@@ -1,0 +1,38 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="tool_bar_height">55dp</dimen>
+    <dimen name="icon_size">22dp</dimen>
+
+    <dimen name="default_corner_radius">8dp</dimen>
+    <dimen name="default_shadow_radius">8dp</dimen>
+
+    <dimen name="title_size">16sp</dimen>
+    <dimen name="small_text_size">12sp</dimen>
+    <dimen name="tip_text_size">13sp</dimen>
+    <dimen name="normal_text_size">14sp</dimen>
+    <dimen name="big_text_size">15sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_22">22sp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
+    <dimen name="text_size_26">26sp</dimen>
+    <dimen name="text_size_28">28sp</dimen>
+    <dimen name="text_size_30">30sp</dimen>
+
+    <dimen name="home_tab_icon_size">35dp</dimen>
+
+    <dimen name="qr_code_size">90dp</dimen>
+
+    <dimen name="transaction_detail_margin_top">15dp</dimen>
+
+    <dimen name="login_top_height">200dp</dimen>
+    <dimen name="login_top_bg_height">170dp</dimen>
+    <dimen name="red_packet_qr_size">130dp</dimen>
+</resources>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout android:id="@+id/view_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="10dp" android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/tv_set_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_white_selector_corner"
+                android:clickable="true"
+                android:gravity="left|center"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:text="重置登录密码"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/normal_text_size" />
+
+            <TextView
+                android:id="@+id/tv_set_pay_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_white_selector_corner"
+                android:clickable="true"
+                android:gravity="left|center"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:text="重置支付密码"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/normal_text_size" />
+
+            <TextView
+                android:id="@+id/tv_author_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_white_selector_corner"
+                android:clickable="true"
+                android:gravity="left|center" android:visibility="gone"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:text="作家专区"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/normal_text_size" />
+
+            <TextView
+                android:id="@+id/tv_bind_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_white_selector_corner"
+                android:clickable="true"
+                android:gravity="left|center" android:visibility="visible"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:text="@string/bind_account"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/normal_text_size" />
+
+
+            <RelativeLayout android:id="@+id/rl_auth_real_name"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:layout_width="match_parent" android:background="@drawable/item_white_selector_corner"
+                android:clickable="true"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/mine_real_name_authentication"
+                    android:textSize="@dimen/normal_text_size"
+                    android:textColor="@color/normal_text_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView android:id="@+id/tv_auth_status"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/small_text_size"
+                    android:textColor="@color/red_color"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_wifi_transfer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_white_selector_corner"
+                android:clickable="true"
+                android:gravity="left|center"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:text="WiFi传书"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/normal_text_size" />
+
+            <TextView
+                android:id="@+id/tv_wallet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_white_selector_corner"
+                android:clickable="true"
+                android:gravity="left|center"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:text="我的钱包"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/normal_text_size" />
+
+
+            <TextView
+                android:id="@+id/tv_clear_cache"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_white_selector_corner"
+                android:clickable="true"
+                android:gravity="left|center"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:text="清除缓存"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/normal_text_size" />
+
+            <TextView
+                android:id="@+id/tv_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_white_selector_corner"
+                android:clickable="true"
+                android:gravity="center"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:text="退出登录"
+                android:textColor="@color/red_color"
+                android:textSize="@dimen/normal_text_size" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="left|center"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:text="其他"
+                android:textColor="@color/darker_gray"
+                android:textSize="@dimen/text_size_16"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_white_selector_corner"
+                android:clickable="true"
+                android:gravity="left|center"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:text="帮助与反馈"
+                android:textColor="@color/black_text_color"
+                android:textSize="@dimen/text_size_16"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_white_selector_corner"
+                android:clickable="true"
+                android:gravity="left|center"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:text="关于我们"
+                android:textColor="@color/black_text_color"
+                android:textSize="@dimen/text_size_16"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <RelativeLayout android:id="@+id/view_not_login" android:visibility="invisible"
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:background="@mipmap/bg_not_login_chasing"
+            android:layout_height="match_parent">
+
+            <RelativeLayout android:id="@+id/view_not_login_content"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="180dp">
+                <TextView android:id="@+id/tv_title"
+                    android:textSize="@dimen/text_size_26"
+                    android:text="您还未登录"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/normal_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView android:id="@+id/tv_tip" android:layout_below="@+id/tv_title"
+                    android:textSize="@dimen/normal_text_size"
+                    android:text="登录后才能查看相关内容"
+                    android:layout_marginTop="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/second_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <TextView android:id="@+id/tv_to_login"  android:layout_below="@+id/view_not_login_content"
+                android:textSize="@dimen/normal_text_size"
+                android:text="去登录"
+                android:layout_margin="20dp"
+                android:gravity="left|center"
+                android:paddingLeft="15dp" android:paddingRight="10dp"
+                android:background="@drawable/gradient_bg"
+                android:drawableRight="@mipmap/icon_white_arrow_right"
+                android:drawablePadding="20dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+</android.support.v4.widget.NestedScrollView>

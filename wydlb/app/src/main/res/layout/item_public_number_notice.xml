@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    >
+
+    <TextView
+        android:id="@+id/tv_timeline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="#CCCCCC"
+        android:textSize="@dimen/text_size_12" />
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_timeline"
+        android:background="@drawable/white_corner_card">
+
+        <com.lianzai.reader.view.SelectableRoundedImageView
+            android:id="@+id/iv_img"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            app:sriv_right_top_corner_radius="5dp"
+            app:sriv_left_top_corner_radius="5dp"
+            android:scaleType="centerCrop"
+             />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_marginTop="10dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+            android:layout_below="@+id/iv_img"
+            android:text="有章节更新"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginTop="6dp" android:layout_margin="10dp"
+            android:ellipsize="end"
+            style="@style/TextPaddingStyle"
+            />
+
+        <View android:id="@+id/line"
+            android:layout_below="@+id/tv_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/line_bg"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+        <TextView android:id="@+id/tv_open"
+            android:layout_below="@+id/line"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/color_black_ff666666"
+            android:drawableRight="@mipmap/v2_icon_find_arrow_right"
+            android:text="点击查看详情"
+            android:layout_margin="10dp"
+            android:textSize="14sp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

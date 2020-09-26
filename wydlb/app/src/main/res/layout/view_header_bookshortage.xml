@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:id="@+id/ly_content"
+    android:visibility="gone"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/no_bookshortage_img"
+        android:layout_marginTop="23dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="为你推荐以下热门书籍:"
+        android:textSize="@dimen/text_size_12"
+        android:textColor="@color/bluetext_color2"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="12dp"
+        android:paddingLeft="18dp"
+        />
+
+</LinearLayout>

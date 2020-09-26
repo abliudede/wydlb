@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2016 JustWayward Team
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/v2_blue_color"
+        >
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="@dimen/back_icon_size"
+            android:layout_height="@dimen/back_icon_size"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/v2_icon_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="WiFi传书"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16"
+            />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_pc_and_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_bar_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@mipmap/pc_and_phone" />
+
+    <TextView android:id="@+id/tv_wifi_status" android:layout_below="@+id/iv_pc_and_phone"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/third_text_color"
+        android:text="WiFi服务已开启\n上传过程请勿离开此页"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_wifi_status"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/normal_text_color"
+        android:layout_marginTop="30dp"
+        android:text="请在电脑浏览器的地址栏输入"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/mTvWifiIp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/normal_text_color" />
+
+    <TextView android:id="@+id/tv_copy_url"
+        android:layout_below="@+id/mTvWifiIp"
+        android:background="@drawable/bg_ip_shape"
+        android:layout_centerHorizontal="true"
+        android:text="复制链接"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:layout_width="130dp"
+        android:layout_height="35dp" />
+
+
+    <TextView
+        android:layout_below="@+id/tv_copy_url"
+        android:textSize="10sp" android:layout_marginTop="40dp"
+        android:text="注：请确认电脑和手机连接的是同一个WiFi"
+        android:gravity="center"
+        android:textColor="@color/third_text_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

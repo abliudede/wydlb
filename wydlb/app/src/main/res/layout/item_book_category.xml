@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/tv_book_category_name"
+    android:background="@drawable/white_corner_card"
+    android:textSize="@dimen/text_size_16" android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:textColor="@color/black_text_color"
+    android:layout_marginTop="10dp"
+    android:text="分类(0本)"
+    android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+    android:gravity="left|center"
+    android:drawableRight="@mipmap/icon_arrow_right" android:drawablePadding="10dp"
+    android:layout_height="50dp">
+
+</TextView>

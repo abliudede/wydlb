@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_width="wrap_content" android:minWidth="150dp" android:layout_gravity="center"
+    android:layout_height="wrap_content"  android:background="@drawable/toast_gradient_bg" >
+
+
+    <LinearLayout android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView android:id="@+id/tv_jinzuan_tag"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@mipmap/jinzuan_mid"
+            android:text="推荐票"
+            android:textSize="@dimen/text_size_17"
+            android:textStyle="bold"
+            android:gravity="left|center"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/toast_amount_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="+10"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_17" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/toast_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="阅读推送奖励"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_11" />
+
+
+
+</LinearLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_parent"
+    android:layout_width="210dp"
+    android:layout_height="270dp"
+    android:layout_gravity="center"
+    android:background="@mipmap/home_rec_bg">
+
+
+    <com.lianzai.reader.view.SelectableRoundedImageView
+        android:id="@+id/iv_quanzi_bg"
+        android:layout_width="182dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="9dp"
+        app:sriv_left_top_corner_radius="8dp"
+        app:sriv_right_top_corner_radius="8dp" />
+
+    <com.lianzai.reader.view.SelectableRoundedImageView
+        android:layout_width="182dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="9dp"
+        app:sriv_left_top_corner_radius="8dp"
+        app:sriv_right_top_corner_radius="8dp"
+        android:src="@mipmap/home_rec_black_bg"/>
+
+    <TextView
+        android:id="@+id/tv_quanzi_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="27dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/white_text_color"
+        android:textSize="@dimen/text_size_14"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_quanzi_bg"
+        android:src="@mipmap/home_rec_bookitem"
+        android:layout_centerHorizontal="true"
+        />
+
+    <com.lianzai.reader.view.SelectableRoundedImageView
+        android:id="@+id/book_cover"
+        android:layout_width="56dp"
+        android:layout_height="65dp"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        app:sriv_left_top_corner_radius="3dp"
+        app:sriv_right_top_corner_radius="3dp"
+        android:layout_alignBottom="@id/iv_quanzi_bg"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_below="@id/iv_quanzi_bg"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/text_size_13"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/text_size_13"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/text_size_13"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+       <!-- <TextView
+            android:id="@+id/tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="20本书"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textColor="@color/third_text_color"
+            android:textSize="@dimen/text_size_13"
+            android:gravity="center_vertical"
+            android:drawableRight="@mipmap/icon_arrow_right"
+            />-->
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>
+

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_white_selector"
+    android:clickable="true"
+    >
+
+    <View
+        android:id="@+id/item_quanzi_person_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bg_color"/>
+
+
+    <RelativeLayout
+        android:id="@+id/view_header"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/item_quanzi_person_line"
+        android:paddingLeft="@dimen/leftright_margin"
+        android:paddingRight="@dimen/leftright_margin">
+
+        <ImageView
+            android:id="@+id/quanzi_arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_arrow_right" />
+
+        <TextView
+            android:id="@+id/item_quanzi_person_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/quanzi_arrow_right"
+            android:textSize="@dimen/normal_text_size"
+            android:textColor="@color/third_text_color"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/leftright_margin"/>
+
+        <com.lianzai.reader.view.SelectableRoundedImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/default_fangxing_logo"
+            app:sriv_left_bottom_corner_radius="5dp"
+            app:sriv_left_top_corner_radius="5dp"
+            app:sriv_right_bottom_corner_radius="5dp"
+            app:sriv_right_top_corner_radius="5dp"
+            />
+
+        <ImageView
+            android:id="@+id/huangguan_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/iv_logo"
+            android:layout_toRightOf="@id/iv_logo"
+            android:layout_marginBottom="-10dp"
+            android:layout_marginLeft="-10dp"
+            android:src="@mipmap/im_chat_room_admin1"
+            android:scaleType="centerInside"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_logo"
+            android:layout_toLeftOf="@+id/item_quanzi_person_head"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black_text_color"
+            android:textSize="@dimen/text_size_16"
+            android:maxLines="1"
+            android:ellipsize="end"
+             />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_nickname"
+            android:layout_alignRight="@+id/tv_nickname"
+            android:layout_below="@+id/tv_nickname"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/third_text_color"
+            android:textSize="@dimen/sp_12"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:maxWidth="200dp"
+            android:visibility="gone"
+            />
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

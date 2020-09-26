@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lianzai.reader.view.SelectableRoundedImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="40dp"
+    android:layout_height="match_parent"
+    app:sriv_left_top_corner_radius="5dp"
+    app:sriv_right_top_corner_radius="5dp"
+    app:sriv_right_bottom_corner_radius="5dp"
+    app:sriv_left_bottom_corner_radius="5dp"
+    android:id="@+id/iv_book_cover"
+    android:orientation="vertical">
+
+</com.lianzai.reader.view.SelectableRoundedImageView>
+

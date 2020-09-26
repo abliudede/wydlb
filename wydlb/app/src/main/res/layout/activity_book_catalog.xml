@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:background="@color/bg_color"
+    style="@style/StatusBarTintStyle"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/book_directory_rv"
+        android:layout_marginTop="@dimen/tool_bar_height"
+        style="@style/ScrollBarVerticalStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        />
+
+    <include android:layout_alignParentTop="true" android:layout_width="match_parent" android:layout_height="@dimen/tool_bar_height" layout="@layout/common_title"/>
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:background="@drawable/white_corner_card"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text= "什么是推荐票？"
+            android:textColor="@color/color_black_333333"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tv_description"
+            style="@style/TextPaddingStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="left|center"
+            android:text="连载阅读共享版权是指，由作者、读者、连载平台以及投资者共同组成的社区。共同为小说作品的发展作出贡献，共同拥有作品的版权，共同拥有作品的收益权。而版权资产则是指所拥有作品的版权积分。"
+            android:textColor="@color/color_black_333333"
+            android:textSize="@dimen/text_size_15" />
+
+        <TextView
+            android:id="@+id/tv_showmore"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="查看更多 >"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/f5f5f5_9dpcorner_card"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="@dimen/text_size_12"
+            />
+
+        <TextView
+            android:id="@+id/tv_know_it"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/left_right_bottom_bg_corner"
+            android:gravity="center"
+            android:text="@string/know_it"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_15"/>
+    </LinearLayout>
+</FrameLayout>

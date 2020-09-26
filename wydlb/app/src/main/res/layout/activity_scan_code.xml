@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <!--android:layout_below="@+id/rl_actionbar"-->
+    <FrameLayout
+        android:id="@+id/fl_my_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        ></FrameLayout>
+
+    <RelativeLayout android:id="@+id/rl_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="26dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/tv_common_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="扫一扫 "
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white_text_color"
+            android:textSize="@dimen/title_size"
+            tools:text="扫一扫" />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            app:srcCompat="@mipmap/v2_icon_back" />
+
+        <TextView
+            android:id="@+id/tv_album"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/white_text_color"
+            android:text="相册"
+            android:layout_alignParentRight="true"
+            android:paddingRight="16dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/StatusBarTintStyle"
+    >
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        style="@style/ShadowStyle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@mipmap/icon_back_black" />
+
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/icon_more_black"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_commom_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="75dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="拼手气"
+            android:textColor="@color/color_black_333333"
+            android:textSize="@dimen/title_size"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_bar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/white_corner_card"
+                android:visibility="visible">
+
+
+                <com.lianzai.reader.view.SelectableRoundedImageView
+                    android:id="@+id/iv_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/fightluck_bg"
+                    app:sriv_right_top_corner_radius="5dp"
+                    app:sriv_left_top_corner_radius="5dp"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="26dp"
+                    android:text="拼手气"
+                    android:textColor="@color/white_text_color"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/tv_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/white_text_color"
+                    android:textSize="@dimen/text_size_32" />
+
+                <TextView
+                    android:id="@+id/kouhao_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/iv_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:text="快来一起拼手气，决战到天亮！"
+                    android:textColor="@color/normal_text_color"
+                    android:textSize="@dimen/text_size_16" />
+                <View
+                    android:id="@+id/fengexian"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:background="@color/bg_color"
+                    android:layout_below="@id/kouhao_tv"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发起人"
+                    android:textColor="@color/five_text_color"
+                    android:textSize="@dimen/text_size_14"
+                    android:layout_below="@id/fengexian"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="13dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="当前奖池"
+                    android:textColor="@color/five_text_color"
+                    android:textSize="@dimen/text_size_14"
+                    android:layout_below="@id/fengexian"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="52dp"
+                    android:layout_marginBottom="16dp"
+                    />
+
+                <TextView
+                    android:id="@+id/name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发起人"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/five_text_color"
+                    android:textSize="@dimen/text_size_14"
+                    android:layout_below="@id/fengexian"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="13dp"
+                    android:gravity="center_vertical"
+                    android:maxLength="10"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    />
+
+                <com.lianzai.reader.view.SelectableRoundedImageView
+                    android:id="@+id/head_iv"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/default_fangxing_logo"
+                    android:layout_centerHorizontal="true"
+                    app:sriv_right_top_corner_radius="4dp"
+                    app:sriv_left_top_corner_radius="4dp"
+                    app:sriv_left_bottom_corner_radius="4dp"
+                    app:sriv_right_bottom_corner_radius="4dp"
+                    android:layout_toLeftOf="@id/name_tv"
+                    android:layout_below="@id/fengexian"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="7dp"
+                    />
+
+                <TextView
+                    android:id="@+id/all_amount_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/redFE3838"
+                    android:textSize="@dimen/text_size_14"
+                    android:layout_below="@id/fengexian"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="52dp"
+                    android:layout_marginBottom="16dp"
+                    />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_corner_card"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/join_iv"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="32dp"
+                    android:src="@mipmap/fightluck_status3"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:id="@+id/time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_below="@id/join_iv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/fense_biaoqian"
+                    android:gravity="center"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:textColor="@color/redFE3838"
+                    android:textSize="@dimen/text_size_14"
+                    android:visibility="invisible"
+                    />
+
+                <com.lianzai.reader.view.OverlapLogoViewForFightLuck
+                    android:id="@+id/headview_counttv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_centerHorizontal="true"
+                    app:txtColor="@color/normal_text_color"
+                    android:layout_below="@id/time_tv">
+
+                </com.lianzai.reader.view.OverlapLogoViewForFightLuck>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/owner_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_corner_card">
+
+                <com.lianzai.reader.view.SelectableRoundedImageView
+                    android:id="@+id/owner_head_iv"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/default_fangxing_logo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    app:sriv_right_top_corner_radius="7dp"
+                    app:sriv_left_top_corner_radius="7dp"
+                    app:sriv_left_bottom_corner_radius="7dp"
+                    app:sriv_right_bottom_corner_radius="7dp"
+                    />
+
+                <TextView
+                    android:id="@+id/owner_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/owner_head_iv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/five_text_color"
+                    />
+
+                <TextView
+                    android:id="@+id/owner_des_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/owner_name_tv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:textSize="@dimen/text_size_16"
+                    android:textColor="@color/normal_text_color"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_corner_card">
+
+
+                <TextView
+                    android:id="@+id/rule_tit_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="12dp"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/five_text_color"
+                    android:text="拼手气规则："
+                    />
+
+                <TextView
+                    android:id="@+id/rule_content_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rule_tit_tv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/five_text_color"
+                    />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

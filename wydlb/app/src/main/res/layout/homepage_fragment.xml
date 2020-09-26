@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@color/white">
+
+
+        <ImageView
+            android:id="@+id/top_color"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:src="@mipmap/top_color"
+            android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:id="@+id/tab_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/top_color"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="16dp"
+        android:paddingTop="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="left"
+            >
+
+            <TextView
+                android:id="@+id/tv_my_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                android:text="推荐"
+                android:textColor="@color/color_black_333333"
+                android:textSize="@dimen/text_size_26"
+                />
+
+            <TextView
+                android:id="@+id/tv_my_book_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_my_book"
+                android:layout_marginLeft="16dp"
+                android:textStyle="bold"
+                android:text="动态"
+                android:textColor="@color/third_text_color"
+                android:textSize="@dimen/text_size_16" />
+
+            <View
+                android:id="@+id/red_dongtai_view"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:background="@drawable/dot_red_bg"
+                android:layout_toRightOf ="@id/tv_my_book_list"
+                android:layout_alignTop ="@id/tv_my_book_list"
+                android:layout_marginLeft="4dp"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginRight="16dp">
+
+                <TextView
+                    android:id="@+id/get_reward_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/gray_text_color"
+                    android:textSize="@dimen/text_size_12"
+                    android:text="领取8推荐票"
+                    android:background="@mipmap/jinzuan_canget_bg"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="8dp"
+                    android:layout_centerVertical="true"
+                    android:visibility="visible"
+                    />
+
+                <TextView
+                    android:id="@+id/notget_reward_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/gray_text_color"
+                    android:textSize="@dimen/text_size_12"
+                    android:text="03:04"
+                    android:background="@mipmap/jinzuan_cannot_bg"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="4dp"
+                    android:visibility="gone"
+                    />
+
+                <View
+                    android:id="@+id/more_reward_iv"
+                    android:layout_width="63dp"
+                    android:layout_height="24dp"
+                    android:background="@mipmap/jinzuan_more_bg"
+                    android:visibility="gone"
+                    />
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_slide"
+            android:layout_width="16dp"
+            android:layout_height="3dp"
+            android:layout_marginLeft="21dp"
+            android:background="@color/v2_blue_color" />
+
+    </LinearLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tab_ly" />
+
+
+</RelativeLayout>

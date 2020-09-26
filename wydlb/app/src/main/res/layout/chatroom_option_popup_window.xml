@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/chatroom_option_popup_window"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="120dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView android:id="@+id/tv_copy_text"
+            style="@style/ChatMorePopupItemStyle"
+            android:background="@drawable/chat_bottom_line_bg"
+            android:drawableLeft="@mipmap/im_option_copy_text"
+            android:text="复制文本"
+             />
+
+        <TextView android:id="@+id/tv_delete_msg"
+            android:background="@drawable/chat_bottom_line_bg"
+            style="@style/ChatMorePopupItemStyle" android:visibility="gone"
+            android:drawableLeft="@mipmap/im_option_del_msg"
+            android:text="删除消息"
+            />
+
+        <TextView android:id="@+id/tv_praise_msg"
+            style="@style/ChatMorePopupItemStyle"
+            android:visibility="gone"
+            android:text="赞一个"
+            android:drawableLeft="@mipmap/im_option_praise"
+             />
+
+        <TextView android:id="@+id/tv_tread_msg"
+            style="@style/ChatMorePopupItemStyle"
+            android:background="@drawable/chat_bottom_line_bg"
+            android:text="投诉"
+            android:drawableLeft="@mipmap/im_option_tread_msg"
+             />
+
+        <TextView android:id="@+id/tv_quote_msg"
+            style="@style/ChatMorePopupItemStyle"
+            android:background="@color/transparent"
+            android:drawableLeft="@mipmap/im_option_quote_msg"
+            android:text="引用回复"
+             />
+    </LinearLayout>
+
+</FrameLayout>

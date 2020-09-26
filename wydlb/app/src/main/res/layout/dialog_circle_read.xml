@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_dialog_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/body_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/white_corner_card"
+        android:orientation="vertical">
+
+        <TextView android:id="@+id/tv_1"
+            android:textColor="@color/color_black_ff333333"
+            android:text="举报TA"
+            android:background="@drawable/bottom_line_bg"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:textSize="@dimen/text_size_15"
+            />
+
+        <TextView android:id="@+id/tv_2"
+            android:textColor="@color/color_black_ff333333"
+            android:text="加入黑名单"
+            android:background="@drawable/bottom_line_bg"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:textSize="@dimen/text_size_15"/>
+
+        <!--<TextView android:id="@+id/tv_3"-->
+            <!--android:textColor="@color/color_black_ff333333"-->
+            <!--android:text="全网搜索"-->
+            <!--android:background="@drawable/bottom_line_bg"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="65dp"-->
+            <!--android:textSize="@dimen/text_size_15"/>-->
+
+        <TextView android:id="@+id/tv_cancel"
+            android:textColor="@color/color_black_ff333333"
+            android:text="取消"
+            android:background="@drawable/shape_gray_bottomyuanjiao"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:textSize="@dimen/text_size_15"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

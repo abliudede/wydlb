@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view_content"
+    android:layout_width="match_parent"
+    android:layout_height="76dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+   >
+
+
+    <com.lianzai.reader.view.CircleImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/default_fangxing_logo"
+        app:border_color="@color/white"
+        app:border_width="1dp" />
+
+    <TextView
+        android:id="@+id/tv_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/text_size_16"
+        android:maxLines="1"
+        android:maxWidth="160dp"
+        android:ellipsize="end"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/attention_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textColor="@color/white_text_color"
+        android:textSize="@dimen/text_size_13"
+        android:visibility="visible"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center"
+        />
+
+</LinearLayout>

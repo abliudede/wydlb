@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/f5f5f5_9dpcorner_card"
+        android:paddingRight="8dp">
+
+        <FrameLayout
+            android:id="@+id/fl_book_list_cover"
+            android:layout_width="121dp"
+            android:layout_height="121dp"
+           >
+
+            <com.lianzai.reader.view.SelectableRoundedImageView
+                android:id="@+id/iv_book_list_cover"
+                android:layout_width="121dp"
+                android:layout_height="121dp"
+                android:scaleType="centerCrop"
+                app:sriv_left_bottom_corner_radius="8dp"
+                app:sriv_left_top_corner_radius="8dp"
+                 />
+
+            <TextView
+                android:id="@+id/tv_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/update_book_list_background"
+                android:gravity="center_horizontal"
+                android:paddingBottom="3dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="3dp"
+                android:text="有更新"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_10"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/iv_book_list_description1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/fl_book_list_cover"
+            android:layout_marginTop="18dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_black_ff666666"
+            android:textSize="@dimen/text_size_13"
+            android:layout_marginLeft="8dp"/>
+
+        <TextView
+            android:id="@+id/iv_book_list_description2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/fl_book_list_cover"
+            android:layout_marginTop="51dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_black_ff666666"
+            android:textSize="@dimen/text_size_13"
+            android:layout_marginLeft="8dp"/>
+
+        <TextView
+            android:id="@+id/iv_book_list_description3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/fl_book_list_cover"
+            android:layout_marginTop="84dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_black_ff666666"
+            android:textSize="@dimen/text_size_13"
+            android:layout_marginLeft="8dp"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

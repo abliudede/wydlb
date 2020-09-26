@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:id="@+id/body_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/white_corner_card"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="告诉我们你想要看到的书籍"
+            android:textColor="@color/color_black_333333"
+            android:textSize="@dimen/text_size_16"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="5dp"
+            android:background="@drawable/gray_corner_bg_f5f5f5"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <EditText android:id="@+id/ed_book_name"
+                android:hint="书名"
+                android:textColor="@color/color_black_ff333333"
+                android:background="@null"
+                android:textSize="@dimen/text_size_13"
+                android:maxLength="20"
+                android:paddingLeft="3dp"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="30dp"  />
+            <ImageView
+                android:id="@+id/iv_clear_book_name"
+                android:layout_marginLeft="3dp"
+                android:src="@mipmap/icon_clear_edittext"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:padding="5dp"
+            android:background="@drawable/gray_corner_bg_f5f5f5"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <EditText android:id="@+id/ed_author_name"
+                android:background="@null"
+                android:textColor="@color/color_black_ff333333"
+                android:hint="请输入作者名(选填)"
+                android:paddingLeft="3dp"
+                android:maxLength="20"
+                android:textSize="@dimen/text_size_13"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="30dp"  />
+            <ImageView
+                android:id="@+id/iv_clear_author_name"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:layout_marginLeft="3dp" android:visibility="gone"
+                android:src="@mipmap/icon_clear_edittext"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+
+        <View
+            android:background="@color/line_bg"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_sure"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_blue_leftbottomyuanjiao"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_13" />
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/text_size_13" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

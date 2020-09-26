@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="AppTheme" parent="BaseAppTheme">
+		<item name="android:statusBarColor">@color/blue_color</item>
+	</style>
+
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/blue_color</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/bg_color</item>
+        <item name="android:windowBackground">@color/bg_color</item>
+        <item name="android:actionOverflowMenuStyle">@style/ActionButton.Overflow.Menu</item>
+    </style>
+
+    <style name="ShadowStyle">
+        <item name="android:elevation">2dp</item>
+        <item name="android:translationZ">3dp</item>
+    </style>
+
+</resources>

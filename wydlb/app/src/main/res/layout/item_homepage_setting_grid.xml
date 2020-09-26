@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:clickable="true">
+
+    <com.lianzai.reader.view.SelectableRoundedImageView
+        android:id="@+id/iv_book_list_cover"
+        android:layout_width="109dp"
+        android:layout_height="145dp"
+        android:scaleType="centerCrop"
+        app:sriv_left_bottom_corner_radius="4dp"
+        app:sriv_left_top_corner_radius="4dp"
+        app:sriv_right_bottom_corner_radius="4dp"
+        app:sriv_right_top_corner_radius="4dp" />
+
+    <TextView
+        android:id="@+id/tv_book_list_name"
+        style="@style/TextPaddingStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/iv_book_list_cover"
+        android:layout_below="@+id/iv_book_list_cover"
+        android:layout_marginTop="6dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="连载神器"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/text_size_13"/>
+
+    <ImageView
+        android:id="@+id/icon_gongxiangbanquan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/gongxiangbanquan_jiaobiao"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

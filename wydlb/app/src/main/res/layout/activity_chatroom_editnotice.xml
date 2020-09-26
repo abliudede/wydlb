@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/StatusBarTintStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include layout="@layout/common_title"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.lianzai.reader.view.SelectableRoundedImageView
+            android:id="@+id/iv_user_head"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:scaleType="centerCrop"
+            android:background="@color/bg_color"
+            app:sriv_left_bottom_corner_radius="5dp"
+            app:sriv_left_top_corner_radius="5dp"
+            app:sriv_right_bottom_corner_radius="5dp"
+            app:sriv_right_top_corner_radius="5dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/normal_text_color"
+            android:layout_toRightOf="@id/iv_user_head"
+            android:layout_alignTop="@id/iv_user_head"
+            android:layout_marginLeft="12dp"
+            android:ellipsize="end"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/tv_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_13"
+            android:textColor="@color/third_text_color"
+            android:layout_toRightOf="@id/iv_user_head"
+            android:layout_below="@id/tv_nickname"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:maxLines="1"/>
+
+        <View
+            android:id="@+id/fengexian"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/iv_user_head"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/bg_color"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fengexian"
+            android:padding="17dp"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/normal_text_color"
+           />
+
+
+        <EditText android:id="@+id/ed_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_content"
+            android:layout_toLeftOf="@+id/iv_clear"
+            android:background="@null"
+            android:hint="编辑公告"
+            android:maxLength="300"
+            android:padding="17dp"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/text_size_16"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

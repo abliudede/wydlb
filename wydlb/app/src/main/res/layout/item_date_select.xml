@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_date_picker"
+    android:background="@drawable/item_white_selector"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:gravity="left|center"
+    android:paddingLeft="10dp"
+    android:text="2018年4月"
+    android:textColor="@color/second_text_color"
+    android:textSize="@dimen/normal_text_size">
+
+</TextView>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_notification"
+    style="@style/ImParentStyle">
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/im_tv_timeline"
+        style="@style/ImTimelineStyle" />
+    
+    <TextView
+        android:layout_below="@+id/im_tv_timeline"
+
+        android:background="@drawable/im_tips_background"
+        android:id="@+id/im_tv_notification"
+        style="@style/ImTipsStyle" />
+
+    <ImageView android:id="@+id/iv_retry"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/icon_im_retry"
+        android:layout_gravity="center"
+        android:layout_width="@dimen/retry_icon_size"
+        android:layout_height="@dimen/retry_icon_size" />
+</RelativeLayout>

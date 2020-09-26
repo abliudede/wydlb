@@ -1,0 +1,219 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+
+// 依赖插件脚本
+//apply from: 'tinker-support.gradle'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    defaultConfig {
+        applicationId "com.lianzai.reader"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 40102
+        versionName "4.0.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        // 开启multidex
+        multiDexEnabled true
+
+        renderscriptTargetApi 20
+        renderscriptSupportModeEnabled true
+
+        ndk{abiFilters "armeabi"}
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+    }
+    signingConfigs {
+        release {
+            storeFile file(KEYSTORE_FILE)
+            storePassword KEYSTORE_PWD
+            keyAlias KEY_ALIAS
+            keyPassword KEY_PWD
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+    lintOptions {
+        disable 'InvalidPackage'
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    dexOptions {
+        preDexLibraries false
+        jumboMode true
+        javaMaxHeapSize "4g"
+    }
+
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }}
+
+greendao{
+    schemaVersion 50
+    daoPackage 'com.lianzai.reader.model.gen'
+    targetGenDir 'src/main/java'
+}
+repositories{
+    flatDir{
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation 'com.android.support:support-v4:27.0.2'
+    implementation 'com.android.support:design:27.1.0'
+    implementation 'com.android.support:cardview-v7:27.0.2'
+    implementation 'com.android.support:exifinterface:27.0.2'
+
+    //        implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    // Net
+    implementation 'com.squareup.retrofit2:retrofit:2.2.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.2.0'
+    compileOnly 'com.squareup.okhttp3:okhttp:3.13.1'
+
+    // Annotation
+    implementation 'com.google.dagger:dagger:2.0.2'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.0.2'
+    compileOnly 'org.glassfish:javax.annotation:10.0-b28'
+    implementation 'com.jakewharton:butterknife:7.0.1'
+
+    // RxJava
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.0.1'
+
+    // leakcanary
+
+    //    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+
+    //    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+
+    // 多dex配置
+    implementation 'com.android.support:multidex:1.0.1'
+
+    //recyclerview adapter 框架
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    implementation 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    implementation 'com.nineoldandroids:library:2.4.0'
+
+    //微信
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:5.1.6'
+
+    // walle（多渠道使用）
+    implementation 'com.meituan.android.walle:library:1.1.3'
+    implementation 'com.just.agentweb:agentweb:4.0.2'
+    implementation 'com.just.agentweb:filechooser:4.0.2'
+
+    //ORM Database
+    implementation 'org.greenrobot:greendao:3.2.0'
+    implementation 'com.github.devlight:infinitecycleviewpager:1.0.2'
+
+    //侧滑
+    implementation 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+    implementation 'com.github.mcxtzhang:SuspensionIndexBar:V1.0.0'
+    implementation('com.upyun:upyun-android-sdk:2.0.5', {
+        exclude module: 'okhttp'
+    })
+    implementation 'com.daasuu:EasingInterpolator:1.0.0'
+    implementation 'me.panpf:sketch:2.6.1'
+    implementation 'me.panpf:sketch-gif:2.6.1'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.9.0'
+    implementation 'jp.wasabeef:glide-transformations:3.0.1'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+//    implementation files('libs/fastjson-1.1.34.android.jar')
+//    implementation files('libs/java-json.jar')
+    implementation 'me.everything:overscroll-decor-android:1.0.4'
+    implementation 'me.leolin:ShortcutBadger:1.1.17@aar'
+    implementation 'top.zibin:Luban:1.1.5'
+    implementation 'com.umeng.sdk:analytics:7.5.0'
+    implementation 'com.umeng.sdk:common:1.5.0'
+    implementation 'com.umeng.sdk:utdid:1.1.5.3'
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    implementation 'com.meizu.flyme.internet:push-internal:3.6.3@aar'
+    implementation 'com.huawei.android.hms:push:2.6.0.301'
+//    implementation files('libs/MiPush_SDK_Client_3_6_2.jar')
+
+    //二维码
+
+    //    implementation 'com.google.zxing:core:3.3.0'
+    implementation 'cn.yipianfengye.android:zxing-library:2.2'
+    implementation 'org.hashids:hashids:1.0.3'
+
+    //微博sdk
+    implementation 'com.sina.weibo.sdk:core:4.3.0:openDefaultRelease@aar'
+//    implementation files('libs/open_sdk_r6008_lite.jar')
+
+    //高斯模糊
+
+    //implementation 'at.favre.lib:dali:0.3.5'
+    implementation 'com.airbnb.android:lottie:2.7.0'
+//    implementation files('libs/tbs_x5.jar')
+//    implementation files('libs/com.baidu.tts_2.3.2.20180713_6101c2a.jar')
+    implementation 'org.jsoup:jsoup:1.11.3'
+
+    //头条穿山甲广告联盟版本号V2.5.2.4
+//    implementation files('libs/android-query-full.0.26.7.jar')
+    implementation(name: 'open_ad_sdk', ext: 'aar')
+    //头条穿山甲动态图支持
+//    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.6'
+//    implementation files('libs/AMap_Location_V4.5.0_20190121.jar')
+//    implementation files('libs/AMap2DMap_5.2.0_AMapSearch_6.5.0_20180930.jar')
+
+    //多图片选择器
+//    implementation 'com.yuyh.imgsel:library:2.0.6'
+    implementation 'com.yuyh.easyadapter:library:1.1.0'
+
+    //websocket
+//    implementation "org.java-websocket:Java-WebSocket:1.4.0"
+
+    implementation 'com.qihoo360.replugin:replugin-plugin-lib:2.2.4'
+
+    implementation 'com.github.0xZhangKe:WebSocketDemo:3.1'
+
+    implementation (name:'GDTSDK.unionNormal.4.100.970', ext:'aar')
+}

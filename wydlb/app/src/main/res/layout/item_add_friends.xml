@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.lianzai.reader.view.CircleImageView
+        app:border_color="@color/white"
+        app:border_width="1dp"
+        android:id="@+id/iv_logo"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_nickname"
+        android:layout_toRightOf="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black_text_color"
+         />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_alignLeft="@+id/tv_nickname"
+        android:layout_below="@+id/tv_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/third_text_color"
+        android:text="签名"
+        />
+
+    <TextView
+        android:id="@+id/tv_is_focus"
+        android:background="@drawable/v2_blue_30corner_bg"
+        android:textColor="@color/white"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="关注"
+        android:paddingRight="25dp"
+        android:paddingLeft="25dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

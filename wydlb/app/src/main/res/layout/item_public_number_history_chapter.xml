@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10dp"
+    >
+
+
+    <TextView
+        android:id="@+id/tv_timeline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="#CCCCCC"
+        android:textSize="@dimen/text_size_12" />
+
+    <!--章节更新-->
+    <RelativeLayout android:id="@+id/rl_chapter_update"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_corner_card">
+
+        <com.netease.nim.uikit.common.ui.imageview.HeadImageView
+            android:id="@+id/rl_chapter_update_iv_book_cover"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/rl_chapter_update_tv_chapter_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/rl_chapter_update_iv_book_cover"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/rl_chapter_update_iv_book_cover"
+            android:text="有章节更新"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView android:id="@+id/rl_chapter_update_tv_chapter_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/rl_chapter_update_tv_chapter_title"
+            android:layout_below="@+id/rl_chapter_update_tv_chapter_title"
+            android:layout_marginTop="6dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+             />
+
+        <View android:id="@+id/line"
+            android:layout_below="@+id/rl_chapter_update_iv_book_cover"
+            android:layout_marginTop="15dp"
+            android:background="@color/line_bg"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+        <TextView android:id="@+id/tv_open_current_chapter"
+            android:layout_below="@+id/line"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/color_black_ff666666"
+            android:drawableRight="@mipmap/v2_icon_find_arrow_right"
+            android:text="点击前往阅读"
+            android:textSize="14sp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <!--周报-->
+    <RelativeLayout android:id="@+id/rl_weekly"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_corner_card">
+
+        <com.lianzai.reader.view.SelectableRoundedImageView
+            android:id="@+id/rl_weekly_iv_img"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            app:sriv_right_top_corner_radius="5dp"
+            app:sriv_left_top_corner_radius="5dp"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/rl_weekly_tv_title"
+            android:layout_marginTop="10dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+            android:layout_below="@+id/rl_weekly_iv_img"
+            android:text="有章节更新"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView android:id="@+id/rl_weekly_tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_weekly_tv_title"
+            android:layout_marginTop="6dp" android:layout_margin="10dp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            style="@style/TextPaddingStyle"
+             />
+
+        <View android:id="@+id/line1"
+            android:layout_below="@+id/rl_weekly_tv_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/line_bg"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+        <TextView android:id="@+id/tv_open"
+            android:layout_below="@+id/line1"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/color_black_ff666666"
+            android:drawableRight="@mipmap/v2_icon_find_arrow_right"
+            android:text="点击查看详情"
+            android:layout_margin="10dp"
+            android:textSize="14sp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <!--通知-->
+    <LinearLayout android:id="@+id/ll_notice"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent" android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/white_corner_card">
+
+
+        <TextView
+            android:id="@+id/ll_notice_tv_title"
+            android:layout_marginTop="10dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+            android:layout_below="@+id/iv_img"
+            android:text="有章节更新"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/sp_16" />
+
+        <View
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/line_bg"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+
+        <TextView android:id="@+id/ll_notice_tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" android:layout_margin="10dp"
+            style="@style/TextPaddingStyle"
+            />
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout android:id="@+id/rl_open_chat_room"
+        android:layout_marginTop="10dp" android:visibility="gone"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_corner_card">
+
+        <TextView
+            android:id="@+id/tv_open_chat_room_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="聊天室开通成功通知"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView android:id="@+id/tv_open_chat_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_open_chat_room_title"
+            android:layout_below="@+id/tv_open_chat_room_title"
+            android:layout_marginTop="6dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+              />
+
+        <View android:id="@+id/line10"
+            android:layout_below="@+id/tv_open_chat_room"
+            android:layout_marginTop="15dp"
+            android:background="@color/line_bg"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+        <TextView
+            android:layout_below="@+id/line10"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/color_black_ff666666"
+            android:drawableRight="@mipmap/v2_icon_find_arrow_right"
+            android:text="点击前往聊天"
+            android:textSize="14sp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_book_volume_name"
+    android:textSize="@dimen/normal_text_size" android:paddingLeft="10dp" android:paddingRight="10dp"
+    android:textColor="@color/normal_text_color"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:gravity="left|center"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:drawableRight="@mipmap/icon_directory_on"
+    android:layout_height="wrap_content"/>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <FrameLayout
+        android:id="@+id/bg_view1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_blur_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@mipmap/bg_circle_detail_header2" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_circle_close"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="19dp"
+                    android:layout_marginTop="30dp"
+                    />
+
+
+                <com.lianzai.reader.view.SelectableRoundedImageView
+                    android:id="@+id/iv_circle_detail_cover"
+                    android:layout_width="120dp"
+                    android:layout_height="160dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="centerCrop"
+                    app:sriv_border_color="@color/transparent"
+                    app:sriv_left_bottom_corner_radius="4dp"
+                    app:sriv_left_top_corner_radius="4dp"
+                    app:sriv_right_bottom_corner_radius="4dp"
+                    app:sriv_right_top_corner_radius="4dp"
+                    android:layout_below="@id/iv_close"
+                    android:layout_marginTop="27dp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_circle_detail_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:layout_below="@+id/iv_circle_detail_cover"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_20"
+                    android:layout_marginTop="18dp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_book_author"
+                    android:text=" 著"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="@color/white"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/tv_circle_detail_name"
+                    android:layout_marginTop="9dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <View
+                    android:id="@+id/fengexian"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="@color/white80"
+                    android:layout_below="@+id/tv_book_author"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="28dp"
+                    android:layout_marginLeft="28dp"/>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_circle_detail_tags"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fengexian"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:visibility="invisible"
+                    android:layout_centerHorizontal="true"
+                    android:minHeight="20dp"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_circle_detail_tags_guanfang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fengexian"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:visibility="invisible"
+                    android:layout_centerHorizontal="true"
+                    android:minHeight="20dp"/>
+
+                <TextView
+                    android:id="@+id/tv_circle_detail_description"
+                    style="@style/TextPaddingStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_circle_detail_tags"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:paddingBottom="20dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_14" />
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </FrameLayout>
+
+</RelativeLayout>

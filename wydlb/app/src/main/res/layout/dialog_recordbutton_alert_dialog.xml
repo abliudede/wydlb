@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="160dp"
+    android:background="@drawable/record_button_dialog_tr_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/_record_button_dialog_imageview"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/record_animation"
+         />
+
+    <ImageView android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:id="@+id/record_audio_cancel"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@mipmap/v2_im_record_cancel"
+        />
+
+    <TextView
+        android:id="@+id/record_button_dialog_time_tv"
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:text="00:00" android:visibility="gone"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/record_button_dialog_title_tv"
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:text="@string/record_button_finger_up_to_cancel_send"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+</LinearLayout>

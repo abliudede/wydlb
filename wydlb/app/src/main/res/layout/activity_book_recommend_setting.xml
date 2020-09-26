@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    style="@style/StatusBarTintStyle"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView android:id="@+id/iv_back_step"
+        android:layout_alignParentLeft="true"
+        android:visibility="gone"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:layout_alignParentTop="true"
+        android:src="@mipmap/icon_black_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView android:id="@+id/tv_exit"
+        android:textSize="@dimen/text_size_13"
+        android:textColor="@color/color_grey_999999"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:text="跳过"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout android:id="@+id/ll_male" android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_below="@+id/tv_exit"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView android:text="请选择您的性别"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:textSize="@dimen/text_size_22"
+            android:textColor="@color/color_black_ff333333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView android:text="我们会根据性别为您推荐合适的书籍"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:textSize="@dimen/text_size_13"
+            android:textColor="@color/color_black_ff999999"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <LinearLayout android:id="@+id/ll_category" android:layout_centerHorizontal="true"
+        android:gravity="center" android:visibility="gone"
+        android:layout_below="@+id/tv_exit"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView android:text="请选择您的阅读喜好"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:textSize="@dimen/text_size_22"
+            android:textColor="@color/color_black_ff333333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView android:text="这有助于我们推荐最适合您口味的作品"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:textSize="@dimen/text_size_13"
+            android:textColor="@color/color_black_ff999999"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout android:id="@+id/ll_male_choice"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout android:id="@+id/rl_boy"
+            android:clickable="true" android:visibility="visible"
+            android:translationX="-600dp"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_height="wrap_content">
+            <ImageView android:id="@+id/iv_boy"
+                android:src="@mipmap/icon_boy"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView android:id="@+id/iv_boy_selected" android:layout_alignRight="@+id/iv_boy"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="13dp" android:visibility="gone"
+                android:src="@mipmap/icon_sex_selected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView android:id="@+id/tv_boy" android:layout_below="@+id/iv_boy"
+                android:textColor="@color/color_black_ff666666"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/text_size_15"
+                android:textStyle="bold"
+                android:text="男生"
+                android:paddingLeft="28dp" android:paddingRight="28dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:background="@drawable/sex_corner_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout android:id="@+id/rl_girl" android:translationX="600dp"
+            android:clickable="true" android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView android:id="@+id/iv_girl"
+                android:src="@mipmap/icon_girl"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView android:id="@+id/iv_girl_selected" android:layout_alignRight="@+id/iv_girl"
+                android:layout_marginRight="13dp" android:visibility="gone"
+                android:layout_marginTop="13dp"
+                android:src="@mipmap/icon_sex_selected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView android:id="@+id/tv_girl" android:layout_below="@+id/iv_girl"
+                android:textColor="@color/color_black_ff666666"
+                android:textSize="@dimen/text_size_15"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:text="女生"
+                android:paddingLeft="28dp" android:paddingRight="28dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:background="@drawable/sex_corner_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_data" android:visibility="gone"
+        android:layout_below="@+id/ll_category"
+
+        android:layout_marginTop="30dp"
+        android:layout_above="@+id/btn_finish"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button android:id="@+id/bt_next"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:elevation="4dp"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="9dp"
+        android:paddingBottom="9dp"
+        android:enabled="false"
+        android:text="下一步"
+        android:background="@drawable/v2_gray_30corner_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button android:id="@+id/btn_finish"
+        android:textColor="@color/white" android:visibility="gone"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:elevation="4dp"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="9dp"
+        android:paddingBottom="9dp"
+        android:enabled="false"
+        android:text="选好了，开始阅读之旅"
+        android:background="@drawable/v2_gray_30corner_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

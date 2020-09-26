@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    >
+
+    <LinearLayout
+        android:id="@+id/body_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:background="@drawable/white_corner_card"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        >
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="16dp"
+            android:gravity="center"
+            android:text="成员排行与投票是什么？"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+        <TextView
+            android:id="@+id/tv_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/normal_text_color"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="@dimen/text_size_15" />
+
+        </ScrollView>
+        <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="我知道了"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_15"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/shape_blue_bottomyuanjiao"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

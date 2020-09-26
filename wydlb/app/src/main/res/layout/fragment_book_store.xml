@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:loadingView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_grid_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_grid_book_store"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="11dp" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_delete"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:alpha="0.9"
+        android:background="@drawable/red_lefttopcorner_115dp"
+        android:visibility="invisible"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        >
+
+        <TextView
+            android:id="@+id/tv_delete_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingTop="20dp"
+            android:paddingLeft="20dp"
+            android:drawableTop="@mipmap/v2_icon_delete_white"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_13"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_share"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:alpha="0.9"
+        android:background="@drawable/blue_righttopcorner_115dp"
+        android:visibility="invisible"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        >
+
+        <TextView
+            android:id="@+id/tv_share_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp"
+            android:drawableTop="@mipmap/v2_icon_share_white"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="分享"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_13"/>
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/view_not_login"
+        layout="@layout/view_my_book_record_not_login"
+        android:visibility="gone" />
+
+
+    <FrameLayout
+        android:id="@+id/view_loading"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/toast_gradient_bg"
+        android:visibility="gone">
+
+        <com.lianzai.reader.view.loadding.LoadingView
+            android:id="@+id/dialog_loading_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            loadingView:loadding_color="@color/white"
+            loadingView:progress_style="material" />
+    </FrameLayout>
+
+</RelativeLayout>
+
+

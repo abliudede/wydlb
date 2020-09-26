@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/read_dl_slide"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+    <!--android:background="@color/black"-->
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--阅读页面-->
+        <com.lianzai.reader.view.page.PageView
+            android:id="@+id/read_pv_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:clickable="true"
+            tools:visibility="gone" />
+        <!--阅读页面-->
+
+        <RelativeLayout
+            android:id="@+id/content_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </RelativeLayout>
+
+        <!--加载进度条视图-->
+        <RelativeLayout
+            android:id="@+id/rl_read_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_loading_slogan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/color_black_ff333333"
+                    android:textSize="15sp" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="90dp">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/lottie_loading_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerInside"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/read_loading" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_loading_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="正实时从原网页转码 0%"
+                    android:textColor="@color/white_text_color"
+                    android:textSize="@dimen/text_size_12" />
+
+                <!--<ImageView android:id="@+id/iv_loading_description"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@mipmap/icon_read_loading_description" />-->
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_read_tip_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:src="@mipmap/bg_read_tip_bottom" />
+
+        </RelativeLayout>
+        <!--加载进度条视图-->
+
+        <!--顶部菜单视图-->
+        <LinearLayout
+            android:id="@+id/read_abl_top_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/read_abl_top_menu_rl"
+                style="@style/ShadowStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/img_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_alignParentLeft="true"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_read_back_black" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/icon_gongxiangbanquan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:src="@mipmap/icon_gongxiangbanquan"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_payfor_book_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:src="@mipmap/pay_for_book_black"
+                        android:visibility="gone" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_download_book_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:src="@mipmap/icon_read_download"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/fl_reload_chapter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                    />
+
+
+                    <ImageView
+                        android:id="@+id/iv_listen_book"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:src="@mipmap/icon_read_listen_black" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_exchange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:src="@mipmap/readmode_open"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_more_option"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:src="@mipmap/icon_more_black" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/read_tip_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:src="@mipmap/read_tip_img"
+                android:visibility="gone" />
+
+        </LinearLayout>
+        <!--顶部菜单视图-->
+
+
+        <!--切换章节提示-->
+        <LinearLayout
+            android:id="@+id/ll_chapter_tip"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_above="@+id/read_ll_bottom_menu"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/change__chapter_bg"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/tv_chapter_status"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_cache_chapter_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/iv_return_chapter"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_13" />
+
+                <ImageView
+                    android:id="@+id/iv_return_chapter"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/return_chapter_corner_bg"
+                    android:scaleType="center"
+                    android:src="@mipmap/icon_read_return_chapter_white"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <!--切换章节提示-->
+
+
+        <!--底部菜单页面-->
+        <LinearLayout
+            android:id="@+id/read_ll_bottom_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/nb.read.menu.bg"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <!--页面进度栏-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/read_tv_pre_chapter"
+                    style="@style/ReadTextAppearance.Read.BottomMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="上一章" />
+
+                <SeekBar
+                    android:id="@+id/read_sb_chapter_progress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:max="100"
+                    android:maxHeight="2dp"
+                    android:minHeight="2dp"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seekbar_bg"
+                    android:thumb="@mipmap/seekbar_thumb" />
+
+                <TextView
+                    android:id="@+id/read_tv_next_chapter"
+                    style="@style/ReadTextAppearance.Read.BottomMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:text="下一章" />
+            </LinearLayout>
+
+            <!--菜单栏-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/read_tv_category"
+                    style="@style/ReadTextAppearance.Read.BottomMenu.Button"
+                    android:drawableTop="@drawable/ic_read_menu_category"
+                    android:text="@string/nb.read.category" />
+
+                <TextView
+                    android:id="@+id/read_tv_night_mode"
+                    style="@style/ReadTextAppearance.Read.BottomMenu.Button"
+                    android:drawableTop="@drawable/ic_read_menu_night"
+                    android:text="@string/nb.mode.night" />
+
+
+                <TextView
+                    android:id="@+id/read_tv_setting"
+                    style="@style/ReadTextAppearance.Read.BottomMenu.Button"
+                    android:drawableTop="@drawable/ic_read_menu_setting"
+                    android:text="@string/nb.read.setting" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/read_tv_feedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/post_black"
+                        android:gravity="center_horizontal|bottom"
+                        android:text="@string/nb.read.post"
+                        android:textColor="@color/color_black_ff666666"
+                        android:textSize="@dimen/text_size_11" />
+
+                    <View
+                        android:id="@+id/view_post_red"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/dot_red_bg"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <!--底部菜单页面-->
+
+        <!--弹幕相关-->
+        <ImageView
+            android:id="@+id/iv_chat_room_enter"
+            android:layout_width="72dp"
+            android:layout_height="75dp"
+            android:layout_above="@+id/read_ll_bottom_menu"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="6dp"
+            android:visibility="visible" />
+
+        <!--<com.lianzai.reader.view.BarrageChatRoomView-->
+        <!--android:id="@+id/barrage_view"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_above="@+id/iv_chat_room_enter"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:gravity="bottom"-->
+        <!--android:visibility="gone"/>-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/iv_close_barrage"-->
+        <!--android:layout_width="20dp"-->
+        <!--android:layout_height="20dp"-->
+        <!--android:layout_above="@+id/barrage_view"-->
+        <!--android:layout_alignRight="@+id/barrage_view"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:alpha="0.2"-->
+        <!--android:src="@mipmap/icon_barrage_close"-->
+        <!--android:visibility="gone"-->
+        <!--/>-->
+        <!--弹幕相关-->
+
+
+        <!--加入书架按钮-->
+        <ImageView
+            android:id="@+id/iv_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/read_abl_top_menu"
+            android:layout_marginTop="32dp"
+            android:src="@mipmap/icon_read_follow"
+            android:visibility="visible" />
+
+        <!--回到书架按钮-->
+        <ImageView
+            android:id="@+id/iv_return_bookshelf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/read_abl_top_menu"
+            android:layout_marginTop="32dp"
+            android:src="@mipmap/return_to_bookshelf"
+            android:visibility="visible" />
+
+
+        <!--引导图-->
+        <ImageView
+            android:id="@+id/iv_guide_read"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/toast_bg"
+            android:scaleType="center"
+            android:src="@mipmap/guide_read_bg"
+            android:visibility="gone"
+            tools:visibility="gone" />
+
+    </RelativeLayout>
+
+
+    <!--侧滑栏-->
+    <LinearLayout
+        android:id="@+id/ll_category"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_book_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorf5f5f5"
+            android:paddingBottom="12dp"
+            android:paddingTop="24dp">
+
+            <com.lianzai.reader.view.SelectableRoundedImageView
+                android:id="@+id/iv_book_cover"
+                android:layout_width="75dp"
+                android:layout_height="100dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:scaleType="centerCrop"
+                app:sriv_left_bottom_corner_radius="4dp"
+                app:sriv_left_top_corner_radius="4dp"
+                app:sriv_right_bottom_corner_radius="4dp"
+                app:sriv_right_top_corner_radius="4dp" />
+
+            <TextView
+                android:id="@+id/tv_book_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_toLeftOf="@+id/iv_book_cover"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/color_black_ff333333"
+                android:textSize="@dimen/text_size_16" />
+
+            <TextView
+                android:id="@+id/tv_book_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv_book_title"
+                android:layout_below="@id/tv_book_title"
+                android:layout_marginTop="12dp"
+                android:layout_toLeftOf="@id/iv_book_cover"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/five_text_color"
+                android:textSize="@dimen/text_size_12" />
+
+            <ImageView
+                android:id="@+id/tv_enter_circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_book_cover"
+                android:layout_alignLeft="@id/tv_book_title"
+                android:src="@mipmap/icon_enter_circle" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_book_total_chapter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:textColor="@color/color_black_ff999999"
+                android:textSize="@dimen/normal_text_size" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/iv_sort_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:src="@mipmap/icon_category_desc" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_category_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FFF5F5F5" />
+
+        <ListView
+            android:id="@+id/read_iv_category"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@null"
+            android:scrollbars="none" />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_book_cache"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:elevation="10dp"
+            android:translationZ="8dp">
+
+            <TextView
+                android:id="@+id/tv_book_cache_status"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@mipmap/icon_book_cached"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="缓存"
+                android:textColor="@color/v2_blue_color"
+                android:textSize="@dimen/text_size_15" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+    <!--侧滑栏-->
+
+</android.support.v4.widget.DrawerLayout>

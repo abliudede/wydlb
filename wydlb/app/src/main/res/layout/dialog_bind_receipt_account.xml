@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:minWidth="290dp"
+
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/white_corner_card"
+    android:gravity="center"
+
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edit_bg"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/normal_text_size"
+        android:text="绑定提现账号"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <EditText android:id="@+id/ed_real_name"
+        android:hint="真实姓名"
+        android:textSize="@dimen/normal_text_size"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:maxLength="20"
+        android:background="@drawable/edit_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <EditText android:id="@+id/ed_pay_password"
+        android:textSize="@dimen/normal_text_size"
+        android:paddingLeft="10dp"
+        android:inputType="textPassword"
+        android:layout_marginTop="10dp"
+        android:hint="支付密码"
+        android:background="@drawable/edit_bg"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+
+    <TextView
+        android:text="1. 请填写收款微信所认证的真实姓名。\n2. 若填写姓名不相符，可能会造成收款失败。"
+        android:textSize="10sp"
+        android:lineSpacingExtra="1.5dp"
+        android:lineSpacingMultiplier="1.2"
+        android:padding="10dp"
+        android:background="@drawable/bottom_line_bg"
+        android:alpha="0.5"
+        android:textColor="@color/v2_blue_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/cancel_btn"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/normal_text_size" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/line_bg" />
+
+        <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="立即绑定"
+            android:clickable="true"
+            android:textColor="@color/v2_blue_color"
+            android:textSize="@dimen/normal_text_size" />
+    </LinearLayout>
+</LinearLayout>

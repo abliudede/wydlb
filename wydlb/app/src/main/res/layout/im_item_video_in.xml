@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ImParentStyle">
+
+    <TextView
+         android:visibility="visible"
+        android:id="@+id/im_tv_timeline"
+        style="@style/ImTimelineStyle" />
+
+
+    <com.lianzai.reader.view.SelectableRoundedImageView
+        android:id="@+id/im_iv_logo"
+        style="@style/ImCircleLogoStyle"
+        android:layout_below="@+id/im_tv_timeline"
+
+        />
+    <TextView android:id="@+id/im_tv_nickname"
+        android:layout_toRightOf="@+id/im_iv_logo"
+        android:layout_alignTop="@+id/im_iv_logo"
+        android:text="@string/chat_room_empty_name"
+        style="@style/ImNickNameStyle" />
+    
+    <com.lianzai.reader.view.SelectableRoundedImageView
+        android:layout_alignLeft="@+id/im_tv_nickname"
+        android:layout_below="@+id/im_tv_nickname"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/im_picture_loading_in_background"
+        android:id="@+id/im_iv_picture"
+        style="@style/ImInPictureStyle" />
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_margin="30dp"
+        android:layout_gravity="center"
+        android:background="@drawable/white_corner_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical">
+        <TextView
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="left|center"
+            android:text="@string/can_not_open_chat_room_title"
+            android:textColor="@color/color_black_333333"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <TextView android:id="@+id/tv_description"
+            android:textSize="@dimen/text_size_13"
+            android:layout_marginTop="20dp"
+            android:gravity="left|center"
+            android:layout_margin="15dp"
+            style="@style/TextPaddingStyle"
+            android:text="@string/can_not_open_chat_room_description"
+            android:textColor="@color/color_black_333333"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView android:id="@+id/tv_know_it"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:text="@string/know_it"
+            android:layout_width="match_parent"
+            android:background="@drawable/left_right_bottom_bg_corner"
+            android:gravity="center"
+            android:layout_height="45dp" />
+    </LinearLayout>
+</FrameLayout>

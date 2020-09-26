@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bg_click"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    >
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        />
+    <com.lianzai.reader.view.SelectableRoundedImageView
+        android:id="@+id/iv_annual"
+        android:layout_width="291dp"
+        android:layout_height="370dp"
+        app:sriv_right_top_corner_radius="5dp"
+        app:sriv_left_top_corner_radius="5dp"
+        app:sriv_left_bottom_corner_radius="5dp"
+        app:sriv_right_bottom_corner_radius="5dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/annual_bg"
+        />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/annual_close"
+        android:scaleType="centerInside"
+        android:padding="30dp"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        />
+
+
+</LinearLayout>

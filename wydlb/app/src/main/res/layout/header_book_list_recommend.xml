@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tit_tv"
+        android:text="@string/recommend_book_list_title"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:paddingLeft="16dp"
+        android:textSize="@dimen/text_size_18"
+        android:textColor="@color/color_black_333333"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_more_book_grid"
+        android:textColor="@color/color_black_ff999999"
+        android:textSize="@dimen/text_size_13"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="26.5dp"
+        android:layout_alignParentRight="true"
+        android:text="查看更多 >"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="26.5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_below="@+id/tv_more_book_grid"
+        android:id="@+id/rv_grid_recommend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"/>
+
+</RelativeLayout>

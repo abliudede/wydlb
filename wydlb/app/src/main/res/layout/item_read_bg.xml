@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/read_bg_view"
+	android:padding="2dp"
+	android:layout_marginRight="10dp"
+	android:orientation="vertical"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content">
+
+	<com.lianzai.reader.view.SelectableRoundedImageView
+		app:sriv_left_top_corner_radius="2dp"
+		app:sriv_right_top_corner_radius="2dp"
+		app:sriv_left_bottom_corner_radius="2dp"
+		app:sriv_right_bottom_corner_radius="2dp"
+		android:id="@+id/read_bg_button"
+		android:scaleType="centerCrop"
+		android:layout_width="@dimen/nb.read_setting.btn_width"
+		android:layout_height="@dimen/nb.read_setting.btn_height"
+		/>
+
+</FrameLayout>

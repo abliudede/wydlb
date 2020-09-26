@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@color/white">
+
+
+        <ImageView
+            android:id="@+id/top_color"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:src="@mipmap/top_color"
+            android:scaleType="centerCrop"/>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="58dp">
+
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top_color"
+                android:layout_marginLeft="16dp"
+                android:textStyle="bold"
+                android:text="发现"
+                android:textColor="@color/color_black_333333"
+                android:textSize="@dimen/text_size_26" />
+
+            <RelativeLayout
+                android:id="@+id/rl_lucky_box"
+                android:layout_width="match_parent"
+                android:layout_height="91dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@mipmap/bg_lucky">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="幸运宝箱"
+                    android:textColor="@color/white_text_color"
+                    android:textSize="@dimen/text_size_18"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="14dp"
+                    android:textStyle="bold"
+                    />
+
+                <ViewFlipper
+                    android:id="@+id/vf_notice_scroll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/title"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="16dp"
+                    />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_bounty_hunter"
+                android:layout_width="match_parent"
+                android:layout_height="91dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@mipmap/bg_hunter">
+
+                <TextView
+                    android:id="@+id/tv_hunter_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="赏金猎人"
+                    android:textColor="@color/white_text_color"
+                    android:textSize="@dimen/text_size_18"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="14dp"
+                    android:textStyle="bold"
+                    />
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_reward"
+                android:layout_width="match_parent"
+                android:layout_height="91dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@mipmap/bg_reward">
+
+                <TextView
+                    android:id="@+id/tv_reward_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="一键赏"
+                    android:textColor="@color/white_text_color"
+                    android:textSize="@dimen/text_size_18"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="14dp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_reward_title"
+                    android:text="快速打赏优秀作者"
+                    android:textColor="@color/white_text_color"
+                    android:textSize="@dimen/text_size_12"
+                    android:alpha="0.8"
+                    android:drawableRight="@mipmap/icon_arrow_right"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

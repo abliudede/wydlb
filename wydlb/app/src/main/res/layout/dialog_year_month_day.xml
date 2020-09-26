@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_text_color"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:alpha="0.6"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/cancel_btn"
+            android:textColor="@color/black_text_color"
+            android:textSize="@dimen/normal_text_size" />
+
+        <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+
+            android:alpha="0.6"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/confirm_btn"
+            android:textColor="@color/black_text_color"
+            android:textSize="@dimen/normal_text_size" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.1dp"
+        android:alpha="0.6"
+        android:background="@color/line_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:gravity="center">
+
+        <com.lianzai.reader.view.dialog.dialogWheel.WheelView
+            android:id="@+id/wheelView_year"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <com.lianzai.reader.view.dialog.dialogWheel.WheelView
+            android:id="@+id/wheelView_month"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <com.lianzai.reader.view.dialog.dialogWheel.WheelView
+            android:id="@+id/wheelView_day"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gray_corner_bg_f5f5f5"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="16dp"
+   >
+
+    <com.lianzai.reader.view.CircleImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="14dp"
+        android:src="@mipmap/default_fangxing_logo"
+        app:border_color="@color/white"
+        app:border_width="0dp" />
+
+    
+
+    <TextView
+        android:id="@+id/tv_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/text_size_16"
+        android:maxLines="1"
+        android:maxWidth="160dp"
+        android:ellipsize="end"
+        android:layout_alignTop="@id/iv_logo"
+        android:layout_toRightOf="@id/iv_logo"
+        android:layout_marginLeft="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_nickname"
+        android:layout_alignBottom="@id/tv_nickname"
+        android:layout_toRightOf="@id/tv_nickname"
+        android:layout_marginLeft="4dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textColor="@color/five_text_color"
+        android:textSize="@dimen/text_size_13"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_alignBottom="@id/iv_logo"
+        android:layout_alignLeft="@id/tv_nickname"
+        />
+
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/light"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_below="@id/iv_logo"
+        android:layout_marginTop="14dp"
+        />
+
+
+
+        <LinearLayout
+            android:id="@+id/ly_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_below="@id/view_line"
+            android:layout_marginTop="9dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/five_text_color"
+                android:textSize="@dimen/text_size_15"
+                android:gravity="center"
+                android:text="圈子书籍阅读时长："
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/read_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/text_size_15"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_below="@+id/ly_1"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/five_text_color"
+                android:textSize="@dimen/text_size_15"
+                android:gravity="center"
+                android:text="圈子动态发表数："
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/post_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/text_size_15"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_below="@+id/ly_2"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/five_text_color"
+                android:textSize="@dimen/text_size_15"
+                android:gravity="center"
+                android:text="圈子评论、回复数："
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/comment_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/text_size_15"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+
+    <View
+        android:id="@+id/view_line2"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/light"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="9dp"
+        android:layout_below="@+id/ly_3"
+        />
+
+    <!--动态文本内容-->
+    <com.lianzai.reader.view.EllipsizeTextView
+        android:id="@+id/tv_dynamic_content_text"
+       android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textSize="@dimen/text_size_15"
+        android:textColor="@color/normal_text_color"
+        android:layout_below="@id/view_line2"
+        android:layout_marginTop="14dp"
+        android:lineSpacingExtra="1dp"
+        android:lineSpacingMultiplier="1.2"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:text="申请理由："
+        />
+
+        <LinearLayout
+            android:id="@+id/ly_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="7dp"
+            android:layout_below="@+id/tv_dynamic_content_text"
+            >
+            <TextView
+                android:id="@+id/sure_tv"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="10"
+                android:textColor="@color/white_text_color"
+                android:textSize="@dimen/text_size_15"
+                android:gravity="center"
+                android:background="@drawable/blue_corner_card_21dp"
+                android:text="通过申请"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/delete_tv"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="10"
+                android:textColor="@color/white_text_color"
+                android:textSize="@dimen/text_size_15"
+                android:gravity="center"
+                android:background="@drawable/red_corner_card_21dp"
+                android:text="拒绝"
+                />
+
+        </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/white_corner_card"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp">
+
+    <com.lianzai.reader.view.SelectableRoundedImageView
+        android:id="@+id/iv_book_cover"
+        android:layout_width="75dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginBottom="14dp"
+        app:sriv_left_bottom_corner_radius="5dp"
+        app:sriv_left_top_corner_radius="5dp"
+        app:sriv_right_bottom_corner_radius="5dp"
+        app:sriv_right_top_corner_radius="5dp" />
+
+    <TextView
+        android:id="@+id/tv_book_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_book_cover"
+        android:layout_toRightOf="@+id/iv_book_cover"
+        android:layout_marginLeft="12dp"
+        android:text="连载神器"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/text_size_18"
+        android:ellipsize="end"
+        android:maxLines="1"/>
+
+    <TextView
+        android:id="@+id/tv_book_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_book_name"
+        android:layout_below="@+id/tv_book_name"
+        android:layout_marginTop="4dp"
+        android:text="连载"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/text_size_13"
+        android:ellipsize="end"
+        android:maxLines="1"/>
+
+    <TextView
+        android:id="@+id/tv_book_last_chapter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_book_name"
+        android:layout_alignBottom="@+id/iv_book_cover"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="自动投票数"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/text_size_15" />
+
+    <TextView
+        android:id="@+id/tv_modify"
+        android:layout_width="58dp"
+        android:layout_height="26dp"
+        android:background="@drawable/blue_15dpconor_bg"
+        android:text="修改"
+        android:textColor="@color/white_text_color"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_14"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/iv_book_cover"
+        android:layout_marginRight="14dp"
+        />
+
+
+</RelativeLayout>

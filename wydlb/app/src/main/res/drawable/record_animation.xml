@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+   <item android:drawable="@drawable/record_audio1" android:maxLevel="0"></item>
+   <item android:drawable="@drawable/record_audio2" android:maxLevel="1"></item>
+   <item android:drawable="@drawable/record_audio3" android:maxLevel="2"></item>
+   <item android:drawable="@drawable/record_audio4" android:maxLevel="3"></item>
+   <item android:drawable="@drawable/record_audio5" android:maxLevel="4"></item>
+   <item android:drawable="@drawable/record_audio6" android:maxLevel="5"></item>
+</level-list>

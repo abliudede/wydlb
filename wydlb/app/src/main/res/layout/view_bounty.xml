@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/rl_yijianshang"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/yijianshang_icon"/>
+        <ImageView
+            android:id="@+id/rl_bounty_hunter"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/shangjinlieren_icon"/>
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/rl_yijianshang"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:background="@drawable/item_white_selector"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:clickable="true"-->
+            <!--android:padding="10dp">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/iv1"-->
+                <!--android:layout_marginRight="5dp"-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:src="@mipmap/icon_yijianshang" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv1"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_toRightOf="@+id/iv1"-->
+                <!--android:text="一键赏"-->
+                <!--android:textColor="#FF000000"-->
+                <!--android:textSize="@dimen/normal_text_size"-->
+                <!--android:textStyle="bold" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignLeft="@+id/tv1"-->
+                <!--android:layout_below="@+id/tv1"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:text="快速打赏优秀作者"-->
+                <!--android:textColor="@color/color_black_ff999999"-->
+                <!--android:textSize="@dimen/small_text_size"-->
+                <!--android:textStyle="bold" />-->
+
+        <!--</RelativeLayout>-->
+
+        <!--<View android:background="#FFF5F5F5"-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_gravity="center" />-->
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/rl_bounty_hunter"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:background="@drawable/item_white_selector"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:clickable="true"-->
+            <!--android:padding="10dp">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/iv2"-->
+                <!--android:layout_marginRight="5dp"-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:src="@mipmap/icon_bounty_hunter" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv2"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_toRightOf="@+id/iv2"-->
+                <!--android:text="赏金猎人"-->
+                <!--android:textColor="#FF000000"-->
+                <!--android:textSize="@dimen/normal_text_size"-->
+                <!--android:textStyle="bold" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignLeft="@+id/tv2"-->
+                <!--android:layout_below="@+id/tv2"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:text="共同打赏优质作品"-->
+                <!--android:textColor="@color/color_black_ff999999"-->
+                <!--android:textSize="@dimen/small_text_size"-->
+                <!--android:textStyle="bold" />-->
+
+        <!--</RelativeLayout>-->
+
+    </LinearLayout>
+
+</LinearLayout>

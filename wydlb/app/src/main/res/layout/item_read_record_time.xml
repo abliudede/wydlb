@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorf5f5f5"
+        />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/view_line"
+        android:text="今天"
+        android:paddingLeft="16dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/text_size_18" />
+
+    <TextView
+        android:id="@+id/tv_read_minute"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/view_line"
+        android:text="共 0 分钟"
+        android:paddingRight="16dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/normal_text_size"
+        />
+</RelativeLayout>

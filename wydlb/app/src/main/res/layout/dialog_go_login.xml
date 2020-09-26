@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    >
+
+    <LinearLayout
+        android:id="@+id/body_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:background="@drawable/white_corner_card"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/gologinbg"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="16dp"
+            android:gravity="center"
+            android:text="登录后就可以追喜爱的小说啦！"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/text_size_16"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="登录"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16"
+            android:background="@drawable/blue_corner_card"/>
+
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="注册"
+            android:textColor="@color/v2_blue_color"
+            android:textSize="@dimen/text_size_16"
+            android:background="@drawable/blue_solid_register_bg"/>
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/tv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/big_white_close"
+        android:layout_alignRight="@id/body_ly"
+       android:layout_alignTop="@id/body_ly"
+       android:padding="10dp"
+        />
+
+
+</RelativeLayout>

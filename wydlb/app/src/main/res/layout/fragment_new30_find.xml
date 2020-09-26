@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@color/white">
+
+
+        <ImageView
+            android:id="@+id/top_color"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:src="@mipmap/top_color"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="58dp"
+            android:paddingBottom="10dp"
+            >
+
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top_color"
+                android:layout_marginLeft="16dp"
+                android:textStyle="bold"
+                android:text="发现"
+                android:textColor="@color/color_black_333333"
+                android:textSize="@dimen/text_size_26" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_data"
+                android:layout_marginTop="16dp"
+                style="@style/ScrollBarVerticalStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+
+
+        </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/popup_anima"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/white_corner_card"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/v3_icon_report"
+            android:drawablePadding="20dp"
+            android:gravity="left|center"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:text="举报"
+            android:textColor="@color/v2_black_color" />
+
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/v3_icon_del_blue"
+            android:drawablePadding="20dp"
+            android:gravity="left|center"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:text="删除"
+            android:textColor="@color/v2_black_color"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_mute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/icon_mute_black"
+            android:drawablePadding="20dp"
+            android:gravity="left|center"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:text="禁言"
+            android:textColor="@color/v2_black_color"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</LinearLayout>

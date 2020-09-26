@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:background="@drawable/white_corner_card"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="23dp"
+            android:layout_below="@id/ly_ad"
+            android:gravity="center"
+            android:text= "恭喜您获得"
+            android:textColor="@color/color_black_333333"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/ly_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="19dp"
+            android:layout_marginRight="19dp"
+            >
+
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/tv_know_it"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/left_right_bottom_bg_corner_chengse"
+                android:gravity="center"
+                android:text="收入囊中"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15"
+                android:layout_marginTop="32dp"
+                />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_corner_card"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp">
+
+    <com.lianzai.reader.view.SelectableRoundedImageView
+        android:id="@+id/iv_book_cover"
+        android:layout_width="92dp"
+        android:layout_height="123dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="12dp"
+        app:sriv_left_bottom_corner_radius="4dp"
+        app:sriv_left_top_corner_radius="4dp"
+        app:sriv_right_bottom_corner_radius="4dp"
+        app:sriv_right_top_corner_radius="4dp" />
+
+    <TextView
+        android:id="@+id/tv_book_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_book_cover"
+        android:layout_toRightOf="@+id/iv_book_cover"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="12dp"
+        android:text="连载神器"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/text_size_15"
+        android:ellipsize="end"
+        android:maxLines="1"/>
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_book_author"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignLeft="@+id/tv_book_name"-->
+        <!--android:layout_below="@+id/tv_book_name"-->
+        <!--android:layout_marginTop="4dp"-->
+        <!--android:layout_marginRight="12dp"-->
+        <!--android:text="连载"-->
+        <!--android:textColor="@color/normal_text_color"-->
+        <!--android:textSize="@dimen/text_size_13"-->
+        <!--android:ellipsize="end"-->
+        <!--android:maxLines="1"/>-->
+
+    <LinearLayout
+        android:id="@+id/ly_read_coin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignLeft="@+id/tv_book_name"
+        android:layout_alignBottom="@+id/iv_book_cover"
+        android:layout_marginRight="12dp">
+
+
+        <TextView
+            android:id="@+id/tv_read_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/bluetext_color"
+            android:textSize="@dimen/text_size_13" />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/iv_exchange"
+            android:layout_width="61dp"
+            android:layout_height="27dp"
+            android:src="@mipmap/button_exchange" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_book_coin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignLeft="@+id/tv_book_name"
+        android:layout_above="@id/ly_read_coin"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="12dp">
+
+        <TextView
+            android:id="@+id/tv_book_coin_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="剑来点："
+            android:textColor="@color/five_text_color"
+            android:textSize="@dimen/text_size_12" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_book_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/five_text_color"
+            android:textSize="@dimen/text_size_12" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_book_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignLeft="@+id/tv_book_name"
+        android:layout_above="@+id/ly_book_coin"
+        android:layout_marginBottom="6dp"
+        android:layout_marginRight="12dp">
+
+        <TextView
+            android:id="@+id/tv_book_ticket_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="剑来券："
+            android:textColor="@color/five_text_color"
+            android:textSize="@dimen/text_size_12" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_book_ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/five_text_color"
+            android:textSize="@dimen/text_size_12" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_corwd_balance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignLeft="@+id/tv_book_name"
+        android:layout_above="@+id/ly_book_ticket"
+        android:layout_marginBottom="6dp"
+        android:layout_marginRight="12dp">
+
+        <TextView
+            android:id="@+id/tv_corwd_balance_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="已投资阅点："
+            android:textColor="@color/five_text_color"
+            android:textSize="@dimen/text_size_12" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_corwd_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/five_text_color"
+            android:textSize="@dimen/text_size_12" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

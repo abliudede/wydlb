@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/white_corner_card"
+        android:orientation="vertical"
+        >
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+          >
+
+            <TextView
+                android:id="@+id/tv_share_wx"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableTop="@mipmap/ftf_wx_icon"
+                android:gravity="center"
+                android:text="微信"
+                android:textColor="@color/third_text_color"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tv_share_qq"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableTop="@mipmap/ftf_qq_icon"
+                android:gravity="center"
+                android:text="QQ"
+                android:textColor="@color/third_text_color"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tv_share_timeline"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableTop="@mipmap/ftf_timeline_icon"
+                android:gravity="center"
+                android:text="朋友圈"
+                android:textColor="@color/third_text_color"
+                android:textSize="@dimen/small_text_size" />
+            <TextView
+                android:id="@+id/tv_share_weibo"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableTop="@mipmap/ftf_weibo_icon"
+                android:gravity="center"
+                android:text="微博"
+                android:textColor="@color/third_text_color"
+                android:textSize="@dimen/small_text_size" />
+        </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+         >
+            <TextView
+                android:id="@+id/tv_share_kouling"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableTop="@mipmap/icon_lianzaikouling"
+                android:gravity="center"
+                android:text="连载口令"
+                android:textColor="@color/third_text_color"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tv_share_jubao"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableTop="@mipmap/share_report"
+                android:gravity="center"
+                android:text="举报"
+                android:textColor="@color/third_text_color"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tv_share_heimingdan"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableTop="@mipmap/web_copyurl"
+                android:gravity="center"
+                android:text="加入黑名单"
+                android:textColor="@color/third_text_color"
+                android:textSize="@dimen/small_text_size" />
+
+        </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/text_size_16"
+            android:background="@drawable/f5f5f5_bottom_corner_card"/>
+
+    </LinearLayout>
+</RelativeLayout>

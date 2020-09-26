@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/parent_view"
+    android:layout_height="match_parent"
+    style="@style/StatusBarTintStyle"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+
+
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@mipmap/icon_back_black" />
+
+        <TextView
+            android:id="@+id/tv_close"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:padding="10dp"
+            android:layout_toRightOf="@+id/img_back"
+            android:text="返回"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/normal_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/tv_commom_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="75dp"
+            android:textColor="@color/color_black_333333"
+            android:textSize="@dimen/title_size"
+            android:textStyle="bold"
+            android:text="面对面邀请"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:id="@+id/share_rv"
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:background="@mipmap/ftf_top_bg"
+            >
+
+
+            <ImageView
+                android:id="@+id/bg_r_iv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ftf_bg_r"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerInside"
+                />
+
+            <ImageView
+                android:id="@+id/erweima_iv"
+                android:layout_width="155dp"
+                android:layout_height="155dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerInside"
+                android:layout_marginTop="105dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="0dp"
+                android:src="@mipmap/ftf_help"
+                android:layout_below="@id/bg_r_iv"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:background="@mipmap/ftf_bottom_bg">
+
+            <TextView
+                android:id="@+id/mid_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="将二维码分享到"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/white_text_color"
+                android:textSize="@dimen/text_size_14"
+                />
+
+            <View
+                android:layout_width="96dp"
+                android:layout_height="1dp"
+                android:background="@color/white50"
+                android:layout_alignBottom="@id/mid_tv"
+                android:layout_toLeftOf="@id/mid_tv"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="11dp"
+                />
+            <View
+                android:layout_width="96dp"
+                android:layout_height="1dp"
+                android:background="@color/white50"
+                android:layout_alignBottom="@id/mid_tv"
+                android:layout_toRightOf="@id/mid_tv"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="11dp"
+                />
+
+            <LinearLayout
+                android:id="@+id/bottom_view_tably"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mid_tv"
+                android:orientation="horizontal"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+
+                <LinearLayout
+                    android:id="@+id/bottom_view_tab1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ftf_wx_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="6dp"
+                        android:text="微信"
+                        android:textColor="@color/white_text_color"
+                        android:textSize="@dimen/text_size_12" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bottom_view_tab2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ftf_qq_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="6dp"
+                        android:text="QQ"
+                        android:textColor="@color/white_text_color"
+                        android:textSize="@dimen/text_size_12" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bottom_view_tab4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ftf_timeline_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="6dp"
+                        android:text="朋友圈"
+                        android:textColor="@color/white_text_color"
+                        android:textSize="@dimen/text_size_12" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/bottom_view_tab5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ftf_weibo_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="6dp"
+                        android:text="微博"
+                        android:textColor="@color/white_text_color"
+                        android:textSize="@dimen/text_size_12" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

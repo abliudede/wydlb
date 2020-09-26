@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ImParentStyle">
+
+    <TextView
+        android:visibility="visible"
+        android:id="@+id/im_tv_timeline"
+        style="@style/ImTimelineStyle" />
+
+
+    <com.lianzai.reader.view.SelectableRoundedImageView
+        android:id="@+id/im_iv_logo"
+        style="@style/ImCircleLogoStyle"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/im_tv_timeline"
+
+        />
+
+    <com.lianzai.reader.view.SelectableRoundedImageView
+        android:layout_alignTop="@+id/im_iv_logo"
+        android:layout_toLeftOf="@+id/im_iv_logo"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/im_picture_loading_out_background"
+        android:id="@+id/im_iv_picture"
+        style="@style/ImInPictureStyle" />
+</RelativeLayout>

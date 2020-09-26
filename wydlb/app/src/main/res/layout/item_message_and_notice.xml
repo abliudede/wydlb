@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/item_white_selector" android:clickable="true"
+    android:padding="20dp"
+    android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/rl_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="34dp" android:id="@+id/img_type"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:layout_height="34dp" />
+        <ImageView  android:id="@+id/iv_red_dot" android:layout_toRightOf="@+id/img_type"
+            android:layout_alignTop="@+id/img_type"
+            android:src="@mipmap/icon_red_dot"
+            android:layout_width="8dp"
+            android:layout_height="8dp" />
+    </RelativeLayout>
+    <TextView android:layout_toRightOf="@+id/rl_type" android:id="@+id/message_title" android:layout_toLeftOf="@+id/message_date"
+        android:text="您有一笔新的收款" android:textColor="@color/normal_text_color" android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content" android:textSize="@dimen/big_text_size" android:maxLines="1" android:ellipsize="end"
+        android:layout_height="wrap_content" />
+    <TextView android:layout_toRightOf="@+id/rl_type" android:id="@+id/message_tip" android:layout_below="@+id/message_title"
+        android:layout_alignLeft="@+id/message_title" android:layout_marginTop="5dp"
+        android:text="请点击消息查询" android:textColor="@color/darker_gray"
+        android:layout_width="wrap_content" android:textSize="@dimen/sp_14"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_height="wrap_content" />
+
+    <TextView android:id="@+id/message_date"
+        android:layout_alignParentRight="true"
+         android:textColor="@color/darker_gray"
+        android:layout_width="wrap_content" android:textSize="@dimen/small_text_size"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

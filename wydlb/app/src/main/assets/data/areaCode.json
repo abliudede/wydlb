@@ -1,0 +1,1672 @@
+[
+	{
+		"ISNI": "Afghanistan",
+		"ChinaName": "阿富汗",
+		"QTQ": "AF",
+		"InternaCode": "93",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Albania",
+		"ChinaName": "阿尔巴尼亚",
+		"QTQ": "AL",
+		"InternaCode": "355",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Algeria",
+		"ChinaName": "阿尔及利亚",
+		"QTQ": "DZ",
+		"InternaCode": "213",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "American Samoa",
+		"ChinaName": "萨摩亚",
+		"QTQ": "AS",
+		"InternaCode": "684",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "Andorra",
+		"ChinaName": "安道尔共和国",
+		"QTQ": "AD",
+		"InternaCode": "376",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Angola",
+		"ChinaName": "安哥拉",
+		"QTQ": "AO",
+		"InternaCode": "244",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Anguilla",
+		"ChinaName": "安圭拉岛",
+		"QTQ": "AI",
+		"InternaCode": "1264",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Antarctica",
+		"ChinaName": "南极洲",
+		"QTQ": "AQ",
+		"InternaCode": "672",
+		"REGENT": "南极洲"
+	},
+	{
+		"ISNI": "Antigua and Barbuda",
+		"ChinaName": "安提瓜和巴布达",
+		"QTQ": "AG",
+		"InternaCode": "1268",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Argentina",
+		"ChinaName": "阿根廷",
+		"QTQ": "AR",
+		"InternaCode": "54",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Armenia",
+		"ChinaName": "亚美尼亚",
+		"QTQ": "AM",
+		"InternaCode": "374",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Aruba",
+		"ChinaName": "阿鲁巴",
+		"QTQ": "AW",
+		"InternaCode": "297",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Australia",
+		"ChinaName": "澳大利亚",
+		"QTQ": "AU",
+		"InternaCode": "61",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "Austria",
+		"ChinaName": "奥地利",
+		"QTQ": "AT",
+		"InternaCode": "43",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Azerbaijan",
+		"ChinaName": "阿塞拜疆",
+		"QTQ": "AZ",
+		"InternaCode": "994",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Bahamas",
+		"ChinaName": "巴哈马",
+		"QTQ": "BS",
+		"InternaCode": "1242",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Bahrain",
+		"ChinaName": "巴林",
+		"QTQ": "BH",
+		"InternaCode": "973",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Bangladesh",
+		"ChinaName": "孟加拉国",
+		"QTQ": "BD",
+		"InternaCode": "880",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Barbados",
+		"ChinaName": "巴巴多斯",
+		"QTQ": "BB",
+		"InternaCode": "1246",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Belarus",
+		"ChinaName": "白俄罗斯",
+		"QTQ": "BY",
+		"InternaCode": "375",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Belgium",
+		"ChinaName": "比利时",
+		"QTQ": "BE",
+		"InternaCode": "32",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Belize",
+		"ChinaName": "伯利兹城",
+		"QTQ": "BZ",
+		"InternaCode": "501",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Benin",
+		"ChinaName": "贝宁",
+		"QTQ": "BJ",
+		"InternaCode": "229",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Bermuda",
+		"ChinaName": "百慕大",
+		"QTQ": "BM",
+		"InternaCode": "1441",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Bhutan",
+		"ChinaName": "不丹",
+		"QTQ": "BT",
+		"InternaCode": "975",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Bolivia",
+		"ChinaName": "玻利维亚",
+		"QTQ": "BO",
+		"InternaCode": "591",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Bosnia and Herzegovina",
+		"ChinaName": "波斯尼亚和黑塞哥维那",
+		"QTQ": "BA",
+		"InternaCode": "387",
+		"REGENT": "欧洲",
+		"field6": "Босна и Херцеговина"
+	},
+	{
+		"ISNI": "Botswana",
+		"ChinaName": "博茨瓦纳",
+		"QTQ": "BW",
+		"InternaCode": "267",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Brazil",
+		"ChinaName": "巴西",
+		"QTQ": "BR",
+		"InternaCode": "55",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "British Indian Ocean Territory",
+		"ChinaName": "英属印度洋领地",
+		"QTQ": "IO",
+		"InternaCode": "246",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Brunei Darussalam",
+		"ChinaName": "文莱达鲁萨兰国",
+		"QTQ": "BN",
+		"InternaCode": "673",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Bulgaria",
+		"ChinaName": "保加利亚",
+		"QTQ": "BG",
+		"InternaCode": "359",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Burkina Faso",
+		"ChinaName": "布基纳法索",
+		"QTQ": "BF",
+		"InternaCode": "226",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Burundi",
+		"ChinaName": "布隆迪",
+		"QTQ": "BI",
+		"InternaCode": "257",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Cambodia",
+		"ChinaName": "柬埔寨",
+		"QTQ": "KH",
+		"InternaCode": "855",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Cameroon",
+		"ChinaName": "喀麦隆",
+		"QTQ": "CM",
+		"InternaCode": "237",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Canada",
+		"ChinaName": "加拿大",
+		"QTQ": "CA",
+		"InternaCode": "1",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Cape Verde",
+		"ChinaName": "佛得角",
+		"QTQ": "CV",
+		"InternaCode": "238",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Cayman Islands",
+		"ChinaName": "开曼群岛",
+		"QTQ": "KY",
+		"InternaCode": "1345",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Central African Republic",
+		"ChinaName": "中非共和国",
+		"QTQ": "CF",
+		"InternaCode": "236",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Chad",
+		"ChinaName": "乍得",
+		"QTQ": "TD",
+		"InternaCode": "235",
+		"REGENT": "非洲",
+		"field6": "تشاد‎"
+	},
+	{
+		"ISNI": "Chile",
+		"ChinaName": "智利",
+		"QTQ": "CL",
+		"InternaCode": "56",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "China",
+		"ChinaName": "中国",
+		"QTQ": "CN",
+		"InternaCode": "86",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Christmas Island",
+		"ChinaName": "圣延岛",
+		"QTQ": "CX",
+		"InternaCode": "61",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Cocos (Keeling) Islands",
+		"ChinaName": "科科斯群岛",
+		"QTQ": "CC",
+		"InternaCode": "61",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "Colombia",
+		"ChinaName": "哥伦比亚",
+		"QTQ": "CO",
+		"InternaCode": "57",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Comoros",
+		"ChinaName": "科摩罗",
+		"QTQ": "KM",
+		"InternaCode": "269",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Congo",
+		"ChinaName": "刚果",
+		"QTQ": "CG",
+		"InternaCode": "242",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Congo The Democratic Republic Of The",
+		"ChinaName": "刚果民主共和国",
+		"QTQ": "ZR",
+		"InternaCode": "243",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Cook Islands",
+		"ChinaName": "库克群岛",
+		"QTQ": "CK",
+		"InternaCode": "682",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "Costa Rica",
+		"ChinaName": "哥斯达黎加",
+		"QTQ": "CR",
+		"InternaCode": "506",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Cote D'Ivoire",
+		"ChinaName": "Cote D'Ivoire",
+		"QTQ": "CI",
+		"InternaCode": "225",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Croatia (local name: Hrvatska)",
+		"ChinaName": "克罗地亚",
+		"QTQ": "HR",
+		"InternaCode": "385",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Cuba",
+		"ChinaName": "古巴",
+		"QTQ": "CU",
+		"InternaCode": "53",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Cyprus",
+		"ChinaName": "塞浦路斯",
+		"QTQ": "CY",
+		"InternaCode": "357",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Czech Republic",
+		"ChinaName": "捷克",
+		"QTQ": "CZ",
+		"InternaCode": "420",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Denmark",
+		"ChinaName": "丹麦",
+		"QTQ": "DK",
+		"InternaCode": "45",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Djibouti",
+		"ChinaName": "吉布提",
+		"QTQ": "DJ",
+		"InternaCode": "253",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Dominica",
+		"ChinaName": "多米尼克国",
+		"QTQ": "DM",
+		"InternaCode": "1767",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Dominican Republic",
+		"ChinaName": "多米尼加共和国",
+		"QTQ": "DO",
+		"InternaCode": "1849",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "East Timor",
+		"ChinaName": "东帝汶",
+		"QTQ": "TP",
+		"InternaCode": "670",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Ecuador",
+		"ChinaName": "厄瓜多尔",
+		"QTQ": "EC",
+		"InternaCode": "593",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Egypt",
+		"ChinaName": "埃及",
+		"QTQ": "EG",
+		"InternaCode": "20",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "El Salvador",
+		"ChinaName": "萨尔瓦多",
+		"QTQ": "SV",
+		"InternaCode": "503",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Equatorial Guinea",
+		"ChinaName": "赤道几内亚",
+		"QTQ": "GQ",
+		"InternaCode": "240",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Eritrea",
+		"ChinaName": "厄立特里亚国",
+		"QTQ": "ER",
+		"InternaCode": "291",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Estonia",
+		"ChinaName": "爱沙尼亚",
+		"QTQ": "EE",
+		"InternaCode": "372",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Ethiopia",
+		"ChinaName": "埃塞俄比亚",
+		"QTQ": "ET",
+		"InternaCode": "251",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Falkland Islands (Malvinas)",
+		"ChinaName": "福克兰群岛",
+		"QTQ": "FK",
+		"InternaCode": "5",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Faroe Islands",
+		"ChinaName": "法罗群岛",
+		"QTQ": "FO",
+		"InternaCode": "298",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Fiji",
+		"ChinaName": "斐济",
+		"QTQ": "FJ",
+		"InternaCode": "679",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "Finland",
+		"ChinaName": "芬兰",
+		"QTQ": "FI",
+		"InternaCode": "358",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "France",
+		"ChinaName": "法国",
+		"QTQ": "FR",
+		"InternaCode": "33",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "France Metropolitan",
+		"ChinaName": "法国大都会",
+		"QTQ": "FX",
+		"InternaCode": "33",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "French Guiana",
+		"ChinaName": "法属圭亚那",
+		"QTQ": "GF",
+		"InternaCode": "594",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "French Polynesia",
+		"ChinaName": "法属玻里尼西亚",
+		"QTQ": "PF",
+		"InternaCode": "689",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "Gabon",
+		"ChinaName": "加蓬",
+		"QTQ": "GA",
+		"InternaCode": "241",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Gambia",
+		"ChinaName": "冈比亚",
+		"QTQ": "GM",
+		"InternaCode": "220",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Georgia",
+		"ChinaName": "格鲁吉亚",
+		"QTQ": "GE",
+		"InternaCode": "995",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Germany",
+		"ChinaName": "德国",
+		"QTQ": "DE",
+		"InternaCode": "49",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Ghana",
+		"ChinaName": "加纳",
+		"QTQ": "GH",
+		"InternaCode": "233",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Gibraltar",
+		"ChinaName": "直布罗陀",
+		"QTQ": "GI",
+		"InternaCode": "350",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Greece",
+		"ChinaName": "希腊",
+		"QTQ": "GR",
+		"InternaCode": "30",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Greenland",
+		"ChinaName": "格陵兰",
+		"QTQ": "GL",
+		"InternaCode": "45",
+		"REGENT": "美洲",
+		"field6": "Grønland"
+	},
+	{
+		"ISNI": "Grenada",
+		"ChinaName": "格林纳达",
+		"QTQ": "GD",
+		"InternaCode": "1473",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Guadeloupe",
+		"ChinaName": "瓜德罗普岛",
+		"QTQ": "GP",
+		"InternaCode": "590",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Guam",
+		"ChinaName": "关岛",
+		"QTQ": "GU",
+		"InternaCode": "1671",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "Guatemala",
+		"ChinaName": "危地马拉",
+		"QTQ": "GT",
+		"InternaCode": "502",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Guinea",
+		"ChinaName": "几内亚",
+		"QTQ": "GN",
+		"InternaCode": "224",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "Guinea-Bissau",
+		"ChinaName": "几内亚比绍",
+		"QTQ": "GW",
+		"InternaCode": "245",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Guyana",
+		"ChinaName": "圭亚那",
+		"QTQ": "GY",
+		"InternaCode": "592",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Haiti",
+		"ChinaName": "海地",
+		"QTQ": "HT",
+		"InternaCode": "509",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Honduras",
+		"ChinaName": "洪都拉斯",
+		"QTQ": "HN",
+		"InternaCode": "504",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Hong Kong,China",
+		"ChinaName": "中国-香港",
+		"QTQ": "HK",
+		"InternaCode": "852",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Hungary",
+		"ChinaName": "匈牙利",
+		"QTQ": "HU",
+		"InternaCode": "36",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Iceland",
+		"ChinaName": "冰岛",
+		"QTQ": "IS",
+		"InternaCode": "354",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "India",
+		"ChinaName": "印度",
+		"QTQ": "IN",
+		"InternaCode": "91",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Indonesia",
+		"ChinaName": "印度尼西亚",
+		"QTQ": "ID",
+		"InternaCode": "62",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Iran (Islamic Republic of)",
+		"ChinaName": "伊朗（伊斯兰共和国）",
+		"QTQ": "IR",
+		"InternaCode": "98",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Iraq",
+		"ChinaName": "伊拉克",
+		"QTQ": "IQ",
+		"InternaCode": "964",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Ireland",
+		"ChinaName": "爱尔兰",
+		"QTQ": "IE",
+		"InternaCode": "353",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Israel",
+		"ChinaName": "以色列",
+		"QTQ": "IL",
+		"InternaCode": "972",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Italy",
+		"ChinaName": "意大利",
+		"QTQ": "IT",
+		"InternaCode": "39",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Jamaica",
+		"ChinaName": "牙买加",
+		"QTQ": "JM",
+		"InternaCode": "1876",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Japan",
+		"ChinaName": "日本",
+		"QTQ": "JP",
+		"InternaCode": "81",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Jordan",
+		"ChinaName": "约旦",
+		"QTQ": "JO",
+		"InternaCode": "962",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Kazakhstan",
+		"ChinaName": "哈萨克",
+		"QTQ": "KZ",
+		"InternaCode": "7",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Kenya",
+		"ChinaName": "肯尼亚",
+		"QTQ": "KE",
+		"InternaCode": "254",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Kuwait",
+		"ChinaName": "科威特",
+		"QTQ": "KW",
+		"InternaCode": "965",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Kyrgyzstan",
+		"ChinaName": "吉尔吉斯",
+		"QTQ": "KG",
+		"InternaCode": "996",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Latvia",
+		"ChinaName": "拉脱维亚",
+		"QTQ": "LV",
+		"InternaCode": "371",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Lebanon",
+		"ChinaName": "黎巴嫩",
+		"QTQ": "LB",
+		"InternaCode": "961",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Lesotho",
+		"ChinaName": "莱索托",
+		"QTQ": "LS",
+		"InternaCode": "266",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Liberia",
+		"ChinaName": "利比里亚",
+		"QTQ": "LR",
+		"InternaCode": "231",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Libyan Arab Jamahiriya",
+		"ChinaName": "利比亚",
+		"QTQ": "LY",
+		"InternaCode": "218",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Liechtenstein",
+		"ChinaName": "列支敦士登",
+		"QTQ": "LI",
+		"InternaCode": "423",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Lithuania",
+		"ChinaName": "立陶宛",
+		"QTQ": "LT",
+		"InternaCode": "370",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Luxembourg",
+		"ChinaName": "卢森堡",
+		"QTQ": "LU",
+		"InternaCode": "352",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Macau China",
+		"ChinaName": "中国-澳门",
+		"QTQ": "MO",
+		"InternaCode": "853",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Madagascar",
+		"ChinaName": "马达加斯加",
+		"QTQ": "MG",
+		"InternaCode": "261",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Malawi",
+		"ChinaName": "马拉维",
+		"QTQ": "MW",
+		"InternaCode": "265",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Malaysia",
+		"ChinaName": "马来西亚",
+		"QTQ": "MY",
+		"InternaCode": "60",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Maldives",
+		"ChinaName": "马尔代夫",
+		"QTQ": "MV",
+		"InternaCode": "960",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Mali",
+		"ChinaName": "马里",
+		"QTQ": "ML",
+		"InternaCode": "223",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Malta",
+		"ChinaName": "马尔他",
+		"QTQ": "MT",
+		"InternaCode": "356",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Marshall Islands",
+		"ChinaName": "马绍尔群岛",
+		"QTQ": "MH",
+		"InternaCode": "692",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "Martinique",
+		"ChinaName": "马提尼克岛",
+		"QTQ": "MQ",
+		"InternaCode": "596",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Mauritania",
+		"ChinaName": "毛里塔尼亚",
+		"QTQ": "MR",
+		"InternaCode": "222",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Mauritius",
+		"ChinaName": "毛里求斯",
+		"QTQ": "MU",
+		"InternaCode": "230",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Mayotte",
+		"ChinaName": "马约特",
+		"QTQ": "YT",
+		"InternaCode": "262",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Mexico",
+		"ChinaName": "墨西哥",
+		"QTQ": "MX",
+		"InternaCode": "52",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Micronesia",
+		"ChinaName": "密克罗尼西亚",
+		"QTQ": "FM",
+		"InternaCode": "691",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "Moldova",
+		"ChinaName": "摩尔多瓦",
+		"QTQ": "MD",
+		"InternaCode": "373",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Monaco",
+		"ChinaName": "摩纳哥",
+		"QTQ": "MC",
+		"InternaCode": "377",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Mongolia",
+		"ChinaName": "外蒙古",
+		"QTQ": "MN",
+		"InternaCode": "976",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Montenegro",
+		"ChinaName": "黑山共和国",
+		"QTQ": "MNE",
+		"InternaCode": "382",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Montserrat",
+		"ChinaName": "蒙特塞拉特",
+		"QTQ": "MS",
+		"InternaCode": "1664",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Morocco",
+		"ChinaName": "摩洛哥",
+		"QTQ": "MA",
+		"InternaCode": "212",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Mozambique",
+		"ChinaName": "莫桑比克",
+		"QTQ": "MZ",
+		"InternaCode": "258",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Myanmar",
+		"ChinaName": "缅甸",
+		"QTQ": "MM",
+		"InternaCode": "95",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Namibia",
+		"ChinaName": "那米比亚",
+		"QTQ": "NA",
+		"InternaCode": "264",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Nauru",
+		"ChinaName": "瑙鲁",
+		"QTQ": "NR",
+		"InternaCode": "674",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "Nepal",
+		"ChinaName": "尼泊尔",
+		"QTQ": "NP",
+		"InternaCode": "977",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Netherlands",
+		"ChinaName": "荷兰",
+		"QTQ": "NL",
+		"InternaCode": "31",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Netherlands Antilles",
+		"ChinaName": "荷兰安的列斯群岛",
+		"QTQ": "AN",
+		"InternaCode": "599",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "New Caledonia",
+		"ChinaName": "新喀里多尼亚",
+		"QTQ": "NC",
+		"InternaCode": "687",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "New Zealand",
+		"ChinaName": "新西兰",
+		"QTQ": "NZ",
+		"InternaCode": "64",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "Nicaragua",
+		"ChinaName": "尼加拉瓜",
+		"QTQ": "NI",
+		"InternaCode": "505",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Niger",
+		"ChinaName": "尼日尔",
+		"QTQ": "NE",
+		"InternaCode": "227",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Nigeria",
+		"ChinaName": "尼日利亚",
+		"QTQ": "NG",
+		"InternaCode": "234",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Norfolk Island",
+		"ChinaName": "诺福克岛",
+		"QTQ": "NF",
+		"InternaCode": "6723",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "North Korea",
+		"ChinaName": "朝鲜",
+		"QTQ": "KP",
+		"InternaCode": "850",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Northern Mariana Islands",
+		"ChinaName": "北马里亚纳群岛",
+		"QTQ": "MP",
+		"InternaCode": "1670",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "Norway",
+		"ChinaName": "挪威",
+		"QTQ": "NO",
+		"InternaCode": "47",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Oman",
+		"ChinaName": "阿曼",
+		"QTQ": "OM",
+		"InternaCode": "968",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Pakistan",
+		"ChinaName": "巴基斯坦",
+		"QTQ": "PK",
+		"InternaCode": "92",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Palau",
+		"ChinaName": "帛琉",
+		"QTQ": "PW",
+		"InternaCode": "680",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "Palestine",
+		"ChinaName": "巴勒斯坦",
+		"QTQ": "PS",
+		"InternaCode": "970",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Panama",
+		"ChinaName": "巴拿马",
+		"QTQ": "PA",
+		"InternaCode": "507",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Papua New Guinea",
+		"ChinaName": "巴布亚新几内亚",
+		"QTQ": "PG",
+		"InternaCode": "675",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "Paraguay",
+		"ChinaName": "巴拉圭",
+		"QTQ": "PY",
+		"InternaCode": "595",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Peru",
+		"ChinaName": "秘鲁",
+		"QTQ": "PE",
+		"InternaCode": "51",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Philippines",
+		"ChinaName": "菲律宾共和国",
+		"QTQ": "PH",
+		"InternaCode": "63",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Pitcairn",
+		"ChinaName": "皮特凯恩岛",
+		"QTQ": "PN",
+		"InternaCode": "64",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "Poland",
+		"ChinaName": "波兰",
+		"QTQ": "PL",
+		"InternaCode": "48",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Portugal",
+		"ChinaName": "葡萄牙",
+		"QTQ": "PT",
+		"InternaCode": "351",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Puerto Rico",
+		"ChinaName": "波多黎各",
+		"QTQ": "PR",
+		"InternaCode": "1787",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Qatar",
+		"ChinaName": "卡塔尔",
+		"QTQ": "QA",
+		"InternaCode": "974",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Reunion",
+		"ChinaName": "留尼汪岛",
+		"QTQ": "RE",
+		"InternaCode": "262",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Romania",
+		"ChinaName": "罗马尼亚",
+		"QTQ": "RO",
+		"InternaCode": "40",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Russian Federation",
+		"ChinaName": "俄罗斯联邦",
+		"QTQ": "RU",
+		"InternaCode": "7",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Rwanda",
+		"ChinaName": "卢旺达",
+		"QTQ": "RW",
+		"InternaCode": "250",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Samoa",
+		"ChinaName": "美属萨摩亚",
+		"QTQ": "WS",
+		"InternaCode": "685",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "San Marino",
+		"ChinaName": "圣马力诺共和国",
+		"QTQ": "SM",
+		"InternaCode": "378",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Saudi Arabia",
+		"ChinaName": "沙特阿拉伯",
+		"QTQ": "SA",
+		"InternaCode": "966",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Senegal",
+		"ChinaName": "塞内加尔",
+		"QTQ": "SN",
+		"InternaCode": "221",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Serbia",
+		"ChinaName": "塞尔维亚共和国",
+		"QTQ": "SRB",
+		"InternaCode": "381",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Seychelles",
+		"ChinaName": "塞舌尔",
+		"QTQ": "SC",
+		"InternaCode": "248",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Sierra Leone",
+		"ChinaName": "塞拉利昂",
+		"QTQ": "SL",
+		"InternaCode": "232",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Singapore",
+		"ChinaName": "新加坡",
+		"QTQ": "SG",
+		"InternaCode": "65",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Slovakia (Slovak Republic)",
+		"ChinaName": "斯洛伐克（斯洛伐克人的共和国）",
+		"QTQ": "SK",
+		"InternaCode": "421",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Slovenia",
+		"ChinaName": "斯洛文尼亚",
+		"QTQ": "SI",
+		"InternaCode": "386",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Solomon Islands",
+		"ChinaName": "索罗门群岛",
+		"QTQ": "SB",
+		"InternaCode": "677",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "Somalia",
+		"ChinaName": "索马里",
+		"QTQ": "SO",
+		"InternaCode": "252",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "South Africa",
+		"ChinaName": "南非",
+		"QTQ": "ZA",
+		"InternaCode": "27",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "South Korea",
+		"ChinaName": "韩国",
+		"QTQ": "KR",
+		"InternaCode": "82",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Spain",
+		"ChinaName": "西班牙",
+		"QTQ": "ES",
+		"InternaCode": "34",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Sri Lanka",
+		"ChinaName": "斯里兰卡",
+		"QTQ": "LK",
+		"InternaCode": "94",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Sudan",
+		"ChinaName": "苏丹",
+		"QTQ": "SD",
+		"InternaCode": "249",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Suriname",
+		"ChinaName": "苏里南",
+		"QTQ": "SR",
+		"InternaCode": "597",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Swaziland",
+		"ChinaName": "斯威士兰",
+		"QTQ": "SZ",
+		"InternaCode": "268",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Sweden",
+		"ChinaName": "瑞典",
+		"QTQ": "SE",
+		"InternaCode": "46",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Switzerland",
+		"ChinaName": "瑞士",
+		"QTQ": "CH",
+		"InternaCode": "41",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Syrian Arab Republic",
+		"ChinaName": "叙利亚",
+		"QTQ": "SY",
+		"InternaCode": "963",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Taiwan Province",
+		"ChinaName": "中国-台湾省",
+		"QTQ": "TW",
+		"InternaCode": "886",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Tajikistan",
+		"ChinaName": "塔吉克",
+		"QTQ": "TJ",
+		"InternaCode": "992",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Tanzania",
+		"ChinaName": "坦桑尼亚",
+		"QTQ": "TZ",
+		"InternaCode": "255",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Thailand",
+		"ChinaName": "泰国",
+		"QTQ": "TH",
+		"InternaCode": "66",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Togo",
+		"ChinaName": "多哥",
+		"QTQ": "TG",
+		"InternaCode": "228",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Tokelau",
+		"ChinaName": "托克劳",
+		"QTQ": "TK",
+		"InternaCode": "690",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "Tonga",
+		"ChinaName": "汤加",
+		"QTQ": "TO",
+		"InternaCode": "676",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "Trinidad and Tobago",
+		"ChinaName": "特立尼达和多巴哥",
+		"QTQ": "TT",
+		"InternaCode": "1868",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Tunisia",
+		"ChinaName": "突尼斯",
+		"QTQ": "TN",
+		"InternaCode": "216",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Turkey",
+		"ChinaName": "土耳其",
+		"QTQ": "TR",
+		"InternaCode": "90",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Turkmenistan",
+		"ChinaName": "土库曼",
+		"QTQ": "TM",
+		"InternaCode": "993",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Turks and Caicos Islands",
+		"ChinaName": "土克斯及开科斯群岛",
+		"QTQ": "TC",
+		"InternaCode": "1809",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Tuvalu",
+		"ChinaName": "图瓦卢",
+		"QTQ": "TV",
+		"InternaCode": "688",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "Uganda",
+		"ChinaName": "乌干达",
+		"QTQ": "UG",
+		"InternaCode": "256",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Ukraine",
+		"ChinaName": "乌克兰",
+		"QTQ": "UA",
+		"InternaCode": "380",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "United Arab Emirates",
+		"ChinaName": "阿拉伯联合酋长国",
+		"QTQ": "AE",
+		"InternaCode": "971",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "United Kingdom",
+		"ChinaName": "英国",
+		"QTQ": "UK",
+		"InternaCode": "44",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "United States",
+		"ChinaName": "美国",
+		"QTQ": "US",
+		"InternaCode": "1",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Uruguay",
+		"ChinaName": "乌拉圭",
+		"QTQ": "UY",
+		"InternaCode": "598",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Uzbekistan",
+		"ChinaName": "乌兹别克斯坦",
+		"QTQ": "UZ",
+		"InternaCode": "998",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Vanuatu",
+		"ChinaName": "瓦努阿图",
+		"QTQ": "VU",
+		"InternaCode": "678",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "Vatican City State (Holy See)",
+		"ChinaName": "梵蒂冈(罗马教廷)",
+		"QTQ": "VA",
+		"InternaCode": "39",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Venezuela",
+		"ChinaName": "委内瑞拉",
+		"QTQ": "VE",
+		"InternaCode": "58",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Vietnam",
+		"ChinaName": "越南",
+		"QTQ": "VN",
+		"InternaCode": "84",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Virgin Islands (British)",
+		"ChinaName": "维尔京群岛(英国)",
+		"QTQ": "VG",
+		"InternaCode": "1284",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Virgin Islands (U.S.)",
+		"ChinaName": "维尔京群岛(美国)",
+		"QTQ": "VI",
+		"InternaCode": "1340",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Wallis And Futuna Islands",
+		"ChinaName": "沃利斯和富图纳群岛",
+		"QTQ": "WF",
+		"InternaCode": "681",
+		"REGENT": "大洋洲"
+	},
+	{
+		"ISNI": "Western Sahara",
+		"ChinaName": "西撒哈拉",
+		"QTQ": "EH",
+		"InternaCode": "685",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Yemen",
+		"ChinaName": "也门",
+		"QTQ": "YE",
+		"InternaCode": "967",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Yugoslavia",
+		"ChinaName": "南斯拉夫",
+		"QTQ": "YU",
+		"InternaCode": "381",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Zambia",
+		"ChinaName": "赞比亚",
+		"QTQ": "ZM",
+		"InternaCode": "260",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Zimbabwe",
+		"ChinaName": "津巴布韦",
+		"QTQ": "ZW",
+		"InternaCode": "263",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "the Republic of Abkhazia",
+		"ChinaName": "阿布哈兹",
+		"QTQ": "ABH",
+		"InternaCode": "7",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "the Republic of South Ossetia",
+		"ChinaName": "南奥赛梯",
+		"QTQ": "",
+		"InternaCode": "7",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Guernsey",
+		"ChinaName": "格恩西岛",
+		"QTQ": "",
+		"InternaCode": "441481",
+		"REGENT": "欧洲",
+		"field6": "Guernesey"
+	},
+	{
+		"ISNI": "Bailiwick of Jersey",
+		"ChinaName": "泽西岛",
+		"QTQ": "",
+		"InternaCode": "44",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "Lao People's Democratic Republic",
+		"ChinaName": "老挝",
+		"QTQ": "LAO",
+		"InternaCode": "856",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "The Republic of Macedonia",
+		"ChinaName": "马其顿",
+		"QTQ": "MKD",
+		"InternaCode": "389",
+		"REGENT": "欧洲"
+	},
+	{
+		"ISNI": "The Federation of Saint Kitts and Nevis",
+		"ChinaName": "圣基茨和尼维斯",
+		"QTQ": "KNA",
+		"InternaCode": "1869",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Santa Luzia Island",
+		"ChinaName": "圣卢西亚岛",
+		"QTQ": "",
+		"InternaCode": "1758",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "Saint Vincent and the Grenadines",
+		"ChinaName": "圣文森特和格林纳丁斯",
+		"QTQ": "VCT",
+		"InternaCode": "1784",
+		"REGENT": "美洲"
+	},
+	{
+		"ISNI": "Sao Tome and Principe",
+		"ChinaName": "圣多美和普林西比",
+		"QTQ": "STP",
+		"InternaCode": "239",
+		"REGENT": "非洲"
+	},
+	{
+		"ISNI": "Sao Tome and Principe",
+		"ChinaName": "圣多美和普林西比",
+		"QTQ": "",
+		"InternaCode": "590",
+		"REGENT": "亚洲"
+	},
+	{
+		"ISNI": "The Republic of South Sudan",
+		"ChinaName": "南苏丹共和国",
+		"QTQ": "SSD",
+		"InternaCode": "211",
+		"REGENT": "非洲"
+	}
+]

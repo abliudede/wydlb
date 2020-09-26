@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_manager"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        >
+        <TextView
+            android:id="@+id/tv_invite"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:paddingBottom="13dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="10dp"
+            android:paddingTop="13dp"
+            android:text="管理员名单"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/text_size_16" />
+
+
+        <ImageView
+            android:id="@+id/iv_arrow_right1"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/v2_icon_find_arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_person_count1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/third_text_color"
+            android:textSize="@dimen/text_size_14"
+            android:layout_toLeftOf="@+id/iv_arrow_right1"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_mute"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        >
+        <TextView
+            android:id="@+id/tv_mute"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:paddingBottom="13dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="10dp"
+            android:paddingTop="13dp"
+            android:text="被禁言名单"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/text_size_16" />
+
+
+        <ImageView
+            android:id="@+id/iv_arrow_right2"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/v2_icon_find_arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_person_count2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/third_text_color"
+            android:textSize="@dimen/text_size_14"
+            android:layout_toLeftOf="@+id/iv_arrow_right2"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/line_bg"/>
+
+
+    <TextView
+        android:id="@+id/tit_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:text="代圈主"
+        android:textColor="@color/color_black_333333"
+        android:textSize="@dimen/text_size_16"
+        />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_grid_recommend1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/gray_corner_bg_f5f5f5"
+         />
+
+    <TextView
+        android:id="@+id/tit_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:text="管理员"
+        android:textColor="@color/color_black_333333"
+        android:textSize="@dimen/text_size_16" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_grid_recommend2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/gray_corner_bg_f5f5f5"
+        />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/line_bg"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

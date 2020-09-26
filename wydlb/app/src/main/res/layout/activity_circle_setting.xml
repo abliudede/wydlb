@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:minHeight="160dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/top_corner_bg_white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="16dp">
+
+                <ImageView
+                    android:id="@+id/iv_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="12dp"
+                    android:src="@mipmap/mine_ad_close" />
+
+                <com.lianzai.reader.view.SelectableRoundedImageView
+                    android:id="@+id/iv_book_cover"
+                    android:layout_width="64dp"
+                    android:layout_height="85dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="37dp"
+                    android:scaleType="centerCrop"
+                    app:sriv_left_bottom_corner_radius="5dp"
+                    app:sriv_left_top_corner_radius="5dp"
+                    app:sriv_right_bottom_corner_radius="5dp"
+                    app:sriv_right_top_corner_radius="5dp" />
+
+                <TextView
+                    android:id="@+id/tv_book_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/iv_book_cover"
+                    android:layout_marginLeft="25dp"
+                    android:layout_toRightOf="@id/iv_book_cover"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/normal_text_color"
+                    android:textSize="@dimen/text_size_20" />
+
+                <ImageView
+                    android:id="@+id/iv_head_bg"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:layout_alignLeft="@id/iv_book_cover"
+                    android:layout_alignTop="@id/iv_book_cover"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="51dp"
+                    android:src="@mipmap/circle_gold"
+                    android:visibility="visible" />
+
+                <com.lianzai.reader.view.CircleImageView
+                    android:id="@+id/iv_user_logo"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_alignLeft="@id/iv_head_bg"
+                    android:layout_alignTop="@id/iv_head_bg"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/default_fangxing_logo"
+                    app:border_color="@color/colorf5f5f5"
+                    app:border_width="0dp" />
+
+
+                <TextView
+                    android:id="@+id/tv_book_read"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/iv_book_cover"
+                    android:layout_alignLeft="@id/tv_book_name"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/five_text_color"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/tv_book_days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/tv_book_read"
+                    android:layout_alignLeft="@id/tv_book_name"
+                    android:layout_marginBottom="6dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/five_text_color"
+                    android:textSize="@dimen/text_size_12" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="置顶"
+                    android:textColor="@color/normal_text_color"
+                    android:textSize="@dimen/text_size_16" />
+
+                <CheckBox
+                    android:id="@+id/sb_top_off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/switch_btn_drawable"
+                    android:button="@null" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="推送通知"
+                    android:textColor="@color/normal_text_color"
+                    android:textSize="@dimen/text_size_16" />
+
+                <CheckBox
+                    android:id="@+id/sb_msg_off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/switch_btn_drawable"
+                    android:button="@null" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_person"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <TextView
+                    android:id="@+id/tv_invite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="left|center"
+                    android:paddingBottom="13dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="13dp"
+                    android:text="圈子成员"
+                    android:textColor="@color/normal_text_color"
+                    android:textSize="@dimen/text_size_16" />
+
+
+                <ImageView
+                    android:id="@+id/iv_arrow_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/v2_icon_find_arrow_right" />
+
+                <TextView
+                    android:id="@+id/tv_person_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/iv_arrow_right"
+                    android:textColor="@color/third_text_color"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_copyright"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:clickable="true"
+                android:drawableRight="@mipmap/v2_icon_find_arrow_right"
+                android:gravity="left|center"
+                android:paddingLeft="16dp"
+                android:paddingRight="10dp"
+                android:text="版权认证"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/text_size_16"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/tv_shenhe_report"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:clickable="true"
+                android:drawableRight="@mipmap/v2_icon_find_arrow_right"
+                android:gravity="left|center"
+                android:paddingLeft="16dp"
+                android:paddingRight="10dp"
+                android:text="审核举报内容"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/text_size_16"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_report"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:clickable="true"
+                android:drawableRight="@mipmap/v2_icon_find_arrow_right"
+                android:gravity="left|center"
+                android:paddingLeft="16dp"
+                android:paddingRight="10dp"
+                android:text="举报"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/text_size_16" />
+
+
+            <TextView
+                android:id="@+id/tv_shenqing"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:clickable="true"
+                android:drawableRight="@mipmap/v2_icon_find_arrow_right"
+                android:gravity="left|center"
+                android:paddingLeft="16dp"
+                android:paddingRight="10dp"
+                android:text="申请管理员"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/text_size_16"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_whats_circle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:clickable="true"
+                android:drawableRight="@mipmap/v2_icon_find_arrow_right"
+                android:gravity="left|center"
+                android:paddingLeft="16dp"
+                android:paddingRight="10dp"
+                android:text="什么是圈子？"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/text_size_16" />
+
+            <TextView
+                android:id="@+id/tv_share"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:clickable="true"
+                android:drawableRight="@mipmap/v2_icon_find_arrow_right"
+                android:gravity="left|center"
+                android:paddingLeft="16dp"
+                android:paddingRight="10dp"
+                android:text="分享"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/text_size_16" />
+
+
+            <TextView
+                android:id="@+id/tv_exit_circle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/gray_corner_bg_f5f5f5_24dp"
+                android:gravity="center"
+                android:text="退出圈子"
+                android:textColor="@color/redFE3838"
+                android:textSize="@dimen/text_size_16" />
+
+
+        </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

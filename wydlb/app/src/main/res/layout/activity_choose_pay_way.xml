@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/StatusBarTintStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pay_background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/common_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/xuxian_storke_white_bg"
+           android:padding="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/text_size_18"
+                android:text="@string/orderinformation"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/third_text_color"
+                    android:textSize="@dimen/text_size_15"
+                    android:text="@string/amount"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/amount_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/normal_text_color"
+                    android:textSize="@dimen/text_size_15"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/third_text_color"
+                    android:textSize="@dimen/text_size_15"
+                    android:text="@string/type"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/type_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/normal_text_color"
+                    android:textSize="@dimen/text_size_15"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/third_text_color"
+                    android:textSize="@dimen/text_size_15"
+                    android:text="@string/object"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/object_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/normal_text_color"
+                    android:textSize="@dimen/text_size_15"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/text_size_18"
+            android:text="@string/choosepayway"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="21dp"/>
+
+
+        <LinearLayout
+            android:id="@+id/balance_ly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="18dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/text_size_15"
+                android:text="@string/balance"
+                android:drawableLeft="@mipmap/icon_balance_pay"
+                android:gravity="center_vertical"
+                android:drawablePadding="12dp"/>
+
+
+            <TextView
+                android:id="@+id/balance_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/text_size_15"
+                android:layout_marginLeft="8dp"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/balance_iv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/payicon_choose"
+              />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/wx_ly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="18dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="18dp"
+            android:layout_gravity="center_vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/text_size_15"
+                android:text="@string/wxpay"
+                android:drawableLeft="@mipmap/icon_wx_pay"
+                android:gravity="center_vertical"
+                android:drawablePadding="12dp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/wx_iv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/payicon_not_choose"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+
+
+        <TextView
+            android:id="@+id/save_btn"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_margin="30dp"
+            android:background="@drawable/sure_btn"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/surepay"
+            android:textColor="@color/white_text_color"
+            android:textSize="@dimen/text_size_15"
+            />
+
+    </LinearLayout>
+</LinearLayout>

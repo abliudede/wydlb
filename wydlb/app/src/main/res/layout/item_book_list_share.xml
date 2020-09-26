@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+   >
+
+
+        <com.lianzai.reader.view.SelectableRoundedImageView
+            android:id="@+id/iv_book_cover"
+            android:layout_width="52dp"
+            android:layout_height="69dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="19dp"
+            app:sriv_left_bottom_corner_radius="4dp"
+            app:sriv_left_top_corner_radius="4dp"
+            app:sriv_right_bottom_corner_radius="4dp"
+            app:sriv_right_top_corner_radius="4dp" />
+
+
+
+        <TextView
+            android:id="@+id/tv_book_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_book_cover"
+            android:layout_toRightOf="@+id/iv_book_cover"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="19dp"
+            android:layout_marginTop="-3dp"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/text_size_15"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tv_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_book_name"
+            android:layout_below="@id/tv_book_name"
+            android:maxLines="1"
+            android:textColor="@color/five_text_color"
+            android:textSize="@dimen/text_size_12" />
+
+    <!--<RatingBar-->
+        <!--android:id="@+id/rb_star"-->
+        <!--style="@style/RatingBar_CustomDrawable"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignLeft="@id/tv_book_name"-->
+        <!--android:layout_below="@id/tv_book_name"-->
+        <!--android:isIndicator="true"-->
+        <!--android:stepSize="0.5"-->
+        <!--android:layout_marginTop="2dp"-->
+        <!--/>-->
+
+    <TextView
+        android:id="@+id/tv_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_book_name"
+        android:layout_alignBottom="@id/iv_book_cover"
+        android:layout_marginRight="19dp"
+        android:layout_marginBottom="-2dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="@color/third_text_color"
+        android:textSize="@dimen/text_size_12" />
+
+
+</RelativeLayout>

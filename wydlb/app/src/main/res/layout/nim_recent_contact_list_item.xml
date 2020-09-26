@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_menu_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    app:ios="true"
+    app:leftSwipe="true"
+    app:swipeEnable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="5dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="70dip">
+
+            <FrameLayout
+                android:id="@+id/portrait_panel"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true">
+
+                <com.netease.nim.uikit.common.ui.imageview.HeadImageView
+                    android:id="@+id/img_head"
+                    android:layout_width="@dimen/avatar_size_default"
+                    android:layout_height="@dimen/avatar_size_default"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="12dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="7dp"
+                android:layout_toLeftOf="@+id/tv_date_time"
+                android:layout_toRightOf="@id/portrait_panel">
+
+                <TextView
+                    android:id="@+id/tv_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:gravity="left"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:textColor="@color/normal_text_color"
+                    android:textSize="16sp" />
+
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:id="@+id/content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/portrait_panel"
+                android:layout_alignLeft="@+id/fl_nickname"
+                android:layout_below="@id/fl_nickname"
+                android:layout_marginRight="50dip"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_online_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="6dp"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:textColor="@color/fourth_text_color"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/img_msg_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="6dp"
+                    android:contentDescription="@string/empty"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autoLink="none"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:scrollHorizontally="true"
+                    android:textColor="@color/color_black_ff666666"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/fl_nickname"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/color_black_ff999999"
+                android:textSize="@dimen/text_small_size_ten_sp" />
+
+
+            <TextView
+                android:id="@+id/unread_number_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                android:layout_alignBottom="@id/fl_nickname"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="27dp"
+                android:visibility="gone"
+                android:background="@drawable/dot_red_bg"/>
+
+            <ImageView
+                android:id="@+id/mute_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/tv_date_time"
+                android:layout_below="@id/tv_date_time"
+                android:layout_marginTop="9dp"
+                android:src="@mipmap/xiaoximiandarao"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_top"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorF58923"
+        android:gravity="center"
+        android:text="置顶"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tv_cancel_top"
+        android:layout_width="130dp"
+        android:layout_height="match_parent"
+        android:background="@color/color_split_line_cccccc"
+        android:gravity="center"
+        android:text="取消置顶"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_delete_recent"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:background="@color/redFE3838"
+        android:gravity="center"
+        android:text="删除"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16" />
+
+
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

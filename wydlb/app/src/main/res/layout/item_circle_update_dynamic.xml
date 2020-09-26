@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_chapter_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/gray_corner_bg_f5f5f5"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tv_circle_update_chapter"
+                style="@style/DynamicText_15_333333"
+                android:layout_width="match_parent"
+                android:layout_marginRight="16dp"
+                android:drawableLeft="@mipmap/icon_circle_chapter_update"
+                android:drawablePadding="5dp"
+                android:ellipsize="end"
+                android:gravity="left|center"
+                android:lines="1" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_circle_update_chapter"
+                android:layout_below="@+id/tv_circle_update_chapter"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_circle_chapter_date"
+                    style="@style/DynamicText_13_999999"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp" />
+
+                <!--<com.lianzai.reader.view.OverlapLogoView-->
+                <!--android:id="@+id/olv_users_logo"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--app:showText="true"-->
+                <!--app:txtColor="@color/color_black_ff999999" />-->
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_gray"
+            android:layout_width="match_parent"
+            android:layout_height="9dp"
+            android:layout_below="@id/rl_gray"
+            android:background="@drawable/gray_bg" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+
+</LinearLayout>

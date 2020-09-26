@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_blue_selector"
+    android:padding="10dp">
+
+    <com.lianzai.reader.view.CircleImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@mipmap/default_fangxing_logo"
+        android:scaleType="centerCrop"
+        app:border_color="@color/white"
+        app:border_width="1dp" />
+
+    <TextView
+        android:id="@+id/tv_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_logo"
+        android:layout_toLeftOf="@+id/praise_view"
+        android:layout_toRightOf="@+id/iv_logo"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/text_size_15"
+        android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/praise_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/tv_praise_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/shine_btn"
+                android:gravity="left|center"
+                android:textSize="@dimen/normal_text_size" />
+
+            <ImageView
+                android:id="@+id/shine_btn"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@mipmap/icon_dynamic_not_praise"
+                android:padding="5dp"
+                />
+        </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/tv_expandable_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_nickname"
+        android:layout_below="@+id/tv_nickname"
+        android:paddingRight="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="left"
+        android:lineSpacingMultiplier="1.2"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/text_size_16" />
+
+    <com.lianzai.reader.view.CommentListTextView
+        android:id="@+id/tv_comment_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_nickname"
+        android:layout_below="@+id/tv_expandable_text"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/v2_comment_5corner_bg"
+        android:lineSpacingExtra="2dp"
+        android:lineSpacingMultiplier="1.2"
+        android:padding="10dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_12"
+        android:textColor="@color/third_text_color"
+        android:layout_below="@id/tv_comment_list"
+        android:layout_alignLeft="@id/tv_nickname"
+        android:layout_marginTop="10dp"
+        />
+</RelativeLayout>

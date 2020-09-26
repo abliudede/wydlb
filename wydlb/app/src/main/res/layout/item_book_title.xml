@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingLeft="10dp" android:paddingRight="10dp"
+    android:layout_height="wrap_content">
+
+    <TextView android:id="@+id/tv_book_title"
+        android:textSize="@dimen/text_size_18"
+        android:textColor="@color/normal_text_color"
+        android:text="标题"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_book_description"
+        android:textSize="@dimen/small_text_size" android:layout_below="@+id/tv_book_title"
+        android:textColor="@color/second_text_color"
+        android:text="最新上架的书籍推荐" android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" android:id="@+id/iv_arrow_right"
+        android:layout_width="20dp" android:src="@mipmap/icon_arrow_right"
+        android:layout_height="20dp" />
+</RelativeLayout>

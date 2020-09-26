@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:background="@drawable/top_corner_bg_f5f5f5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TextView android:id="@+id/tv_des1"
+            android:layout_gravity="center"
+            android:text="淫秽色情"
+            android:padding="19dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:textSize="@dimen/text_size_15"
+            android:textColor="@color/color_black_ff333333"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView android:id="@+id/tv_des2"
+            android:layout_gravity="center"
+            android:text="垃圾广告"
+            android:padding="19dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:textSize="@dimen/text_size_15"
+            android:textColor="@color/color_black_ff333333"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView android:id="@+id/tv_des3"
+            android:layout_gravity="center"
+            android:text="人身攻击"
+            android:padding="19dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:textSize="@dimen/text_size_15"
+            android:textColor="@color/color_black_ff333333"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView android:id="@+id/tv_des4"
+            android:layout_gravity="center"
+            android:text="其他"
+            android:padding="19dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:textSize="@dimen/text_size_15"
+            android:textColor="@color/color_black_ff333333"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView android:id="@+id/tv_cancle"
+            android:layout_gravity="center"
+            android:text="取消"
+            android:padding="19dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:textSize="@dimen/text_size_15"
+            android:textColor="@color/color_black_ff333333"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"/>
+
+
+
+    </LinearLayout>
+</RelativeLayout>

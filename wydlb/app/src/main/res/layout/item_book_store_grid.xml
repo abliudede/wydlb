@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="101dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:id="@+id/content"
+    android:clickable="true"
+    >
+
+    <com.lianzai.reader.view.SelectableRoundedImageView
+        android:id="@+id/iv_book_cover"
+        android:layout_width="match_parent"
+        android:layout_height="129dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginRight="5dp"
+        android:scaleType="centerCrop"
+        app:sriv_left_bottom_corner_radius="5dp"
+        app:sriv_left_top_corner_radius="5dp"
+        app:sriv_right_bottom_corner_radius="5dp"
+        app:sriv_right_top_corner_radius="5dp" />
+
+    <TextView
+        android:id="@+id/tv_book_name"
+        style="@style/TextPaddingStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/iv_book_cover"
+        android:layout_below="@+id/iv_book_cover"
+        android:layout_marginTop="5dp"
+        android:drawablePadding="5dp"
+        android:maxLines="2"
+        android:textSize="@dimen/text_size_12"
+        android:text="连载神器"
+        android:textColor="@color/normal_text_color" />
+
+
+    <ImageView
+        android:id="@+id/iv_url_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv_book_cover"
+        android:layout_alignLeft="@+id/iv_book_cover"
+        android:layout_margin="5dp"
+        android:src="@mipmap/url_book_icon1"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_huancun_count"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_alignTop="@id/iv_book_cover"
+        android:layout_alignRight="@id/iv_book_cover"
+        android:background="@drawable/black_biaoqian3"
+        android:textSize="@dimen/text_size_10"
+        android:textColor="@color/white_text_color"
+        android:gravity="center"
+        android:text="已缓存"
+        android:paddingLeft="8dp"
+        android:paddingRight="4dp"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        />
+    <!---->
+    <ImageView
+        android:id="@+id/view_red"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@mipmap/reddot_whitebian"
+        android:layout_alignTop="@id/iv_book_cover"
+        android:layout_alignRight="@id/iv_book_cover"
+        android:layout_marginTop="-5dp"
+        android:layout_marginRight="-5dp"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/gongxiangbanquan_jiaobiao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/gongxiangbanquan_jiaobiao"
+        android:layout_alignTop="@id/iv_book_cover"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

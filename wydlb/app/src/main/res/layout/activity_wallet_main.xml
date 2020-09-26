@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2016 JustWayward Team
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/StatusBarTintStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        style="@style/ShadowStyle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@mipmap/icon_back_black" />
+
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/icon_v2_mine_setting"
+            android:visibility="visible"/>
+        
+        <View
+            android:id="@+id/view_red"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/dot_red_bg"
+            android:layout_alignTop="@id/iv_more"
+            android:layout_alignRight="@id/iv_more"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tv_commom_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="75dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="我的钱包"
+            android:textColor="@color/color_black_333333"
+            android:textSize="@dimen/title_size"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_read_coin"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/item_white_selector_corner"
+        android:clickable="true"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/v2_icon_wallet_read_coin" />
+
+        <TextView
+            android:id="@+id/tv_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/iv1"
+            android:text="阅点余额"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/normal_text_size" />
+
+        <ImageView
+            android:id="@+id/help_yuedian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_wenhao"
+            android:layout_toRightOf="@id/tv_name1"
+            android:layout_centerVertical="true"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_read_token"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_gold_coin"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/item_white_selector_corner"
+        android:clickable="true"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/iv2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/v2_icon_wallet_gold_coin" />
+
+        <TextView
+            android:id="@+id/tv_name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/iv2"
+            android:text="金币余额"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/normal_text_size" />
+
+        <ImageView
+            android:id="@+id/help_jinbi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_wenhao"
+            android:layout_toRightOf="@id/tv_name2"
+            android:layout_centerVertical="true"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_gold_coin_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_read_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/item_white_selector_corner"
+        android:clickable="true"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/iv3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/v2_icon_wallet_read_ticket" />
+
+        <TextView
+            android:id="@+id/tv_name3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/iv3"
+            android:text="阅券余额"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/normal_text_size" />
+
+        <ImageView
+            android:id="@+id/help_yuejuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_wenhao"
+            android:layout_toRightOf="@id/tv_name3"
+            android:layout_centerVertical="true"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_read_ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_copyright"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/item_white_selector_corner"
+        android:clickable="true"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/iv4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_banquanzichan" />
+
+        <TextView
+            android:id="@+id/tv_name4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/iv4"
+            android:text="版权资产"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/normal_text_size" />
+
+        <ImageView
+            android:id="@+id/help_copyright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_wenhao"
+            android:layout_toRightOf="@id/tv_name4"
+            android:layout_centerVertical="true"
+            android:padding="10dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_copyright"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

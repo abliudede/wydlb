@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/tv_feedback_name"
+    android:textSize="@dimen/text_size_15" android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:textColor="@color/color_black_333333"
+    android:text="错字漏字"
+    android:gravity="center"
+    android:layout_height="50dp">
+</TextView>

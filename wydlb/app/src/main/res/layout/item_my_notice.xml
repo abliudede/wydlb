@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_white_selector"
+    >
+
+    <com.lianzai.reader.view.CircleImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@mipmap/default_fangxing_logo"
+        android:scaleType="centerCrop"
+        app:border_color="@color/white"
+        app:border_width="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"/>
+    
+    <TextView
+        android:id="@+id/tv_dynamic"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:maxLines="4"
+        android:textSize="@dimen/text_size_13"
+        android:ellipsize="end"
+        android:textColor="@color/third_text_color"
+        />
+
+    <com.lianzai.reader.view.SelectableRoundedImageView
+        android:id="@+id/iv_dynamic"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:scaleType="centerCrop"
+        app:sriv_left_bottom_corner_radius="5dp"
+        app:sriv_left_top_corner_radius="5dp"
+        app:sriv_right_bottom_corner_radius="5dp"
+        app:sriv_right_top_corner_radius="5dp" />
+
+    <TextView
+        android:id="@+id/tv_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_logo"
+        android:layout_toLeftOf="@+id/tv_dynamic"
+        android:layout_toRightOf="@+id/iv_logo"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/text_size_15"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <com.lianzai.reader.view.EllipsizeTextView
+        android:id="@+id/tv_expandable_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_nickname"
+        android:layout_below="@+id/tv_nickname"
+        android:layout_toLeftOf="@id/tv_dynamic"
+       android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="left"
+        android:lineSpacingMultiplier="1.2"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/text_size_16"
+        android:maxLines="3"
+        android:ellipsize="end"/>
+
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_12"
+        android:textColor="@color/third_text_color"
+        android:layout_below="@id/tv_expandable_text"
+        android:layout_alignLeft="@id/tv_nickname"
+        android:layout_marginTop="10dp"
+        />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@id/tv_nickname"
+        android:layout_alignRight="@id/tv_dynamic"
+        android:background="@color/f9f9f9"
+        android:layout_below="@id/tv_date"
+        android:layout_marginTop="16dp"
+        />
+</RelativeLayout>

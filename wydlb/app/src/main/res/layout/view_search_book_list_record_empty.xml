@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:src="@mipmap/icon_my_bookstore_empty" />
+
+    <TextView
+        android:id="@+id/tv_empty_content"
+        style="@style/TextPaddingStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_empty"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="没有找到您想要的"
+        android:textColor="@color/color_black_333333"
+        android:visibility="visible" />
+
+</RelativeLayout>

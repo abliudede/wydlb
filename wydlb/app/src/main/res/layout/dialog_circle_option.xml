@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/white_corner_card"
+        android:orientation="vertical"
+        >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/tv_top"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableTop="@mipmap/icon_top"
+                android:gravity="center"
+                android:text="置顶"
+                android:textColor="@color/third_text_color"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tv_push"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableTop="@mipmap/icon_open_push"
+                android:gravity="center"
+                android:text="打开推送"
+                android:textColor="@color/third_text_color"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tv_circle"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableTop="@mipmap/whatiscircle"
+                android:gravity="center"
+                android:text="什么是圈子"
+                android:textColor="@color/third_text_color"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tv_enter_exit"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableTop="@mipmap/icon_exit_circle"
+                android:gravity="center"
+                android:text="退出圈子"
+                android:textColor="@color/third_text_color"
+                android:textSize="@dimen/small_text_size" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/text_size_16"
+            android:background="@drawable/f5f5f5_bottom_corner_card"/>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/popup_anima"
+        android:layout_margin="15dp"
+        android:background="@drawable/white_corner_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:background="@drawable/bottom_line_bg"
+            android:text="您想对该成员进行什么操作?"
+            android:textSize="@dimen/small_text_size"
+            android:textColor="@color/third_text_color" />
+
+
+        <TextView android:id="@+id/tv_collect"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:background="@drawable/bottom_line_bg"
+            android:text="永久拉黑"
+            android:textSize="@dimen/normal_text_size"
+            android:textColor="@color/red_color" />
+
+
+        <TextView android:id="@+id/tv_delete"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="禁言"
+            android:textSize="@dimen/normal_text_size"
+            android:textColor="@color/red_color" />
+
+        <TextView android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="取消"
+            android:textSize="@dimen/normal_text_size"
+            android:textColor="@color/third_text_color" />
+
+    </LinearLayout>
+</LinearLayout>

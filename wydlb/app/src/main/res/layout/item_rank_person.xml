@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_white_selector"
+    android:clickable="true">
+
+    <View
+        android:id="@+id/item_quanzi_person_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bg_color" />
+
+    <RelativeLayout
+        android:id="@+id/view_header"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_below="@id/item_quanzi_person_head"
+        android:paddingLeft="@dimen/leftright_margin"
+        android:paddingRight="@dimen/leftright_margin">
+
+        <TextView
+            android:id="@+id/tv_rank_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/third_text_color"
+            android:minWidth="30dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/iv_rank_num"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/tv_rank_num"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/diyiming"
+            android:visibility="gone"
+            />
+
+
+        <com.lianzai.reader.view.SelectableRoundedImageView
+            android:id="@+id/iv_user_head"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:scaleType="centerCrop"
+            app:sriv_left_bottom_corner_radius="5dp"
+            app:sriv_left_top_corner_radius="5dp"
+            app:sriv_right_bottom_corner_radius="5dp"
+            app:sriv_right_top_corner_radius="5dp"
+            android:layout_toRightOf="@id/iv_rank_num"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/normal_text_color"
+            android:layout_toRightOf="@id/iv_user_head"
+            android:layout_alignTop="@id/iv_user_head"
+            android:layout_marginLeft="12dp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/tv_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_13"
+            android:textColor="@color/third_text_color"
+            android:layout_toRightOf="@id/iv_user_head"
+            android:layout_below="@id/tv_nickname"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="2dp"/>
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

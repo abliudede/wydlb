@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="180dp"
+    android:background="@mipmap/popup_reply_bg"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:paddingBottom="10dp"
+    android:layout_height="61dp">
+
+    <TextView
+        android:id="@+id/tv_reply"
+        android:textSize="10sp"
+        android:text="回复"
+        android:textColor="@color/white"
+        android:drawableTop="@mipmap/icon_reply"
+        android:gravity="center"
+        android:layout_width="0dp" android:layout_weight="1"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_copy"
+        android:textSize="10sp"
+        android:text="复制"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:drawableTop="@mipmap/icon_copy"
+        android:layout_width="0dp" android:layout_weight="1"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_delete"
+        android:textSize="10sp"
+        android:text="删除"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:drawableTop="@mipmap/v2_icon_delete_white"
+        android:layout_width="0dp" android:layout_weight="1"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_report"
+        android:textSize="10sp"
+        android:text="举报" android:visibility="gone"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:drawableTop="@mipmap/v2_icon_report_white"
+        android:layout_width="0dp" android:layout_weight="1"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2016 JustWayward Team
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_gravity="bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_listen_time"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+       android:background="@drawable/black_biaoqian4"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/tv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="延长 >"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white_text_color"
+            android:textSize="@dimen/text_size_12"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/tv_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="听书有效时长："
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/tv_more"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white_text_color"
+            android:textSize="@dimen/text_size_12"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/read_setting_ll_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/nb.read.menu.bg"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        >
+
+        <ImageView android:id="@+id/iv_listen_book_support"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/icon_listen_book_support"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/nb.read_setting.divider"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="语速"
+                android:textColor="@color/color_black_ff666666"
+                android:textSize="@dimen/normal_text_size" />
+
+            <TextView android:id="@+id/tv_slow"
+                android:textSize="@dimen/normal_text_size"
+                android:layout_marginLeft="10dp"
+                android:text="慢" android:textColor="@color/color_black_ff333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <SeekBar
+                android:id="@+id/read_setting_sb_voice_speed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100"
+                android:maxHeight="2dp"
+                android:minHeight="2dp"
+                android:progressDrawable="@drawable/seekbar_bg"
+                android:thumb="@mipmap/seekbar_thumb" />
+
+            <TextView android:id="@+id/tv_quick"
+                android:layout_marginRight="10dp"
+                android:textSize="@dimen/normal_text_size"
+                android:text="快" android:textColor="@color/color_black_ff333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/nb.read_setting.divider"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="声音"
+                android:textColor="@color/color_black_ff666666"
+                android:textSize="@dimen/normal_text_size" />
+
+            <HorizontalScrollView android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:id="@+id/read_setting_rg_voice_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/read_setting_rb_voice_normal_girl"
+                        style="@style/ReadTextAppearance.Read.BottomMenu"
+                        android:layout_width="@dimen/nb.read_setting.btn_width"
+                        android:layout_height="@dimen/nb.read_setting.btn_height"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/selector_btn_read_setting"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="普通女声"
+                        android:textColor="@color/read_setting_selector"
+                        android:textSize="@dimen/text_size_13" />
+
+                    <RadioButton
+                        android:id="@+id/read_setting_rb_voice_normal_boy"
+                        style="@style/ReadTextAppearance.Read.BottomMenu"
+                        android:layout_width="@dimen/nb.read_setting.btn_width"
+                        android:layout_height="@dimen/nb.read_setting.btn_height"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/selector_btn_read_setting"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="普通男声"
+                        android:textColor="@color/read_setting_selector"
+                        android:textSize="@dimen/text_size_13" />
+
+                    <RadioButton
+                        android:id="@+id/read_setting_rb_voice_emotion_girl"
+                        style="@style/ReadTextAppearance.Read.BottomMenu"
+                        android:layout_width="@dimen/nb.read_setting.btn_width"
+                        android:layout_height="@dimen/nb.read_setting.btn_height"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/selector_btn_read_setting"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="情感童声"
+                        android:textColor="@color/read_setting_selector"
+                        android:textSize="@dimen/text_size_13"
+                        android:visibility="visible" />
+
+                    <RadioButton
+                        android:id="@+id/read_setting_rb_voice_emotion_boy"
+                        style="@style/ReadTextAppearance.Read.BottomMenu"
+                        android:layout_width="@dimen/nb.read_setting.btn_width"
+                        android:layout_height="@dimen/nb.read_setting.btn_height"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/selector_btn_read_setting"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="情感男声"
+                        android:textColor="@color/read_setting_selector"
+                        android:textSize="@dimen/text_size_13" />
+
+                </RadioGroup>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+
+        <LinearLayout android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/nb.read_setting.divider"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="定时"
+                android:textColor="@color/color_black_ff666666"
+                android:textSize="@dimen/normal_text_size" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <RadioGroup
+                    android:id="@+id/read_setting_rg_voice_timer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+
+                    <RadioButton
+                        android:id="@+id/read_setting_rb_timer_none"
+                        style="@style/ReadTextAppearance.Read.BottomMenu"
+                        android:layout_width="@dimen/nb.read_setting.btn_width"
+                        android:layout_height="@dimen/nb.read_setting.btn_height"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/selector_btn_read_setting"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="无"
+                        android:textColor="@color/read_setting_selector"
+                        android:textSize="@dimen/text_size_13" />
+
+                    <RadioButton
+                        android:id="@+id/read_setting_rb_timer_fifteen_min"
+                        style="@style/ReadTextAppearance.Read.BottomMenu"
+                        android:layout_width="@dimen/nb.read_setting.btn_width"
+                        android:layout_height="@dimen/nb.read_setting.btn_height"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/selector_btn_read_setting"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="15分"
+                        android:textColor="@color/read_setting_selector"
+                        android:textSize="@dimen/text_size_13"
+                        android:visibility="visible" />
+
+                    <RadioButton
+                        android:id="@+id/read_setting_rb_timer_thirty_min"
+                        style="@style/ReadTextAppearance.Read.BottomMenu"
+                        android:layout_width="@dimen/nb.read_setting.btn_width"
+                        android:layout_height="@dimen/nb.read_setting.btn_height"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/selector_btn_read_setting"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="30分"
+                        android:textColor="@color/read_setting_selector"
+                        android:textSize="@dimen/text_size_13"
+                        android:visibility="visible" />
+
+                    <RadioButton
+                        android:id="@+id/read_setting_rb_timer_sixty_min"
+                        style="@style/ReadTextAppearance.Read.BottomMenu"
+                        android:layout_width="@dimen/nb.read_setting.btn_width"
+                        android:layout_height="@dimen/nb.read_setting.btn_height"
+                        android:background="@drawable/selector_btn_read_setting"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="60分"
+                        android:textColor="@color/read_setting_selector"
+                        android:textSize="@dimen/text_size_13" />
+                </RadioGroup>
+
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <View android:id="@+id/view_line"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorf5f5f5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <TextView android:id="@+id/tv_exit_listen_book"
+            android:text="退出朗读"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="10dp"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:drawableLeft="@mipmap/icon_exit_listen_book"
+            android:paddingTop="10dp"
+            android:textSize="@dimen/text_size_15"
+            android:layout_gravity="center"
+            android:textColor="@color/redFE3838"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

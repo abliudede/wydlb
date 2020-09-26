@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_blur_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@mipmap/book_list_top_blur" />
+
+        <RelativeLayout
+            android:id="@+id/rl_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="60dp">
+
+            <com.lianzai.reader.view.SelectableRoundedImageView
+                android:id="@+id/iv_book_list_cover"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="15dp"
+                android:scaleType="centerCrop"
+                app:sriv_border_color="@color/transparent"
+                app:sriv_left_bottom_corner_radius="4dp"
+                app:sriv_left_top_corner_radius="4dp"
+                app:sriv_right_bottom_corner_radius="4dp"
+                app:sriv_right_top_corner_radius="4dp" />
+
+            <TextView
+                android:id="@+id/tv_book_list_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/iv_book_list_cover"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/iv_book_list_cover"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16"
+                 />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_book_list_cover"
+                android:layout_alignLeft="@+id/tv_book_list_name"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.lianzai.reader.view.CircleImageView
+                    android:id="@+id/civ_logo"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/default_fangxing_logo"
+                    app:border_color="@color/transparent" />
+
+                <TextView
+                    android:id="@+id/tv_creator_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="#C7FFFFFF" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/rm_tv_description"
+                style="@style/TextPaddingStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/iv_book_list_cover"
+                android:layout_below="@+id/iv_book_list_cover"
+                android:layout_marginTop="20dp"
+                android:gravity="left"
+                android:maxLength="500"
+                android:paddingBottom="5dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_13" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_book_list_tags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rm_tv_description"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_book_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/book_list_book_count"
+            android:textColor="@color/color_black_ff666666"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/tv_collection"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/v2_blue_color"
+            android:drawableLeft="@mipmap/icon_add_white_big"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:minWidth="80dp"
+            android:padding="10dp"
+            android:text="收藏"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_12"
+             />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_bg" />
+
+</LinearLayout>
