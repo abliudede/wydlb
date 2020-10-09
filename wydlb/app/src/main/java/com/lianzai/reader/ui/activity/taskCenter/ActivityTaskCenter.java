@@ -2,7 +2,7 @@ package com.lianzai.reader.ui.activity.taskCenter;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
+import androidx.fragment.app.FragmentManager;
 
 import com.lianzai.reader.R;
 import com.lianzai.reader.ui.activity.PermissionActivity;

@@ -1,7 +1,7 @@
 package com.lianzai.reader.utils;
 
 import android.content.Context;
-import android.support.annotation.IntDef;
+import androidx.annotation.IntDef;
 import android.text.Spannable;
 import android.view.View;
 import android.view.ViewGroup;

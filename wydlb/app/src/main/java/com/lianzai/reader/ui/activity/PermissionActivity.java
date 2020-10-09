@@ -4,15 +4,13 @@ import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
 
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.EasyPermissions;
-import com.lianzai.reader.model.local.ReadSettingManager;
-import com.lianzai.reader.utils.BrightnessUtils;
 import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxLogTool;
 

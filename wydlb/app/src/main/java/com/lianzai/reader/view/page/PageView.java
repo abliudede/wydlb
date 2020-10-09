@@ -4,15 +4,13 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.RectF;
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 
-import com.lianzai.reader.model.bean.CollBookBean;
 import com.lianzai.reader.model.local.ReadSettingManager;
-import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.view.animation.CoverAutoPageAnim;
 import com.lianzai.reader.view.animation.CoverPageAnim;
 import com.lianzai.reader.view.animation.HorizonPageAnim;

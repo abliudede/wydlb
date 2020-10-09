@@ -2,7 +2,7 @@ package com.lianzai.reader.ui.adapter;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextPaint;
@@ -14,14 +14,10 @@ import android.widget.TextView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.lianzai.reader.R;
-import com.lianzai.reader.base.ReportAuditListBean;
 import com.lianzai.reader.bean.ManagerAuditBean;
-import com.lianzai.reader.model.gen.ContactsBeanDao;
-import com.lianzai.reader.model.local.DaoDbHelper;
 import com.lianzai.reader.ui.activity.circle.ActivityCircleDetail;
 import com.lianzai.reader.utils.CustomLinkMovementMethod;
 import com.lianzai.reader.utils.RxImageTool;
-import com.lianzai.reader.view.CenteredImageSpan;
 import com.lianzai.reader.view.CircleImageView;
 import com.lianzai.reader.view.EllipsizeTextView;
 

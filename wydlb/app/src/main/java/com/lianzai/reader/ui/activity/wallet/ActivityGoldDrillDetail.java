@@ -4,25 +4,21 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.google.gson.JsonObject;
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.BaseActivity;
 import com.lianzai.reader.base.Constant;
-import com.lianzai.reader.bean.BookInfoBean;
-import com.lianzai.reader.bean.GetGoldDrillBean;
 import com.lianzai.reader.bean.UserDailyTicket;
 import com.lianzai.reader.bean.UserDailyTicketStreamBean;
 import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.component.DaggerAccountComponent;
-import com.lianzai.reader.model.local.BookRepository;
 import com.lianzai.reader.ui.adapter.GoldDrillAdapter;
 import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.DividerItemDecoration;
@@ -31,8 +27,6 @@ import com.lianzai.reader.utils.OKHttpUtil;
 import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxLinearLayoutManager;
 import com.lianzai.reader.utils.RxLogTool;
-import com.lianzai.reader.utils.RxNetTool;
-import com.lianzai.reader.utils.RxSharedPreferencesUtil;
 import com.lianzai.reader.view.CustomLoadMoreView;
 import com.lianzai.reader.view.RxToast;
 
@@ -40,8 +34,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.OnClick;

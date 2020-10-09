@@ -1,17 +1,14 @@
 package com.lianzai.reader.ui.presenter;
 
 
-import android.os.Looper;
-import android.support.v4.util.ArrayMap;
+import androidx.collection.ArrayMap;
 import android.text.TextUtils;
 
 import com.google.gson.Gson;
-import com.lianzai.reader.R;
 import com.lianzai.reader.api.ReaderApi;
 import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.base.RxPresenter;
 import com.lianzai.reader.bean.BookCategoryListResponse;
-import com.lianzai.reader.bean.ChapterGroupBean;
 import com.lianzai.reader.bean.InsideChapterBean;
 import com.lianzai.reader.bean.OutsideChapterDetail;
 import com.lianzai.reader.bean.ReadSettingsResponse;
@@ -27,7 +24,6 @@ import com.lianzai.reader.utils.RxNetTool;
 import com.lianzai.reader.utils.RxSharedPreferencesUtil;
 import com.lianzai.reader.utils.RxTool;
 import com.lianzai.reader.utils.RxUtils;
-import com.lianzai.reader.utils.SkipReadUtil;
 import com.lianzai.reader.utils.StringUtils;
 import com.lianzai.reader.view.RxToast;
 import com.lianzai.reader.view.page.ChapterUrlsVo;
@@ -38,16 +34,9 @@ import com.lianzai.reader.view.page.TxtChapter;
 import com.lianzai.reader.view.page.TxtPage;
 import com.lianzai.reader.view.page.UrlsVo;
 
-import org.jsoup.Connection;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.lang.reflect.Method;
-import java.net.URLEncoder;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
@@ -55,8 +44,6 @@ import java.util.List;
 import javax.inject.Inject;
 
 import io.reactivex.Single;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import okhttp3.ResponseBody;

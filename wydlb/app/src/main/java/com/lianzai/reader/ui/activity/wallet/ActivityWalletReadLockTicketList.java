@@ -3,9 +3,9 @@ package com.lianzai.reader.ui.activity.wallet;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.util.ArrayMap;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.RecyclerView;
+import androidx.collection.ArrayMap;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;

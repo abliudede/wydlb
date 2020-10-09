@@ -15,7 +15,7 @@
  */
 package com.lianzai.reader.ui.presenter;
 
-import android.support.v4.util.ArrayMap;
+import androidx.collection.ArrayMap;
 
 import com.lianzai.reader.api.ReaderApi;
 import com.lianzai.reader.base.Constant;

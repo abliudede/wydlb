@@ -1,7 +1,7 @@
 package com.lianzai.reader.ui.adapter;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -9,7 +9,6 @@ import android.widget.TextView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.lianzai.reader.R;
-import com.lianzai.reader.bean.BookListResponse;
 import com.lianzai.reader.bean.HotRankingListBean;
 import com.lianzai.reader.utils.RxDeviceTool;
 import com.lianzai.reader.utils.RxImageTool;

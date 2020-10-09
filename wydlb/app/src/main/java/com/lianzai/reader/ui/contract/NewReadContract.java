@@ -1,18 +1,15 @@
 package com.lianzai.reader.ui.contract;
 
 
-import android.support.v4.util.ArrayMap;
+import androidx.collection.ArrayMap;
 
 import com.lianzai.reader.base.BaseContract;
-import com.lianzai.reader.bean.ChapterGroupBean;
-import com.lianzai.reader.model.bean.BookChapterBean;
 import com.lianzai.reader.model.bean.CollBookBean;
 import com.lianzai.reader.view.page.ChapterUrlsVo;
 import com.lianzai.reader.view.page.PageLoader;
 import com.lianzai.reader.view.page.PageParagraphVo;
 import com.lianzai.reader.view.page.TxtChapter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

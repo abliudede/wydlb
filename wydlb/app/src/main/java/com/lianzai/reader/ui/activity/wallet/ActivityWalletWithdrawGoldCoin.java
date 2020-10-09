@@ -2,7 +2,7 @@ package com.lianzai.reader.ui.activity.wallet;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.util.ArrayMap;
+import androidx.collection.ArrayMap;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;

@@ -1,7 +1,7 @@
 package com.lianzai.reader.ui.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 
 import com.lianzai.reader.R;
@@ -33,7 +33,6 @@ import com.netease.nim.uikit.extension.ImLianzaihaoAttachment;
 import com.netease.nim.uikit.extension.StickerAttachment;
 import com.netease.nim.uikit.extension.UrlBookBean;
 import com.netease.nimlib.sdk.chatroom.model.ChatRoomMessage;
-import com.netease.nimlib.sdk.msg.constant.MsgDirectionEnum;
 import com.netease.nimlib.sdk.msg.constant.MsgTypeEnum;
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
 import com.netease.nimlib.sdk.msg.model.IMMessage;

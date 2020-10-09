@@ -1,6 +1,6 @@
 package com.lianzai.reader.view.behavior;
 
-import android.support.v4.view.animation.LinearOutSlowInInterpolator;
+import androidx.interpolator.view.animation.LinearOutSlowInInterpolator;
 import android.view.animation.Interpolator;
 
 /**

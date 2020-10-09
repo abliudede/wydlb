@@ -1,7 +1,6 @@
 package com.lianzai.reader.ui.activity.taskCenter;
 
 import android.os.Bundle;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -10,7 +9,6 @@ import android.widget.TextView;
 
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.BaseActivityForTranslucent;
-import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.bean.BaseBean;
 import com.lianzai.reader.bean.GetTaskIsCompleteByUserIdBean;
 import com.lianzai.reader.bean.ReceiveBean;
@@ -20,7 +18,6 @@ import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.component.DaggerAccountComponent;
 import com.lianzai.reader.ui.contract.TaskCenterContract;
 import com.lianzai.reader.ui.presenter.TaskCenterPresenter;
-import com.lianzai.reader.utils.RxEventBusTool;
 import com.lianzai.reader.utils.RxImageTool;
 import com.lianzai.reader.view.CircleImageView;
 

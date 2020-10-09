@@ -43,7 +43,7 @@
            android:textSize="@dimen/text_size_18"
             />
 
-       <android.support.v7.widget.RecyclerView
+       <androidx.recyclerview.widget.RecyclerView
            android:id="@+id/rv_price"
            android:layout_marginLeft="10dp"
            android:layout_width="match_parent"

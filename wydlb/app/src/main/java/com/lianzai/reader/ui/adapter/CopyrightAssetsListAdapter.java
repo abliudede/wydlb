@@ -1,8 +1,8 @@
 package com.lianzai.reader.ui.adapter;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
-import android.text.TextUtils;
+import androidx.annotation.Nullable;
+
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -12,10 +12,7 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.bean.CopyrightAssetsBean;
-import com.lianzai.reader.bean.UserAutoSettingDailyTicketListBean;
 import com.lianzai.reader.ui.activity.ActivityWebView;
-import com.lianzai.reader.ui.activity.circle.ActivityCircleDetail;
-import com.lianzai.reader.ui.activity.wallet.ActivityAutoTicketManage;
 import com.lianzai.reader.utils.RxDataTool;
 import com.lianzai.reader.utils.RxImageTool;
 import com.lianzai.reader.view.SelectableRoundedImageView;

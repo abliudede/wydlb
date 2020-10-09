@@ -1,7 +1,7 @@
 package com.lianzai.reader.ui.adapter;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
@@ -10,10 +10,7 @@ import android.widget.TextView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.lianzai.reader.R;
-import com.lianzai.reader.bean.BookCategoryListResponse;
-import com.lianzai.reader.bean.BookSourceResponse;
 import com.lianzai.reader.utils.BookManager;
-import com.lianzai.reader.utils.TimeFormatUtil;
 import com.lianzai.reader.view.page.TxtChapter;
 
 import java.util.List;

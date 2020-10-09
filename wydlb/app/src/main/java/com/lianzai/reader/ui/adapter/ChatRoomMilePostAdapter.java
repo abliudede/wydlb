@@ -1,17 +1,15 @@
 package com.lianzai.reader.ui.adapter;
 
 import android.app.Activity;
-import android.graphics.drawable.Drawable;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.text.Spannable;
+
+import androidx.annotation.Nullable;
+
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.TextPaint;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
-import android.text.style.ImageSpan;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -19,12 +17,9 @@ import android.widget.TextView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.lianzai.reader.R;
-import com.lianzai.reader.bean.ChatRoomPersonBaseInfo;
 import com.lianzai.reader.bean.MilepostBean;
 import com.lianzai.reader.utils.RxImageTool;
-import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.utils.TimeFormatUtil;
-import com.netease.nim.uikit.business.contact.core.model.AbsContactDataList;
 
 import java.util.ArrayList;
 import java.util.List;

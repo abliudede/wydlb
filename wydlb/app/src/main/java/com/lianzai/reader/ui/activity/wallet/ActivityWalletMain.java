@@ -1,12 +1,11 @@
 package com.lianzai.reader.ui.activity.wallet;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.util.ArrayMap;
+import androidx.collection.ArrayMap;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
@@ -17,16 +16,13 @@ import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.bean.AccountBalanceList;
 import com.lianzai.reader.bean.AccountDetailBean;
 import com.lianzai.reader.bean.BaseCountBean;
-import com.lianzai.reader.bean.PlacedTopListBean;
 import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.component.DaggerAccountComponent;
 import com.lianzai.reader.interfaces.OnRepeatClickListener;
 import com.lianzai.reader.ui.activity.ActivityAccountSecuritySettings;
 import com.lianzai.reader.ui.activity.ActivityBindPhone;
-import com.lianzai.reader.ui.activity.ActivityEditPassword;
 import com.lianzai.reader.ui.activity.ActivityEditPasswordShowPhone;
 import com.lianzai.reader.ui.activity.ActivityWebView;
-import com.lianzai.reader.ui.activity.listenPay.ActivityListenPay;
 import com.lianzai.reader.ui.contract.WalletBalanceListContract;
 import com.lianzai.reader.ui.presenter.WalletBalanceListPresenter;
 import com.lianzai.reader.utils.CallBackUtil;
@@ -43,9 +39,6 @@ import com.lianzai.reader.view.RxToast;
 import com.lianzai.reader.view.dialog.RxDialogBindPhone;
 import com.lianzai.reader.view.dialog.RxDialogSureCancel;
 import com.lianzai.reader.view.dialog.RxDialogWhatIsJinzuan;
-
-import java.util.HashMap;
-import java.util.Map;
 
 import javax.inject.Inject;
 

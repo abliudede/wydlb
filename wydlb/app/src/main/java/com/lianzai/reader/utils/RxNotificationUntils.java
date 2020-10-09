@@ -10,12 +10,11 @@ import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
-import android.support.v4.app.NotificationCompat;
+import androidx.annotation.RequiresApi;
+import androidx.core.app.NotificationCompat;
 
 import com.lianzai.reader.R;
 import com.lianzai.reader.ui.SplashActivity;
-import com.lianzai.reader.ui.activity.BookRecommendSettingActivity;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;

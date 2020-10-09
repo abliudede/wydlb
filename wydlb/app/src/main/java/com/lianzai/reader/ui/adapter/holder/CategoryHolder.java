@@ -1,8 +1,8 @@
 package com.lianzai.reader.ui.adapter.holder;
 
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.support.v4.content.ContextCompat;
+
+import androidx.core.content.ContextCompat;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
@@ -13,8 +13,6 @@ import com.lianzai.reader.base.adapter.ViewHolderImpl;
 import com.lianzai.reader.model.bean.BookChapterBean;
 import com.lianzai.reader.model.local.ReadSettingManager;
 import com.lianzai.reader.utils.BookManager;
-import com.lianzai.reader.utils.RxLogTool;
-import com.lianzai.reader.view.page.TxtChapter;
 
 
 public class CategoryHolder extends ViewHolderImpl<BookChapterBean> {

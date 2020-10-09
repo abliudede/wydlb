@@ -3,25 +3,17 @@ package com.lianzai.reader.ui.activity.circle;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.support.annotation.Nullable;
-import android.support.v4.util.ArrayMap;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.text.Editable;
+
+import androidx.annotation.Nullable;
+
 import android.text.TextUtils;
-import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.PopupWindow;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -31,68 +23,23 @@ import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
-import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.google.gson.JsonObject;
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.BaseActivity;
 import com.lianzai.reader.base.Constant;
-import com.lianzai.reader.base.JinZuanChargeBean;
-import com.lianzai.reader.bean.AccountDetailBean;
-import com.lianzai.reader.bean.AttentionBean;
-import com.lianzai.reader.bean.BaseBean;
-import com.lianzai.reader.bean.BaseCountBean;
-import com.lianzai.reader.bean.CircleBookBean;
-import com.lianzai.reader.bean.CircleDynamicBean;
-import com.lianzai.reader.bean.ConcernResponse;
-import com.lianzai.reader.bean.PostDetailBean;
-import com.lianzai.reader.bean.UserAttentionBean;
 import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.component.DaggerAccountComponent;
-import com.lianzai.reader.ui.activity.ActivityImagesPreview;
-import com.lianzai.reader.ui.activity.ActivityLoginNew;
-import com.lianzai.reader.ui.activity.ActivityWebView;
-import com.lianzai.reader.ui.activity.PersonHomePage.PerSonHomePageActivity;
-import com.lianzai.reader.ui.adapter.BarPostItemAdapter;
-import com.lianzai.reader.ui.contract.UserAttentionContract;
-import com.lianzai.reader.ui.presenter.UserAttentionPresenter;
-import com.lianzai.reader.utils.CallBackUtil;
-import com.lianzai.reader.utils.DividerItemDecoration;
 import com.lianzai.reader.utils.FastBlur;
-import com.lianzai.reader.utils.GsonUtil;
-import com.lianzai.reader.utils.OKHttpUtil;
 import com.lianzai.reader.utils.RxActivityTool;
-import com.lianzai.reader.utils.RxClipboardTool;
-import com.lianzai.reader.utils.RxDataTool;
-import com.lianzai.reader.utils.RxDeviceTool;
-import com.lianzai.reader.utils.RxEventBusTool;
 import com.lianzai.reader.utils.RxImageTool;
-import com.lianzai.reader.utils.RxKeyboardTool;
-import com.lianzai.reader.utils.RxLinearLayoutManager;
 import com.lianzai.reader.utils.RxLogTool;
-import com.lianzai.reader.utils.RxLoginTool;
-import com.lianzai.reader.utils.RxNetTool;
-import com.lianzai.reader.utils.RxTool;
 import com.lianzai.reader.utils.SystemBarUtils;
-import com.lianzai.reader.utils.TimeFormatUtil;
-import com.lianzai.reader.utils.URLUtils;
-import com.lianzai.reader.view.CircleImageView;
-import com.lianzai.reader.view.CommentEditText;
-import com.lianzai.reader.view.CommentOptionPopup;
-import com.lianzai.reader.view.CustomLoadMoreView;
-import com.lianzai.reader.view.MoreOptionPopup;
-import com.lianzai.reader.view.RxToast;
 import com.lianzai.reader.view.SelectableRoundedImageView;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
-import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.OnClick;
-import okhttp3.Call;
 
 /**
  * Created by lrz on 2017/10/13.

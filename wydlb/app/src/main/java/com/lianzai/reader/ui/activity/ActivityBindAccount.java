@@ -1,7 +1,7 @@
 package com.lianzai.reader.ui.activity;
 
 import android.os.Bundle;
-import android.support.v4.util.ArrayMap;
+import androidx.collection.ArrayMap;
 import android.text.TextUtils;
 import android.widget.TextView;
 
@@ -27,7 +27,6 @@ import com.lianzai.reader.utils.RxEventBusTool;
 import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.utils.RxLoginTool;
 import com.lianzai.reader.utils.RxNetTool;
-import com.lianzai.reader.utils.RxSharedPreferencesUtil;
 import com.lianzai.reader.utils.RxTool;
 import com.lianzai.reader.view.RxToast;
 import com.lianzai.reader.view.dialog.RxDialogConfirm;

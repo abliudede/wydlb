@@ -2,7 +2,7 @@ package com.lianzai.reader.ui.adapter;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.text.Layout;
 import android.text.SpannableString;
 import android.text.Spanned;

@@ -5,17 +5,11 @@ import android.graphics.Color;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
-import android.text.Spanned;
-import android.text.TextPaint;
-import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
-import android.text.style.ClickableSpan;
 import android.text.style.ForegroundColorSpan;
-import android.text.style.TextAppearanceSpan;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.lianzai.reader.R;
 import com.lianzai.reader.bean.CommentInfoBean;
 import com.lianzai.reader.interfaces.CommentClickListener;
 import com.lianzai.reader.utils.URLUtils;
@@ -26,7 +20,7 @@ import java.util.List;
  * Created by lrz on 2018/1/8.
  */
 
-public class CommentListTextView extends android.support.v7.widget.AppCompatTextView {
+public class CommentListTextView extends androidx.appcompat.widget.AppCompatTextView {
     /**
      * 所有评论数据
      */

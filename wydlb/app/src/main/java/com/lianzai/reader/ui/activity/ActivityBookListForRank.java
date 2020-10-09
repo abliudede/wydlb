@@ -4,9 +4,9 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Looper;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.View;
 import android.widget.TextView;
 
@@ -14,29 +14,20 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.BaseActivity;
 import com.lianzai.reader.base.Constant;
-import com.lianzai.reader.bean.BookListResponse;
 import com.lianzai.reader.bean.HotRankingListBean;
 import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.component.DaggerAccountComponent;
 import com.lianzai.reader.ui.activity.book.ActivityBookListDetail;
-import com.lianzai.reader.ui.adapter.BookListListAdapter;
 import com.lianzai.reader.ui.adapter.HotRankListListAdapter;
 import com.lianzai.reader.utils.CallBackUtil;
-import com.lianzai.reader.utils.DividerItemDecoration;
 import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
 import com.lianzai.reader.utils.RxActivityTool;
-import com.lianzai.reader.utils.RxEventBusTool;
 import com.lianzai.reader.utils.RxLinearLayoutManager;
-import com.lianzai.reader.utils.RxLoginTool;
-import com.lianzai.reader.utils.RxTool;
-import com.lianzai.reader.view.CustomLoadMoreView;
 import com.lianzai.reader.view.RxToast;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import butterknife.Bind;
 import butterknife.OnClick;

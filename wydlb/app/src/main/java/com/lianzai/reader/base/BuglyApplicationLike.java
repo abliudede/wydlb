@@ -3,9 +3,8 @@ package com.lianzai.reader.base;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.multidex.MultiDex;
+import androidx.multidex.MultiDex;
 import android.text.TextUtils;
 
 import com.lianzai.reader.component.AppComponent;
@@ -21,7 +20,6 @@ import com.lianzai.reader.utils.DemoCache;
 import com.lianzai.reader.utils.NimSDKOptionConfig;
 import com.lianzai.reader.utils.Preferences;
 import com.lianzai.reader.utils.RxAppTool;
-import com.lianzai.reader.utils.RxDeviceTool;
 import com.lianzai.reader.utils.RxEventBusTool;
 import com.lianzai.reader.utils.RxSharedPreferencesUtil;
 import com.lianzai.reader.utils.RxTool;

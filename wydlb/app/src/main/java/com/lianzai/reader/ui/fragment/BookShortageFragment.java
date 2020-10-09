@@ -2,30 +2,24 @@ package com.lianzai.reader.ui.fragment;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.BaseFragment;
 import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.bean.BookShortageSearchBean;
-import com.lianzai.reader.bean.SearchNovelsBean;
 import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.ui.activity.ActivitySearch2;
-import com.lianzai.reader.ui.activity.chat.PublicNumberDetailActivity;
 import com.lianzai.reader.ui.activity.circle.ActivityCircleDetail;
-import com.lianzai.reader.ui.adapter.BooksSearchAdapter;
 import com.lianzai.reader.ui.adapter.BooksShortageSearchAdapter;
 import com.lianzai.reader.utils.CallBackUtil;
-import com.lianzai.reader.utils.DividerItemDecoration;
 import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
 import com.lianzai.reader.utils.RxLinearLayoutManager;
-import com.lianzai.reader.view.CustomLoadMoreView;
 
 import java.util.ArrayList;
 import java.util.HashMap;

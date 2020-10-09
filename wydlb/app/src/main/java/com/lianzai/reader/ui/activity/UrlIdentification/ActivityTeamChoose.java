@@ -1,45 +1,35 @@
 package com.lianzai.reader.ui.activity.UrlIdentification;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.util.ArrayMap;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.BaseActivity;
 import com.lianzai.reader.base.Constant;
-import com.lianzai.reader.bean.UserAttentionBean;
 import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.component.DaggerAccountComponent;
 import com.lianzai.reader.interfaces.OnRepeatClickListener;
 import com.lianzai.reader.ui.activity.ActivityWebView;
-import com.lianzai.reader.ui.adapter.AttentionPersonItemAdapter;
 import com.lianzai.reader.ui.adapter.TeamItemAdapter;
-import com.lianzai.reader.ui.contract.UserAttentionContract;
-import com.lianzai.reader.ui.presenter.UserAttentionPresenter;
 import com.lianzai.reader.utils.DividerItemDecoration;
-import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxLinearLayoutManager;
 import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.utils.RxNetTool;
 import com.lianzai.reader.utils.SystemBarUtils;
-import com.lianzai.reader.view.CustomLoadMoreView;
 import com.lianzai.reader.view.RxToast;
 import com.lianzai.reader.view.dialog.RxDialogSureCancelNew;
-import com.netease.nim.uikit.extension.ImLianzaihaoAttachment;
 import com.netease.nim.uikit.extension.UrlBookBean;
 import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.RequestCallback;
 import com.netease.nimlib.sdk.msg.MessageBuilder;
 import com.netease.nimlib.sdk.msg.MsgService;
-import com.netease.nimlib.sdk.msg.constant.MsgStatusEnum;
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
 import com.netease.nimlib.sdk.team.TeamService;
@@ -47,8 +37,6 @@ import com.netease.nimlib.sdk.team.model.Team;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.OnClick;

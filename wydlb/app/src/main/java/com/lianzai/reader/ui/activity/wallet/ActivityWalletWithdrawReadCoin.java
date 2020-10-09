@@ -2,7 +2,7 @@ package com.lianzai.reader.ui.activity.wallet;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.util.ArrayMap;
+import androidx.collection.ArrayMap;
 import android.text.TextUtils;
 import android.widget.TextView;
 
@@ -20,7 +20,6 @@ import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
 import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxDataTool;
-import com.lianzai.reader.utils.RxTool;
 import com.lianzai.reader.view.NumberEditText;
 import com.lianzai.reader.view.RxToast;
 import com.lianzai.reader.view.dialog.RxBindWalletDialog;

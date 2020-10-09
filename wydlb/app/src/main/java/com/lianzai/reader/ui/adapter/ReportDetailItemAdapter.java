@@ -1,23 +1,16 @@
 package com.lianzai.reader.ui.adapter;
 
-import android.support.annotation.Nullable;
-import android.text.SpannableString;
-import android.text.Spanned;
-import android.text.style.TextAppearanceSpan;
+import androidx.annotation.Nullable;
+
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.lianzai.reader.R;
-import com.lianzai.reader.bean.CommentDetailBean;
 import com.lianzai.reader.bean.ReportDetailBean;
-import com.lianzai.reader.utils.RxDataTool;
 import com.lianzai.reader.utils.RxImageTool;
 import com.lianzai.reader.utils.TimeFormatUtil;
-import com.lianzai.reader.utils.URLUtils;
 import com.lianzai.reader.view.CircleImageView;
 
 import java.util.List;

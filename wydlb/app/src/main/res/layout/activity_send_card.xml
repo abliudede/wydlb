@@ -4,7 +4,7 @@
     android:background="@color/white"
     android:layout_width="match_parent" android:layout_height="match_parent">
     <include android:id="@+id/ll_actionbar" layout="@layout/common_title"/>
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_data" android:layout_below="@+id/ll_actionbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

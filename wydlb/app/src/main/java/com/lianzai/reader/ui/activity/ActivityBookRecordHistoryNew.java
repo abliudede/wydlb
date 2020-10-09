@@ -1,16 +1,13 @@
 package com.lianzai.reader.ui.activity;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 import android.view.View;
 import android.view.ViewTreeObserver;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -19,13 +16,8 @@ import com.lianzai.reader.base.BaseActivity;
 import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.ui.adapter.TabFragmentAdapter;
 import com.lianzai.reader.ui.fragment.BookRecordFragment;
-import com.lianzai.reader.ui.fragment.MyCommentFragment;
-import com.lianzai.reader.ui.fragment.MyDynamicFragment;
-import com.lianzai.reader.ui.fragment.WebRecordFragment;
-import com.lianzai.reader.utils.FastBlur;
 import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxImageTool;
-import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.utils.SystemBarUtils;
 import com.nineoldandroids.animation.AnimatorSet;
 import com.nineoldandroids.animation.ObjectAnimator;

@@ -16,15 +16,11 @@
 package com.lianzai.reader.ui.contract;
 
 
-import android.support.v4.util.ArrayMap;
+import androidx.collection.ArrayMap;
 
 import com.lianzai.reader.base.BaseContract;
 import com.lianzai.reader.bean.AttentionBean;
-import com.lianzai.reader.bean.BaseBean;
 import com.lianzai.reader.bean.CirclePersonBean;
-import com.lianzai.reader.bean.LuckInfoBean;
-import com.lianzai.reader.bean.LuckInfoFollowBean;
-import com.lianzai.reader.bean.LuckLaunchBean;
 import com.lianzai.reader.bean.UserAttentionBean;
 
 public interface UserAttentionContract {

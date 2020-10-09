@@ -16,18 +16,13 @@
 package com.lianzai.reader.ui.contract;
 
 
-import android.support.v4.util.ArrayMap;
+import androidx.collection.ArrayMap;
 
 import com.lianzai.reader.base.BaseContract;
 import com.lianzai.reader.bean.BaseBean;
-import com.lianzai.reader.bean.GateWayResponse;
-import com.lianzai.reader.bean.GetOrderByOrderNo;
-import com.lianzai.reader.bean.GetRewaredPoolDetailBean;
 import com.lianzai.reader.bean.LuckInfoBean;
 import com.lianzai.reader.bean.LuckInfoFollowBean;
 import com.lianzai.reader.bean.LuckLaunchBean;
-
-import okhttp3.RequestBody;
 
 public interface FightLuckContract {
 

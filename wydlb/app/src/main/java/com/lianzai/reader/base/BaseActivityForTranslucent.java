@@ -16,12 +16,11 @@
 package com.lianzai.reader.base;
 
 import android.annotation.TargetApi;
-import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,13 +28,11 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.lianzai.reader.R;
-import com.lianzai.reader.bean.AccountDetailBean;
 import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.interfaces.OnRepeatClickListener;
 import com.lianzai.reader.ui.activity.PermissionActivityForTranslucent;
 import com.lianzai.reader.utils.RxBarTool;
 import com.lianzai.reader.utils.RxLogTool;
-import com.lianzai.reader.utils.RxTool;
 import com.lianzai.reader.view.RxToolBar;
 import com.lianzai.reader.view.dialog.RxDialogSure;
 import com.lianzai.reader.view.loadding.CustomDialog;

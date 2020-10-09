@@ -4,14 +4,12 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.widget.TextView;
 
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.BaseActivity;
 import com.lianzai.reader.component.AppComponent;
-import com.lianzai.reader.ui.fragment.TaskCenterFragment;
 import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxClipboardTool;
 import com.lianzai.reader.utils.SystemBarUtils;

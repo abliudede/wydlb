@@ -1,8 +1,8 @@
 package com.lianzai.reader.view;
 
 import android.content.Context;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.RelativeLayout;
@@ -10,13 +10,9 @@ import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lianzai.reader.R;
-import com.lianzai.reader.base.Constant;
-import com.lianzai.reader.bean.BookListResponse;
 import com.lianzai.reader.bean.HomePageSettingBean;
-import com.lianzai.reader.ui.activity.ActivityBookList;
 import com.lianzai.reader.ui.activity.book.ActivityBookListDetail;
 import com.lianzai.reader.ui.activity.circle.ActivityCircleDetail;
-import com.lianzai.reader.ui.adapter.BookListGridAdapter;
 import com.lianzai.reader.ui.adapter.HomePageGridAdapter;
 import com.lianzai.reader.utils.RxImageTool;
 import com.lianzai.reader.utils.RxRecyclerViewDividerTool;

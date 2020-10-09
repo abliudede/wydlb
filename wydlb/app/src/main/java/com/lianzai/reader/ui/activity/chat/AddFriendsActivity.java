@@ -3,7 +3,7 @@ package com.lianzai.reader.ui.activity.chat;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 
 import com.lianzai.reader.R;

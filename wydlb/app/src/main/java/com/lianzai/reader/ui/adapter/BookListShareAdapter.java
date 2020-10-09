@@ -1,28 +1,17 @@
 package com.lianzai.reader.ui.adapter;
 
 import android.content.Context;
-import android.graphics.Paint;
-import android.graphics.Typeface;
-import android.graphics.drawable.Drawable;
-import android.support.annotation.Nullable;
-import android.text.TextUtils;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RatingBar;
-import android.widget.RelativeLayout;
+
+import androidx.annotation.Nullable;
+
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.lianzai.reader.R;
-import com.lianzai.reader.bean.BookListDetailResponse;
 import com.lianzai.reader.bean.ShareBitmapBean;
 import com.lianzai.reader.utils.RxImageTool;
-import com.lianzai.reader.utils.RxLogTool;
-import com.lianzai.reader.utils.RxTool;
 import com.lianzai.reader.view.SelectableRoundedImageView;
-import com.netease.nim.uikit.common.util.sys.ScreenUtil;
 
 import java.util.List;
 

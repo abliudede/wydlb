@@ -3,19 +3,16 @@ package com.lianzai.reader.ui.fragment;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Looper;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.entity.MultiItemEntity;
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.BaseFragment;
-import com.lianzai.reader.base.Constant;
-import com.lianzai.reader.bean.AccountDetailBean;
 import com.lianzai.reader.bean.AccountTokenBean;
-import com.lianzai.reader.bean.BookRecordHistoryResponse;
 import com.lianzai.reader.bean.WebHistoryListBean;
 import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.model.bean.WebHistoryBean;
@@ -23,26 +20,14 @@ import com.lianzai.reader.model.local.WebHistoryRepository;
 import com.lianzai.reader.ui.activity.ActivityWebView;
 import com.lianzai.reader.ui.adapter.BookRecordExpandableItemAdapter;
 import com.lianzai.reader.ui.adapter.WebRecordExpandableItemAdapter;
-import com.lianzai.reader.utils.CallBackUtil;
-import com.lianzai.reader.utils.GsonUtil;
-import com.lianzai.reader.utils.OKHttpUtil;
-import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.utils.RxLoginTool;
-import com.lianzai.reader.utils.RxNetTool;
-import com.lianzai.reader.utils.SkipReadUtil;
 import com.lianzai.reader.utils.TimeFormatUtil;
-import com.lianzai.reader.view.CustomLoadMoreView;
-import com.lianzai.reader.view.RxToast;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 import butterknife.Bind;
-import okhttp3.Call;
 
 
 /**

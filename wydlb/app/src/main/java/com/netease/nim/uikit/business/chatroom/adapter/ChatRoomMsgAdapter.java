@@ -1,6 +1,6 @@
 package com.netease.nim.uikit.business.chatroom.adapter;
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 
 import com.lianzai.reader.R;

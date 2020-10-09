@@ -1,53 +1,31 @@
 package com.lianzai.reader.ui.activity;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.util.ArrayMap;
-import android.text.Editable;
+import androidx.collection.ArrayMap;
+
 import android.text.TextUtils;
-import android.text.TextWatcher;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.lianzai.reader.R;
-import com.lianzai.reader.api.ReaderBookApiService;
-import com.lianzai.reader.api.support.GsonConverterFactory;
 import com.lianzai.reader.base.BaseActivity;
 import com.lianzai.reader.base.BuglyApplicationLike;
 import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.bean.AccountTokenBean;
-import com.lianzai.reader.bean.ControlBean;
 import com.lianzai.reader.bean.DataSynEvent;
-import com.lianzai.reader.bean.MyTokensResponse;
-import com.lianzai.reader.bean.SendSmsResponse;
 import com.lianzai.reader.bean.WxLoginResponse;
 import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.component.DaggerAccountComponent;
 import com.lianzai.reader.interfaces.OnRepeatClickListener;
-import com.lianzai.reader.model.bean.TokenBean;
-import com.lianzai.reader.model.local.TokensRepository;
 import com.lianzai.reader.ui.contract.LoginContract;
-import com.lianzai.reader.ui.contract.SendSmsContract;
 import com.lianzai.reader.ui.presenter.LoginPresenter;
-import com.lianzai.reader.ui.presenter.SendSmsPresenter;
-import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.DemoCache;
-import com.lianzai.reader.utils.GsonUtil;
-import com.lianzai.reader.utils.OKHttpUtil;
 import com.lianzai.reader.utils.RxActivityTool;
-import com.lianzai.reader.utils.RxDataTool;
-import com.lianzai.reader.utils.RxEncryptTool;
 import com.lianzai.reader.utils.RxEventBusTool;
 import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.utils.RxLoginTool;
@@ -68,8 +46,6 @@ import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.OnClick;
-import okhttp3.Call;
-import retrofit2.Retrofit;
 
 /**
  * Created by lrz on 2017/10/14.

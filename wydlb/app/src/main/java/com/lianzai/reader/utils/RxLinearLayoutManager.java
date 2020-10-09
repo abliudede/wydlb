@@ -1,11 +1,9 @@
 package com.lianzai.reader.utils;
 
 import android.content.Context;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.AttributeSet;
-
-import com.lianzai.reader.R;
 
 /**
  * Created by lrz on 2017/11/1.

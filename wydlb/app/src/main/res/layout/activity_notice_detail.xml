@@ -50,7 +50,7 @@
 
     </RelativeLayout>
 
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_below="@+id/view_title"
         android:background="@color/white"
         app:layout_collapseMode="none"
@@ -66,7 +66,7 @@
             android:textColor="@color/normal_text_color"
             android:textSize="16sp"
              />
-    </android.support.v4.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 
 </RelativeLayout>

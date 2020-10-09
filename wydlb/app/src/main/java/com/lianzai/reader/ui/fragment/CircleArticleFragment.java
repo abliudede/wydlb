@@ -1,14 +1,13 @@
 package com.lianzai.reader.ui.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
-import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.google.gson.JsonObject;
@@ -20,7 +19,6 @@ import com.lianzai.reader.bean.AccountDetailBean;
 import com.lianzai.reader.bean.BaseBean;
 import com.lianzai.reader.bean.CircleBookBean;
 import com.lianzai.reader.bean.CircleDynamicBean;
-import com.lianzai.reader.bean.CircleInfoBean;
 import com.lianzai.reader.bean.ConcernResponse;
 import com.lianzai.reader.bean.PlacedTopListBean;
 import com.lianzai.reader.component.AppComponent;
@@ -32,9 +30,7 @@ import com.lianzai.reader.ui.activity.ActivityWebView;
 import com.lianzai.reader.ui.activity.PersonHomePage.PerSonHomePageActivity;
 import com.lianzai.reader.ui.activity.UrlIdentification.UrlReadActivity;
 import com.lianzai.reader.ui.activity.circle.ActivityCircleDetail;
-import com.lianzai.reader.ui.activity.circle.ActivityInsideBookMulu;
 import com.lianzai.reader.ui.activity.circle.ActivityPostDetail;
-import com.lianzai.reader.ui.activity.circle.ActivityRelatedLinks;
 import com.lianzai.reader.ui.adapter.CircleDynamicAdapter;
 import com.lianzai.reader.ui.adapter.CircleTopAdapter;
 import com.lianzai.reader.utils.CallBackUtil;
@@ -45,7 +41,6 @@ import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.utils.RxLoginTool;
 import com.lianzai.reader.utils.RxSharedPreferencesUtil;
 import com.lianzai.reader.utils.RxTool;
-import com.lianzai.reader.utils.TimeFormatUtil;
 import com.lianzai.reader.view.CustomLoadMoreView;
 import com.lianzai.reader.view.MoreOptionPopup;
 import com.lianzai.reader.view.RxToast;
@@ -60,10 +55,8 @@ import com.qq.e.comm.pi.AdData;
 import com.qq.e.comm.util.AdError;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import butterknife.Bind;
 import okhttp3.Call;

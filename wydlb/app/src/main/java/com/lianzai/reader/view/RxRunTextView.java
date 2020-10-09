@@ -7,7 +7,7 @@ import android.view.ViewDebug;
 /**
  * @author  by vondear on 2016/6/28.
  */
-public class RxRunTextView extends android.support.v7.widget.AppCompatTextView {
+public class RxRunTextView extends androidx.appcompat.widget.AppCompatTextView {
     public RxRunTextView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }

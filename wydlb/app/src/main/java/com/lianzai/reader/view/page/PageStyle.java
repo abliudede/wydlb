@@ -1,6 +1,6 @@
 package com.lianzai.reader.view.page;
 
-import android.support.annotation.ColorRes;
+import androidx.annotation.ColorRes;
 
 import com.lianzai.reader.R;
 

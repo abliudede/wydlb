@@ -1,7 +1,6 @@
 package com.lianzai.reader.ui.activity;
 
 import android.os.Bundle;
-import android.support.v4.util.ArrayMap;
 import android.view.View;
 import android.widget.TextView;
 
@@ -9,12 +8,10 @@ import com.lianzai.reader.R;
 import com.lianzai.reader.base.BaseActivity;
 import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.bean.DataSynEvent;
-import com.lianzai.reader.bean.WxLoginResponse;
 import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.utils.RxSharedPreferencesUtil;
-import com.lianzai.reader.view.RxToast;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;

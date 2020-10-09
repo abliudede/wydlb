@@ -16,10 +16,9 @@
 package com.lianzai.reader.ui.contract;
 
 
-import android.support.v4.util.ArrayMap;
+import androidx.collection.ArrayMap;
 
 import com.lianzai.reader.base.BaseContract;
-import com.lianzai.reader.bean.BaseBean;
 import com.lianzai.reader.bean.UnBindWxBean;
 
 public interface UnbindAccountContract {

@@ -4,11 +4,8 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.GradientDrawable;
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 import android.view.View;
-
-import com.lianzai.reader.model.local.ReadSettingManager;
-import com.lianzai.reader.view.page.PageStyle;
 
 /**
  * Created by newbiechen on 17-7-24.

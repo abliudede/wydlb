@@ -1,19 +1,17 @@
 package com.lianzai.reader.ui.fragment;
 
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.View;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.google.gson.JsonObject;
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.BaseFragment;
 import com.lianzai.reader.base.Constant;
-import com.lianzai.reader.bean.CircleDynamicBean;
 import com.lianzai.reader.bean.GetUserPersonalBookListInfoBean;
 import com.lianzai.reader.bean.GetUserPersonalInfoBean;
 import com.lianzai.reader.component.AppComponent;
@@ -26,9 +24,7 @@ import com.lianzai.reader.utils.OKHttpUtil;
 import com.lianzai.reader.utils.RxImageTool;
 import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.utils.RxRecyclerViewDividerTool;
-import com.lianzai.reader.utils.RxTimeTool;
 import com.lianzai.reader.utils.SkipReadUtil;
-import com.lianzai.reader.view.CustomLoadMoreView;
 import com.lianzai.reader.view.MoreOptionPopup;
 import com.lianzai.reader.view.RxToast;
 import com.zhy.view.flowlayout.FlowLayout;

@@ -4,7 +4,7 @@
     style="@style/StatusBarTintStyle"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/book_directory_rv"
         android:layout_marginTop="@dimen/tool_bar_height"
         style="@style/ScrollBarVerticalStyle"

@@ -2,56 +2,32 @@ package com.lianzai.reader.ui.activity.circle;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.RecyclerView;
-import android.text.Editable;
+
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.text.TextUtils;
-import android.text.TextWatcher;
 import android.view.View;
-import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.google.gson.JsonObject;
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.BaseActivityForTranslucent;
 import com.lianzai.reader.base.Constant;
-import com.lianzai.reader.base.JinZuanChargeBean;
-import com.lianzai.reader.bean.AccountDetailBean;
-import com.lianzai.reader.bean.BaseBean;
-import com.lianzai.reader.bean.CommentDetailBean;
-import com.lianzai.reader.bean.ConcernResponse;
 import com.lianzai.reader.bean.ReportDetailBean;
-import com.lianzai.reader.bean.UrlKeyValueBean;
 import com.lianzai.reader.component.AppComponent;
-import com.lianzai.reader.ui.activity.ActivityLoginNew;
 import com.lianzai.reader.ui.activity.PersonHomePage.PerSonHomePageActivity;
-import com.lianzai.reader.ui.adapter.BarPostFloorItemAdapter;
 import com.lianzai.reader.ui.adapter.ReportDetailItemAdapter;
 import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
 import com.lianzai.reader.utils.RxActivityTool;
-import com.lianzai.reader.utils.RxClipboardTool;
-import com.lianzai.reader.utils.RxKeyboardTool;
 import com.lianzai.reader.utils.RxLinearLayoutManager;
 import com.lianzai.reader.utils.RxLogTool;
-import com.lianzai.reader.utils.RxLoginTool;
-import com.lianzai.reader.utils.RxTool;
-import com.lianzai.reader.utils.URLUtils;
-import com.lianzai.reader.view.CommentEditText;
-import com.lianzai.reader.view.CommentOptionPopup;
 import com.lianzai.reader.view.CustomLoadMoreView;
 import com.lianzai.reader.view.RxToast;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-
-import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -59,12 +35,6 @@ import java.util.Map;
 
 import butterknife.Bind;
 import butterknife.OnClick;
-import io.reactivex.Observable;
-import io.reactivex.ObservableEmitter;
-import io.reactivex.ObservableOnSubscribe;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.functions.Consumer;
-import io.reactivex.schedulers.Schedulers;
 import okhttp3.Call;
 
 /**

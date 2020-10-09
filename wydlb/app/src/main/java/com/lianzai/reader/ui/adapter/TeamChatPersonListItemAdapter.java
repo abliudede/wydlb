@@ -1,7 +1,7 @@
 package com.lianzai.reader.ui.adapter;
 
 import android.app.Activity;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -10,7 +10,6 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.Constant;
-import com.lianzai.reader.bean.ChatRoomSearchBean;
 import com.lianzai.reader.bean.TeamChatInfoBean;
 import com.lianzai.reader.utils.RxImageTool;
 import com.lianzai.reader.view.SelectableRoundedImageView;

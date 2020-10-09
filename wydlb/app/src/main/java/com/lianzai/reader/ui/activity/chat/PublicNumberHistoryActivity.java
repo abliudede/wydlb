@@ -4,11 +4,10 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
@@ -28,7 +27,6 @@ import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.bean.BaseBean;
 import com.lianzai.reader.bean.PublicNumberHistoryBean;
 import com.lianzai.reader.component.AppComponent;
-import com.lianzai.reader.model.bean.CollBookBean;
 import com.lianzai.reader.ui.activity.ActivityWebView;
 import com.lianzai.reader.ui.activity.TeamChat.TeamMessageActivity;
 import com.lianzai.reader.ui.activity.UrlIdentification.UrlReadActivity;
@@ -40,7 +38,6 @@ import com.lianzai.reader.utils.OKHttpUtil;
 import com.lianzai.reader.utils.RxImageTool;
 import com.lianzai.reader.utils.RxLinearLayoutManager;
 import com.lianzai.reader.utils.RxLogTool;
-import com.lianzai.reader.utils.SkipReadUtil;
 import com.lianzai.reader.utils.SystemBarUtils;
 import com.lianzai.reader.view.CustomLoadMoreView;
 import com.lianzai.reader.view.RxToast;
@@ -52,7 +49,6 @@ import java.util.List;
 import java.util.Map;
 
 import butterknife.Bind;
-import butterknife.OnClick;
 import okhttp3.Call;
 
 public class PublicNumberHistoryActivity extends BaseActivity implements  BaseQuickAdapter.RequestLoadMoreListener{

@@ -1,40 +1,25 @@
 package com.lianzai.reader.ui.activity;
 
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.text.TextUtils;
-import android.view.View;
-import android.view.ViewGroup;
+import androidx.annotation.NonNull;
+
 import android.view.WindowManager;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.BaseActivity;
 import com.lianzai.reader.base.Constant;
-import com.lianzai.reader.bean.BaseBean;
 import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.inner.MyCountDownTimerForAD;
-import com.lianzai.reader.inner.MyCountDownTimerForGame;
-import com.lianzai.reader.ui.SplashActivity;
 import com.lianzai.reader.utils.CallBackUtil;
-import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
 import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxImageTool;
 import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.view.RxToast;
-import com.lianzai.reader.view.SelectableRoundedImageView;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 import butterknife.Bind;
 import me.panpf.sketch.SketchImageView;

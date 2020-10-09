@@ -1,10 +1,9 @@
 package com.lianzai.reader.ui.adapter;
 
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
-import android.support.v4.view.PagerAdapter;
-import android.text.TextUtils;
+
+import androidx.viewpager.widget.PagerAdapter;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,18 +11,10 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.lianzai.reader.R;
-import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.model.bean.BannerBean;
-import com.lianzai.reader.ui.activity.ActivityBountyHunter;
-import com.lianzai.reader.ui.activity.ActivityLoginNew;
-import com.lianzai.reader.ui.activity.ActivityOneKeyReward;
-import com.lianzai.reader.ui.activity.ActivityWebView;
-import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxAppTool;
 import com.lianzai.reader.utils.RxDeviceTool;
 import com.lianzai.reader.utils.RxImageTool;
-import com.lianzai.reader.utils.RxLoginTool;
-import com.lianzai.reader.view.RxToast;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,31 +1,22 @@
 package com.lianzai.reader.ui.adapter;
 
-import android.graphics.Color;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.lianzai.reader.R;
-import com.lianzai.reader.bean.CommentInfoBean;
 import com.lianzai.reader.bean.MyNoticeDataBean;
-import com.lianzai.reader.bean.PostDetailBean;
-import com.lianzai.reader.interfaces.CommentClickListener;
 import com.lianzai.reader.ui.activity.circle.ActivityMyNotice;
 import com.lianzai.reader.utils.RxImageTool;
-import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.utils.TimeFormatUtil;
 import com.lianzai.reader.utils.URLUtils;
 import com.lianzai.reader.view.CircleImageView;
-import com.lianzai.reader.view.CommentListTextView;
 import com.lianzai.reader.view.EllipsizeTextView;
 import com.lianzai.reader.view.SelectableRoundedImageView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

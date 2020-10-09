@@ -1,18 +1,16 @@
 package com.lianzai.reader.ui.adapter;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
-import android.support.annotation.Nullable;
-import android.view.View;
+
+import androidx.annotation.Nullable;
+
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.lianzai.reader.R;
 import com.lianzai.reader.bean.AutoDailyTicketStreamBean;
-import com.lianzai.reader.utils.RxImageTool;
 import com.lianzai.reader.utils.RxTimeTool;
-import com.lianzai.reader.utils.RxTool;
 
 import java.util.List;
 

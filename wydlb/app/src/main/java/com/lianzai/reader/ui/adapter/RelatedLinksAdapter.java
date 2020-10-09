@@ -1,27 +1,20 @@
 package com.lianzai.reader.ui.adapter;
 
 import android.graphics.drawable.Drawable;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.text.SpannableString;
 import android.text.Spanned;
-import android.text.TextUtils;
 import android.text.style.TextAppearanceSpan;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.lianzai.reader.R;
-import com.lianzai.reader.bean.MyNoticeDataBean;
 import com.lianzai.reader.bean.RelatedLinksBean;
-import com.lianzai.reader.ui.activity.circle.ActivityMyNotice;
 import com.lianzai.reader.utils.RxImageTool;
-import com.lianzai.reader.utils.TimeFormatUtil;
-import com.lianzai.reader.view.CircleImageView;
 import com.lianzai.reader.view.ItemChapters;
-import com.lianzai.reader.view.SelectableRoundedImageView;
 
 import java.util.List;
 

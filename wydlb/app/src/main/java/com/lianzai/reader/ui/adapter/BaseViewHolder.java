@@ -1,6 +1,6 @@
 package com.lianzai.reader.ui.adapter;
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 
 import com.lianzai.reader.base.adapter.IViewHolder;

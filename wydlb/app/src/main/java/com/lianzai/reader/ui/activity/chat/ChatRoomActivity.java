@@ -1,16 +1,14 @@
 package com.lianzai.reader.ui.activity.chat;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.FragmentManager;
+import androidx.fragment.app.FragmentManager;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
-import android.view.animation.RotateAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -19,9 +17,6 @@ import android.widget.TextView;
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.BaseActivity;
 import com.lianzai.reader.base.Constant;
-import com.lianzai.reader.bean.BaseBean;
-import com.lianzai.reader.bean.CanSpeakResponse;
-import com.lianzai.reader.bean.CheckUpdateResponse;
 import com.lianzai.reader.bean.DataSynEvent;
 import com.lianzai.reader.bean.ObserverBean;
 import com.lianzai.reader.bean.TureOrFalseBean;

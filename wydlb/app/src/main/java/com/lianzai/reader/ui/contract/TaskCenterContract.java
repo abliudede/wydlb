@@ -16,13 +16,10 @@
 package com.lianzai.reader.ui.contract;
 
 
-import android.support.v4.util.ArrayMap;
+import androidx.collection.ArrayMap;
 
 import com.lianzai.reader.base.BaseContract;
 import com.lianzai.reader.bean.BaseBean;
-import com.lianzai.reader.bean.GateWayResponse;
-import com.lianzai.reader.bean.GetOrderByOrderNo;
-import com.lianzai.reader.bean.GetRewaredPoolDetailBean;
 import com.lianzai.reader.bean.GetTaskIsCompleteByUserIdBean;
 import com.lianzai.reader.bean.ReceiveBean;
 import com.lianzai.reader.bean.TaskCenterBean;

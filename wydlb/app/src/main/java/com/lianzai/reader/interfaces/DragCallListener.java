@@ -1,6 +1,6 @@
 package com.lianzai.reader.interfaces;
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 
 public interface DragCallListener {
     void onItemDragStart(RecyclerView.ViewHolder viewHolder, int pos);

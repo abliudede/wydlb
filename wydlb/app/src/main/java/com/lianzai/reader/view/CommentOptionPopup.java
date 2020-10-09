@@ -3,9 +3,7 @@ package com.lianzai.reader.view;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
-import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
@@ -15,7 +13,6 @@ import android.widget.TextView;
 import com.lianzai.reader.R;
 import com.lianzai.reader.utils.RxDeviceTool;
 import com.lianzai.reader.utils.RxImageTool;
-import com.lianzai.reader.utils.RxLogTool;
 
 /**
  * Created by lrz on 2019/3/19.

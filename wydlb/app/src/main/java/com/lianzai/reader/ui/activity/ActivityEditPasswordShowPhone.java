@@ -3,7 +3,7 @@ package com.lianzai.reader.ui.activity;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.util.ArrayMap;
+import androidx.collection.ArrayMap;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;

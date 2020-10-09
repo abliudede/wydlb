@@ -2,16 +2,14 @@ package com.lianzai.reader.service;
 
 import android.app.Notification;
 import android.app.NotificationChannel;
-import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
-import android.support.annotation.Nullable;
-import android.support.v4.app.NotificationCompat;
-import android.util.Log;
+import androidx.annotation.Nullable;
+import androidx.core.app.NotificationCompat;
+
 import android.util.Pair;
 
 import com.baidu.tts.chainofresponsibility.logger.LoggerProxy;
@@ -26,8 +24,6 @@ import com.lianzai.reader.ui.activity.UrlIdentification.baiduUtils.MySyntherizer
 import com.lianzai.reader.ui.activity.UrlIdentification.baiduUtils.NonBlockSyntherizer;
 import com.lianzai.reader.ui.activity.UrlIdentification.baiduUtils.OfflineResource;
 import com.lianzai.reader.utils.RxEventBusTool;
-import com.lianzai.reader.utils.RxLogTool;
-import com.lianzai.reader.utils.RxNetTool;
 import com.lianzai.reader.view.RxToast;
 import com.lianzai.reader.view.page.PageParagraphVo;
 

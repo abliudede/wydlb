@@ -3,8 +3,8 @@ package com.lianzai.reader.ui.fragment;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Looper;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -23,10 +23,8 @@ import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
 import com.lianzai.reader.utils.RxImageTool;
 import com.lianzai.reader.utils.RxLinearLayoutManager;
-import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.utils.RxRecyclerViewDividerTool;
 import com.lianzai.reader.view.CustomLoadMoreView;
-import com.lianzai.reader.view.RxToast;
 
 import java.util.ArrayList;
 import java.util.HashMap;

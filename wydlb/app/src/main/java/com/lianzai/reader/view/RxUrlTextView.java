@@ -2,7 +2,7 @@ package com.lianzai.reader.view;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.widget.AppCompatTextView;
+import androidx.appcompat.widget.AppCompatTextView;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;

@@ -106,7 +106,7 @@
         />
 
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_grid_recommend1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -127,7 +127,7 @@
         android:textSize="@dimen/text_size_16" />
 
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_grid_recommend2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -15,21 +15,15 @@
  */
 package com.lianzai.reader.ui.presenter;
 
-import android.support.v4.util.ArrayMap;
+import androidx.collection.ArrayMap;
 
 import com.lianzai.reader.api.ReaderApi;
 import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.base.RxPresenter;
-import com.lianzai.reader.bean.ChatRoomPersonBaseInfo;
 import com.lianzai.reader.ui.contract.ChatRoomPersonListContract;
-import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.utils.RxNetTool;
-import com.lianzai.reader.utils.RxUtils;
 
 import javax.inject.Inject;
-
-import io.reactivex.Single;
-import io.reactivex.disposables.Disposable;
 
 public class ChatRoomPersonListPresenter extends RxPresenter<ChatRoomPersonListContract.View> implements ChatRoomPersonListContract.Presenter<ChatRoomPersonListContract.View> {
 

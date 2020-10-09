@@ -2,45 +2,33 @@ package com.lianzai.reader.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.util.ArrayMap;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.google.gson.JsonObject;
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.BaseActivity;
 import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.bean.AccountDetailBean;
 import com.lianzai.reader.bean.BaseBean;
-import com.lianzai.reader.bean.DataSynEvent;
 import com.lianzai.reader.bean.UnpasswordDetailBean;
 import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.interfaces.OnRepeatClickListener;
-import com.lianzai.reader.ui.activity.TeamChat.TeamMessageActivity;
-import com.lianzai.reader.ui.activity.circle.ActivityCircleDetail;
-import com.lianzai.reader.ui.activity.listenPay.ActivityListenPay;
-import com.lianzai.reader.ui.activity.wallet.ActivityCopyrightDetail;
 import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
 import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxEncryptTool;
 import com.lianzai.reader.utils.RxLogTool;
-import com.lianzai.reader.utils.RxSharedPreferencesUtil;
 import com.lianzai.reader.utils.RxTool;
 import com.lianzai.reader.view.RxToast;
 import com.lianzai.reader.view.dialog.RxDialogBindPhone;
 import com.lianzai.reader.view.dialog.RxDialogPayment;
 import com.lianzai.reader.view.dialog.RxDialogSureCancel;
 
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
-
 import java.util.HashMap;
-import java.util.Map;
 import java.util.SortedMap;
 import java.util.TreeMap;
 

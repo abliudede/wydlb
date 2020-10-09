@@ -150,7 +150,7 @@
 
     </LinearLayout>
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_data" android:visibility="gone"
         android:layout_below="@+id/ll_category"
 

@@ -2,22 +2,17 @@ package com.lianzai.reader.ui.adapter;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.lianzai.reader.R;
-import com.lianzai.reader.bean.LuckInfoFollowBean;
 import com.lianzai.reader.bean.UserAttentionBean;
-import com.lianzai.reader.model.gen.ContactsBeanDao;
-import com.lianzai.reader.model.local.DaoDbHelper;
 import com.lianzai.reader.utils.RxImageTool;
-import com.lianzai.reader.utils.RxTimeTool;
 import com.lianzai.reader.utils.RxTool;
 import com.lianzai.reader.view.CircleImageView;
-import com.lianzai.reader.view.SelectableRoundedImageView;
 
 import java.util.List;
 

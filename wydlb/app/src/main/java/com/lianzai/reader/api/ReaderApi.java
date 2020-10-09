@@ -16,9 +16,8 @@
 package com.lianzai.reader.api;
 
 
-import android.support.v4.util.ArrayMap;
+import androidx.collection.ArrayMap;
 
-import com.google.gson.JsonObject;
 import com.lianzai.reader.api.support.GsonConverterFactory;
 import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.base.JinZuanChargeBean;
@@ -37,7 +36,6 @@ import com.lianzai.reader.bean.BindAccountListResponse;
 import com.lianzai.reader.bean.BookCatalogResponse;
 import com.lianzai.reader.bean.BookCategoryBean;
 import com.lianzai.reader.bean.BookCategoryListResponse;
-import com.lianzai.reader.bean.BookChapterDetailBean;
 import com.lianzai.reader.bean.BookListCategoryBean;
 import com.lianzai.reader.bean.BookShopBean;
 import com.lianzai.reader.bean.BookStoreResponse;
@@ -47,10 +45,8 @@ import com.lianzai.reader.bean.ChasingBookListBean;
 import com.lianzai.reader.bean.CheckRedPacketBean;
 import com.lianzai.reader.bean.CirclePersonBean;
 import com.lianzai.reader.bean.GateWayResponse;
-import com.lianzai.reader.bean.GetGoldDrillBean;
 import com.lianzai.reader.bean.GetOrderByOrderNo;
 import com.lianzai.reader.bean.GetRewaredPoolDetailBean;
-import com.lianzai.reader.bean.GetTaskCenterShowDictByKeywordBean;
 import com.lianzai.reader.bean.GetTaskIsCompleteByUserIdBean;
 import com.lianzai.reader.bean.HongBaoDetailBean;
 import com.lianzai.reader.bean.HotSearchBean;

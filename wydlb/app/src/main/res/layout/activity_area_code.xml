@@ -5,7 +5,7 @@
     style="@style/StatusBarTintStyle"
     android:layout_width="match_parent"
     android:layout_height="match_parent" android:orientation="vertical">
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/tool_bar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -35,17 +35,17 @@
                 android:layout_height="match_parent" />
 
         </RelativeLayout>
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
 
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_area_code" android:layout_below="@+id/tool_bar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/white">
 
-    </android.support.v7.widget.RecyclerView>
+    </androidx.recyclerview.widget.RecyclerView>
 
     <com.mcxtzhang.indexlib.IndexBar.widget.IndexBar
         android:id="@+id/indexBar" android:layout_below="@+id/tool_bar"

@@ -1,6 +1,6 @@
 package com.netease.nim.uikit.business.recent.adapter;
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.lianzai.reader.R;
 import com.netease.nim.uikit.business.recent.RecentContactsCallback;

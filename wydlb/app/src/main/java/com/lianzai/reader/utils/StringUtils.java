@@ -1,15 +1,13 @@
 package com.lianzai.reader.utils;
 
 import android.content.Context;
-import android.support.annotation.StringRes;
+import androidx.annotation.StringRes;
 
 import com.lianzai.reader.base.BuglyApplicationLike;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
-
-import static com.lianzai.reader.model.local.ReadSettingManager.*;
 
 
 /**

@@ -1,23 +1,16 @@
 package com.lianzai.reader.ui.adapter;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
-import android.support.annotation.Nullable;
-import android.view.View;
-import android.widget.ImageView;
+
+import androidx.annotation.Nullable;
+
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.lianzai.reader.R;
-import com.lianzai.reader.base.Constant;
-import com.lianzai.reader.bean.AccountDetailBean;
-import com.lianzai.reader.bean.CirclePersonBean;
 import com.lianzai.reader.model.bean.ReadTimeBean;
 import com.lianzai.reader.utils.GsonUtil;
-import com.lianzai.reader.utils.RxImageTool;
-import com.lianzai.reader.utils.RxTool;
-import com.lianzai.reader.view.CircleImageView;
 
 import java.util.List;
 

@@ -24,9 +24,9 @@ import android.os.Looper;
 import android.os.Message;
 import android.os.PowerManager;
 import android.provider.Settings;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.util.ArrayMap;
-import android.support.v4.widget.DrawerLayout;
+import androidx.core.content.ContextCompat;
+import androidx.collection.ArrayMap;
+import androidx.drawerlayout.widget.DrawerLayout;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
@@ -146,7 +146,7 @@ import butterknife.OnClick;
 import io.reactivex.disposables.Disposable;
 import okhttp3.Call;
 
-import static android.support.v4.view.ViewCompat.LAYER_TYPE_SOFTWARE;
+import static androidx.core.view.ViewCompat.LAYER_TYPE_SOFTWARE;
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 

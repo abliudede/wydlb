@@ -1,44 +1,30 @@
 package com.lianzai.reader.ui.activity;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.CheckBox;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.google.gson.JsonObject;
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.BaseActivity;
 import com.lianzai.reader.base.Constant;
-import com.lianzai.reader.bean.AccountDetailBean;
 import com.lianzai.reader.bean.BaseBean;
-import com.lianzai.reader.bean.UnpasswordDetailBean;
 import com.lianzai.reader.component.AppComponent;
-import com.lianzai.reader.interfaces.OnRepeatClickListener;
-import com.lianzai.reader.ui.activity.circle.ActivityCircleDetail;
 import com.lianzai.reader.ui.adapter.SmallConfidentialPaymentItemAdapter;
-import com.lianzai.reader.ui.adapter.SortItemAdapter;
 import com.lianzai.reader.utils.CallBackUtil;
-import com.lianzai.reader.utils.DividerItemDecoration;
 import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
 import com.lianzai.reader.utils.RxActivityTool;
-import com.lianzai.reader.utils.RxDataTool;
 import com.lianzai.reader.utils.RxEncryptTool;
 import com.lianzai.reader.utils.RxLinearLayoutManager;
 import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.utils.RxTool;
 import com.lianzai.reader.view.RxToast;
-import com.lianzai.reader.view.SortPopWindow;
-import com.lianzai.reader.view.dialog.RxDialogBindPhone;
 import com.lianzai.reader.view.dialog.RxDialogPayment;
-import com.lianzai.reader.view.dialog.RxDialogSureCancel;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -47,7 +33,6 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 
 import butterknife.Bind;
-import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
 import okhttp3.Call;
 

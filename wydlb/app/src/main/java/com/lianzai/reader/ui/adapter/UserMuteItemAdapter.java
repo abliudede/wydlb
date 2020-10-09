@@ -1,8 +1,8 @@
 package com.lianzai.reader.ui.adapter;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -11,9 +11,6 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.lianzai.reader.R;
 import com.lianzai.reader.bean.BannedListBean;
-import com.lianzai.reader.bean.UserShieldingBean;
-import com.lianzai.reader.model.gen.ContactsBeanDao;
-import com.lianzai.reader.model.local.DaoDbHelper;
 import com.lianzai.reader.utils.RxImageTool;
 import com.lianzai.reader.view.CircleImageView;
 

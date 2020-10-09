@@ -1,7 +1,7 @@
 package com.lianzai.reader.ui.adapter;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -14,7 +14,6 @@ import com.lianzai.reader.R;
 import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.bean.PublicNumberHistoryBean;
 import com.lianzai.reader.interfaces.OnRepeatClickListener;
-import com.lianzai.reader.ui.activity.chat.ChatRoomActivity;
 import com.lianzai.reader.utils.RxDeviceTool;
 import com.lianzai.reader.utils.RxImageTool;
 import com.lianzai.reader.utils.TimeFormatUtil;

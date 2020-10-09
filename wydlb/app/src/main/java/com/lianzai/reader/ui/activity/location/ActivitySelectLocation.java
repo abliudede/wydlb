@@ -1,12 +1,11 @@
 package com.lianzai.reader.ui.activity.location;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -29,12 +28,10 @@ import com.lianzai.reader.base.BaseActivity;
 import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.ui.adapter.LocationItemAdapter;
 import com.lianzai.reader.utils.DividerItemDecoration;
-import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxLinearLayoutManager;
 import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.utils.SystemBarUtils;
 import com.lianzai.reader.view.CustomLoadMoreView;
-import com.lianzai.reader.view.RxToast;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -4,14 +4,13 @@ import android.content.Context;
 import android.text.InputFilter;
 import android.text.Spanned;
 import android.util.AttributeSet;
-import android.widget.EditText;
 
 /**
  * Created by qingcheng on 2018/3/28.
  * 评论框限制
  */
 
-public class CommentEditText extends android.support.v7.widget.AppCompatEditText {
+public class CommentEditText extends androidx.appcompat.widget.AppCompatEditText {
     public CommentEditText(Context context) {
         super(context);
         setFilter();

@@ -2,8 +2,8 @@ package com.lianzai.reader.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.EasyPermissions;

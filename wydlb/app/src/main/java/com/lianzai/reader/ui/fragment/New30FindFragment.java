@@ -1,40 +1,24 @@
 package com.lianzai.reader.ui.fragment;
 
 import android.app.Activity;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
-import android.widget.ScrollView;
-import android.widget.ViewFlipper;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.BaseFragment;
 import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.bean.DataSynEvent;
-import com.lianzai.reader.bean.ObserverBean;
 import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.model.bean.BannerBean;
-import com.lianzai.reader.ui.activity.ActivityBountyHunter;
-import com.lianzai.reader.ui.activity.ActivityLoginNew;
-import com.lianzai.reader.ui.activity.ActivityOneKeyReward;
-import com.lianzai.reader.ui.activity.ActivityWebView;
-import com.lianzai.reader.ui.activity.circle.ActivityCirclePersonList;
 import com.lianzai.reader.ui.adapter.NewFindAdapter;
 import com.lianzai.reader.utils.CallBackUtil;
-import com.lianzai.reader.utils.DividerItemDecoration;
 import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
-import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxAppTool;
 import com.lianzai.reader.utils.RxEventBusTool;
 import com.lianzai.reader.utils.RxLinearLayoutManager;
 import com.lianzai.reader.utils.RxLogTool;
-import com.lianzai.reader.utils.RxLoginTool;
-import com.lianzai.reader.view.ItemLuckyBox;
 import com.lianzai.reader.view.RxToast;
-import com.lianzai.reader.view.dialog.RxDialogGoLogin;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
@@ -45,8 +29,6 @@ import java.util.List;
 import java.util.Map;
 
 import butterknife.Bind;
-import butterknife.OnClick;
-import me.everything.android.ui.overscroll.OverScrollDecoratorHelper;
 import okhttp3.Call;
 
 

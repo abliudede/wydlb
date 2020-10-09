@@ -5,13 +5,11 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.os.Handler;
-import android.support.annotation.ColorInt;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.NonNull;
-import android.text.Spannable;
-import android.text.SpannableStringBuilder;
-import android.text.style.AbsoluteSizeSpan;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.NonNull;
+
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,12 +21,8 @@ import com.lianzai.reader.R;
 import com.lianzai.reader.base.BuglyApplicationLike;
 import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.base.JinZuanChargeBean;
-import com.lianzai.reader.inner.Counter;
 import com.lianzai.reader.utils.RxImageTool;
 import com.lianzai.reader.utils.ToastUtil;
-
-import java.util.Timer;
-import java.util.TimerTask;
 
 import static com.lianzai.reader.utils.RxTool.getContext;
 

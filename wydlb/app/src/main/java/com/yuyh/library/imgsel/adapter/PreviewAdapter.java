@@ -2,7 +2,7 @@ package com.yuyh.library.imgsel.adapter;
 
 import com.lianzai.reader.R;
 import android.app.Activity;
-import android.support.v4.view.PagerAdapter;
+import androidx.viewpager.widget.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;

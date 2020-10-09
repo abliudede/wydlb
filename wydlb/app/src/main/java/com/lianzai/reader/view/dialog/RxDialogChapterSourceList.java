@@ -1,35 +1,27 @@
 package com.lianzai.reader.view.dialog;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.Constant;
-import com.lianzai.reader.bean.FeedBackTypeResponse;
 import com.lianzai.reader.bean.ReadSettingsResponse;
-import com.lianzai.reader.interfaces.OnRepeatClickListener;
 import com.lianzai.reader.ui.adapter.BookChapterSourceAdapter;
-import com.lianzai.reader.ui.adapter.FeedbackTypesAdapter;
 import com.lianzai.reader.utils.CallBackUtil;
-import com.lianzai.reader.utils.DividerItemDecoration;
 import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
 import com.lianzai.reader.utils.RxLinearLayoutManager;
 import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.utils.RxSharedPreferencesUtil;
-import com.lianzai.reader.utils.SystemBarUtils;
 import com.lianzai.reader.view.page.UrlsVo;
 
 import java.util.ArrayList;

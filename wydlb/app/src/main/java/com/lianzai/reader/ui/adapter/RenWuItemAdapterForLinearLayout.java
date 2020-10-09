@@ -1,26 +1,12 @@
 package com.lianzai.reader.ui.adapter;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
-import android.support.annotation.Nullable;
-import android.text.TextUtils;
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
-import android.view.animation.ScaleAnimation;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.chad.library.adapter.base.BaseViewHolder;
-import com.lianzai.reader.R;
+import androidx.annotation.Nullable;
+
+import android.widget.LinearLayout;
+
 import com.lianzai.reader.bean.TaskCenterBean;
-import com.lianzai.reader.model.bean.ContactsBean;
-import com.lianzai.reader.model.gen.ContactsBeanDao;
-import com.lianzai.reader.model.local.DaoDbHelper;
-import com.lianzai.reader.utils.RxImageTool;
-import com.lianzai.reader.utils.RxTool;
 import com.lianzai.reader.view.ItemRenWu;
 import com.lianzai.reader.view.ItemRenWu2;
 
