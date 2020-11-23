@@ -1,10 +1,7 @@
 package com.lianzai.reader.view;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-import android.view.View;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -12,17 +9,9 @@ import com.lianzai.reader.R;
 import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.bean.RelatedLinksBean;
 import com.lianzai.reader.bean.RelatedLinksBean2;
-import com.lianzai.reader.bean.TaskCenterBean;
 import com.lianzai.reader.ui.activity.ActivityWebView;
 import com.lianzai.reader.ui.activity.UrlIdentification.UrlReadActivity;
-import com.lianzai.reader.ui.activity.taskCenter.ActivityTaskCenter;
-import com.lianzai.reader.utils.RxDataTool;
-import com.lianzai.reader.utils.RxImageTool;
 import com.lianzai.reader.utils.RxSharedPreferencesUtil;
-import com.lianzai.reader.utils.RxTool;
-import com.lianzai.reader.utils.TimeFormatUtil;
-
-import java.util.List;
 
 public class ItemChapters extends RelativeLayout{
 

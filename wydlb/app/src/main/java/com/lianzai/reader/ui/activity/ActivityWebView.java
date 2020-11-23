@@ -59,7 +59,6 @@ import com.lianzai.reader.ui.activity.UrlIdentification.UrlReadActivity;
 import com.lianzai.reader.ui.activity.book.ActivityBookListDetail;
 import com.lianzai.reader.ui.activity.circle.ActivityCircleDetail;
 import com.lianzai.reader.ui.activity.wallet.ActivityAutoTicketRecord;
-import com.lianzai.reader.ui.activity.wallet.ActivityWalletMain;
 import com.lianzai.reader.ui.adapter.PureReadItemAdapter;
 import com.lianzai.reader.utils.AndroidBug5497Workaround;
 import com.lianzai.reader.utils.BrightnessUtils;
@@ -589,12 +588,7 @@ public class ActivityWebView extends PermissionActivity {
     private boolean skipFromUrl(String url){
         //跳转逻辑。
         try {
-            if (url.equals("account-home")) {//跳到钱包首页
-                //钱包首页页面
-                ActivityWalletMain.startActivity(ActivityWebView.this);
-                finish();
-                return true;
-            }else if (url.contains(Constant.ParseUrl.VOTINGRECORDS)) {//自动投票记录
+            if (url.contains(Constant.ParseUrl.VOTINGRECORDS)) {//自动投票记录
                 ActivityAutoTicketRecord.startActivity(ActivityWebView.this);
                 finish();
                 return true;
@@ -1765,7 +1759,7 @@ public class ActivityWebView extends PermissionActivity {
         webHistoryBean.setUrl(url);
         if (RxLoginTool.isLogin()) {
             try {
-                String uid = String.valueOf(RxLoginTool.getLoginAccountToken().getData().getUid());
+                String uid = String.valueOf(RxLoginTool.getLoginAccountToken().getData().getId());
                 webHistoryBean.setUserId(uid);
             } catch (Exception e) {
                 webHistoryBean.setUserId("0");

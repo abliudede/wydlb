@@ -395,7 +395,7 @@ public class ActivityTeamChatInfo extends BaseActivity {
      */
     @OnClick(R.id.tv_report)void reportClick(){
         //旧链接
-        String url = Constant.H5_BASE_URL + "/author/#/report?source=4&targetId="+teamId + "&createdBy=" + RxLoginTool.getLoginAccountToken().getData().getUid();
+        String url = Constant.H5_BASE_URL + "/author/#/report?source=4&targetId="+teamId + "&createdBy=" + RxLoginTool.getLoginAccountToken().getData().getId();
         //新链接
         //String url = Constant.H5_BASE_URL+"/inform/#/report?source=3&targetId=" + chatRoomId + "&createdBy=" + RxLoginTool.getLoginAccountToken().getData().getUid();
         RxLogTool.e("URl" , url);

@@ -25,8 +25,6 @@ import com.lianzai.reader.bean.GetBookRewardConfigsBean;
 import com.lianzai.reader.bean.IsNeedPasswordBean;
 import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.interfaces.OnRepeatClickListener;
-import com.lianzai.reader.ui.activity.ActivityBindPhone;
-import com.lianzai.reader.ui.activity.ActivityEditPasswordShowPhone;
 import com.lianzai.reader.ui.activity.ActivityWebView;
 import com.lianzai.reader.ui.activity.wallet.ActivityWalletRechargeGoldCoin;
 import com.lianzai.reader.ui.adapter.PayForBookItemAdapter;
@@ -183,7 +181,6 @@ public class ActivityPayForBook extends BaseActivityForTranslucent {
                 rxDialogSureCancel.dismiss();
                 Bundle bundle = new Bundle();
                 bundle.putInt("flag", Constant.RegisterOrPassword.PayPassword);
-                RxActivityTool.skipActivity(ActivityPayForBook.this, ActivityEditPasswordShowPhone.class, bundle);
             }
         });
 
@@ -254,7 +251,6 @@ public class ActivityPayForBook extends BaseActivityForTranslucent {
                             rxDialogBindPhone.dismiss();
                             Bundle bundle = new Bundle();
                             bundle.putInt("flag", Constant.RegisterOrPassword.BindPhone);
-                            RxActivityTool.skipActivity(ActivityPayForBook.this, ActivityBindPhone.class, bundle);
                         }
                     });
 

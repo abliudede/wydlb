@@ -545,7 +545,7 @@ public class UrlReadActivity extends BaseActivity implements NewReadContract.Vie
             //判断是否登录，并取到uid
             AccountTokenBean account = RxLoginTool.getLoginAccountToken();
             if (null != account) {
-                int userId = account.getData().getUid();
+                int userId = account.getData().getId();
                 //在这里更新小说的阅读时间
                 BookStoreRepository.getInstance().updateBooks(userId, Integer.parseInt(bookId));
                 //红点清除，红点清除之后还会更新一次时间。
@@ -1028,7 +1028,7 @@ public class UrlReadActivity extends BaseActivity implements NewReadContract.Vie
         try {
             AccountTokenBean account = RxLoginTool.getLoginAccountToken();
             if (null != account) {
-                userId = String.valueOf(account.getData().getUid());
+                userId = String.valueOf(account.getData().getId());
                 bqtKey = userId + Constant.BQT_KEY;
                 phoneModel = RxDeviceTool.getBuildBrandModel();
                 deviceNo = RxDeviceTool.getDeviceIdIMEI(this);

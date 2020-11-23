@@ -177,7 +177,7 @@ public class ActivitySettings extends BaseActivity implements  LogoutContract.Vi
                         RxToast.custom("缓存已清除成功",Constant.ToastType.TOAST_SUCCESS).show();
                         //判断是否已登录，已登录情况，清除账户相关
                         if(RxLoginTool.isLogin()){
-                            int uid = RxLoginTool.getLoginAccountToken().getData().getUid();
+                            int uid = RxLoginTool.getLoginAccountToken().getData().getId();
                             RxSharedPreferencesUtil.getInstance().remove(String.valueOf(uid) +"_WDSD");//清除书单缓存
                             RxSharedPreferencesUtil.getInstance().remove(String.valueOf(uid) + "_BQT");//清除书籍token
                             RxSharedPreferencesUtil.getInstance().remove(String.valueOf(uid) +  Constant.BQT_KEY);//清除书籍token
@@ -287,7 +287,6 @@ public class ActivitySettings extends BaseActivity implements  LogoutContract.Vi
                         dismissDialog();
                         Bundle bundle = new Bundle();
                         bundle.putInt("flag", Constant.RegisterOrPassword.BindPhone);
-                        RxActivityTool.skipActivity(ActivitySettings.this, ActivityBindPhone.class, bundle);
                     }
                 });
 
@@ -299,8 +298,6 @@ public class ActivitySettings extends BaseActivity implements  LogoutContract.Vi
                 });
             }
             rxDialogBindPhone.show();
-        }else {
-            RxActivityTool.skipActivity(this,ActivityAccountSecuritySettings.class);
         }
     }
 

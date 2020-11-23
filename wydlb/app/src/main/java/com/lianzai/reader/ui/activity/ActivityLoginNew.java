@@ -58,9 +58,6 @@ public class ActivityLoginNew extends BaseActivity implements LoginContract.View
     @Bind(R.id.rl_wx_login)
     ImageView rl_wx_login;
 
-    @Bind(R.id.tv_phone_login)
-    TextView tv_phone_login;
-
     @Bind(R.id.tv_link_agreement)
     TextView tv_link_agreement;
 
@@ -125,11 +122,6 @@ public class ActivityLoginNew extends BaseActivity implements LoginContract.View
             }
         });
 
-        tv_phone_login.setOnClickListener(
-                v -> {
-                    ActivityLogin.startActivity(ActivityLoginNew.this, true);
-                }
-        );
 
         tv_link_agreement.setOnClickListener(
                 v -> {
@@ -163,10 +155,6 @@ public class ActivityLoginNew extends BaseActivity implements LoginContract.View
     @Override
     public void loginSuccess(AccountTokenBean bean) {
         RxLoginTool.saveToken(bean);
-        RxSharedPreferencesUtil.getInstance().putString(Constant.LOGIN_ID,bean.getData().getMobile());
-        //登录im账号
-        imLogin(bean.getData().getImAccount(),bean.getData().getImToken());
-//        imLogin("5270b7c4a7c0414fa0dbe33bad6b6b10","fac71e5112ac4375871a7323b42ae3d3");
     }
 
     private  void imLogin(String imaccount,String imtoken){
@@ -214,27 +202,9 @@ public class ActivityLoginNew extends BaseActivity implements LoginContract.View
     public void wxLoginSuccess(WxLoginResponse bean) {
 
         if (bean.getCode()==Constant.ResponseCodeStatus.SUCCESS_CODE){
-            if (TextUtils.isEmpty(bean.getData().getToken())){//该微信号还未绑定过手机号，跳转到绑定手机号页面
-                dismissDialog();
-                RxToast.custom("请先绑定您的手机号码",Constant.ToastType.TOAST_ERROR).show();
-                Bundle bundle = new Bundle();
-                bundle.putInt("flag", Constant.RegisterOrPassword.BindAccount);
-                bundle.putSerializable("wxData", bean.getData());
-                RxActivityTool.skipActivity(this, ActivityBindPhone.class, bundle);
-            }else{//已绑定过，直接登录
+           //已绑定过，直接登录
                 AccountTokenBean accountTokenBean=new AccountTokenBean();
                 AccountTokenBean.DataBean dataBean=new AccountTokenBean.DataBean();
-                dataBean.setAvatar(bean.getData().getAvatar());
-                dataBean.setMobile(bean.getData().getMobile());
-                dataBean.setNickName(bean.getData().getNickName());
-                dataBean.setImAccount(bean.getData().getImAccount());
-                dataBean.setImToken(bean.getData().getImToken());
-                try{
-                    dataBean.setStatus(Integer.parseInt(bean.getData().getStatus()));
-                }catch (Exception e){
-
-                }
-                dataBean.setUid(Integer.parseInt(bean.getData().getUid()));
                 dataBean.setToken(bean.getData().getToken());
 
                 accountTokenBean.setData(dataBean);
@@ -242,20 +212,7 @@ public class ActivityLoginNew extends BaseActivity implements LoginContract.View
                 RxLoginTool.saveToken(accountTokenBean);
                 RxSharedPreferencesUtil.getInstance().putString(Constant.LOGIN_ID,bean.getData().getMobile());
 
-                //登录im账号
-                imLogin(bean.getData().getImAccount(),bean.getData().getImToken());
-//                imLogin("5270b7c4a7c0414fa0dbe33bad6b6b10","fac71e5112ac4375871a7323b42ae3d3");
-            }
-        }else if(bean.getCode()==Constant.ResponseCodeStatus.BIND_PHONE||bean.getCode()==Constant.ResponseCodeStatus.BIND_PHONE2){//需要绑定手机号
-            dismissDialog();
-
-            RxToast.custom("请先绑定您的手机号码",Constant.ToastType.TOAST_ERROR).show();
-            Bundle bundle = new Bundle();
-            bundle.putInt("flag", Constant.RegisterOrPassword.BindAccount);
-            bundle.putSerializable("wxData", bean.getData());
-            RxActivityTool.skipActivity(this, ActivityBindPhone.class, bundle);
         }
-
     }
 
     @Override
@@ -294,13 +251,6 @@ public class ActivityLoginNew extends BaseActivity implements LoginContract.View
             showDialog();
             loginPresenter.wxLogin(params);
 
-        }else if (event.getTag() == Constant.EventTag.BIND_PHONE) {//绑定手机
-            WxLoginResponse bean = (WxLoginResponse) event.getObj();
-            RxToast.custom("请先绑定您的手机号码",Constant.ToastType.TOAST_ERROR).show();
-            Bundle bundle = new Bundle();
-            bundle.putInt("flag", Constant.RegisterOrPassword.BindAccount);
-            bundle.putSerializable("wxData", bean.getData());
-            RxActivityTool.skipActivity(this, ActivityBindPhone.class, bundle);
         }else if (event.getTag() == Constant.EventTag.LOGIN_REFRESH_TAG) {//登录成功
             finish();
         }

@@ -2,18 +2,13 @@ package com.lianzai.reader.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.lianzai.reader.R;
 import com.lianzai.reader.bean.ReceiveWhiteBookCouponBean;
-import com.lianzai.reader.bean.TaskCenterBean;
-import com.lianzai.reader.ui.activity.taskCenter.ActivityTaskCenter;
 import com.lianzai.reader.utils.RxImageTool;
-
-import java.util.List;
 
 public class ItemLaobaiReward extends RelativeLayout{
 

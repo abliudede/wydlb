@@ -60,15 +60,11 @@ import com.lianzai.reader.ui.activity.book.ActivityBookListDetail;
 import com.lianzai.reader.ui.activity.circle.ActivityCircleDetail;
 import com.lianzai.reader.ui.activity.circle.ActivityMyNotice;
 import com.lianzai.reader.ui.activity.circle.ActivityPostDetail;
-import com.lianzai.reader.ui.activity.taskCenter.ActivityGetRedEnvelope;
-import com.lianzai.reader.ui.activity.taskCenter.ActivityNewRedEnvelope;
 import com.lianzai.reader.ui.activity.wallet.ActivityAutoTicketRecord;
-import com.lianzai.reader.ui.activity.wallet.ActivityWalletMain;
 import com.lianzai.reader.ui.contract.AccountContract;
 import com.lianzai.reader.ui.fragment.BookStoreFragment;
 import com.lianzai.reader.ui.fragment.HomePageSwitchFragment;
 import com.lianzai.reader.ui.fragment.New30FindFragment;
-import com.lianzai.reader.ui.fragment.NewMineFragment;
 import com.lianzai.reader.ui.presenter.AccountPresenter;
 import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.DemoCache;
@@ -134,7 +130,6 @@ public class MainActivity extends BaseActivity implements AccountContract.View {
     FrameLayout frame_layout;
 
     RecentContactsFragment recentContactsFragment;
-    NewMineFragment mineFragment;
 
     BookStoreFragment bookStoreFragment;
 
@@ -427,13 +422,6 @@ public class MainActivity extends BaseActivity implements AccountContract.View {
         if (RxLoginTool.isLogin()) {
             accountPresenter.getAccountDetail();
             needRefreshBookStore = true;
-            String account = RxLoginTool.getLoginAccountToken().getData().getImAccount();
-            String token = RxLoginTool.getLoginAccountToken().getData().getImToken();
-            RxLogTool.e("getLoginInfo--account:" + account);
-            RxLogTool.e("getLoginInfo--token:" + token);
-            if (!TextUtils.isEmpty(account) && !TextUtils.isEmpty(token)) {
-                DemoCache.setAccount(account.toLowerCase());
-            }
             red_packet_iv.setVisibility(View.GONE);
         } else {
             if (index == 0) {
@@ -572,10 +560,6 @@ public class MainActivity extends BaseActivity implements AccountContract.View {
                         }
 
 
-                        try {
-                            mineFragment.reSetRed(nogetNumberAwardStr, noticeFlag);
-                        } catch (Exception e) {
-                        }
                     }
                 } catch (Exception e) {
 
@@ -587,7 +571,6 @@ public class MainActivity extends BaseActivity implements AccountContract.View {
     @OnClick(R.id.red_packet_iv)
     void red_packet_ivClick() {
         red_packet_iv.setVisibility(View.GONE);
-        RxActivityTool.skipActivity(this, ActivityNewRedEnvelope.class);
     }
 
 
@@ -758,44 +741,6 @@ public class MainActivity extends BaseActivity implements AccountContract.View {
                     //进入动态详情
                     String dynamicId = pushObject.getString("dynamicId");
                     ActivityPostDetail.startActivity(this,dynamicId);
-                }else if (action.equals("account-home")) {
-                    //钱包首页页面
-                    if (RxLoginTool.isLogin()) {
-                        AccountDetailBean accountDetailBean = RxTool.getAccountBean();
-                        if (null != accountDetailBean && !TextUtils.isEmpty(accountDetailBean.getData().getMobile())) {
-                            ActivityWalletMain.startActivity(MainActivity.this);
-                        } else {
-                            //绑定手机号弹窗
-                            if (null == rxDialogBindPhone) {
-                                rxDialogBindPhone = new RxDialogBindPhone(MainActivity.this, R.style.OptionDialogStyle);
-                                rxDialogBindPhone.setContent("您暂未绑定手机号，请先绑定手机号再使用相关功能。");
-                                rxDialogBindPhone.setTitle("绑定手机号提示");
-                                rxDialogBindPhone.getCancelView().setVisibility(View.VISIBLE);
-                                rxDialogBindPhone.setButtonText("立即绑定", "取消");
-                                rxDialogBindPhone.setSureListener(new OnRepeatClickListener() {
-                                    @Override
-                                    public void onRepeatClick(View v) {
-                                        //跳转到绑定手机号页面
-                                        rxDialogBindPhone.dismiss();
-                                        Bundle bundle = new Bundle();
-                                        bundle.putInt("flag", Constant.RegisterOrPassword.BindPhone);
-                                        RxActivityTool.skipActivity(MainActivity.this, ActivityBindPhone.class, bundle);
-                                    }
-                                });
-
-                                rxDialogBindPhone.setCancelListener(new OnRepeatClickListener() {
-                                    @Override
-                                    public void onRepeatClick(View v) {
-                                        rxDialogBindPhone.dismiss();
-                                    }
-                                });
-                            }
-                            rxDialogBindPhone.show();
-                        }
-                    } else {
-                        //直接跳登录页，不关闭之前页面
-                        RxActivityTool.skipActivity(MainActivity.this, ActivityLoginNew.class);
-                    }
                 }else if (action.equals(Constant.ParseUrl.VOTINGRECORDS)) {//自动投票记录
                     ActivityAutoTicketRecord.startActivity(MainActivity.this);
                 }
@@ -983,7 +928,6 @@ public class MainActivity extends BaseActivity implements AccountContract.View {
 
     private void isShowRecommendSetting() {//是否需要弹出喜好设置界面
         if (!isShowAd) {
-            RxActivityTool.skipActivity(this, ActivityGetRedEnvelope.class);
             BookRecommendSettingActivity.startActivity(true, this);
         }
     }
@@ -1085,7 +1029,7 @@ public class MainActivity extends BaseActivity implements AccountContract.View {
         accountTokenBean = RxLoginTool.getLoginAccountToken();
         if (null != accountTokenBean) {
             //直接获取本地红点
-            List<BookStoreBeanN> list = BookStoreRepository.getInstance().getBookStoreRedByUserId(accountTokenBean.getData().getUid());
+            List<BookStoreBeanN> list = BookStoreRepository.getInstance().getBookStoreRedByUserId(accountTokenBean.getData().getId());
             if(null != list && !list.isEmpty()){
                 //显示书架红点
                 noget_number_chasing.setVisibility(View.VISIBLE);
@@ -1790,7 +1734,7 @@ public class MainActivity extends BaseActivity implements AccountContract.View {
             public void onDragOut() {
                 noget_number_chasing.setVisibility(View.INVISIBLE);
                 //清除此用户书架所有红点
-                BookStoreRepository.getInstance().updateBookStoreBooksByUserId(RxLoginTool.getLoginAccountToken().getData().getUid());
+                BookStoreRepository.getInstance().updateBookStoreBooksByUserId(RxLoginTool.getLoginAccountToken().getData().getId());
                 RxEventBusTool.sendEvents(Constant.EventTag.REFRESH_BOOK_STORE_TAG);
             }
         });
@@ -1890,24 +1834,6 @@ public class MainActivity extends BaseActivity implements AccountContract.View {
                 fragmentTransaction.show(newFindFragment);
 
                 break;
-            case 4:
-                red_packet_iv.setVisibility(View.GONE);
-                if (mineFragment == null) {
-                    mineFragment = new NewMineFragment();
-                    fragmentTransaction.add(R.id.frame_layout, mineFragment);
-                }
-                fragmentTransaction.show(mineFragment);
-
-                if (RxLoginTool.isLogin()) {
-                    isShowRed();
-                }
-
-                //每次切换到我的页面，刷新一下账户信息
-                if (RxLoginTool.isLogin()) {
-                    accountPresenter.getAccountDetail();
-                    RxLogTool.e("refresh getAccountDetail.......");
-                }
-                break;
         }
         index = i;
         fragmentTransaction.commitAllowingStateLoss();//最后千万别忘记提交事务
@@ -1927,9 +1853,6 @@ public class MainActivity extends BaseActivity implements AccountContract.View {
         }
         if (newFindFragment != null) {
             ftr.hide(newFindFragment);
-        }
-        if (mineFragment != null) {
-            ftr.hide(mineFragment);
         }
     }
 

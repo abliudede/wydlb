@@ -1,22 +1,16 @@
 package com.lianzai.reader.ui.fragment;
 
 import android.app.Activity;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
 import android.widget.ScrollView;
-import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.BaseFragment;
 import com.lianzai.reader.base.Constant;
-import com.lianzai.reader.bean.GetReceiveFlagBean;
 import com.lianzai.reader.bean.ObserverBean;
 import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.ui.activity.ActivityBountyHunter;
-import com.lianzai.reader.ui.activity.ActivityLogin;
 import com.lianzai.reader.ui.activity.ActivityLoginNew;
 import com.lianzai.reader.ui.activity.ActivityOneKeyReward;
 import com.lianzai.reader.ui.activity.ActivityWebView;
@@ -24,10 +18,8 @@ import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
 import com.lianzai.reader.utils.RxActivityTool;
-import com.lianzai.reader.utils.RxImageTool;
 import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.utils.RxLoginTool;
-import com.lianzai.reader.utils.RxTool;
 import com.lianzai.reader.view.ItemLuckyBox;
 import com.lianzai.reader.view.RxToast;
 import com.lianzai.reader.view.dialog.RxDialogGoLogin;

@@ -459,7 +459,7 @@ public class NewReadActivity extends BaseActivity implements NewReadContract.Vie
         //此处判断是否有云端记录。
         if (RxLoginTool.isLogin()) {
             //登录情况时才有云端记录
-            String uid = String.valueOf(RxLoginTool.getLoginAccountToken().getData().getUid());
+            String uid = String.valueOf(RxLoginTool.getLoginAccountToken().getData().getId());
             CloudRecordBean bean = CloudRecordRepository.getInstance().getCloudRecord(Long.parseLong(bookId));//Long.parseLong(uid),
             if (null == bean) {
                 context.startActivity(new Intent(context, NewReadActivity.class).putExtra(EXTRA_BOOK_ID, bookId));
@@ -721,7 +721,7 @@ public class NewReadActivity extends BaseActivity implements NewReadContract.Vie
             //判断是否登录，并取到uid
             AccountTokenBean account = RxLoginTool.getLoginAccountToken();
             if (null != account) {
-                userId = String.valueOf(account.getData().getUid());
+                userId = String.valueOf(account.getData().getId());
                 bqtKey = userId + Constant.BQT_KEY;
                 //在这里更新小说的阅读时间，表示本地已阅读过，红点清除返回失败也不要紧。
                 BookStoreRepository.getInstance().updateBooks(Integer.parseInt(userId), Integer.parseInt(mBookId));

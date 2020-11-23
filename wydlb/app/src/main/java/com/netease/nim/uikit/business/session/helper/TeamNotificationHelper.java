@@ -70,7 +70,7 @@ public class TeamNotificationHelper {
                 break;
             case LeaveTeam:
                 text = buildLeaveTeamNotification(fromAccount);
-                if(fromAccount.equals(RxLoginTool.getLoginAccountToken().getData().getImAccount())) {
+                if(fromAccount.equals(RxLoginTool.getLoginAccountToken().getData().getAccount())) {
                     new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
                         @Override
                         public void run() {

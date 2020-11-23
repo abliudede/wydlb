@@ -1,21 +1,13 @@
 package com.lianzai.reader.view;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-import android.view.View;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.lianzai.reader.R;
 import com.lianzai.reader.bean.ObserverBean;
-import com.lianzai.reader.bean.TaskCenterBean;
-import com.lianzai.reader.ui.activity.taskCenter.ActivityTaskCenter;
 import com.lianzai.reader.utils.RxImageTool;
-import com.lianzai.reader.utils.RxTool;
-
-import java.util.List;
 
 public class ItemLuckyBox extends RelativeLayout{
 

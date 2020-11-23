@@ -14,8 +14,6 @@ import com.just.agentweb.AgentWeb;
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.bean.ShowShareBean;
-import com.lianzai.reader.ui.activity.ActivityBindPhone;
-import com.lianzai.reader.ui.activity.ActivityEditPasswordShowPhone;
 import com.lianzai.reader.ui.activity.ActivityImagesPreview;
 import com.lianzai.reader.ui.activity.ActivityLoginNew;
 import com.lianzai.reader.ui.activity.ActivitySearchFirst;
@@ -25,9 +23,7 @@ import com.lianzai.reader.ui.activity.TeamChat.TeamMessageActivity;
 import com.lianzai.reader.ui.activity.book.ActivityBookListDetail;
 import com.lianzai.reader.ui.activity.circle.ActivityCircleDetail;
 import com.lianzai.reader.ui.activity.circle.ActivityCircleGXBQPersonList;
-import com.lianzai.reader.ui.activity.listenPay.ActivityListenPay;
 import com.lianzai.reader.ui.activity.wallet.ActivityAutoTicketManage;
-import com.lianzai.reader.ui.activity.wallet.ActivityWalletDetail;
 import com.lianzai.reader.ui.activity.wallet.ActivityWalletRechargeGoldCoin;
 import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.GsonUtil;
@@ -100,23 +96,7 @@ public class AndroidInterface {
 
     @JavascriptInterface
     public String getUid() {
-        return String.valueOf(RxLoginTool.getLoginAccountToken().getData().getUid());
-    }
-
-    //跳转到支付密码页面
-    @JavascriptInterface
-    public void goPayPassword() {
-        Bundle bundle = new Bundle();
-        bundle.putInt("flag", Constant.RegisterOrPassword.PayPassword);
-        RxActivityTool.skipActivity(activity, ActivityEditPasswordShowPhone.class, bundle);
-    }
-
-    //跳转到支付密码页面
-    @JavascriptInterface
-    public void goBindPhone() {
-        Bundle bundle = new Bundle();
-        bundle.putInt("flag", Constant.RegisterOrPassword.BindPhone);
-        RxActivityTool.skipActivity(activity, ActivityBindPhone.class, bundle);
+        return String.valueOf(RxLoginTool.getLoginAccountToken().getData().getId());
     }
 
 

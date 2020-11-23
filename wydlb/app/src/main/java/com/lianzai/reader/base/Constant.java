@@ -53,8 +53,7 @@ public class Constant {
 
     public static String CURRENT_LANGUAGE_KEY = "language";
 
-    public static final String ACCOUNT_TOKEN = "token2";
-    public static final String ACCOUNT_TOKEN3 = "token3";
+    public static final String ACCOUNT_TOKEN = "token";
 
     public static final String SMS_TIME = "smsTime";
 

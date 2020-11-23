@@ -3,7 +3,6 @@ package com.lianzai.reader.ui.adapter.holder;
 import android.widget.TextView;
 
 import com.lianzai.reader.R;
-import com.lianzai.reader.ui.activity.chat.ChatRoomActivity;
 import com.lianzai.reader.ui.adapter.PublicNumberAdapter;
 import com.netease.nim.uikit.common.ui.recyclerview.adapter.BaseQuickAdapter;
 import com.netease.nim.uikit.common.ui.recyclerview.holder.BaseViewHolder;

@@ -2,38 +2,13 @@ package com.lianzai.reader.view.dialog;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
-import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
-import android.view.animation.RotateAnimation;
-import android.view.animation.TranslateAnimation;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lianzai.reader.R;
-import com.lianzai.reader.base.Constant;
-import com.lianzai.reader.inner.MyCountDownTimerForAD2;
-import com.lianzai.reader.model.bean.BannerBean;
-import com.lianzai.reader.ui.activity.taskCenter.ActivityTaskCenter;
-import com.lianzai.reader.utils.CallBackUtil;
-import com.lianzai.reader.utils.OKHttpUtil;
-import com.lianzai.reader.utils.RxAppTool;
-import com.lianzai.reader.utils.RxImageTool;
-import com.qq.e.ads.nativ.ADSize;
-import com.qq.e.ads.nativ.NativeExpressAD;
-import com.qq.e.ads.nativ.NativeExpressADView;
-import com.qq.e.comm.util.AdError;
-
-import java.util.HashMap;
-import java.util.List;
-
-import okhttp3.Call;
 
 
 /**

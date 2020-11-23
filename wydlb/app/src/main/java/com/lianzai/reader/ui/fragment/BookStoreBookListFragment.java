@@ -150,7 +150,7 @@ public class BookStoreBookListFragment extends BaseFragment implements SwipeRefr
             mSwipeRefreshLayout.setEnabled(true);
             accountTokenBean = RxLoginTool.getLoginAccountToken();
             if(null != accountTokenBean && null != accountTokenBean.getData()) {
-                uid = accountTokenBean.getData().getUid();
+                uid = accountTokenBean.getData().getId();
                 bqtKey = uid + "_WDSD";
                 bookRequestTime = RxSharedPreferencesUtil.getInstance().getLong(bqtKey, 0);
             }
@@ -302,7 +302,7 @@ public class BookStoreBookListFragment extends BaseFragment implements SwipeRefr
 
     private void deleteBookListOptions(String id) {
         //移除
-        MyBookListRepository.getInstance().deleteByBookListIdAndUid(accountTokenBean.getData().getUid(),id);
+        MyBookListRepository.getInstance().deleteByBookListIdAndUid(accountTokenBean.getData().getId(),id);
         RxLogTool.e("deleteBookListOptions bookListId:" + id);
 
         fetchLocalDataAndShow();

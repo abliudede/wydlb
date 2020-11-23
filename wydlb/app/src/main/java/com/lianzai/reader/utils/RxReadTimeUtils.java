@@ -541,7 +541,7 @@ public class RxReadTimeUtils {
         }
         if (null != accountTokenBean) {
             if (RxNetTool.isAvailable()) {
-                String uid = String.valueOf(accountTokenBean.getData().getUid());
+                String uid = String.valueOf(accountTokenBean.getData().getId());
                 List<ReadTimeBean> readTimeBeans = ReadTimeRepository.getInstance().getReadTimeList(uid);
                 if(null == readTimeBeans || readTimeBeans.isEmpty()) {
                     return;

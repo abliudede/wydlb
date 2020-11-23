@@ -1438,8 +1438,8 @@ public class RecentContactsFragment extends TFragment {
     private void tryOptions() {
             if (RxLoginTool.isLogin()) {
                 if (!msgLoaded) {//未加载数据
-                    visitorImAccount = RxLoginTool.getLoginAccountToken().getData().getImAccount();
-                    visitorImToken = RxLoginTool.getLoginAccountToken().getData().getImToken();
+//                    visitorImAccount = RxLoginTool.getLoginAccountToken().getData().getImAccount();
+//                    visitorImToken = RxLoginTool.getLoginAccountToken().getData().getImToken();
                     imLogin(visitorImAccount, visitorImToken);
                 } else {
                     msgLoaded = false;

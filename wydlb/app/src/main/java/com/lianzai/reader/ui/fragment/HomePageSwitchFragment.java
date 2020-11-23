@@ -20,7 +20,6 @@ import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.inner.MyCountDownTimerForMMSS;
 import com.lianzai.reader.model.bean.BannerBean;
 import com.lianzai.reader.ui.activity.ActivityLoginNew;
-import com.lianzai.reader.ui.activity.taskCenter.ActivityTaskCenter;
 import com.lianzai.reader.ui.adapter.TabFragmentAdapter;
 import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.GsonUtil;
@@ -286,7 +285,6 @@ public class HomePageSwitchFragment extends BaseFragment {
 
     @OnClick(R.id.more_reward_iv) void moreClick(){
         if(RxLoginTool.isLogin()) {
-            ActivityTaskCenter.startActivity(getActivity(),0);
         }else {
             ActivityLoginNew.startActivity(getActivity());
         }

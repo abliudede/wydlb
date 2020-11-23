@@ -130,7 +130,7 @@ public class WebRecordFragment extends BaseFragment  implements  SwipeRefreshLay
         AccountTokenBean account = RxLoginTool.getLoginAccountToken();
         String uid = "0";
         if(null != account){
-            uid = String.valueOf(account.getData().getUid());
+            uid = String.valueOf(account.getData().getId());
         }
         List<WebHistoryBean> list = WebHistoryRepository.getInstance().getWebHistoryList(uid);
         if (null != list && !list.isEmpty()){

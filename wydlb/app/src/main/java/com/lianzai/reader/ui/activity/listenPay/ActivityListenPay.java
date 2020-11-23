@@ -20,8 +20,6 @@ import com.lianzai.reader.bean.ListenDetailBean;
 import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.component.DaggerAccountComponent;
 import com.lianzai.reader.interfaces.OnRepeatClickListener;
-import com.lianzai.reader.ui.activity.ActivityBindPhone;
-import com.lianzai.reader.ui.activity.ActivityEditPasswordShowPhone;
 import com.lianzai.reader.ui.activity.ActivityWebView;
 import com.lianzai.reader.ui.adapter.ListenPayItemAdapter;
 import com.lianzai.reader.utils.CallBackUtil;
@@ -161,7 +159,6 @@ public class ActivityListenPay extends BaseActivity {
                 rxDialogSureCancel.dismiss();
                 Bundle bundle = new Bundle();
                 bundle.putInt("flag", Constant.RegisterOrPassword.PayPassword);
-                RxActivityTool.skipActivity(ActivityListenPay.this, ActivityEditPasswordShowPhone.class, bundle);
             }
         });
     }
@@ -278,7 +275,6 @@ public class ActivityListenPay extends BaseActivity {
                                                             rxDialogBindPhone.dismiss();
                                                             Bundle bundle = new Bundle();
                                                             bundle.putInt("flag", Constant.RegisterOrPassword.BindPhone);
-                                                            RxActivityTool.skipActivity(ActivityListenPay.this, ActivityBindPhone.class, bundle);
                                                         }
                                                     });
 
@@ -332,7 +328,6 @@ public class ActivityListenPay extends BaseActivity {
                                                             rxDialogBindPhone.dismiss();
                                                             Bundle bundle = new Bundle();
                                                             bundle.putInt("flag", Constant.RegisterOrPassword.BindPhone);
-                                                            RxActivityTool.skipActivity(ActivityListenPay.this, ActivityBindPhone.class, bundle);
                                                         }
                                                     });
 

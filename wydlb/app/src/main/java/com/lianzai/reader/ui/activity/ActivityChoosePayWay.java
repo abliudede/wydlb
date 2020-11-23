@@ -108,8 +108,6 @@ public class ActivityChoosePayWay extends BaseActivity implements BountyHunterCo
     //当前订单号
     private String order_no;
 
-    //设置支付密码弹框
-    RxDialogSureCancel rxDialogSureCancel;
     private boolean isSuccess = false;
     private AccountDetailBean accountDetailBean;
 
@@ -171,32 +169,6 @@ public class ActivityChoosePayWay extends BaseActivity implements BountyHunterCo
         arrayMap.put("balanceType",Constant.WithdrawType.GOLD_TYPE);
         walletBalancePresenter.getWalletBalance(arrayMap);
         showDialog();
-
-
-        rxDialogSureCancel=new RxDialogSureCancel(this,R.style.OptionDialogStyle);
-        rxDialogSureCancel.setContent("请设置支付密码后再使用我的钱包功能");
-        rxDialogSureCancel.setCanceledOnTouchOutside(false);
-        rxDialogSureCancel.setCancel("再看看");
-        rxDialogSureCancel.setSure("立即设置");
-        rxDialogSureCancel.setCancelable(false);
-
-        rxDialogSureCancel.setCancelListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                rxDialogSureCancel.dismiss();
-            }
-        });
-
-        rxDialogSureCancel.setSureListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                rxDialogSureCancel.dismiss();
-                Bundle bundle = new Bundle();
-                bundle.putInt("flag", Constant.RegisterOrPassword.PayPassword);
-                RxActivityTool.skipActivity(ActivityChoosePayWay.this, ActivityEditPasswordShowPhone.class, bundle);
-            }
-        });
-
 
     }
 
@@ -265,37 +237,7 @@ public class ActivityChoosePayWay extends BaseActivity implements BountyHunterCo
             if(Integer.parseInt(amountstr) > banlanceamount){
                 RxToast.custom("余额不足", Constant.ToastType.TOAST_ERROR).show();
                 return;
-            }else if(TextUtils.isEmpty(accountDetailBean.getData().getMobile())){
-                //绑定手机号弹窗
-                if (null == rxDialogBindPhone) {
-                    rxDialogBindPhone = new RxDialogBindPhone(ActivityChoosePayWay.this, R.style.OptionDialogStyle);
-                    rxDialogBindPhone.setContent("您暂未绑定手机号，请先绑定手机号再使用相关功能。");
-                    rxDialogBindPhone.setTitle("绑定手机号提示");
-                    rxDialogBindPhone.getCancelView().setVisibility(View.VISIBLE);
-                    rxDialogBindPhone.setButtonText("立即绑定", "取消");
-                    rxDialogBindPhone.setSureListener(new OnRepeatClickListener() {
-                        @Override
-                        public void onRepeatClick(View v) {
-                            //跳转到绑定手机号页面
-                            rxDialogBindPhone.dismiss();
-                            Bundle bundle = new Bundle();
-                            bundle.putInt("flag", Constant.RegisterOrPassword.BindPhone);
-                            RxActivityTool.skipActivity(ActivityChoosePayWay.this, ActivityBindPhone.class, bundle);
-                        }
-                    });
-
-                    rxDialogBindPhone.setCancelListener(new OnRepeatClickListener() {
-                        @Override
-                        public void onRepeatClick(View v) {
-                            rxDialogBindPhone.dismiss();
-                        }
-                    });
-                }
-                rxDialogBindPhone.show();
-            } else if (!accountDetailBean.getData().isHasPayPwd()){//未设置
-                rxDialogSureCancel.show();
-                return;
-            } else{
+            }else{
                 //支付密码输入弹框
                 rxDialogPayment.getTv_sure().setOnClickListener(
                         view->{

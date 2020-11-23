@@ -12,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.lianzai.reader.R;
-import com.lianzai.reader.ui.activity.ActivityLogin;
 import com.lianzai.reader.ui.activity.ActivityLoginNew;
 
 

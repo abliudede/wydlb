@@ -3,17 +3,13 @@ package com.lianzai.reader.view.dialog;
 import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.graphics.Typeface;
-import android.net.Uri;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.RotateAnimation;
-import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -21,22 +17,12 @@ import android.widget.TextView;
 
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.Constant;
-import com.lianzai.reader.inner.MyCountDownTimerForAD;
 import com.lianzai.reader.inner.MyCountDownTimerForAD2;
 import com.lianzai.reader.model.bean.BannerBean;
-import com.lianzai.reader.ui.activity.ActivityBountyHunter;
-import com.lianzai.reader.ui.activity.ActivityLoginNew;
-import com.lianzai.reader.ui.activity.ActivityOneKeyReward;
-import com.lianzai.reader.ui.activity.ActivityWebView;
-import com.lianzai.reader.ui.activity.taskCenter.ActivityTaskCenter;
 import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
-import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxAppTool;
 import com.lianzai.reader.utils.RxImageTool;
-import com.lianzai.reader.utils.RxLoginTool;
-import com.lianzai.reader.utils.RxSharedPreferencesUtil;
-import com.lianzai.reader.view.RxToast;
 import com.qq.e.ads.nativ.ADSize;
 import com.qq.e.ads.nativ.NativeExpressAD;
 import com.qq.e.ads.nativ.NativeExpressADView;
@@ -155,7 +141,6 @@ public class RxDialogQiandaoReward extends RxDialog {
 
         tv_more.setOnClickListener(
                 v -> {
-                    ActivityTaskCenter.startActivity(mContext,0);
                 }
         );
 

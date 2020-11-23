@@ -173,13 +173,8 @@
 
         </activity>
 
-        <activity
-            android:name="com.lianzai.reader.ui.activity.ActivityRegisterAndPassword"
-            android:launchMode="singleTop" />
         <!--android:windowSoftInputMode="adjustResize"-->
-        <activity android:name="com.lianzai.reader.ui.activity.ActivityLogin" />
         <activity android:name="com.lianzai.reader.ui.activity.ActivityLoginNew" />
-        <activity android:name="com.lianzai.reader.ui.activity.ActivityAccountSecuritySettings" />
         <activity android:name="com.lianzai.reader.ui.activity.ActivityEditPassword" />
         <!--单例模式方便互相切换-->
         <activity
@@ -188,7 +183,6 @@
         <activity android:name="com.lianzai.reader.ui.activity.ActivityBookList" />
         <activity android:name="com.lianzai.reader.ui.activity.MinerGameActivity" />
         <activity android:name="com.lianzai.reader.ui.activity.ActivityAreaCode" />
-        <activity android:name="com.lianzai.reader.ui.activity.ActivityBindAccount" />
         <activity android:name="com.lianzai.reader.ui.activity.ActivityMessageCenter" />
         <activity android:name="com.lianzai.reader.ui.activity.ActivityNoticeDetail" />
 
@@ -199,7 +193,6 @@
         <activity android:name="com.lianzai.reader.ui.activity.ActivitySafety" />
         <activity android:name="com.lianzai.reader.ui.activity.WifiBookActivity" />
         <activity android:name="com.lianzai.reader.ui.activity.wallet.ActivityWalletDetail" />
-        <activity android:name="com.lianzai.reader.ui.activity.wallet.ActivityWalletMain" />
         <activity android:name="com.lianzai.reader.ui.activity.wallet.ActivityWalletRechargeReadCoin" />
         <activity android:name="com.lianzai.reader.ui.activity.wallet.ActivityWalletRechargeGoldCoin" />
         <activity android:name="com.lianzai.reader.ui.activity.wallet.ActivityWalletRechargeReadTicket" />
@@ -220,17 +213,12 @@
         <activity android:name="com.netease.nim.uikit.business.session.activity.CaptureVideoActivity" />
         <activity android:name=".ui.activity.chatRoomSetting.ActivityRank" />
         <activity android:name=".ui.activity.chatRoomSetting.ChatRoomEditNotice" />
-        <activity android:name=".ui.activity.chatRoomSetting.ActivityChatRoomPersonList" />
-        <activity android:name=".ui.activity.chatRoomSetting.ActivityBanPerson" />
         <activity android:name=".ui.activity.chatRoomSetting.ActivityChatRoomShowPerson" />
         <activity android:name=".ui.activity.BookRecommendSettingActivity" />
 
         <activity android:name=".ui.activity.taskCenter.ActivityFaceToFace" />
         <activity
             android:name=".ui.activity.taskCenter.ActivityNewRedEnvelope"
-            android:theme="@style/DialogActivityStyle" />
-        <activity
-            android:name=".ui.activity.taskCenter.ActivityGetRedEnvelope"
             android:theme="@style/DialogActivityStyle" />
         <activity android:name=".ui.activity.wallet.ActivityGoldDrillDetail" />
         <activity android:name=".ui.activity.ActivityGuide" />
@@ -278,11 +266,6 @@
             android:theme="@style/DialogActivityStyle" />
         <activity android:name="com.lianzai.reader.ui.activity.ActivityChoosePayWay" />
         <activity android:name="com.lianzai.reader.ui.activity.ActivityPaySuccess" />
-        <activity android:name="com.lianzai.reader.ui.activity.ActivityVerificationCode" />
-        <activity android:name="com.lianzai.reader.ui.activity.ActivitySetPassword" />
-        <activity android:name="com.lianzai.reader.ui.activity.ActivityBindPhone" />
-        <activity android:name="com.lianzai.reader.ui.activity.ActivityEditPasswordShowPhone" />
-        <activity android:name=".ui.activity.chat.ChatRoomActivity" />
         <activity android:name=".ui.activity.chat.ScanCodeActivity" />
         <activity android:name=".ui.activity.chat.ChatNumberQrCodeActivity" />
         <activity
@@ -309,7 +292,6 @@
         <activity android:name=".ui.activity.ActivityBookListForRank" />
         <activity android:name=".ui.activity.ActivityAdvertisement" />
         <activity android:name=".ui.activity.read.ActivityTeamChooseForLianzaihao" />
-        <activity android:name=".ui.activity.taskCenter.ActivityTaskCenter" />
         <activity android:name=".ui.activity.qrCodeShare.ActivityShareBitmapBook" />
 
         <activity android:name=".ui.activity.circle.ActivityCircleDetail" />
@@ -373,7 +355,6 @@
             android:name="com.yuyh.library.imgsel.ui.ISCameraActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".ui.activity.listenPay.ActivityListenPay" />
-        <activity android:name=".ui.activity.ActivitySmallConfidentialPayment" />
         <activity android:name=".ui.activity.ActivitySmallConfidentialPaymentAmount" />
         <activity
             android:name=".ui.activity.listenPay.ActivityPayForBook"

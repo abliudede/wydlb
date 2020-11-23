@@ -170,7 +170,7 @@ public class ActivityReadTimeShow extends BaseActivity implements SwipeRefreshLa
     public void onRefresh() {
         AccountTokenBean accountTokenBean = RxLoginTool.getLoginAccountToken();
         if (null != accountTokenBean) {
-            String uid = String.valueOf(accountTokenBean.getData().getUid());
+            String uid = String.valueOf(accountTokenBean.getData().getId());
             readTimeBeans = ReadTimeRepository.getInstance().getReadTimeList(uid);
             readTimeAdapter.replaceData(readTimeBeans);
 

@@ -34,7 +34,6 @@ import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.component.DaggerAccountComponent;
 import com.lianzai.reader.ui.activity.profile.ActivityUserProfile;
 import com.lianzai.reader.ui.activity.qrCodeShare.ActivityShareBitmapPerson;
-import com.lianzai.reader.ui.activity.taskCenter.ActivityFaceToFace;
 import com.lianzai.reader.ui.adapter.TabFragmentAdapter;
 import com.lianzai.reader.ui.contract.UserAttentionContract;
 import com.lianzai.reader.ui.fragment.MyDynamicFragmentNotRefresh;
@@ -1031,11 +1030,6 @@ public class PerSonHomePageActivity extends BaseActivity implements UserAttentio
                                 //复制链接
                                 RxClipboardTool.copyText(PerSonHomePageActivity.this,baseBean.getData().getOneUrlVal());
                                 RxToast.custom("复制成功").show();
-                                break;
-
-                            case 8:
-                                //面对面
-                                ActivityFaceToFace.startActivity(PerSonHomePageActivity.this,baseBean.getData().getOneUrlVal());
                                 break;
 
                             case 9:

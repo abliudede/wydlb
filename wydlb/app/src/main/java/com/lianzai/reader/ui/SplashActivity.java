@@ -28,6 +28,7 @@ import com.lianzai.reader.bean.StartVersionBean;
 import com.lianzai.reader.inner.MyCountDownTimerForAD;
 import com.lianzai.reader.ui.activity.ActivityAdvertisement;
 import com.lianzai.reader.ui.activity.ActivityGuide;
+import com.lianzai.reader.ui.activity.ActivityLoginNew;
 import com.lianzai.reader.ui.activity.MainActivity;
 import com.lianzai.reader.ui.activity.PermissionActivity;
 import com.lianzai.reader.utils.CallBackUtil;
@@ -240,10 +241,16 @@ public class SplashActivity extends PermissionActivity implements SplashADListen
         }
     }
 
+    //没登录不能进入主页
     private void enterMainActivity() {
 //        app_logo.setVisibility(View.INVISIBLE);
 //        container.removeAllViews();
-        MainActivity.startActivity(SplashActivity.this, pushJson, webOpenJson);
+        if(RxLoginTool.isLogin()){
+            MainActivity.startActivity(SplashActivity.this, pushJson, webOpenJson);
+        }else {
+            ActivityLoginNew.startActivity(SplashActivity.this);
+        }
+
         finish();
     }
 

@@ -240,8 +240,8 @@ public class MyBookFragment extends BaseFragment implements MyBookStoreContract.
         if (null != accountTokenBean) {
             swipe_grid_refresh_layout.setEnabled(true);
             //非游客状态
-            bqtKey = accountTokenBean.getData().getUid() + Constant.BQT_KEY;
-            uid = accountTokenBean.getData().getUid();
+            bqtKey = accountTokenBean.getData().getId() + Constant.BQT_KEY;
+            uid = accountTokenBean.getData().getId();
 //          view_not_login.setVisibility(View.GONE);
 
         } else {
@@ -766,7 +766,7 @@ public class MyBookFragment extends BaseFragment implements MyBookStoreContract.
 
     private void requestBookStore() {
         ArrayMap map = new ArrayMap();
-        bqtKey = accountTokenBean.getData().getUid() + Constant.BQT_KEY;
+        bqtKey = accountTokenBean.getData().getId() + Constant.BQT_KEY;
         timestamp = RxSharedPreferencesUtil.getInstance().getLong(bqtKey, 0);
         if (timestamp > 0) {//
             map.put("timestamp", String.valueOf(timestamp));
