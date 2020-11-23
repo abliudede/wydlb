@@ -24,7 +24,7 @@ import java.lang.annotation.RetentionPolicy;
 public class Constant {
 
     //基础环境配置
-    public static int appMode = AppMode.RELEASE;//是否是生产环境
+    public static int appMode = AppMode.BETA;//是否是生产环境
 
     //接口地址配置
     public static String API_BASE_URL = getAppBaseUrl();//测试 http://lz-api.bendixing.net dev:
@@ -194,7 +194,7 @@ public class Constant {
     public static String getAppBaseUrl() {
         String url = "";
         if (appMode == AppMode.BETA) {
-            url = "https://lz-api.bendixing.net";
+            url = "https://www.onela.cn";
 //            url="http://192.168.28.55:16010";
         } else if (appMode == AppMode.DEV) {
             url = "http://192.168.31.84:10001";
