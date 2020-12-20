@@ -1,6 +1,6 @@
 package com.yuyh.library.imgsel.ui.fragment;
 
-import com.lianzai.reader.R;
+import com.wydlb.first.R;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;

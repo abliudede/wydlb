@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.lianzai.reader"
+    package="com.wydlb.first"
     android:installLocation="auto">
     <!-- 权限声明 -->
     <!-- 访问网络状态-->
@@ -55,10 +55,10 @@
     <!-- SDK 权限申明, 第三方 APP 接入时，请将 com.netease.nim.demo 替换为自己的包名 -->
     <!-- 和下面的 uses-permission 一起加入到你的 AndroidManifest 文件中。 -->
     <permission
-        android:name="com.lianzai.reader.permission.RECEIVE_MSG"
+        android:name="com.wydlb.first.permission.RECEIVE_MSG"
         android:protectionLevel="signature" />
     <!-- 接收 SDK 消息广播权限， 第三方 APP 接入时，请将 com.netease.nim.demo 替换为自己的包名 -->
-    <uses-permission android:name="com.lianzai.reader.permission.RECEIVE_MSG" />
+    <uses-permission android:name="com.wydlb.first.permission.RECEIVE_MSG" />
 
     <!-- 打开闪光灯 -->
     <!--<uses-permission android:name="android.permission.FLASHLIGHT"/>-->
@@ -81,9 +81,9 @@
 
     <!--以下两处 {你的包名} 改开发者App的包名-->
     <permission
-        android:name="com.lianzai.reader.permission.MIPUSH_RECEIVE"
+        android:name="com.wydlb.first.permission.MIPUSH_RECEIVE"
         android:protectionLevel="signature" />
-    <uses-permission android:name="com.lianzai.reader.permission.MIPUSH_RECEIVE" />
+    <uses-permission android:name="com.wydlb.first.permission.MIPUSH_RECEIVE" />
 
     <uses-sdk tools:overrideLibrary="com.huawei.android.hms.base,com.huawei.android.hms.push" />
 
@@ -92,15 +92,15 @@
     <!-- 兼容flyme5.0以下版本，魅族内部集成pushSDK必填，不然无法收到消息-->
     <uses-permission android:name="com.meizu.flyme.push.permission.RECEIVE" />
     <permission
-        android:name="com.lianzai.reader.push.permission.MESSAGE"
+        android:name="com.wydlb.first.push.permission.MESSAGE"
         android:protectionLevel="signature" />
-    <uses-permission android:name="com.lianzai.reader.push.permission.MESSAGE" />
+    <uses-permission android:name="com.wydlb.first.push.permission.MESSAGE" />
     <!--  兼容flyme3.0配置权限-->
     <uses-permission android:name="com.meizu.c2dm.permission.RECEIVE" />
     <permission
-        android:name="com.lianzai.reader.permission.C2D_MESSAGE"
+        android:name="com.wydlb.first.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
-    <uses-permission android:name="com.lianzai.reader.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.wydlb.first.permission.C2D_MESSAGE" />
 
     <!--用于申请调用A-GPS模块-->
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"></uses-permission>
@@ -156,7 +156,7 @@
             </intent-filter>
         </activity>
         <!--<activity-->
-        <!--android:name="com.lianzai.reader.ui.activity.StartupPageActivity"-->
+        <!--android:name="com.wydlb.first.ui.activity.StartupPageActivity"-->
         <!--android:theme="@style/SplashTheme">-->
         <!--<intent-filter>-->
         <!--<action android:name="android.intent.action.MAIN" />-->
@@ -167,36 +167,36 @@
         <!--</activity>-->
 
         <activity
-            android:name="com.lianzai.reader.ui.activity.MainActivity"
+            android:name="com.wydlb.first.ui.activity.MainActivity"
             android:launchMode="singleTop"
             android:windowSoftInputMode="stateAlwaysHidden">
 
         </activity>
 
         <!--android:windowSoftInputMode="adjustResize"-->
-        <activity android:name="com.lianzai.reader.ui.activity.ActivityLoginNew" />
+        <activity android:name="com.wydlb.first.ui.activity.ActivityLoginNew" />
         <!--单例模式方便互相切换-->
         <activity
-            android:name="com.lianzai.reader.ui.activity.ActivityWebView"
+            android:name="com.wydlb.first.ui.activity.ActivityWebView"
             android:windowSoftInputMode="stateHidden|adjustPan" />
-        <activity android:name="com.lianzai.reader.ui.activity.MinerGameActivity" />
-        <activity android:name="com.lianzai.reader.ui.activity.ActivityMessageCenter" />
-        <activity android:name="com.lianzai.reader.ui.activity.ActivityNoticeDetail" />
+        <activity android:name="com.wydlb.first.ui.activity.MinerGameActivity" />
+        <activity android:name="com.wydlb.first.ui.activity.ActivityMessageCenter" />
+        <activity android:name="com.wydlb.first.ui.activity.ActivityNoticeDetail" />
 
-        <activity android:name="com.lianzai.reader.ui.activity.WifiBookActivity" />
-        <activity android:name="com.lianzai.reader.ui.activity.wallet.ActivityWalletDetail" />
-        <activity android:name="com.lianzai.reader.ui.activity.wallet.ActivityWalletRechargeReadCoin" />
-        <activity android:name="com.lianzai.reader.ui.activity.wallet.ActivityWalletRechargeGoldCoin" />
-        <activity android:name="com.lianzai.reader.ui.activity.wallet.ActivityWalletRechargeReadTicket" />
-        <activity android:name="com.lianzai.reader.ui.activity.wallet.ActivityWalletWithdrawReadCoin" />
-        <activity android:name="com.lianzai.reader.ui.activity.wallet.ActivityWalletChoiceAssets" />
-        <activity android:name="com.lianzai.reader.ui.activity.wallet.ActivityWalletWithdrawGoldCoin" />
-        <activity android:name="com.lianzai.reader.ui.activity.wallet.ActivityWalletWithdrawReadTicket" />
-        <activity android:name="com.lianzai.reader.ui.activity.wallet.ActivityWalletReadLockTicketList" />
-        <activity android:name="com.lianzai.reader.ui.activity.chat.ActivityPublicNumberChat" />
+        <activity android:name="com.wydlb.first.ui.activity.WifiBookActivity" />
+        <activity android:name="com.wydlb.first.ui.activity.wallet.ActivityWalletDetail" />
+        <activity android:name="com.wydlb.first.ui.activity.wallet.ActivityWalletRechargeReadCoin" />
+        <activity android:name="com.wydlb.first.ui.activity.wallet.ActivityWalletRechargeGoldCoin" />
+        <activity android:name="com.wydlb.first.ui.activity.wallet.ActivityWalletRechargeReadTicket" />
+        <activity android:name="com.wydlb.first.ui.activity.wallet.ActivityWalletWithdrawReadCoin" />
+        <activity android:name="com.wydlb.first.ui.activity.wallet.ActivityWalletChoiceAssets" />
+        <activity android:name="com.wydlb.first.ui.activity.wallet.ActivityWalletWithdrawGoldCoin" />
+        <activity android:name="com.wydlb.first.ui.activity.wallet.ActivityWalletWithdrawReadTicket" />
+        <activity android:name="com.wydlb.first.ui.activity.wallet.ActivityWalletReadLockTicketList" />
+        <activity android:name="com.wydlb.first.ui.activity.chat.ActivityPublicNumberChat" />
 
         <activity android:name=".ui.activity.book.ActivityBookListDetail" />
-        <activity android:name="com.lianzai.reader.ui.activity.ActivityImagesPreview" />
+        <activity android:name="com.wydlb.first.ui.activity.ActivityImagesPreview" />
         <activity android:name=".ui.activity.wallet.ActivityWalletRecordList" />
         <activity android:name=".ui.activity.profile.ActivityUserProfile" />
         <activity android:name=".ui.activity.profile.ActivityEditProfile" />
@@ -242,14 +242,14 @@
         <activity android:name=".ui.activity.ActivityBountyHunter" />
         <activity android:name=".ui.activity.ActivityOneKeyReward" />
         <activity
-            android:name="com.lianzai.reader.ui.activity.ActivityEnterAmount"
+            android:name="com.wydlb.first.ui.activity.ActivityEnterAmount"
             android:theme="@style/DialogActivityStyle"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
-            android:name="com.lianzai.reader.ui.activity.ActivityJoinRule"
+            android:name="com.wydlb.first.ui.activity.ActivityJoinRule"
             android:theme="@style/DialogActivityStyle" />
-        <activity android:name="com.lianzai.reader.ui.activity.ActivityChoosePayWay" />
-        <activity android:name="com.lianzai.reader.ui.activity.ActivityPaySuccess" />
+        <activity android:name="com.wydlb.first.ui.activity.ActivityChoosePayWay" />
+        <activity android:name="com.wydlb.first.ui.activity.ActivityPaySuccess" />
         <activity android:name=".ui.activity.chat.ScanCodeActivity" />
         <activity android:name=".ui.activity.chat.ChatNumberQrCodeActivity" />
         <activity
@@ -285,7 +285,7 @@
             android:name=".ui.activity.circle.ActivityPostDetail"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.lianzai.reader.ui.activity.circle.ActivityPostFloor"
+            android:name="com.wydlb.first.ui.activity.circle.ActivityPostFloor"
             android:theme="@style/DialogActivityStyle"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity android:name=".ui.activity.circle.ActivityMyNotice" />
@@ -329,7 +329,7 @@
         <activity android:name=".ui.activity.qrCodeShare.ActivityShareBitmapBookList" />
         <activity android:name=".ui.activity.wallet.ActivityCopyrightHistoryList" />
         <activity
-            android:name="com.lianzai.reader.ui.activity.UrlIdentification.ActivityReadDialogActivity"
+            android:name="com.wydlb.first.ui.activity.UrlIdentification.ActivityReadDialogActivity"
             android:theme="@style/DialogActivityStyle"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
 
@@ -387,14 +387,14 @@
 
         <!-- 微信分享回调 -->
         <activity
-            android:name="com.lianzai.reader.wxapi.WXPayEntryActivity"
+            android:name="com.wydlb.first.wxapi.WXPayEntryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <!--第三方登录-->
         <!--微信分享回调 -->
         <activity
-            android:name="com.lianzai.reader.wxapi.WXEntryActivity"
+            android:name="com.wydlb.first.wxapi.WXEntryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
@@ -403,7 +403,7 @@
         <!-- targetSDKVersion >= 24时才需要添加这个 provider。provider 的 authorities 属性的值为 ${applicationId}.fileprovider，请开发者根据自己的 ${applicationId} 来设置这个值 -->
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.lianzai.reader.fileprovider"
+            android:authorities="com.wydlb.first.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true"
             tools:replace="android:authorities">
@@ -418,7 +418,7 @@
         <!-- android:authorities="${applicationId}.bd.providerasd" authorities中${packageName}部分必须替换成app自己的包名 -->
         <provider
             android:name="com.bytedance.sdk.openadsdk.TTFileProvider"
-            android:authorities="com.lianzai.reader.TTFileProvider"
+            android:authorities="com.wydlb.first.TTFileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -428,7 +428,7 @@
 
         <provider
             android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
-            android:authorities="com.lianzai.reader.TTMultiProvider"
+            android:authorities="com.wydlb.first.TTMultiProvider"
             android:exported="false" />
 
 
@@ -470,7 +470,7 @@
         <!-- android:authorities="{包名}.ipc.provider", 请将com.netease.nim.demo替换为自己的包名 -->
         <provider
             android:name="com.netease.nimlib.ipc.NIMContentProvider"
-            android:authorities="com.lianzai.reader.ipc.provider"
+            android:authorities="com.wydlb.first.ipc.provider"
             android:exported="false"
             android:process=":core" />
 
@@ -494,7 +494,7 @@
 
         <provider
             android:name="com.huawei.hms.update.provider.UpdateProvider"
-            android:authorities="com.lianzai.reader.hms.update.provider"
+            android:authorities="com.wydlb.first.hms.update.provider"
             android:exported="false"
             android:grantUriPermissions="true" />
 
@@ -587,7 +587,7 @@
                 <action android:name="com.meizu.c2dm.intent.REGISTRATION" />
                 <action android:name="com.meizu.c2dm.intent.RECEIVE" />
 
-                <category android:name="com.lianzai.reader" />
+                <category android:name="com.wydlb.first" />
             </intent-filter>
         </receiver>
 

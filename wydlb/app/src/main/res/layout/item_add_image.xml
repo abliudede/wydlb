@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center"
     android:layout_width="wrap_content" android:layout_height="wrap_content">
-<com.lianzai.reader.view.SelectableRoundedImageView
+<com.wydlb.first.view.SelectableRoundedImageView
     app:sriv_right_top_corner_radius="5dp"
     app:sriv_right_bottom_corner_radius="5dp"
     app:sriv_left_top_corner_radius="5dp"

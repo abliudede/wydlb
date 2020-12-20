@@ -79,7 +79,7 @@
     <fragment
         android:layout_below="@+id/rl_actionbar"
         android:id="@+id/fragment_chat_room"
-        android:name="com.lianzai.reader.ui.activity.chat.fragment.ChatRoomFragment"
+        android:name="com.wydlb.first.ui.activity.chat.fragment.ChatRoomFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></fragment>
 
@@ -131,7 +131,7 @@
             android:layout_alignParentBottom="true"
            >
 
-            <com.lianzai.reader.view.CircleImageView
+            <com.wydlb.first.view.CircleImageView
                 android:id="@+id/super_award_iv_logo"
                 android:layout_width="44dp"
                 android:layout_height="44dp"
@@ -223,7 +223,7 @@
             android:background="@drawable/black_biaoqian2"
             android:layout_centerVertical="true">
 
-            <com.lianzai.reader.view.CircleImageView
+            <com.wydlb.first.view.CircleImageView
                 android:id="@+id/big_award_iv_logo"
                 android:layout_width="24dp"
                 android:layout_height="24dp"

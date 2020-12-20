@@ -19,7 +19,7 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content">
 
-    <com.lianzai.reader.view.RxToolBar
+    <com.wydlb.first.view.RxToolBar
         android:id="@+id/common_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -47,5 +47,5 @@
                 android:textColor="@color/blue_color"
                 android:layout_height="match_parent" />
         </RelativeLayout>
-    </com.lianzai.reader.view.RxToolBar>
+    </com.wydlb.first.view.RxToolBar>
 </merge>

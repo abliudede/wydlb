@@ -72,7 +72,7 @@
                 android:visibility="visible">
 
 
-                <com.lianzai.reader.view.SelectableRoundedImageView
+                <com.wydlb.first.view.SelectableRoundedImageView
                     android:id="@+id/iv_bg"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -160,7 +160,7 @@
                     android:maxLines="1"
                     />
 
-                <com.lianzai.reader.view.SelectableRoundedImageView
+                <com.wydlb.first.view.SelectableRoundedImageView
                     android:id="@+id/head_iv"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
@@ -227,7 +227,7 @@
                     android:visibility="invisible"
                     />
 
-                <com.lianzai.reader.view.OverlapLogoViewForFightLuck
+                <com.wydlb.first.view.OverlapLogoViewForFightLuck
                     android:id="@+id/headview_counttv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -237,7 +237,7 @@
                     app:txtColor="@color/normal_text_color"
                     android:layout_below="@id/time_tv">
 
-                </com.lianzai.reader.view.OverlapLogoViewForFightLuck>
+                </com.wydlb.first.view.OverlapLogoViewForFightLuck>
 
             </RelativeLayout>
 
@@ -250,7 +250,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/white_corner_card">
 
-                <com.lianzai.reader.view.SelectableRoundedImageView
+                <com.wydlb.first.view.SelectableRoundedImageView
                     android:id="@+id/owner_head_iv"
                     android:layout_width="48dp"
                     android:layout_height="48dp"

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-                <com.lianzai.reader.view.RecordButtonYuD
+                <com.wydlb.first.view.RecordButtonYuD
                     android:id="@+id/btn_audio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

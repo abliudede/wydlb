@@ -77,7 +77,7 @@
                     app:layout_scrollFlags="scroll|enterAlways">
 
 
-                    <com.lianzai.reader.view.CircleImageView
+                    <com.wydlb.first.view.CircleImageView
                         android:id="@+id/iv_logo"
                         android:layout_width="35dp"
                         android:layout_height="35dp"
@@ -129,7 +129,7 @@
                             android:text="赞"
                             android:textSize="@dimen/normal_text_size" />
 
-                        <com.lianzai.reader.view.praisebutton.ShineButton
+                        <com.wydlb.first.view.praisebutton.ShineButton
                             android:id="@+id/shine_btn"
                             android:layout_width="23dp"
                             android:layout_height="23dp"
@@ -226,7 +226,7 @@
             android:background="@drawable/post_reply_corner_bg"
             android:orientation="horizontal">
 
-            <com.lianzai.reader.view.CommentEditText
+            <com.wydlb.first.view.CommentEditText
                 android:id="@+id/ed_reply"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

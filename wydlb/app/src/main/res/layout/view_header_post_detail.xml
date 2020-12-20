@@ -68,7 +68,7 @@
             android:layout_marginTop="10dp"
             android:visibility="gone">
 
-            <com.lianzai.reader.view.SelectableRoundedImageView
+            <com.wydlb.first.view.SelectableRoundedImageView
                 android:id="@+id/iv_week_cover"
                 android:layout_width="match_parent"
                 android:layout_height="143dp"
@@ -98,7 +98,7 @@
             <!--android:layout_marginTop="10dp"-->
             <!--android:visibility="gone">-->
 
-            <!--<com.lianzai.reader.view.SelectableRoundedImageView-->
+            <!--<com.wydlb.first.view.SelectableRoundedImageView-->
                 <!--android:id="@+id/iv_book_cover"-->
                 <!--android:layout_width="75dp"-->
                 <!--android:layout_height="99dp"-->
@@ -192,7 +192,7 @@
         android:background="@mipmap/item_circle_bg"
         >
 
-        <com.lianzai.reader.view.SelectableRoundedImageView
+        <com.wydlb.first.view.SelectableRoundedImageView
             android:id="@+id/iv_dynamic_book_cover"
             android:layout_width="35dp"
             android:layout_height="46dp"
@@ -235,7 +235,7 @@
             android:layout_centerVertical="true"
             android:src="@mipmap/icon_dynamic_arrow_right" />
 
-        <com.lianzai.reader.view.OverlapLogoView
+        <com.wydlb.first.view.OverlapLogoView
             android:id="@+id/olv_users_logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -4,7 +4,7 @@
     android:layout_gravity="center" android:padding="10dp" android:background="@drawable/item_white_selector"
     android:layout_width="match_parent" android:layout_height="wrap_content">
 
-    <com.lianzai.reader.view.SelectableRoundedImageView
+    <com.wydlb.first.view.SelectableRoundedImageView
         android:id="@+id/iv_book_cover"
         app:sriv_right_bottom_corner_radius="5dp"
         app:sriv_left_top_corner_radius="5dp"

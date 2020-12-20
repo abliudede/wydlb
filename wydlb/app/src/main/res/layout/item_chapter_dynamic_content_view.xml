@@ -44,7 +44,7 @@
         android:layout_marginTop="12dp"
         android:visibility="gone">
 
-        <com.lianzai.reader.view.SelectableRoundedImageView
+        <com.wydlb.first.view.SelectableRoundedImageView
             android:id="@+id/iv_week_cover"
             android:layout_width="match_parent"
             android:layout_height="143dp"
@@ -74,7 +74,7 @@
         android:layout_marginTop="12dp"
         android:visibility="gone">
 
-        <com.lianzai.reader.view.SelectableRoundedImageView
+        <com.wydlb.first.view.SelectableRoundedImageView
             android:id="@+id/iv_book_cover"
             android:layout_width="75dp"
             android:layout_height="99dp"

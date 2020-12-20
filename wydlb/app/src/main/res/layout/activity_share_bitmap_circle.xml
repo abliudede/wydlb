@@ -89,7 +89,7 @@
                 android:src="@mipmap/bg_circle_detail_header2" />
 
 
-            <com.lianzai.reader.view.SelectableRoundedImageView
+            <com.wydlb.first.view.SelectableRoundedImageView
                 android:id="@+id/iv_circle_detail_cover"
                 android:layout_width="86dp"
                 android:layout_height="115dp"
@@ -114,7 +114,7 @@
                 android:textSize="@dimen/text_size_19"
                 />
 
-            <com.lianzai.reader.view.OverlapLogoView
+            <com.wydlb.first.view.OverlapLogoView
                 android:id="@+id/olv_users_logo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -124,7 +124,7 @@
                 app:txtColor="@color/white"
                 >
 
-            </com.lianzai.reader.view.OverlapLogoView>
+            </com.wydlb.first.view.OverlapLogoView>
 
 
             <TextView

@@ -18,7 +18,7 @@
         android:src="@mipmap/im_chat_room_admin1"
         android:visibility="gone" />
 
-    <com.lianzai.reader.view.SelectableRoundedImageView
+    <com.wydlb.first.view.SelectableRoundedImageView
         android:id="@+id/im_iv_logo"
         style="@style/ImCircleLogoStyle"
         android:layout_below="@+id/iv_level" />
@@ -46,7 +46,7 @@
             android:background="@drawable/im_text_in_background">
 
 
-            <com.lianzai.reader.view.SelectableRoundedImageView
+            <com.wydlb.first.view.SelectableRoundedImageView
                 android:id="@+id/im_iv_lianozaihao_cover"
                 android:layout_width="54dp"
                 android:layout_height="72dp"

@@ -53,7 +53,7 @@
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
-        <com.lianzai.reader.view.tab.CommonTabLayout
+        <com.wydlb.first.view.tab.CommonTabLayout
             android:id="@+id/tabs"
             android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"

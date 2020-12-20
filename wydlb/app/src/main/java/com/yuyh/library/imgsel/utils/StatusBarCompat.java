@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 
-import com.lianzai.reader.R;
+import com.wydlb.first.R;
 
 
 /**

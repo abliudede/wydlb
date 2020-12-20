@@ -15,7 +15,7 @@
         android:orientation="vertical">
 
 
-        <com.lianzai.reader.view.CircleImageView
+        <com.wydlb.first.view.CircleImageView
             android:id="@+id/iv_logo"
             android:layout_width="58dp"
             android:layout_height="58dp"

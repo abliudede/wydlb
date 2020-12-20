@@ -3,7 +3,7 @@
     style="@style/StatusBarTintStyle"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <com.lianzai.reader.view.miner.MinerMainView
+    <com.wydlb.first.view.miner.MinerMainView
         android:id="@+id/miner_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

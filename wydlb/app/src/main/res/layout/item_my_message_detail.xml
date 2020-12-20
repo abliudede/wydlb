@@ -9,7 +9,7 @@
     android:background="@drawable/white_corner_card"
     android:padding="10dp">
 
-    <com.lianzai.reader.view.CircleImageView
+    <com.wydlb.first.view.CircleImageView
         android:id="@+id/iv_logo"
         android:layout_width="32dp"
         android:layout_height="32dp"

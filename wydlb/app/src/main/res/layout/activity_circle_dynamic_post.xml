@@ -15,7 +15,7 @@
         android:layout_height="wrap_content">
 
 
-        <com.lianzai.reader.view.CommentEditText
+        <com.wydlb.first.view.CommentEditText
             android:id="@+id/ed_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -56,7 +56,7 @@
         <!--android:layout_marginTop="10dp"-->
         <!--android:visibility="visible">-->
 
-        <!--<com.lianzai.reader.view.SelectableRoundedImageView-->
+        <!--<com.wydlb.first.view.SelectableRoundedImageView-->
             <!--android:id="@+id/iv_book_cover"-->
             <!--android:layout_width="75dp"-->
             <!--android:layout_height="99dp"-->

@@ -76,7 +76,7 @@
             />
 
 
-        <com.lianzai.reader.view.SelectableRoundedImageView
+        <com.wydlb.first.view.SelectableRoundedImageView
             android:id="@+id/iv_user_head"
             android:layout_width="42dp"
             android:layout_height="42dp"

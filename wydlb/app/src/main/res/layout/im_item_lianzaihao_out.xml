@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <com.lianzai.reader.view.SelectableRoundedImageView
+    <com.wydlb.first.view.SelectableRoundedImageView
         android:layout_below="@+id/iv_level"
         android:id="@+id/im_iv_logo"
         style="@style/ImCircleLogoStyle"
@@ -53,7 +53,7 @@
            android:background="@drawable/im_other_out_background">
 
 
-           <com.lianzai.reader.view.SelectableRoundedImageView
+           <com.wydlb.first.view.SelectableRoundedImageView
                android:id="@+id/im_iv_lianozaihao_cover"
                android:layout_width="54dp"
                android:layout_height="72dp"

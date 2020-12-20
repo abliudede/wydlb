@@ -23,7 +23,7 @@
             android:layout_height="wrap_content" />
 
         <!--动态文本内容-->
-        <com.lianzai.reader.view.EllipsizeTextView
+        <com.wydlb.first.view.EllipsizeTextView
             android:id="@+id/tv_dynamic_content_text"
             style="@style/DynamicText_15_333333"
             android:layout_marginTop="12dp"
@@ -42,7 +42,7 @@
             android:orientation="vertical"
             android:visibility="gone">
 
-            <com.lianzai.reader.view.SelectableRoundedImageView
+            <com.wydlb.first.view.SelectableRoundedImageView
                 android:id="@+id/iv_week_cover"
                 android:layout_width="match_parent"
                 android:layout_height="143dp"
@@ -71,7 +71,7 @@
             <!--android:background="@drawable/v2_gray_5corner_bg"-->
             <!--android:visibility="gone">-->
 
-            <!--<com.lianzai.reader.view.SelectableRoundedImageView-->
+            <!--<com.wydlb.first.view.SelectableRoundedImageView-->
                 <!--android:id="@+id/iv_book_cover"-->
                 <!--android:layout_width="75dp"-->
                 <!--android:layout_height="99dp"-->
@@ -144,7 +144,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/gray_bg1">
 
-            <com.lianzai.reader.view.SelectableRoundedImageView
+            <com.wydlb.first.view.SelectableRoundedImageView
                 android:id="@+id/iv_flatform_cover"
                 android:layout_width="18dp"
                 android:layout_height="18dp"

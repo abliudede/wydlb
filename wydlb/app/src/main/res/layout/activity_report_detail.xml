@@ -86,7 +86,7 @@
             <!--android:paddingTop="11dp">-->
 
 
-            <!--<com.lianzai.reader.view.CommentEditText-->
+            <!--<com.wydlb.first.view.CommentEditText-->
                 <!--android:id="@+id/ed_reply"-->
                 <!--android:layout_width="0dp"-->
                 <!--android:layout_height="wrap_content"-->

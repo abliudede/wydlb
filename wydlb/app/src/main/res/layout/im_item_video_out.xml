@@ -9,7 +9,7 @@
         style="@style/ImTimelineStyle" />
 
 
-    <com.lianzai.reader.view.SelectableRoundedImageView
+    <com.wydlb.first.view.SelectableRoundedImageView
         android:id="@+id/im_iv_logo"
         style="@style/ImCircleLogoStyle"
         android:layout_alignParentRight="true"
@@ -17,7 +17,7 @@
 
         />
 
-    <com.lianzai.reader.view.SelectableRoundedImageView
+    <com.wydlb.first.view.SelectableRoundedImageView
         android:layout_alignTop="@+id/im_iv_logo"
         android:layout_toLeftOf="@+id/im_iv_logo"
         android:layout_marginRight="10dp"

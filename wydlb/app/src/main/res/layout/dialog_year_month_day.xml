@@ -50,19 +50,19 @@
         android:layout_height="180dp"
         android:gravity="center">
 
-        <com.lianzai.reader.view.dialog.dialogWheel.WheelView
+        <com.wydlb.first.view.dialog.dialogWheel.WheelView
             android:id="@+id/wheelView_year"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1" />
 
-        <com.lianzai.reader.view.dialog.dialogWheel.WheelView
+        <com.wydlb.first.view.dialog.dialogWheel.WheelView
             android:id="@+id/wheelView_month"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1" />
 
-        <com.lianzai.reader.view.dialog.dialogWheel.WheelView
+        <com.wydlb.first.view.dialog.dialogWheel.WheelView
             android:id="@+id/wheelView_day"
             android:layout_width="0dp"
             android:layout_height="match_parent"

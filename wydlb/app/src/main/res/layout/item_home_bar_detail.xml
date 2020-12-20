@@ -29,7 +29,7 @@
         android:layout_below="@+id/tv_from_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <com.lianzai.reader.view.CircleImageView
+        <com.wydlb.first.view.CircleImageView
             android:id="@+id/iv_logo"
             android:layout_width="35dp"
             android:layout_height="35dp"
@@ -145,7 +145,7 @@
         android:orientation="horizontal"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp">
-        <com.lianzai.reader.view.praisebutton.ShineButton
+        <com.wydlb.first.view.praisebutton.ShineButton
             android:id="@+id/shine_btn"
             android:layout_width="20dp"
             android:layout_height="20dp"

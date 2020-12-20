@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:background="@drawable/post_reply_corner_bg"
         android:layout_height="wrap_content">
-        <com.lianzai.reader.view.CommentEditText android:id="@+id/ed_reply"
+        <com.wydlb.first.view.CommentEditText android:id="@+id/ed_reply"
             android:background="@null"
             android:maxLength="150"
             android:layout_width="0dp" android:layout_weight="1"

@@ -5,7 +5,7 @@
     android:orientation="vertical" android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-    <com.lianzai.reader.view.SelectableRoundedImageView android:id="@+id/iv_book_cover"
+    <com.wydlb.first.view.SelectableRoundedImageView android:id="@+id/iv_book_cover"
         app:sriv_border_color="@android:color/transparent"
         app:sriv_left_bottom_corner_radius="5dp"
         app:sriv_left_top_corner_radius="5dp"

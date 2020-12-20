@@ -1,6 +1,6 @@
 package com.yuyh.library.imgsel.adapter;
 
-import com.lianzai.reader.R;
+import com.wydlb.first.R;
 import android.content.Context;
 import android.view.View;
 import android.widget.ImageView;

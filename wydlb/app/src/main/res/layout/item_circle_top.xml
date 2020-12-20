@@ -18,7 +18,7 @@
         android:src="@mipmap/icon_zhiding"/>
 
 
-        <com.lianzai.reader.view.EllipsizeTextView
+        <com.wydlb.first.view.EllipsizeTextView
             android:id="@+id/tv_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

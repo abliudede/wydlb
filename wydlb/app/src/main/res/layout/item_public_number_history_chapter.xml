@@ -83,7 +83,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/white_corner_card">
 
-        <com.lianzai.reader.view.SelectableRoundedImageView
+        <com.wydlb.first.view.SelectableRoundedImageView
             android:id="@+id/rl_weekly_iv_img"
             android:layout_width="match_parent"
             android:layout_height="160dp"

@@ -88,7 +88,7 @@
         android:background="@drawable/toast_gradient_bg"
         android:visibility="gone">
 
-        <com.lianzai.reader.view.loadding.LoadingView
+        <com.wydlb.first.view.loadding.LoadingView
             android:id="@+id/dialog_loading_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

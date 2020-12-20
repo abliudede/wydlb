@@ -1,11 +1,11 @@
 
 #-------------------------------------------定制化区域----------------------------------------------
 #---------------------------------1.实体类---------------------------------
--keep class com.lianzai.reader.bean.**{*;}
--dontwarn com.lianzai.reader.bean.**
+-keep class com.wydlb.first.bean.**{*;}
+-dontwarn com.wydlb.first.bean.**
 
--keep class com.lianzai.reader.model.**{*;}
--dontwarn com.lianzai.reader.model.**
+-keep class com.wydlb.first.model.**{*;}
+-dontwarn com.wydlb.first.model.**
 
 
 
@@ -74,11 +74,11 @@
 -keep class sun.misc.Unsafe { *; }
 -keep class com.google.gson.stream.** { *; }
 # Application classes that will be serialized/deserialized over Gson 下面替换成自己的实体类
--keep class com.lianzai.reader.* { *; }
--keep class com.lianzai.reader.ui.activity.**{*;}
--dontwarn com.lianzai.reader.ui.activity.**
--keep class com.lianzai.reader.ui.fragment.**{*;}
--dontwarn com.lianzai.reader.ui.fragment.**
+-keep class com.wydlb.first.* { *; }
+-keep class com.wydlb.first.ui.activity.**{*;}
+-dontwarn com.wydlb.first.ui.activity.**
+-keep class com.wydlb.first.ui.fragment.**{*;}
+-dontwarn com.wydlb.first.ui.fragment.**
 
 #腾讯广告联盟需要
  -keep class com.qq.e.** {
@@ -136,7 +136,7 @@
 -keepclassmembers class * {
    public <init> (org.json.JSONObject);
 }
--keep public class com.lianzai.reader.R$*{
+-keep public class com.wydlb.first.R$*{
 public static final int *;
 }
 
@@ -177,7 +177,7 @@ public static java.lang.String TABLENAME;
 -dontwarn com.just.library.**
 -keepclassmembers class com.just.library.agentweb.AndroidInterface{ *; }
 
--keep class com.lianzai.reader.ui.activity.ActivityWebView { *; }
+-keep class com.wydlb.first.ui.activity.ActivityWebView { *; }
 
 #-------------------------------------------------------------------------
 

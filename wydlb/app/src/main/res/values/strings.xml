@@ -117,8 +117,8 @@
 
     <string name="download.chapter_scope">(%1$d-%2$d章)</string>
 
-    <string name="footer_behavior">com.lianzai.reader.view.behavior.BottomBehavior</string>
-    <string name="title_behavior">com.lianzai.reader.view.behavior.TitleBehavior</string>
+    <string name="footer_behavior">com.wydlb.first.view.behavior.BottomBehavior</string>
+    <string name="title_behavior">com.wydlb.first.view.behavior.TitleBehavior</string>
 
     <string-array name="sort_array">
         <item>按更新时间排序</item>

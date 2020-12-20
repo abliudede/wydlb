@@ -14,7 +14,7 @@
         android:layout_height="0dp"
         android:layout_weight="3"
         />
-    <com.lianzai.reader.view.SelectableRoundedImageView
+    <com.wydlb.first.view.SelectableRoundedImageView
         android:id="@+id/iv_annual"
         android:layout_width="291dp"
         android:layout_height="370dp"

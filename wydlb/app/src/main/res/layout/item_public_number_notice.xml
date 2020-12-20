@@ -21,7 +21,7 @@
         android:layout_below="@+id/tv_timeline"
         android:background="@drawable/white_corner_card">
 
-        <com.lianzai.reader.view.SelectableRoundedImageView
+        <com.wydlb.first.view.SelectableRoundedImageView
             android:id="@+id/iv_img"
             android:layout_width="match_parent"
             android:layout_height="160dp"

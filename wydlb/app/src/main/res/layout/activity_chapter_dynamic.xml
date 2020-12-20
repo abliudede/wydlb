@@ -51,7 +51,7 @@
 
     <fragment
         android:id="@+id/fragment"
-        android:name="com.lianzai.reader.ui.fragment.ChapterDynamicFragment"
+        android:name="com.wydlb.first.ui.fragment.ChapterDynamicFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/action_bar"></fragment>

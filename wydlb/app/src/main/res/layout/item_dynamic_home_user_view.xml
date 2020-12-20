@@ -7,7 +7,7 @@
     android:orientation="horizontal"
     >
 
-    <com.lianzai.reader.view.CircleImageView
+    <com.wydlb.first.view.CircleImageView
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:id="@+id/civ_dynamic_user_logo"

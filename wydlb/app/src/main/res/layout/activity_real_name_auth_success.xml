@@ -35,7 +35,7 @@
 
     </RelativeLayout>
 
-    <com.lianzai.reader.view.DropZoomScrollView
+    <com.wydlb.first.view.DropZoomScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -88,7 +88,7 @@
                     android:src="@mipmap/verified_success_bg" />
             </RelativeLayout>
 
-            <com.lianzai.reader.view.CircleImageView
+            <com.wydlb.first.view.CircleImageView
                 android:id="@+id/iv_user_head"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
@@ -183,6 +183,6 @@
 
         </RelativeLayout>
 
-    </com.lianzai.reader.view.DropZoomScrollView>
+    </com.wydlb.first.view.DropZoomScrollView>
 
 </LinearLayout>

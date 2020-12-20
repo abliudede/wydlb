@@ -21,7 +21,7 @@
         android:layout_marginTop="11dp"
         android:layout_marginLeft="9dp"/>
 
-    <com.lianzai.reader.view.CircleImageView
+    <com.wydlb.first.view.CircleImageView
         android:id="@+id/iv_logo"
         android:layout_width="44dp"
         android:layout_height="44dp"

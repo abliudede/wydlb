@@ -21,7 +21,7 @@
             android:layout_height="121dp"
            >
 
-            <com.lianzai.reader.view.SelectableRoundedImageView
+            <com.wydlb.first.view.SelectableRoundedImageView
                 android:id="@+id/iv_book_list_cover"
                 android:layout_width="121dp"
                 android:layout_height="121dp"

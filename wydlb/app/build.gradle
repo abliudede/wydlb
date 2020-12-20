@@ -11,7 +11,7 @@ android {
     aaptOptions.cruncherEnabled = false
     aaptOptions.useNewCruncher = false
     defaultConfig {
-        applicationId "com.lianzai.reader"
+        applicationId "com.wydlb.first"
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 40102
@@ -86,7 +86,7 @@ android {
 
 greendao{
     schemaVersion 50
-    daoPackage 'com.lianzai.reader.model.gen'
+    daoPackage 'com.wydlb.first.model.gen'
     targetGenDir 'src/main/java'
 }
 repositories{

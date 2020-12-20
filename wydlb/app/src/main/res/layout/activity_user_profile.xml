@@ -67,7 +67,7 @@
         android:clickable="true"
         android:padding="36dp">
 
-        <com.lianzai.reader.view.CircleImageView
+        <com.wydlb.first.view.CircleImageView
             android:id="@+id/iv_user_logo"
             android:layout_width="128dp"
             android:layout_height="128dp"

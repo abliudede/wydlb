@@ -43,7 +43,7 @@
         <RelativeLayout  android:layout_alignParentBottom="true"
             android:layout_width="match_parent" android:paddingRight="15dp"
             android:layout_height="wrap_content">
-            <com.lianzai.reader.view.tab.CommonTabLayout
+            <com.wydlb.first.view.tab.CommonTabLayout
                 android:id="@+id/tabs"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"

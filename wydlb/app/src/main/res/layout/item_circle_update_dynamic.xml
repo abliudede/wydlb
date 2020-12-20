@@ -45,7 +45,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginTop="10dp" />
 
-                <!--<com.lianzai.reader.view.OverlapLogoView-->
+                <!--<com.wydlb.first.view.OverlapLogoView-->
                 <!--android:id="@+id/olv_users_logo"-->
                 <!--android:layout_width="wrap_content"-->
                 <!--android:layout_height="wrap_content"-->

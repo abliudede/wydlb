@@ -47,7 +47,7 @@
                     android:layout_marginTop="12dp"
                     android:src="@mipmap/mine_ad_close" />
 
-                <com.lianzai.reader.view.SelectableRoundedImageView
+                <com.wydlb.first.view.SelectableRoundedImageView
                     android:id="@+id/iv_book_cover"
                     android:layout_width="64dp"
                     android:layout_height="85dp"
@@ -82,7 +82,7 @@
                     android:src="@mipmap/circle_gold"
                     android:visibility="visible" />
 
-                <com.lianzai.reader.view.CircleImageView
+                <com.wydlb.first.view.CircleImageView
                     android:id="@+id/iv_user_logo"
                     android:layout_width="42dp"
                     android:layout_height="42dp"

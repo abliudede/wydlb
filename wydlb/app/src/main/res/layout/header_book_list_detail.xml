@@ -30,7 +30,7 @@
             android:paddingRight="10dp"
             android:paddingTop="60dp">
 
-            <com.lianzai.reader.view.SelectableRoundedImageView
+            <com.wydlb.first.view.SelectableRoundedImageView
                 android:id="@+id/iv_book_list_cover"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
@@ -64,7 +64,7 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <com.lianzai.reader.view.CircleImageView
+                <com.wydlb.first.view.CircleImageView
                     android:id="@+id/civ_logo"
                     android:layout_width="28dp"
                     android:layout_height="28dp"

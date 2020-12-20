@@ -78,7 +78,7 @@
                 android:textColor="@color/v2_black_color"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <com.lianzai.reader.view.NumberEditText android:id="@+id/ed_amount" android:layout_toRightOf="@+id/tv_cash_tag"
+            <com.wydlb.first.view.NumberEditText android:id="@+id/ed_amount" android:layout_toRightOf="@+id/tv_cash_tag"
                 android:background="@null" android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:inputType="number"

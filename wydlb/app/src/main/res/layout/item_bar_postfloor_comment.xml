@@ -7,7 +7,7 @@
     android:background="@drawable/bottom_line_white"
     android:padding="10dp">
 
-    <com.lianzai.reader.view.CircleImageView
+    <com.wydlb.first.view.CircleImageView
         android:id="@+id/iv_logo"
         android:layout_width="36dp"
         android:layout_height="36dp"

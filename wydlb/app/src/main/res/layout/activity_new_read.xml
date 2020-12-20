@@ -16,7 +16,7 @@
         android:layout_height="match_parent">
 
         <!--阅读页面-->
-        <com.lianzai.reader.view.page.PageView
+        <com.wydlb.first.view.page.PageView
             android:id="@+id/read_pv_page"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -395,7 +395,7 @@
             android:layout_marginRight="6dp"
             android:visibility="visible" />
 
-        <!--<com.lianzai.reader.view.BarrageChatRoomView-->
+        <!--<com.wydlb.first.view.BarrageChatRoomView-->
         <!--android:id="@+id/barrage_view"-->
         <!--android:layout_width="wrap_content"-->
         <!--android:layout_height="wrap_content"-->
@@ -473,7 +473,7 @@
             android:paddingBottom="12dp"
             android:paddingTop="24dp">
 
-            <com.lianzai.reader.view.SelectableRoundedImageView
+            <com.wydlb.first.view.SelectableRoundedImageView
                 android:id="@+id/iv_book_cover"
                 android:layout_width="75dp"
                 android:layout_height="100dp"

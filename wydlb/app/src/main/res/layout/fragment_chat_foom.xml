@@ -114,7 +114,7 @@
                     android:textSize="13sp"
                     android:visibility="gone" />
 
-                <com.lianzai.reader.view.RecordButton
+                <com.wydlb.first.view.RecordButton
                     android:id="@+id/btn_audio"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"

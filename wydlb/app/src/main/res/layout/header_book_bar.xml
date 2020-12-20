@@ -20,7 +20,7 @@
             android:src="@mipmap/bg_blur_mask"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
-        <com.lianzai.reader.view.SelectableRoundedImageView
+        <com.wydlb.first.view.SelectableRoundedImageView
             app:sriv_left_bottom_corner_radius="5dp"
             app:sriv_left_top_corner_radius="5dp"
             app:sriv_right_bottom_corner_radius="5dp"
@@ -185,7 +185,7 @@
         android:layout_height="wrap_content" />
 
 
-    <com.lianzai.reader.view.ExpandableTextView
+    <com.wydlb.first.view.ExpandableTextView
         android:id="@+id/rm_tv_description"
         android:layout_marginTop="5dp"
         app:maxCollapsedLines="3"
@@ -212,7 +212,7 @@
             android:textColor="@color/blue_color"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-    </com.lianzai.reader.view.ExpandableTextView>
+    </com.wydlb.first.view.ExpandableTextView>
     
     <FrameLayout android:id="@+id/fl_chapter_view"
         android:layout_width="match_parent"

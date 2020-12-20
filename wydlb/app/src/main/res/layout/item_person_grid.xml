@@ -7,7 +7,7 @@
     android:clickable="true"
   >
 
-    <com.lianzai.reader.view.SelectableRoundedImageView
+    <com.wydlb.first.view.SelectableRoundedImageView
         android:id="@+id/iv_member_logo"
         android:layout_width="52dp"
         android:layout_height="52dp"

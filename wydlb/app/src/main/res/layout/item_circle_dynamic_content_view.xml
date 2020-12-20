@@ -24,7 +24,7 @@
     <include layout="@layout/item_dynamic_user_title_view" android:layout_width="match_parent" android:layout_height="wrap_content" />
 
     <!--动态文本内容-->
-    <com.lianzai.reader.view.EllipsizeTextView
+    <com.wydlb.first.view.EllipsizeTextView
         android:id="@+id/tv_dynamic_content_text"
         style="@style/DynamicText_15_333333"
         android:layout_marginTop="12dp"
@@ -75,7 +75,7 @@
         android:layout_marginTop="12dp"
         android:visibility="gone">
 
-        <com.lianzai.reader.view.SelectableRoundedImageView
+        <com.wydlb.first.view.SelectableRoundedImageView
             android:id="@+id/iv_week_cover"
             android:layout_width="match_parent"
             android:layout_height="143dp"

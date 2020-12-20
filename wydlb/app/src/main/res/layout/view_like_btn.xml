@@ -3,13 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.lianzai.reader.view.praisebutton.DotsView
+    <com.wydlb.first.view.praisebutton.DotsView
         android:id="@+id/dots"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"/>
 
-    <com.lianzai.reader.view.praisebutton.CircleView
+    <com.wydlb.first.view.praisebutton.CircleView
         android:id="@+id/circle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.lianzai.reader.view.CircleImageView
+    <com.wydlb.first.view.CircleImageView
         android:id="@+id/civ_dynamic_comment_user_logo"
         android:layout_alignParentLeft="true"
         android:src="@mipmap/default_fangxing_logo"
@@ -13,7 +13,7 @@
         app:border_color="@color/transparent"
         app:border_width="1dp" />
 
-    <com.lianzai.reader.view.EllipsizeTextView
+    <com.wydlb.first.view.EllipsizeTextView
         android:id="@+id/tv_dynamic_user_comment"
         style="@style/DynamicText_13_333333"
         android:layout_marginLeft="4dp"

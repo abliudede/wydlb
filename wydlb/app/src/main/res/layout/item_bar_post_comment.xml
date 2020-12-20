@@ -7,7 +7,7 @@
     android:background="@drawable/item_blue_selector"
     android:padding="10dp">
 
-    <com.lianzai.reader.view.CircleImageView
+    <com.wydlb.first.view.CircleImageView
         android:id="@+id/iv_logo"
         android:layout_width="36dp"
         android:layout_height="36dp"
@@ -68,7 +68,7 @@
         android:textColor="@color/normal_text_color"
         android:textSize="@dimen/text_size_16" />
 
-    <com.lianzai.reader.view.CommentListTextView
+    <com.wydlb.first.view.CommentListTextView
         android:id="@+id/tv_comment_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

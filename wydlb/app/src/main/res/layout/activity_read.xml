@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <!--阅读页面-->
-        <com.lianzai.reader.view.page.PageView
+        <com.wydlb.first.view.page.PageView
             android:id="@+id/read_pv_page"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -424,7 +424,7 @@
             android:layout_width="52dp"
             android:layout_height="59dp" />
 
-        <com.lianzai.reader.view.BarrageChatRoomView
+        <com.wydlb.first.view.BarrageChatRoomView
             android:layout_above="@+id/iv_chat_room_enter"
             android:layout_alignParentRight="true"
             android:id="@+id/barrage_view"

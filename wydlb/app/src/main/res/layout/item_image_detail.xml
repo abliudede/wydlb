@@ -12,7 +12,7 @@
         android:orientation="vertical"
         android:scaleType="fitCenter"></me.panpf.sketch.SketchImageView>
 
-    <com.lianzai.reader.view.loadding.LoadingView
+    <com.wydlb.first.view.loadding.LoadingView
     android:id="@+id/img_loading_view"
     android:layout_gravity="center"
     app:ring_style="round"

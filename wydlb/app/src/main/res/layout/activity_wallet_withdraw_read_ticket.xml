@@ -45,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
-            <com.lianzai.reader.view.NumberEditText android:id="@+id/ed_amount" android:layout_below="@+id/tv1"
+            <com.wydlb.first.view.NumberEditText android:id="@+id/ed_amount" android:layout_below="@+id/tv1"
                 android:background="@null" android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:inputType="number"

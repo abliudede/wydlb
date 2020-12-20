@@ -29,7 +29,7 @@
         android:paddingBottom="24dp"
         >
 
-        <com.lianzai.reader.view.SelectableRoundedImageView
+        <com.wydlb.first.view.SelectableRoundedImageView
             android:id="@+id/iv_book_cover"
             android:layout_width="75dp"
             android:layout_height="100dp"
