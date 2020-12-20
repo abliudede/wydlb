@@ -13,7 +13,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import androidx.annotation.Nullable;
-import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.RecyclerView;
@@ -52,14 +51,12 @@ import com.lianzai.reader.bean.UrlRecognitionBean;
 import com.lianzai.reader.interfaces.AndroidInterface;
 import com.lianzai.reader.interfaces.OnRepeatClickListener;
 import com.lianzai.reader.model.bean.WebHistoryBean;
-import com.lianzai.reader.model.local.ReadSettingManager;
 import com.lianzai.reader.model.local.WebHistoryRepository;
-import com.lianzai.reader.ui.adapter.PureReadItemAdapter;
 import com.lianzai.reader.utils.AndroidBug5497Workaround;
-import com.lianzai.reader.utils.BrightnessUtils;
 import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
+import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxClipboardTool;
 import com.lianzai.reader.utils.RxDeviceTool;
 import com.lianzai.reader.utils.RxEncodeTool;
@@ -73,14 +70,12 @@ import com.lianzai.reader.utils.RxLoginTool;
 import com.lianzai.reader.utils.RxShareUtils;
 import com.lianzai.reader.utils.RxSharedPreferencesUtil;
 import com.lianzai.reader.utils.RxTimeTool;
-import com.lianzai.reader.utils.ScreenUtils;
 import com.lianzai.reader.utils.SystemBarUtils;
 import com.lianzai.reader.utils.UIController;
 import com.lianzai.reader.view.CustomLoadMoreView;
 import com.lianzai.reader.view.RxToast;
 import com.lianzai.reader.view.dialog.RxDialogSureCancelNew;
 import com.lianzai.reader.view.dialog.RxDialogWebShare;
-import com.lianzai.reader.view.page.PageStyle;
 import com.sina.weibo.sdk.share.WbShareHandler;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.UiError;
@@ -150,25 +145,6 @@ public class ActivityWebView extends PermissionActivity {
     @Bind(R.id.iv_exchange)
     ImageView iv_exchange;
 
-    //纯净模式开关
-    @Bind(R.id.iv_pureread)
-    ImageView iv_pureread;
-    boolean canPureClick = true;
-
-    //纯净模式图层
-    @Bind(R.id.pure_view)
-    RecyclerView pure_view;
-    /**
-     * 显示的数据
-     */
-    private List<ReadabilityBean> pureListData = new ArrayList<>();
-    /**
-     * RecyclerView的适配器
-     */
-    private PureReadItemAdapter pureReadItemAdapter;
-    private RxLinearLayoutManager linearLayoutManager;
-    CustomLoadMoreView customLoadMoreView;
-
 
     //引导图层
     private int count = 0;
@@ -211,7 +187,6 @@ public class ActivityWebView extends PermissionActivity {
     private LinearLayout parent_view;
     //用作双击检测
     private long mClickTime;
-    private boolean pureMode;
 
 
     //默认情况0,普通url，会识别，分享抓取页面内容
@@ -339,42 +314,6 @@ public class ActivityWebView extends PermissionActivity {
         parent_view = findViewById(R.id.parent_view);
         errorView = LayoutInflater.from(this).inflate(R.layout.view_webview_error, null);
 
-        pure_view.addOnScrollListener(new RecyclerView.OnScrollListener() {
-
-            @Override
-            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-                super.onScrolled(recyclerView, dx, dy);
-            }
-
-            @Override
-            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-                super.onScrollStateChanged(recyclerView, newState);
-                if (linearLayoutManager.findFirstVisibleItemPosition() >= 1) {
-                    iv_readmode_enter.setVisibility(View.GONE);
-                    action_bar.setVisibility(View.GONE);
-                    SystemBarUtils.readStatusBar4(ActivityWebView.this);
-                } else {
-                    action_bar.setVisibility(View.VISIBLE);
-                    SystemBarUtils.readStatusBar3(ActivityWebView.this);
-                }
-            }
-        });
-
-        action_bar.setOnClickListener(
-                v -> {//双击
-                    if (System.currentTimeMillis() - mClickTime < 800) {
-                        //此处做双击具体业务逻辑
-                        try {
-                            pure_view.scrollToPosition(0);
-                        } catch (Exception e) {
-
-                        }
-                    } else {
-                        mClickTime = System.currentTimeMillis();
-                        //表示单击，此处也可以做单击的操作
-                    }
-                }
-        );
 
         Intent intent = getIntent();
         dealIntent(intent);
@@ -460,21 +399,13 @@ public class ActivityWebView extends PermissionActivity {
         try {
             //总是显示阅读模式转换
             iv_exchange.setVisibility(View.VISIBLE);
-            iv_pureread.setVisibility(View.VISIBLE);
             //假如是内站书的链接则继续
             if (openUrl.contains("lianzai.com/b/") || openUrl.contains("lianzai.com/c/") || openUrl.contains("lianzai.com/e/")) { // 内站的小说
                 iv_exchange.setVisibility(View.VISIBLE);
-                iv_pureread.setVisibility(View.VISIBLE);
             } else if (openUrl.contains("lianzai.com") || openUrl.contains("bendixing.net")) {
                 //假如是内站链接且不是内站书链接，则不显示。
                 iv_exchange.setVisibility(View.GONE);
-                iv_pureread.setVisibility(View.INVISIBLE);
                 showTitle = true;
-            }
-            //获取纯净模式内容
-            pureMode = intent.getBooleanExtra("pureMode", false);
-            if (pureMode && iv_pureread.getVisibility() == View.VISIBLE) {
-                enterPureMode(openUrl, true,false);
             }
         } catch (Exception e) {
         }
@@ -756,25 +687,6 @@ public class ActivityWebView extends PermissionActivity {
         }
     }
 
-    @OnClick(R.id.iv_pureread)
-    void purereadClick() {
-
-        if (!canPureClick) {
-            RxToast.custom("正在努力加载中...").show();
-            return;
-        }
-
-        if (pure_view.getVisibility() == View.VISIBLE) {
-            pure_view.setVisibility(View.GONE);
-            iv_pureread.setImageResource(R.mipmap.purereadmode_close);
-            RxToast.custom("您已退出无广告阅读模式").show();
-        } else {
-            RxToast.custom("正在努力加载中...").show();
-            canPureClick = false;
-            enterPureMode(openUrl, true,true);
-        }
-    }
-
 
 
     @OnClick(R.id.iv_readmode_enter)
@@ -913,7 +825,6 @@ public class ActivityWebView extends PermissionActivity {
                     if (nowTime - lastrequest > 1000) {
                         //插入网页历史记录
                         addHistory(pageTitle, openUrl);
-                        urlRecognitionRequest(openUrl);
                         myHandler.removeCallbacksAndMessages(null);
                     } else {
                         //没达到时间，继续扫描
@@ -924,68 +835,6 @@ public class ActivityWebView extends PermissionActivity {
                 RxLogTool.e("MyHandler e:" + e.getMessage());
             }
         }
-    }
-
-    /**
-     * url链接识别
-     */
-    private void urlRecognitionRequest(String url) {
-        //假如是内站书的链接则继续
-        if (url.contains("lianzai.com/b/") || url.contains("lianzai.com/c/") || url.contains("lianzai.com/e/")) { // 内站的小说
-
-        } else if (url.contains("lianzai.com") || url.contains("bendixing.net") || url.contains("help2.bendixing.net") || url.contains("help.bendixing.net")) {
-            //假如是内站链接且不是内站书链接，则返回。
-            return;
-        }
-
-
-        RxLogTool.e("urlRecognition start:" + url);
-        Map map2 = new HashMap();
-        map2.put("bookUrl", url);
-
-        OKHttpUtil.okHttpPost(Constant.API_BASE_URL + "/book/read/urlRecognition", map2, new CallBackUtil.CallBackString() {
-            @Override
-            public void onFailure(Call call, Exception e) {
-                try {
-                    //识别失败的时候，隐藏按钮
-                    bid = 0;
-                    iv_readmode_enter.setVisibility(View.GONE);
-                    RxLogTool.e("urlRecognition" + e.toString());
-                } catch (Exception ee) {
-
-                }
-            }
-
-            @Override
-            public void onResponse(String response) {
-                try {
-                    RxLogTool.e("urlRecognition" + response);
-                    UrlRecognitionBean urlRecognitionBean = GsonUtil.getBean(response, UrlRecognitionBean.class);
-                    if (urlRecognitionBean.getCode() == Constant.ResponseCodeStatus.SUCCESS_CODE) {
-                        bid = urlRecognitionBean.getData().getNovel_id();
-                        //识别为书的时候展示切换到阅读模式按钮
-                        if (count < 1) {
-                            iv_readmode_enter.setVisibility(View.VISIBLE);
-                            count++;
-                            //假如是自动转码的状态,且不是自动的纯净模式，跳往阅读页面
-                            if (RxSharedPreferencesUtil.getInstance().getBoolean(Constant.AUTO_EXCHANGE, false) && !pureMode) {
-                            }
-                        }
-                    } else {
-                        //识别失败的时候，隐藏按钮
-                        bid = 0;
-                        iv_readmode_enter.setVisibility(View.GONE);
-                        exchangeTip = urlRecognitionBean.getMsg();
-                    }
-                } catch (Exception e) {
-                    //识别失败的时候，隐藏按钮
-                    bid = 0;
-                    iv_readmode_enter.setVisibility(View.GONE);
-                    RxLogTool.e("urlRecognition" + e.toString());
-                }
-
-            }
-        });
     }
 
 
@@ -1375,11 +1224,6 @@ public class ActivityWebView extends PermissionActivity {
             }catch (Exception e){
             }
 
-        }else if(event.getTag() == Constant.EventTag.ERROR_WEB_JSOUP){
-            canPureClick = true;
-            if(null != pureReadItemAdapter) {
-                pureReadItemAdapter.setEnableLoadMore(false);
-            }
         }else if (event.getTag() == Constant.EventTag.WX_PAY_REFRESH_WEB) {
             //刷新
             try{
@@ -1517,97 +1361,6 @@ public class ActivityWebView extends PermissionActivity {
     }
 
 
-    private void enterPureMode(String url, boolean enter , boolean click) {
-        //这里需要放在子线程中完成，否则报这个错android.os.NetworkOnMainThreadException
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Document doc = Jsoup.connect(url).timeout(30000).userAgent("Mozilla/5.0 (Windows NT 6.1; rv:22.0) Gecko/20100101 Firefox/22.0").validateTLSCertificates(false).get();
-                    String content = doc.html();
-                    RxLogTool.e(content);
-                    requestReadability(content, url, enter,click);
-                } catch (IOException e) {
-                    RxEventBusTool.sendEvents(Constant.EventTag.ERROR_WEB_JSOUP);
-                }
-            }
-        }).start();
-
-    }
-
-
-    /*请求纯净模式的内容*/
-    public void requestReadability(String content, String url, boolean enter , boolean click) {
-        JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty("content", content);
-        jsonObject.addProperty("url", url);
-        OKHttpUtil.okHttpPostJson(Constant.API_BASE_URL + "/book/read/readability", jsonObject.toString(), new CallBackUtil.CallBackString() {
-            @Override
-            public void onFailure(Call call, Exception e) {
-                try {
-                    canPureClick = true;
-                    if(click) {
-//                        RxToast.custom("加载失败/book/read/readability").show();
-                    }
-                    if(null != pureReadItemAdapter) {
-                        pureReadItemAdapter.setEnableLoadMore(false);
-                    }
-                } catch (Exception ex) {
-                }
-            }
-
-            @Override
-            public void onResponse(String response) {
-                try {
-                    canPureClick = true;
-                    ReadabilityBean readabilityBean = GsonUtil.getBean(response, ReadabilityBean.class);
-                    if (readabilityBean.getCode() == Constant.ResponseCodeStatus.SUCCESS_CODE ) {
-                        if (enter) {
-                            //显示出纯净模式的界面，并且开始做上一页下一页逻辑
-                            pure_view.setVisibility(View.VISIBLE);
-                            iv_pureread.setImageResource(R.mipmap.purereadmode_open);
-                            initAdapter();
-                            initReadSetting();
-                            pureListData.clear();
-                            RxToast.custom("您已进入无广告阅读模式").show();
-                        }
-                        //增加数据，显示到末尾
-                        pureListData.add(readabilityBean);
-                        pureReadItemAdapter.replaceData(pureListData);
-                        pureReadItemAdapter.loadMoreComplete();
-                        if (null == readabilityBean.getData()) {
-                            pureReadItemAdapter.setEnableLoadMore(false);
-                        } else if (null == readabilityBean.getData().getUrls()) {
-                            pureReadItemAdapter.setEnableLoadMore(false);
-                        } else if (TextUtils.isEmpty(readabilityBean.getData().getUrls().getNext())) {
-                            pureReadItemAdapter.setEnableLoadMore(false);
-                        } else {
-                            pureReadItemAdapter.setEnableLoadMore(true);
-                        }
-                        //插入网页历史记录
-                        addHistory(readabilityBean.getData().getTitle(), url);
-                    } else if (readabilityBean.getCode() == Constant.ResponseCodeStatus.DISABLE_PURE) {
-                        iv_pureread.setVisibility(View.INVISIBLE);
-                    }else {
-                        if(click) {
-//                            RxToast.custom("加载失败/book/read/readability").show();
-                        }
-                        if(null != pureReadItemAdapter) {
-                            pureReadItemAdapter.setEnableLoadMore(false);
-                        }
-                    }
-                } catch (Exception e) {
-                    if(click) {
-//                        RxToast.custom("加载失败/book/read/readability").show();
-                    }
-                    if(null != pureReadItemAdapter) {
-                        pureReadItemAdapter.setEnableLoadMore(false);
-                    }
-                }
-            }
-        });
-    }
-
     private void addHistory(String title, String url) {
         if (url.contains("lianzai.com") || url.contains("bendixing.net")) {
             //假如是内站链接则过滤
@@ -1631,121 +1384,6 @@ public class ActivityWebView extends PermissionActivity {
         WebHistoryRepository.getInstance().addWebHistory(webHistoryBean);
     }
 
-    private void initReadSetting() {
-        //设置当前Activity的Brightness
-        ReadSettingManager mSettingManager = ReadSettingManager.getInstance();
-        if (mSettingManager.isBrightnessAuto()) {
-            BrightnessUtils.setDefaultBrightness(this);
-        } else {
-            BrightnessUtils.setBrightness(this, ReadSettingManager.getInstance().getBrightness());
-        }
-        //设置字体大小
-        if (mSettingManager.isDefaultTextSize()) {
-            pureReadItemAdapter.setTextSize(18);
-        } else {
-            int fontSize = mSettingManager.getTextSize();
-            pureReadItemAdapter.setTextSize(ScreenUtils.pxToDp(fontSize));
-        }
-
-        //设置背景
-        if (mSettingManager.isNightMode()) {
-            PageStyle mPageStyle = PageStyle.NIGHT;
-            pureReadItemAdapter.setPageStyleChecked(mPageStyle);
-
-//            //设置背景
-            int mBgColor = ContextCompat.getColor(this, mPageStyle.getBgColor());
-            pure_view.setBackgroundColor(mBgColor);
-//            if (mPageStyle.getBgColor() == R.color.nb_read_bg_8) {
-//                pure_view.setBackgroundResource(R.drawable.bg1);
-//            }
-
-        } else {
-            PageStyle mPageStyle = mSettingManager.getPageStyle();
-            pureReadItemAdapter.setPageStyleChecked(mPageStyle);
-
-            //设置背景
-            int mBgColor = ContextCompat.getColor(this, mPageStyle.getBgColor());
-            pure_view.setBackgroundColor(mBgColor);
-            if (mPageStyle.getBgColor() == R.color.nb_read_bg_8) {
-                pure_view.setBackgroundResource(R.drawable.bg1);
-            }
-        }
-    }
-
-    private void initAdapter() {
-        if (null == pureReadItemAdapter) {
-            pureReadItemAdapter = new PureReadItemAdapter(pureListData);
-            pureReadItemAdapter.setOnLoadMoreListener(new BaseQuickAdapter.RequestLoadMoreListener() {
-                @Override
-                public void onLoadMoreRequested() {
-                    try {
-                        if (null != pureListData && !pureListData.isEmpty()) {
-                            String nextUrl = pureListData.get(pureListData.size() - 1).getData().getUrls().getNext();
-                            enterPureMode(nextUrl, false,false);
-                        }
-                    } catch (Exception e) {
-
-                    }
-                }
-            }, pure_view);
-            customLoadMoreView = new CustomLoadMoreView();
-            pureReadItemAdapter.setLoadMoreView(customLoadMoreView);
-
-            pureReadItemAdapter.setContentClickListener(new PureReadItemAdapter.ContentClickListener() {
-                @Override
-                public void titleClick(int position, int x, int y) {
-                    int hight = RxDeviceTool.getScreenHeight(ActivityWebView.this);
-
-                    int actionBarHight = 0;
-                    if(action_bar.getVisibility() == View.VISIBLE){
-                        actionBarHight = action_bar.getHeight();
-                    }
-
-                    int oneHight = (hight - actionBarHight)/4;
-                    if (y < actionBarHight + oneHight) {
-                        //往上翻页
-                        pure_view.smoothScrollBy(0, -(hight - actionBarHight));
-                    } else if (y < actionBarHight + 3*oneHight) {
-                        //弹出菜单
-                        action_bar.setVisibility(View.VISIBLE);
-                        SystemBarUtils.readStatusBar3(ActivityWebView.this);
-                    } else {
-                        //往下翻页
-                        pure_view.smoothScrollBy(0, hight - actionBarHight);
-                    }
-                }
-
-                @Override
-                public void contentClick(int position, int x, int y) {
-                    int hight = RxDeviceTool.getScreenHeight(ActivityWebView.this);
-
-                    int actionBarHight = 0;
-                    if(action_bar.getVisibility() == View.VISIBLE){
-                        actionBarHight = action_bar.getHeight();
-                    }
-
-                    int oneHight = (hight - actionBarHight)/4;
-                    if (y < actionBarHight + oneHight) {
-                        //往上翻页
-                        pure_view.smoothScrollBy(0, -(hight - actionBarHight));
-                    } else if (y < actionBarHight + 3*oneHight) {
-                        //弹出菜单
-                        action_bar.setVisibility(View.VISIBLE);
-                        SystemBarUtils.readStatusBar3(ActivityWebView.this);
-                    } else {
-                        //往下翻页
-                        pure_view.smoothScrollBy(0, hight - actionBarHight);
-                    }
-                }
-            });
-
-            linearLayoutManager = new RxLinearLayoutManager(this);
-            pure_view.setLayoutManager(linearLayoutManager);
-            //设置添加,移除item的动画,DefaultItemAnimator为默认的
-            pure_view.setItemAnimator(new DefaultItemAnimator());
-            pure_view.setAdapter(pureReadItemAdapter);
-        }
-    }
 
 
     private void showShare(ShowShareBean bean){

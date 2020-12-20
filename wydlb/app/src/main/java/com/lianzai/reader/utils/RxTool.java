@@ -309,10 +309,6 @@ public class RxTool {
         return context.getResources().getString(string);
     }
 
-    public static AccountDetailBean getAccountBean() {
-        return RxSharedPreferencesUtil.getInstance().getObject(Constant.ACCOUNT_CACHE, AccountDetailBean.class);
-    }
-
 
     public static String getContactPhone(Context context, Cursor cursor) {
         // TODO Auto-generated method stub

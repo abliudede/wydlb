@@ -46,15 +46,14 @@ import com.lianzai.reader.component.DaggerAccountComponent;
 import com.lianzai.reader.interfaces.OnRepeatClickListener;
 import com.lianzai.reader.model.bean.BookStoreBeanN;
 import com.lianzai.reader.model.local.BookStoreRepository;
-import com.lianzai.reader.model.local.CloudRecordRepository;
 import com.lianzai.reader.receiver.NetworkReceiver;
-import com.lianzai.reader.ui.SplashActivity2;
 import com.lianzai.reader.ui.contract.AccountContract;
 import com.lianzai.reader.ui.fragment.New30FindFragment;
 import com.lianzai.reader.ui.presenter.AccountPresenter;
 import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
+import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxAppTool;
 import com.lianzai.reader.utils.RxClipboardTool;
 import com.lianzai.reader.utils.RxEventBusTool;
@@ -96,7 +95,7 @@ import okhttp3.Call;
  * 首页
  */
 
-public class MainActivity extends BaseActivity implements AccountContract.View {
+public class MainActivity extends BaseActivity {
 
     @Bind(R.id.frame_layout)
     FrameLayout frame_layout;
@@ -107,9 +106,6 @@ public class MainActivity extends BaseActivity implements AccountContract.View {
 
     private NetworkReceiver netWorkChangReceiver;
     private AccountDetailBean accountDetailBean;
-
-    @Inject
-    AccountPresenter accountPresenter;
 
 
     @Bind(R.id.rb_book_list)
@@ -235,9 +231,6 @@ public class MainActivity extends BaseActivity implements AccountContract.View {
 
     @Override
     public void initDatas() {
-        if (RxLoginTool.isLogin()) {
-            isShowRed();
-        }
     }
 
     @Override
@@ -246,20 +239,11 @@ public class MainActivity extends BaseActivity implements AccountContract.View {
         SystemBarUtils.fullScreen(this);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            String channelId = "chat";
-            String channelName = "连载听书";
+            String channelId = "notice";
+            String channelName = "圈子回复通知";
             int importance = NotificationManager.IMPORTANCE_HIGH;
             createNotificationChannel(channelId, channelName, importance);
-
-
-
-            channelId = "notice";
-            channelName = "圈子回复通知";
-            importance = NotificationManager.IMPORTANCE_HIGH;
-            createNotificationChannel(channelId, channelName, importance);
         }
-
-        accountPresenter.attachView(this);
 
         fm = getSupportFragmentManager();
 
@@ -312,7 +296,6 @@ public class MainActivity extends BaseActivity implements AccountContract.View {
 
     private void refreshIsLoginView() {
         if (RxLoginTool.isLogin()) {
-            accountPresenter.getAccountDetail();
             needRefreshBookStore = true;
             red_packet_iv.setVisibility(View.GONE);
         } else {
@@ -360,98 +343,6 @@ public class MainActivity extends BaseActivity implements AccountContract.View {
     }
 
 
-    /**
-     * 同步云端阅读记录
-     */
-    public void getCloudRecord() {
-        OKHttpUtil.okHttpGet(Constant.API_BASE_URL + "/user/read/progress/query", new CallBackUtil.CallBackString() {
-            @Override
-            public void onFailure(Call call, Exception e) {
-                try {
-                    RxLogTool.e(e.toString());
-                } catch (Exception e2) {
-                }
-            }
-
-            @Override
-            public void onResponse(String response) {
-                try {
-                    GetCloudRecordBean getCloudRecordBean = GsonUtil.getBean(response, GetCloudRecordBean.class);
-                    if (null != getCloudRecordBean) {
-                        if (getCloudRecordBean.getCode() == Constant.ResponseCodeStatus.SUCCESS_CODE) {
-                            if (getCloudRecordBean.getData() != null && !getCloudRecordBean.getData().isEmpty()) {
-                                RxSharedPreferencesUtil.getInstance().putBoolean(Constant.NEEDGETCLOUDRECORD, false);
-                                //同步云端阅读记录。先清除本地记录
-//                                CloudRecordRepository.getInstance().deleteCloudRecordByUid(Long.parseLong(accountDetailBean.getData().getUid()));
-                                CloudRecordRepository.getInstance().addCloudRecord(getCloudRecordBean.getData());
-                            }
-                        }
-                    }
-                } catch (Exception e) {
-
-                }
-            }
-        });
-    }
-
-    private int nogetNumberAwardStr;
-    private boolean noticeFlag;
-
-    public int getNogetNumberAwardStr() {
-        return nogetNumberAwardStr;
-    }
-
-    public boolean isNoticeFlag() {
-        return noticeFlag;
-    }
-
-    /**
-     * 获取任务中心和我的通知红点状态
-     */
-    public void isShowRed() {
-        OKHttpUtil.okHttpGet(Constant.API_BASE_URL + "/circles/userNoticeFlag", new CallBackUtil.CallBackString() {
-            @Override
-            public void onFailure(Call call, Exception e) {
-                try {
-                    RxLogTool.e(e.toString());
-                } catch (Exception e2) {
-                }
-            }
-
-            @Override
-            public void onResponse(String response) {
-                try {
-                    GetReceiveFlagBean getReceiveFlagBean = GsonUtil.getBean(response, GetReceiveFlagBean.class);
-                    if (null != getReceiveFlagBean) {
-                        nogetNumberAwardStr = getReceiveFlagBean.getData().getTaskFlag();
-                        noticeFlag = getReceiveFlagBean.getData().isNoticeFlag();
-
-                        if (noticeFlag &&  nogetNumberAwardStr == 0) {
-                            //需要显示小红点
-                            noget_number_award.setVisibility(View.VISIBLE);
-                            noget_number_award.setText("1");
-                        } else if(!noticeFlag && nogetNumberAwardStr > 0) {
-                            //需要显示大红点
-                            noget_number_award.setVisibility(View.VISIBLE);
-                            noget_number_award.setText(String.valueOf(nogetNumberAwardStr));
-                        }else if(noticeFlag &&  nogetNumberAwardStr > 0){
-                            //需要显示大红点
-                            noget_number_award.setVisibility(View.VISIBLE);
-                            noget_number_award.setText(String.valueOf(nogetNumberAwardStr + 1));
-                        }else {
-                            //不需要显示红点
-                            noget_number_award.setVisibility(View.GONE);
-                            noget_number_award.setText("");
-                        }
-
-
-                    }
-                } catch (Exception e) {
-
-                }
-            }
-        });
-    }
 
     @OnClick(R.id.red_packet_iv)
     void red_packet_ivClick() {
@@ -696,36 +587,6 @@ public class MainActivity extends BaseActivity implements AccountContract.View {
     }
 
 
-    @Override
-    public void getAccountDetailSuccess(AccountDetailBean bean) {
-        accountDetailBean = bean;
-        RxSharedPreferencesUtil.getInstance().putString(Constant.LOGIN_ID, accountDetailBean.getData().getMobile());
-
-        //刷新我的fragment
-        RxEventBusTool.sendEvents(Constant.EventTag.REFRESH_USER_MINE_TAG);
-
-        //最后，假如已登录请求年度账单接口
-        //限制时间请求年度账单接口
-//        long startTime = RxTimeTool.string2Milliseconds("2019-01-10 00:00:00");
-//        long endTime = RxTimeTool.string2Milliseconds("2019-03-10 23:59:59");
-//        long currentTime = RxTimeTool.getCurTimeMills();
-//        if(currentTime > startTime && currentTime < endTime) {
-//            //处于时间区间内，则请求接口
-//            annualPopRequest();
-//        }
-
-        //假如需要刷新书架，则请求书架接口
-        if (needRefreshBookStore) {
-            needRefreshBookStore = false;
-            userId = String.valueOf(bean.getData().getUid());
-            bqtKey = userId + Constant.BQT_KEY;
-            requestBookStore();
-        }
-        if (RxSharedPreferencesUtil.getInstance().getBoolean(Constant.NEEDGETCLOUDRECORD, false)) {
-
-            getCloudRecord();
-        }
-    }
 
     //同步书架数据
     private void requestBookStore() {
@@ -796,23 +657,6 @@ public class MainActivity extends BaseActivity implements AccountContract.View {
         });
     }
 
-
-    @Override
-    public void showError(String message) {
-        if (RxNetTool.showNetworkUnavailable(message)) {//网络不可用
-            if (null != RxTool.getAccountBean()) {//显示缓存数据
-                accountDetailBean = RxTool.getAccountBean();
-                RxEventBusTool.sendEvents(accountDetailBean);//读缓存数据
-            }
-            return;
-        }
-        RxToast.custom(message, Constant.ToastType.TOAST_ERROR).show();
-    }
-
-    @Override
-    public void complete(String message) {
-        showSeverErrorDialog(message);
-    }
 
 
     @Override
@@ -909,7 +753,6 @@ public class MainActivity extends BaseActivity implements AccountContract.View {
         RxLogTool.e("eventBusNotification.......");
         if (event.getTag() == Constant.EventTag.REFRESH_ACCOUNT) {
             if (RxLoginTool.isLogin()) {
-                accountPresenter.getAccountDetail();
                 RxLogTool.e("refresh getAccountDetail.......");
             }
         } else if (event.getTag() == Constant.EventTag.HOME_EXIT) {//退出
@@ -949,10 +792,7 @@ public class MainActivity extends BaseActivity implements AccountContract.View {
             if(index == 0) {//只在首页识别。
                 checkClipBord();
             }
-        } else if (event.getTag() == Constant.EventTag.REOPEN_AD) {//展示开屏广告
-            needDelay1 = true;
-            SplashActivity2.startActivity(this);
-        }else if (event.getTag() == Constant.EventTag.NETWORK_CONNECT_TAG) {//网络已连接
+        } else if (event.getTag() == Constant.EventTag.NETWORK_CONNECT_TAG) {//网络已连接
            //每次断网重连进行扫描
             RxReadTimeUtils.scanReadTime();
         }

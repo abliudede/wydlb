@@ -63,6 +63,7 @@ import java.util.List;
 import java.util.Vector;
 
 import static com.lianzai.reader.utils.RxConstTool.KB;
+import static com.qihoo360.replugin.base.IPC.getPackageName;
 
 //import android.util.Log;
 
@@ -578,14 +579,6 @@ public class RxFileTool {
      * @return
      */
     public static String getDiskCacheDir() {
-//        String cachePath = null;
-        //直接使用
-//        if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())
-//                || !Environment.isExternalStorageRemovable()) {
-//            cachePath = BuglyApplicationLike.getContext().getExternalCacheDir().getPath();
-//        } else {
-//            cachePath = BuglyApplicationLike.getContext().getCacheDir().getPath();
-//        }
         String storageRootPath = null;
         try {
             // SD卡应用扩展存储区(APP卸载后，该目录下被清除，用户也可以在设置界面中手动清除)，请根据APP对数据缓存的重要性及生命周期来决定是否采用此缓存目录.
@@ -600,7 +593,7 @@ public class RxFileTool {
         }
         if (TextUtils.isEmpty(storageRootPath)) {
             // SD卡应用公共存储区(APP卸载后，该目录不会被清除，下载安装APP后，缓存数据依然可以被加载。SDK默认使用此目录)，该存储区域需要写权限!
-            storageRootPath = Environment.getExternalStorageDirectory() + "/" + DemoCache.getContext().getPackageName();
+            storageRootPath = Environment.getExternalStorageDirectory() + "/" + BuglyApplicationLike.getContext().getPackageName();
         }
 
 //        cachePath = BuglyApplicationLike.getContext().getCacheDir().getPath();

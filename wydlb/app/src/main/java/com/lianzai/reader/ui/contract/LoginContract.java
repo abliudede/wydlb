@@ -31,7 +31,6 @@ public interface LoginContract {
 
     interface Presenter<T> extends BaseContract.BasePresenter<T> {
 
-        void quickLogin(ArrayMap<String,Object> params);
         void normalLogin(ArrayMap<String,Object> params);
         void wxLogin(ArrayMap<String,Object> params);
 

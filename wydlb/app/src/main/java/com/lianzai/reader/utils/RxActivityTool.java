@@ -9,17 +9,8 @@ import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 
 import com.lianzai.reader.R;
-import com.lianzai.reader.ui.activity.ActivityBookShare2;
-import com.lianzai.reader.ui.activity.ActivityBookShare3;
 import com.lianzai.reader.ui.activity.ActivityWebView;
 import com.lianzai.reader.ui.activity.MainActivity;
-import com.lianzai.reader.ui.activity.TeamChat.TeamMessageActivity;
-import com.lianzai.reader.ui.activity.UrlIdentification.UrlReadActivity;
-import com.lianzai.reader.ui.activity.circle.ActivityCircleDetail;
-import com.lianzai.reader.ui.activity.circle.ActivityInsideBookMulu;
-import com.lianzai.reader.ui.activity.circle.ActivityPostDetail;
-import com.lianzai.reader.ui.activity.circle.ActivityPostFloor;
-import com.lianzai.reader.ui.activity.circle.ActivityRelatedLinks;
 
 import java.util.List;
 import java.util.Stack;
@@ -70,71 +61,6 @@ public class RxActivityTool {
         }
     }
 
-    /**
-     * 清除掉之前栈中的评论列表界面
-     */
-    public static void removeActivityPostDetail(){
-        try{
-            if (null!=activityStack&&activityStack.size()>1){
-                for (int i=0;i<activityStack.size();i++){
-                    RxLogTool.e("activityStack.get(i):"+activityStack.get(i).getClass().getName());
-                    if (activityStack.get(i).getClass() == ActivityPostDetail.class){
-                        activityStack.get(i).finish();//关闭
-                        activityStack.remove(i);
-                        i--;
-                        continue;
-                    }
-
-                }
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-
-    /**
-     * 清除掉之前栈中的最新章节界面
-     */
-    public static void removeActivityRelatedLinks(){
-        try{
-            if (null!=activityStack&&activityStack.size()>1){
-                for (int i=0;i<activityStack.size();i++){
-                    RxLogTool.e("activityStack.get(i):"+activityStack.get(i).getClass().getName());
-                    if (activityStack.get(i).getClass() == ActivityRelatedLinks.class){
-                        activityStack.get(i).finish();//关闭
-                        activityStack.remove(i);
-                        i--;
-                        continue;
-                    }
-
-                }
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-
-    /**
-     * 清除掉之前栈中的最新章节界面
-     */
-    public static void removeActivityInsideBookMulu(){
-        try{
-            if (null!=activityStack&&activityStack.size()>1){
-                for (int i=0;i<activityStack.size();i++){
-                    RxLogTool.e("activityStack.get(i):"+activityStack.get(i).getClass().getName());
-                    if (activityStack.get(i).getClass() == ActivityInsideBookMulu.class){
-                        activityStack.get(i).finish();//关闭
-                        activityStack.remove(i);
-                        i--;
-                        continue;
-                    }
-
-                }
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
 
     /**
      * 清除掉之前栈中的主界面
@@ -157,82 +83,6 @@ public class RxActivityTool {
         }
     }
 
-    /**
-     * 清除掉之前栈中的回复列表界面
-     */
-    public static void removeActivityPostFloor(){
-        try{
-            if (null!=activityStack&&activityStack.size()>1){
-                for (int i=0;i<activityStack.size();i++){
-                    RxLogTool.e("activityStack.get(i):"+activityStack.get(i).getClass().getName());
-                    if (activityStack.get(i).getClass() == ActivityPostFloor.class){
-                        activityStack.get(i).finish();//关闭
-                        activityStack.remove(i);
-                        i--;
-                        continue;
-                    }
-
-                }
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-
-    /**
-     * 清除掉之前栈中的圈子界面
-     */
-    public static void removeCircleActivity(){
-        try{
-            if (null!=activityStack&&activityStack.size()>1){
-                for (int i=0;i<activityStack.size();i++){
-                    RxLogTool.e("activityStack.get(i):"+activityStack.get(i).getClass().getName());
-                    if (activityStack.get(i).getClass() == ActivityCircleDetail.class){
-                        activityStack.get(i).finish();//关闭
-                        activityStack.remove(i);
-                        i--;
-                        continue;
-                    }
-                }
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-
-
-    /**
-     * 清除掉之前栈中的阅读界面
-     */
-    public static void removeReadActivity(){
-        try{
-            if (null!=activityStack&&activityStack.size()>1){
-                for (int i=0;i<activityStack.size();i++){
-                    RxLogTool.e("activityStack.get(i):"+activityStack.get(i).getClass().getName());
-                    if (activityStack.get(i).getClass() == UrlReadActivity.class){
-                        activityStack.get(i).finish();//关闭
-                        activityStack.remove(i);
-                        i--;
-                        continue;
-                    }
-                    if (activityStack.get(i).getClass() == ActivityBookShare2.class){
-                        activityStack.get(i).finish();//关闭
-                        activityStack.remove(i);
-                        i--;
-                        continue;
-                    }
-                    if (activityStack.get(i).getClass() == ActivityBookShare3.class){
-                        activityStack.get(i).finish();//关闭
-                        activityStack.remove(i);
-                        i--;
-                        continue;
-                    }
-                }
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
 
     /**
      * 清除掉之前栈中的网页界面
@@ -248,40 +98,6 @@ public class RxActivityTool {
                         i--;
                         continue;
                     }
-                    if (activityStack.get(i).getClass() == ActivityBookShare2.class){
-                        activityStack.get(i).finish();//关闭
-                        activityStack.remove(i);
-                        i--;
-                        continue;
-                    }
-                    if (activityStack.get(i).getClass() == ActivityBookShare3.class){
-                        activityStack.get(i).finish();//关闭
-                        activityStack.remove(i);
-                        i--;
-                        continue;
-                    }
-                }
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-
-    /**
-     * 清除掉之前栈中的群聊界面
-     */
-    public static void removeTeamActivity(){
-        try{
-            if (null!=activityStack&&activityStack.size()>1){
-                for (int i=0;i<activityStack.size();i++){
-                    RxLogTool.e("activityStack.get(i):"+activityStack.get(i).getClass().getName());
-                    if (activityStack.get(i).getClass() == TeamMessageActivity.class){
-                        activityStack.get(i).finish();//关闭
-                        activityStack.remove(i);
-                        i--;
-                        continue;
-                    }
-
                 }
             }
         }catch (Exception e){

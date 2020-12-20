@@ -16,8 +16,6 @@ import com.lianzai.reader.bean.ShowShareBean;
 import com.lianzai.reader.ui.activity.ActivityImagesPreview;
 import com.lianzai.reader.ui.activity.ActivityLoginNew;
 import com.lianzai.reader.ui.activity.ActivityWebView;
-import com.lianzai.reader.ui.activity.wallet.ActivityAutoTicketManage;
-import com.lianzai.reader.ui.activity.wallet.ActivityWalletRechargeGoldCoin;
 import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
@@ -196,13 +194,6 @@ public class AndroidInterface {
     @JavascriptInterface
     public void skipPage(int type,String id) {
         switch (type) {
-            case 1:
-                SkipReadUtil.normalRead(activity, id,"",false);
-                break;
-            case 5:
-                RxEventBusTool.sendEvents(Constant.EventTag.SWITCH_BOOK_LIST);
-                RxActivityTool.returnMainActivity();
-                break;
 
             case 6:
                 ActivityLoginNew.startActivity(activity);
@@ -211,24 +202,6 @@ public class AndroidInterface {
             case 7:
                 break;
 
-            case 8:
-                RxEventBusTool.sendEvents(Constant.EventTag.SWITCH_BOOK_SHELF);
-                RxActivityTool.returnMainActivity();
-                break;
-
-            case 9:
-                ActivitySearchFirst.skiptoSearch(id,activity);
-                break;
-
-
-            case 11:
-                ActivityAutoTicketManage.startActivity(activity,id);
-                break;
-
-            case 12:
-                //充值页面跳转
-                ActivityWalletRechargeGoldCoin.startActivity(activity);
-                break;
         }
     }
 

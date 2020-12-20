@@ -38,42 +38,6 @@ public class LoginPresenter extends RxPresenter<LoginContract.View> implements L
         this.mReaderApi = readerApi;
     }
 
-    @Override
-    public void quickLogin(ArrayMap<String,Object> params) {
-        if (!RxNetTool.isAvailable()){
-            try{
-                mView.showError(Constant.NetWorkStatus.NETWORK_UNAVAILABLE);
-            }catch (Exception e){
-
-            }
-            return;
-        }
-        Disposable disp =mReaderApi.fastLogin(params).compose(RxUtils::toSimpleSingle)
-                .subscribe(
-                        data -> {
-
-                            try {
-                                if (data != null && mView != null && data.getCode()== Constant.ResponseCodeStatus.SUCCESS_CODE) {
-                                    mView.loginSuccess(data);
-                                    RxLogTool.e(data.toString());
-                                }else{
-                                    mView.showError(data.getMsg());
-                                }
-                            }catch (Exception e){
-                                e.printStackTrace();
-
-                            }
-                        },
-                        e -> {
-                                try {
-                                    mView.complete(Constant.NetWorkStatus.SERVER_ERROR);
-                                }catch (Exception ex){
-                                    e.printStackTrace();
-                                }
-                        }
-                );
-        addDisposable(disp);
-    }
 
     @Override
     public void normalLogin(ArrayMap<String,Object> params) {

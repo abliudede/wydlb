@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.BaseActivity;
 import com.lianzai.reader.component.AppComponent;
+import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxImageTool;
 import com.lianzai.reader.view.RxToast;
 import com.lianzai.reader.view.SelectableRoundedImageView;

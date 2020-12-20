@@ -180,15 +180,9 @@
             android:name="com.lianzai.reader.ui.activity.ActivityWebView"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity android:name="com.lianzai.reader.ui.activity.MinerGameActivity" />
-        <activity android:name="com.lianzai.reader.ui.activity.ActivityAreaCode" />
         <activity android:name="com.lianzai.reader.ui.activity.ActivityMessageCenter" />
         <activity android:name="com.lianzai.reader.ui.activity.ActivityNoticeDetail" />
 
-        <activity android:name="com.lianzai.reader.ui.activity.ActivityRealNameAuthFirst" />
-        <activity android:name="com.lianzai.reader.ui.activity.ActivityRealNameAuthInReview" />
-        <activity android:name="com.lianzai.reader.ui.activity.ActivityRealNameAuthSecond" />
-        <activity android:name="com.lianzai.reader.ui.activity.ActivityRealNameAuthSuccess" />
-        <activity android:name="com.lianzai.reader.ui.activity.ActivitySafety" />
         <activity android:name="com.lianzai.reader.ui.activity.WifiBookActivity" />
         <activity android:name="com.lianzai.reader.ui.activity.wallet.ActivityWalletDetail" />
         <activity android:name="com.lianzai.reader.ui.activity.wallet.ActivityWalletRechargeReadCoin" />
@@ -277,7 +271,6 @@
         <activity android:name=".ui.activity.profile.ActivityEditIntro" />
         <activity android:name=".ui.activity.UrlIdentification.BrowserActivity" />
         <activity android:name=".ui.activity.read.ActivityTeamChooseForLianzaihao" />
-        <activity android:name=".ui.activity.qrCodeShare.ActivityShareBitmapBook" />
 
         <activity android:name=".ui.activity.circle.ActivityCircleDetail" />
         <activity
@@ -299,11 +292,9 @@
         <activity android:name=".ui.activity.circle.ActivityMyPraised" />
         <activity android:name=".ui.activity.circle.ActivityMyDynamic" />
         <activity android:name=".ui.activity.ActivityTextShow" />
-        <activity android:name=".ui.SplashActivity2" />
         <activity android:name=".ui.activity.circle.ActivityRelatedLinks" />
         <activity android:name=".ui.activity.PersonHomePage.ActivityUserShieldingList" />
         <activity android:name=".ui.activity.circle.ActivityCircleClose" />
-        <activity android:name=".ui.activity.ActivityBookRecordHistoryNew" />
         <activity android:name=".ui.activity.circle.ActivityCircleGXBQPersonList" />
         <activity android:name=".ui.activity.circle.ActivityCircleDetailShow" />
         <activity

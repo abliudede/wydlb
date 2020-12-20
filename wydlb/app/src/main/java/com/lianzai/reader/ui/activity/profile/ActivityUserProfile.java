@@ -25,6 +25,7 @@ import com.lianzai.reader.ui.presenter.AccountPresenter;
 import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
+import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxEventBusTool;
 import com.lianzai.reader.utils.RxFileTool;
 import com.lianzai.reader.utils.RxImageTool;
@@ -122,7 +123,6 @@ public class ActivityUserProfile extends BaseActivity implements AccountContract
 
         tv_commom_title.setText("个人信息");
         accountPresenter.attachView(this);
-        accountDetailBean= RxTool.getAccountBean();
 
         rxDialogSelectImage=new RxDialogSelectImage(ActivityUserProfile.this,R.style.BottomDialogStyle);
         rxDialogSelectSex=new RxDialogSelectImage(ActivityUserProfile.this,R.style.BottomDialogStyle);

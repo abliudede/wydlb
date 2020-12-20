@@ -1,25 +1,17 @@
 package com.lianzai.reader.utils;
 
-import android.os.Build;
 import android.text.TextUtils;
-import android.view.View;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-import com.lianzai.reader.R;
 import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.bean.AccountTokenBean;
 import com.lianzai.reader.bean.BaseBean;
 import com.lianzai.reader.bean.ReadTimeUploadBean;
-import com.lianzai.reader.bean.ReadabilityBean;
 import com.lianzai.reader.model.bean.CloudRecordBean;
 import com.lianzai.reader.model.bean.ReadTimeBean;
-import com.lianzai.reader.model.local.CloudRecordRepository;
 import com.lianzai.reader.model.local.ReadTimeRepository;
-import com.lianzai.reader.ui.activity.ActivityWebView;
-import com.lianzai.reader.view.RxToast;
 
-import java.util.Date;
 import java.util.List;
 
 import okhttp3.Call;
@@ -734,20 +726,6 @@ public class RxReadTimeUtils {
                 }
             }
         });
-    }
-
-
-    //根据书id获取当前阅读到的进度
-    public static String getSignUrl(String bookId){
-        CloudRecordBean cloudRecordBean = CloudRecordRepository.getInstance()
-                .getCloudRecord(Long.parseLong(bookId));
-        if (cloudRecordBean == null) {
-            return "?bookId=" + bookId;
-        }else if(cloudRecordBean.getChapterId() <= 0){
-            return "?bookId=" + bookId;
-        }else {
-            return "?bookId=" + bookId + "&chapterId=" + cloudRecordBean.getChapterId();
-        }
     }
 
 

@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.BaseActivity;
 import com.lianzai.reader.component.AppComponent;
+import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxClipboardTool;
 import com.lianzai.reader.utils.SystemBarUtils;
 import com.lianzai.reader.view.RxToast;

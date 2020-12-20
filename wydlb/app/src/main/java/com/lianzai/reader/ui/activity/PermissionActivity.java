@@ -11,6 +11,7 @@ import android.view.WindowManager;
 
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.EasyPermissions;
+import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxLogTool;
 
 import java.util.List;
@@ -31,7 +32,6 @@ public class PermissionActivity extends AppCompatActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
 //        RxBarTool.setStatusBarColor(this, Color.);
 //        initStatusBar("#303F9F");//透明状态栏

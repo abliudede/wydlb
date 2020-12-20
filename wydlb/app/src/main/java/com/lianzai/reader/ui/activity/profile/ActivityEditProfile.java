@@ -72,7 +72,6 @@ public class ActivityEditProfile extends BaseActivity {
     public void configViews(Bundle savedInstanceState) {
         tv_commom_title.setText("修改昵称");
         tv_options.setText("保存");
-        accountDetailBean= RxTool.getAccountBean();
         if (null!=accountDetailBean){
             ed_nickname.setText(accountDetailBean.getData().getNickName().replace("\n",""));
         }

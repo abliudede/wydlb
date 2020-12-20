@@ -3,10 +3,9 @@ package com.lianzai.reader.ui.activity;
 import android.app.KeyguardManager;
 import android.os.Bundle;
 import android.view.WindowManager;
-import android.widget.RelativeLayout;
 
 import com.lianzai.reader.R;
-import com.lianzai.reader.base.BaseActivityForTranslucent;
+import com.lianzai.reader.base.BaseActivity;
 import com.lianzai.reader.component.AppComponent;
 
 import butterknife.OnClick;
@@ -16,7 +15,7 @@ import butterknife.OnClick;
  * 透明背景的锁屏页面
  */
 
-public class ActivityLockScreen extends BaseActivityForTranslucent {
+public class ActivityLockScreen extends BaseActivity {
 
     @Override
     public int getLayoutId() {

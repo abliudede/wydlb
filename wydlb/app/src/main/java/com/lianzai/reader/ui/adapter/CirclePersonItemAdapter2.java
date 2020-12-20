@@ -98,13 +98,6 @@ public class CirclePersonItemAdapter2 extends BaseQuickAdapter<CirclePersonBean.
             tv_des.setText("阅读时长：少于1分钟");
         }
 
-        //自己则不显示
-        AccountDetailBean mdata = RxTool.getAccountBean();
-        if(null != mdata && null != mdata.getData() && mdata.getData().getUid().equals(String.valueOf(bean.getUserId()))){
-            attention_tv.setVisibility(View.GONE);
-        }else {
-            attention_tv.setVisibility(View.VISIBLE);
-        }
 
         if(bean.getAttentionStatus() == 0){
             attention_tv.setBackgroundResource(R.drawable.blue_15dpconor_bg);

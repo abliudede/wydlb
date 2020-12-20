@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import com.google.gson.JsonObject;
 import com.lianzai.reader.R;
-import com.lianzai.reader.base.BaseActivityForTranslucent;
+import com.lianzai.reader.base.BaseActivity;
 import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.bean.AccountBalance;
 import com.lianzai.reader.bean.AccountDetailBean;
@@ -26,7 +26,6 @@ import com.lianzai.reader.bean.IsNeedPasswordBean;
 import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.interfaces.OnRepeatClickListener;
 import com.lianzai.reader.ui.activity.ActivityWebView;
-import com.lianzai.reader.ui.activity.wallet.ActivityWalletRechargeGoldCoin;
 import com.lianzai.reader.ui.adapter.PayForBookItemAdapter;
 import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.GsonUtil;
@@ -62,7 +61,7 @@ import okhttp3.Call;
  * 打赏书籍弹出页面
  */
 
-public class ActivityPayForBook extends BaseActivityForTranslucent {
+public class ActivityPayForBook extends BaseActivity {
 
     @Bind(R.id.recycler_view)
     RecyclerView recycler_view;
@@ -107,7 +106,6 @@ public class ActivityPayForBook extends BaseActivityForTranslucent {
 
     @Override
     public void initDatas() {
-        accountDetailBean= RxTool.getAccountBean();
         if (null==accountDetailBean) {
             RxToast.custom("未登录").show();
             finish();
@@ -117,7 +115,6 @@ public class ActivityPayForBook extends BaseActivityForTranslucent {
     public static void startActivity(Activity context, String bookId){
         Bundle intent=new Bundle();
         intent.putString("bookId",bookId);
-        RxActivityTool.skipActivity(context,ActivityPayForBook.class,intent);
     }
 
 
@@ -232,7 +229,6 @@ public class ActivityPayForBook extends BaseActivityForTranslucent {
                 RxToast.custom("充值成功").show();
             }else {
                 //跳往充值页面，并带入充值后发起打赏的参数
-                ActivityWalletRechargeGoldCoin.startActivity(this);
             }
         }else {
             if(TextUtils.isEmpty(accountDetailBean.getData().getMobile())){

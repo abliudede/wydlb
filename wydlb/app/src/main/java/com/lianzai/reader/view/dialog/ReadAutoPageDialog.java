@@ -8,15 +8,11 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.lianzai.reader.R;
-import com.lianzai.reader.model.local.ReadSettingManager;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

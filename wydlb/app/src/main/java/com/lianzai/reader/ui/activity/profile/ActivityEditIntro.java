@@ -72,7 +72,6 @@ public class ActivityEditIntro extends BaseActivity {
     public void configViews(Bundle savedInstanceState) {
         tv_commom_title.setText("修改个人简介");
         tv_options.setText("保存");
-        accountDetailBean= RxTool.getAccountBean();
         if (null!=accountDetailBean && null != accountDetailBean.getData().getIntroduce()){
             ed_nickname.setText(accountDetailBean.getData().getIntroduce().replace("\n",""));
         }

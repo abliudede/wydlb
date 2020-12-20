@@ -10,7 +10,6 @@ import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.component.DaggerAppComponent;
 import com.lianzai.reader.module.AppModule;
 import com.lianzai.reader.module.ReaderApiModule;
-import com.lianzai.reader.utils.AppCrashHandler;
 import com.lianzai.reader.utils.AppUtils;
 import com.lianzai.reader.utils.RxEventBusTool;
 import com.lianzai.reader.utils.RxSharedPreferencesUtil;
@@ -142,9 +141,6 @@ public class BuglyApplicationLike extends Application {
 
         RxSharedPreferencesUtil.init(this, "lianzaishenqi", Context.MODE_PRIVATE);
         initComponent();
-
-        // crash handler
-        AppCrashHandler.getInstance(this);
 
         //二维码初始化
         ZXingLibrary.initDisplayOpinion(this);

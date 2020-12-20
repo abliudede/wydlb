@@ -339,7 +339,7 @@ public interface ReaderBookApiService {
     Single<AccountDetailBean> getUserInfo();
 
     @FormUrlEncoded
-    @POST("/user/login")
+    @POST("/api/user/login/minigame")
     Single<AccountTokenBean> login(@FieldMap ArrayMap<String,Object>maps);
 
     @FormUrlEncoded

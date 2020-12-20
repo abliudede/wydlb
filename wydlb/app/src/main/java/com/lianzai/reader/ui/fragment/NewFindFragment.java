@@ -17,6 +17,7 @@ import com.lianzai.reader.ui.activity.ActivityWebView;
 import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
+import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.utils.RxLoginTool;
 import com.lianzai.reader.view.ItemLuckyBox;

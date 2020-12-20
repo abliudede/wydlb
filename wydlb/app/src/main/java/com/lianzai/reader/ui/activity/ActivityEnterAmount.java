@@ -15,7 +15,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.lianzai.reader.R;
-import com.lianzai.reader.base.BaseActivityForTranslucent;
+import com.lianzai.reader.base.BaseActivity;
 import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.interfaces.OnRepeatClickListener;
 import com.lianzai.reader.ui.adapter.GirdRecyclerViewAdapter2;
@@ -35,7 +35,7 @@ import butterknife.OnClick;
  * 输入打赏金额
  */
 
-public class ActivityEnterAmount extends BaseActivityForTranslucent {
+public class ActivityEnterAmount extends BaseActivity {
 
     @Bind(R.id.tv_options)
     TextView tv_options;

@@ -28,6 +28,7 @@ import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.FastBlur;
 import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
+import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxClipboardTool;
 import com.lianzai.reader.utils.RxFileTool;
 import com.lianzai.reader.utils.RxImageTool;

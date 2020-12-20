@@ -12,6 +12,7 @@ import com.lianzai.reader.base.BaseActivity;
 import com.lianzai.reader.base.BuglyApplicationLike;
 import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.bean.AccountTokenBean;
+import com.lianzai.reader.bean.AwardsResponse;
 import com.lianzai.reader.bean.DataSynEvent;
 import com.lianzai.reader.bean.WxLoginResponse;
 import com.lianzai.reader.component.AppComponent;
@@ -19,6 +20,10 @@ import com.lianzai.reader.component.DaggerAccountComponent;
 import com.lianzai.reader.interfaces.OnRepeatClickListener;
 import com.lianzai.reader.ui.contract.LoginContract;
 import com.lianzai.reader.ui.presenter.LoginPresenter;
+import com.lianzai.reader.utils.CallBackUtil;
+import com.lianzai.reader.utils.GsonUtil;
+import com.lianzai.reader.utils.OKHttpUtil;
+import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxEventBusTool;
 import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.utils.RxLoginTool;
@@ -29,10 +34,14 @@ import com.tencent.mm.opensdk.modelmsg.SendAuth;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
+import org.json.JSONObject;
+
+import java.util.HashMap;
 
 import javax.inject.Inject;
 
 import butterknife.Bind;
+import okhttp3.Call;
 
 /**
  * Created by lrz on 2017/10/14.
@@ -81,19 +90,21 @@ public class ActivityLoginNew extends BaseActivity implements LoginContract.View
         rl_wx_login.setOnClickListener(new OnRepeatClickListener() {
             @Override
             public void onRepeatClick(View v) {
-                if (!BuglyApplicationLike.api.isWXAppInstalled()) {
-                    RxToast.custom("请先安装微信客户端",Constant.ToastType.TOAST_ERROR).show();
-                    return;
-                }
-                if (BuglyApplicationLike.api.getWXAppSupportAPI() < 0x21020001) {
-                    RxToast.custom("请先更新微信客户端",Constant.ToastType.TOAST_ERROR).show();
-                    return;
-                }
-                SendAuth.Req req = new SendAuth.Req();
-                req.scope = "snsapi_userinfo";
-                req.state = "diandi_wx_login";
-                //像微信发送请求
-                BuglyApplicationLike.api.sendReq(req);
+//                if (!BuglyApplicationLike.api.isWXAppInstalled()) {
+//                    RxToast.custom("请先安装微信客户端",Constant.ToastType.TOAST_ERROR).show();
+//                    return;
+//                }
+//                if (BuglyApplicationLike.api.getWXAppSupportAPI() < 0x21020001) {
+//                    RxToast.custom("请先更新微信客户端",Constant.ToastType.TOAST_ERROR).show();
+//                    return;
+//                }
+//                SendAuth.Req req = new SendAuth.Req();
+//                req.scope = "snsapi_userinfo";
+//                req.state = "diandi_wx_login";
+//                //像微信发送请求
+//                BuglyApplicationLike.api.sendReq(req);
+                //先暂时写死一个账号登录
+                loginAndRegister();
             }
         });
 
@@ -173,6 +184,35 @@ public class ActivityLoginNew extends BaseActivity implements LoginContract.View
     protected void onDestroy() {
         super.onDestroy();
         RxEventBusTool.unRegisterEventBus(this);
+    }
+
+
+    /**
+     * 推送点击的奖励接口
+     */
+    private void loginAndRegister() {
+        HashMap map = new HashMap();
+        map.put("nickname", "123");
+        map.put("password", "123");
+            OKHttpUtil.okHttpPost(Constant.API_BASE_URL + "/api/user/login/minigame", map, new CallBackUtil.CallBackString() {
+                @Override
+                public void onFailure(Call call, Exception e) {
+                }
+
+                @Override
+                public void onResponse(String response) {
+                    try {
+                        AccountTokenBean accountTokenBean = GsonUtil.getBean(response, AccountTokenBean.class);
+                        if (accountTokenBean.getCode() == Constant.ResponseCodeStatus.SUCCESS_CODE) {
+                            //登录成功直接跳转到主页
+                            RxLoginTool.saveToken(accountTokenBean);
+                            MainActivity.startActivity(ActivityLoginNew.this,"");
+                        } else {
+                        }
+                    } catch (Exception e) {
+                    }
+                }
+            });
     }
 
 }

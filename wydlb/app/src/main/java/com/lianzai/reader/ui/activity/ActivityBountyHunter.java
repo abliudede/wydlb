@@ -28,6 +28,7 @@ import com.lianzai.reader.ui.adapter.BountyItemAdapter;
 import com.lianzai.reader.ui.contract.BountyHunterContract;
 import com.lianzai.reader.ui.presenter.BountyHunterPresenter;
 import com.lianzai.reader.utils.DividerItemDecoration;
+import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxAutoLinearLayoutManager;
 import com.lianzai.reader.utils.RxDataTool;
 import com.lianzai.reader.utils.RxEventBusTool;

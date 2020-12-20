@@ -27,6 +27,7 @@ import com.lianzai.reader.component.DaggerAccountComponent;
 import com.lianzai.reader.inner.MyCountDownTimerForGame;
 import com.lianzai.reader.ui.contract.FightLuckContract;
 import com.lianzai.reader.ui.presenter.FightLuckPresenter;
+import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxEncryptTool;
 import com.lianzai.reader.utils.RxImageTool;
 import com.lianzai.reader.utils.RxNetTool;

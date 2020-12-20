@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.widget.RelativeLayout;
 
 import com.lianzai.reader.R;
-import com.lianzai.reader.base.BaseActivityForTranslucent;
+import com.lianzai.reader.base.BaseActivity;
 import com.lianzai.reader.component.AppComponent;
 
 import butterknife.OnClick;
@@ -14,7 +14,7 @@ import butterknife.OnClick;
  * 参与规则页面
  */
 
-public class ActivityJoinRule extends BaseActivityForTranslucent {
+public class ActivityJoinRule extends BaseActivity {
 
     @Override
     public int getLayoutId() {

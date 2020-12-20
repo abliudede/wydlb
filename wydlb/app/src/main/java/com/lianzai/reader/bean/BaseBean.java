@@ -11,7 +11,7 @@ public class BaseBean implements Serializable {
 
     private int status;
 
-    private String msg="";
+    private String message="";
 
 
     public int getStatus() {
@@ -31,10 +31,10 @@ public class BaseBean implements Serializable {
     }
 
     public String getMsg() {
-        return msg;
+        return message;
     }
 
     public void setMsg(String msg) {
-        this.msg = msg;
+        this.message = msg;
     }
 }

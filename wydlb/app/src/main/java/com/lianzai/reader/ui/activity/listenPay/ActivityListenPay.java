@@ -25,6 +25,7 @@ import com.lianzai.reader.ui.adapter.ListenPayItemAdapter;
 import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
+import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxDataTool;
 import com.lianzai.reader.utils.RxEncryptTool;
 import com.lianzai.reader.utils.RxEventBusTool;
@@ -102,7 +103,6 @@ public class ActivityListenPay extends BaseActivity {
     @Override
     public void initDatas() {
         listensDetail();
-        accountDetailBean= RxTool.getAccountBean();
         if (null==accountDetailBean) {
             RxToast.custom("未登录").show();
             finish();

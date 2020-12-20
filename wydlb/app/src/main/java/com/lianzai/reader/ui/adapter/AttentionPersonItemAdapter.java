@@ -64,12 +64,6 @@ public class AttentionPersonItemAdapter extends BaseQuickAdapter<UserAttentionBe
         tv_nickname.setText(bean.getNickName());
         des_tv.setText("粉丝：" + bean.getFansSum());
 
-        //自己则不显示
-        if(RxTool.getAccountBean().getData().getUid().equals(String.valueOf(bean.getUserId()))){
-            attention_tv.setVisibility(View.GONE);
-        }else {
-            attention_tv.setVisibility(View.VISIBLE);
-        }
 
         if(bean.getAttentionStatus() == 0){
             attention_tv.setBackgroundResource(R.drawable.blue_15dpconor_bg);
