@@ -11,7 +11,6 @@ import android.view.WindowManager;
 
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.EasyPermissions;
-import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxLogTool;
 
 import java.util.List;

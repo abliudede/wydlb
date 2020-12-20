@@ -61,8 +61,6 @@ public class Constant {
 
     public static final String LOGIN_ID = "loginId";
 
-    public static final String ACCOUNT_CACHE = "account25";
-
     public static final String SHOW_SEARCH_BOOK_GUIDE = "showSearchBooKGuide";//搜索图层引导
 
     public static final String BAIDUAPPID = "15549933";
@@ -325,11 +323,9 @@ public class Constant {
 
         int WX_LOGIN = 50001;
 
-        int PUSH_JSON_TAG = 310000;//push json传递
         int WEB_JSON_TAG = 310001;//push json传递
         int LOGIN_REFRESH_TAG = 310002;//登录成功-刷新数据
         int LOGIN_OUT_REFRESH_TAG = 310003;//退出登录-刷新数据
-        int MAIN_LOGIN_OUT_REFRESH_TAG = 310004;//退出登录-首页刷新数据
         int URL_IDENTIFICATION = 310006;//url识别事件，目前做应用切换到前台和应用内复制书链接
         int MESSAGE_REFRESH = 310007;//消息免打扰开关刷新-刷新数据
         int REOPEN_AD = 310008;//重新展示广告页

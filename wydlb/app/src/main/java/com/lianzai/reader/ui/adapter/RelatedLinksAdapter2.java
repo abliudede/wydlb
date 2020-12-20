@@ -12,7 +12,6 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.lianzai.reader.R;
 import com.lianzai.reader.bean.RelatedLinksBean2;
-import com.lianzai.reader.view.ItemChapters;
 
 import java.util.List;
 

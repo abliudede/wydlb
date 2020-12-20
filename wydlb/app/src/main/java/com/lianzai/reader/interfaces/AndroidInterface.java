@@ -5,7 +5,6 @@ import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.webkit.JavascriptInterface;
@@ -16,19 +15,12 @@ import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.bean.ShowShareBean;
 import com.lianzai.reader.ui.activity.ActivityImagesPreview;
 import com.lianzai.reader.ui.activity.ActivityLoginNew;
-import com.lianzai.reader.ui.activity.ActivitySearchFirst;
 import com.lianzai.reader.ui.activity.ActivityWebView;
-import com.lianzai.reader.ui.activity.PersonHomePage.PerSonHomePageActivity;
-import com.lianzai.reader.ui.activity.TeamChat.TeamMessageActivity;
-import com.lianzai.reader.ui.activity.book.ActivityBookListDetail;
-import com.lianzai.reader.ui.activity.circle.ActivityCircleDetail;
-import com.lianzai.reader.ui.activity.circle.ActivityCircleGXBQPersonList;
 import com.lianzai.reader.ui.activity.wallet.ActivityAutoTicketManage;
 import com.lianzai.reader.ui.activity.wallet.ActivityWalletRechargeGoldCoin;
 import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
-import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxAppTool;
 import com.lianzai.reader.utils.RxClipboardTool;
 import com.lianzai.reader.utils.RxEventBusTool;
@@ -36,14 +28,11 @@ import com.lianzai.reader.utils.RxFileTool;
 import com.lianzai.reader.utils.RxImageTool;
 import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.utils.RxLoginTool;
-import com.lianzai.reader.utils.SkipReadUtil;
 import com.lianzai.reader.view.RxToast;
 import com.lianzai.reader.view.dialog.RxDialogImageOption;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 import okhttp3.Call;
 
@@ -210,15 +199,6 @@ public class AndroidInterface {
             case 1:
                 SkipReadUtil.normalRead(activity, id,"",false);
                 break;
-            case 2:
-                ActivityBookListDetail.startActivity(activity, id);
-                break;
-            case 3:
-                PerSonHomePageActivity.startActivity(activity, id);
-                break;
-            case 4:
-               ActivityCircleDetail.startActivity(activity,id);
-                break;
             case 5:
                 RxEventBusTool.sendEvents(Constant.EventTag.SWITCH_BOOK_LIST);
                 RxActivityTool.returnMainActivity();
@@ -229,7 +209,6 @@ public class AndroidInterface {
                 break;
 
             case 7:
-                joinTeamChat(String.valueOf(id));
                 break;
 
             case 8:
@@ -241,9 +220,6 @@ public class AndroidInterface {
                 ActivitySearchFirst.skiptoSearch(id,activity);
                 break;
 
-            case 10:
-                ActivityCircleGXBQPersonList.startActivity(activity,id);
-                break;
 
             case 11:
                 ActivityAutoTicketManage.startActivity(activity,id);
@@ -256,49 +232,7 @@ public class AndroidInterface {
         }
     }
 
-//   /*4用来调圈子首页并拉起动态列表
-//     10用来显示共享版权参与人列表的不同标题
-// */
-    @JavascriptInterface
-    public void skipPage(int type,String id,String itemId) {
-        switch (type){
-            case 4:
-            ActivityCircleDetail.startActivity(activity, id,true);
-            break;
-            case 10:
-                ActivityCircleGXBQPersonList.startActivity(activity,id,itemId);
-                break;
-        }
-    }
 
-    /**
-     * 加入群聊
-     *
-     * @param teamId
-     */
-    public void joinTeamChat(String teamId) {
-        Map<String, String> map = new HashMap<>();
-        map.put("teamId", teamId);
-        OKHttpUtil.okHttpPut(Constant.API_BASE_URL + "/teams/join" , map, new CallBackUtil.CallBackString() {
-            @Override
-            public void onFailure(Call call, Exception e) {
-            }
-
-            @Override
-            public void onResponse(String response) {
-                try {
-                    TeamMessageActivity.startActivity(activity,teamId);
-//                    BaseBean baseBean = GsonUtil.getBean(response, BaseBean.class);
-//                    if (baseBean.getCode()==Constant.ResponseCodeStatus.SUCCESS_CODE){
-//                    }else {
-//                        RxToast.custom(baseBean.getMsg()).show();
-//                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-    }
 
     @JavascriptInterface
     public void startBrowserActivity(String url){

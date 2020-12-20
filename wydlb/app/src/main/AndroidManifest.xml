@@ -175,12 +175,10 @@
 
         <!--android:windowSoftInputMode="adjustResize"-->
         <activity android:name="com.lianzai.reader.ui.activity.ActivityLoginNew" />
-        <activity android:name="com.lianzai.reader.ui.activity.ActivityEditPassword" />
         <!--单例模式方便互相切换-->
         <activity
             android:name="com.lianzai.reader.ui.activity.ActivityWebView"
             android:windowSoftInputMode="stateHidden|adjustPan" />
-        <activity android:name="com.lianzai.reader.ui.activity.ActivityBookList" />
         <activity android:name="com.lianzai.reader.ui.activity.MinerGameActivity" />
         <activity android:name="com.lianzai.reader.ui.activity.ActivityAreaCode" />
         <activity android:name="com.lianzai.reader.ui.activity.ActivityMessageCenter" />
@@ -201,7 +199,6 @@
         <activity android:name="com.lianzai.reader.ui.activity.wallet.ActivityWalletWithdrawGoldCoin" />
         <activity android:name="com.lianzai.reader.ui.activity.wallet.ActivityWalletWithdrawReadTicket" />
         <activity android:name="com.lianzai.reader.ui.activity.wallet.ActivityWalletReadLockTicketList" />
-        <activity android:name="com.lianzai.reader.ui.activity.ActivitySettings" />
         <activity android:name="com.lianzai.reader.ui.activity.chat.ActivityPublicNumberChat" />
 
         <activity android:name=".ui.activity.book.ActivityBookListDetail" />
@@ -214,7 +211,6 @@
         <activity android:name=".ui.activity.chatRoomSetting.ActivityRank" />
         <activity android:name=".ui.activity.chatRoomSetting.ChatRoomEditNotice" />
         <activity android:name=".ui.activity.chatRoomSetting.ActivityChatRoomShowPerson" />
-        <activity android:name=".ui.activity.BookRecommendSettingActivity" />
 
         <activity android:name=".ui.activity.taskCenter.ActivityFaceToFace" />
         <activity
@@ -232,12 +228,6 @@
             android:resizeableActivity="false"
             android:theme="@style/FastListStyle" />
         <activity android:name=".ui.activity.read.ReadMoreSettingsActivity" />
-        <activity
-            android:name=".ui.activity.ActivityBookShare"
-            android:theme="@style/DialogActivityStyle" />
-        <activity
-            android:name=".ui.activity.ActivityBookShare2"
-            android:theme="@style/DialogActivityStyle" />
         <activity android:name=".ui.activity.TeamChat.TeamMessageActivity" />
         <activity android:name=".ui.activity.TeamChat.ActivityTeamChatInfo" />
         <activity android:name=".ui.activity.TeamChat.ActivityTeamChatShowPerson" />
@@ -286,11 +276,6 @@
         <activity android:name=".ui.activity.PersonHomePage.PerSonHomePageActivity" />
         <activity android:name=".ui.activity.profile.ActivityEditIntro" />
         <activity android:name=".ui.activity.UrlIdentification.BrowserActivity" />
-        <activity
-            android:name=".ui.activity.ActivityBookShare3"
-            android:theme="@style/DialogActivityStyle" />
-        <activity android:name=".ui.activity.ActivityBookListForRank" />
-        <activity android:name=".ui.activity.ActivityAdvertisement" />
         <activity android:name=".ui.activity.read.ActivityTeamChooseForLianzaihao" />
         <activity android:name=".ui.activity.qrCodeShare.ActivityShareBitmapBook" />
 
@@ -302,8 +287,6 @@
             android:name=".ui.activity.location.ActivitySelectLocation"
             android:windowSoftInputMode="adjustResize" />
 
-        <activity android:name=".ui.activity.ActivityBookShortageArtifact" />
-        <activity android:name=".ui.activity.ActivityBookShortageArtifact2" />
         <activity android:name=".ui.activity.circle.ActivityCirclePersonList" />
         <activity
             android:name=".ui.activity.circle.ActivityPostDetail"
@@ -317,13 +300,8 @@
         <activity android:name=".ui.activity.circle.ActivityMyDynamic" />
         <activity android:name=".ui.activity.ActivityTextShow" />
         <activity android:name=".ui.SplashActivity2" />
-        <activity android:name=".ui.activity.ActivityAdvertisement2" />
         <activity android:name=".ui.activity.circle.ActivityRelatedLinks" />
-        <activity
-            android:name=".ui.activity.circle.ActivityInsideBookMulu"
-            android:theme="@style/FastListStyle" />
         <activity android:name=".ui.activity.PersonHomePage.ActivityUserShieldingList" />
-        <activity android:name=".ui.activity.ActivityPushSettings" />
         <activity android:name=".ui.activity.circle.ActivityCircleClose" />
         <activity android:name=".ui.activity.ActivityBookRecordHistoryNew" />
         <activity android:name=".ui.activity.circle.ActivityCircleGXBQPersonList" />
@@ -343,10 +321,6 @@
             android:name=".ui.activity.circle.ActivityReportDetail"
             android:theme="@style/DialogActivityStyle" />
         <activity android:name=".ui.activity.UrlIdentification.ActivityReadTimeShow" />
-        <activity
-            android:name=".ui.activity.ActivitySearchFirst"
-            android:windowSoftInputMode="stateAlwaysVisible|adjustPan" />
-        <activity android:name=".ui.activity.ActivitySearch2" />
         <activity
             android:name="com.yuyh.library.imgsel.ui.ISListActivity"
             android:theme="@style/SelTheme" />
@@ -381,10 +355,6 @@
             android:screenOrientation="portrait"
             android:taskAffinity=""
             android:theme="@style/LockScreenActivityStyle" />
-
-        <service
-            android:name=".service.MusicService"
-            android:exported="false"></service>
 
 
         <!--腾讯广告联盟需要-->
@@ -523,14 +493,6 @@
 
         <!-- 申明自定义通知的广播接收器，第三方APP集成时，action中的com.netease.nim.demo请替换为自己的包名 -->
         <!-- 需要权限申明 <uses-permission android:name="com.netease.nim.demo.permission.RECEIVE_MSG"/> -->
-        <receiver
-            android:name=".receiver.CustomNotificationReceiver"
-            android:enabled="true"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.lianzai.reader.ACTION.RECEIVE_CUSTOM_NOTIFICATION" />
-            </intent-filter>
-        </receiver>
 
 
         <!--华为推送配置-->

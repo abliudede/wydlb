@@ -16,9 +16,7 @@ import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.bean.DataSynEvent;
 import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.component.DaggerAccountComponent;
-import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxEventBusTool;
-import com.lianzai.reader.utils.RxTool;
 import com.lianzai.reader.utils.SystemBarUtils;
 import com.lianzai.reader.view.RxToast;
 

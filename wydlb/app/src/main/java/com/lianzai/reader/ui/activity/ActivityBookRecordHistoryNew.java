@@ -16,7 +16,6 @@ import com.lianzai.reader.base.BaseActivity;
 import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.ui.adapter.TabFragmentAdapter;
 import com.lianzai.reader.ui.fragment.BookRecordFragment;
-import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxImageTool;
 import com.lianzai.reader.utils.SystemBarUtils;
 import com.nineoldandroids.animation.AnimatorSet;

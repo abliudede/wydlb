@@ -2,13 +2,9 @@ package com.lianzai.reader.model.local;
 
 
 import com.lianzai.reader.model.bean.CloudRecordBean;
-import com.lianzai.reader.model.bean.ReadTimeBean;
 import com.lianzai.reader.model.gen.CloudRecordBeanDao;
 import com.lianzai.reader.model.gen.DaoSession;
-import com.lianzai.reader.model.gen.ReadTimeBeanDao;
-import com.lianzai.reader.utils.CrashSaver;
 import com.lianzai.reader.utils.GsonUtil;
-import com.lianzai.reader.utils.RxLogTool;
 
 import org.greenrobot.greendao.query.LazyList;
 

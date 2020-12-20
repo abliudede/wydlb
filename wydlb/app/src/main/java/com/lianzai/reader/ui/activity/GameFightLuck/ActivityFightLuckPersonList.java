@@ -22,7 +22,6 @@ import com.lianzai.reader.ui.adapter.FightLuckPersonItemAdapter;
 import com.lianzai.reader.ui.contract.FightLuckContract;
 import com.lianzai.reader.ui.presenter.FightLuckPresenter;
 import com.lianzai.reader.utils.DividerItemDecoration;
-import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxLinearLayoutManager;
 import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.utils.RxNetTool;

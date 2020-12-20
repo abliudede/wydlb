@@ -11,7 +11,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import androidx.annotation.Nullable;
+
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
@@ -28,7 +28,6 @@ import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.FastBlur;
 import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
-import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxClipboardTool;
 import com.lianzai.reader.utils.RxFileTool;
 import com.lianzai.reader.utils.RxImageTool;

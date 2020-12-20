@@ -23,7 +23,6 @@ import com.lianzai.reader.ui.adapter.WalletTransactionByTypeAdapter;
 import com.lianzai.reader.ui.contract.WalletDetailListContract;
 import com.lianzai.reader.ui.presenter.WalletDetailListPresenter;
 import com.lianzai.reader.utils.DividerItemDecoration;
-import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxLinearLayoutManager;
 import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.view.CustomLoadMoreView;

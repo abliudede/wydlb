@@ -523,35 +523,5 @@ public class RxTool {
         return sbkey.toString();
     }
 
-    public static void saveLoginInfo(final String account, final String token) {
-        Preferences.saveUserAccount(account);
-        Preferences.saveUserToken(token);
-    }
-
-
-    public static void saveBeforeLoginOption(String optionStr,String id){
-        try{
-            JSONObject jsonObject=new JSONObject();
-            jsonObject.put("optionStr",optionStr);
-            jsonObject.put("id",id);
-            RxSharedPreferencesUtil.getInstance().putString(Constant.LOGIN_BEFORE_OPTION_KEY,jsonObject.toString());
-        }catch (Exception e){
-//            e.printStackTrace();
-        }
-    }
-
-    public static JSONObject getBeforeLoginOption(){
-        JSONObject jsonObject=null;
-        try{
-            String json=RxSharedPreferencesUtil.getInstance().getString(Constant.LOGIN_BEFORE_OPTION_KEY);
-
-            jsonObject=new JSONObject(json);
-
-
-        }catch (Exception e){
-//            e.printStackTrace();
-        }
-        return jsonObject;
-    }
 
 }

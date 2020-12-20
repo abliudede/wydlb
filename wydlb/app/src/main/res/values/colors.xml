@@ -32,7 +32,7 @@
     <color name="green_color">#60C639</color>
 
     <color name="transparent_color">@android:color/transparent</color>
-
+    <color name="colorfeeb9e">#feeb9e</color>
 
     <!--read-->
     <color name="read.bg_1">#FFFFFF</color>

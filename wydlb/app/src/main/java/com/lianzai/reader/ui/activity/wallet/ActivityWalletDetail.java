@@ -45,7 +45,6 @@ import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.DividerItemDecoration;
 import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
-import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxClipboardTool;
 import com.lianzai.reader.utils.RxDataTool;
 import com.lianzai.reader.utils.RxEncryptTool;

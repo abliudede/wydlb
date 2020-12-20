@@ -10,13 +10,11 @@ import android.widget.TextView;
 
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.BaseActivity;
-import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.bean.AuthStatusResponse;
 import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.component.DaggerAccountComponent;
 import com.lianzai.reader.ui.contract.AuthInfoContract;
 import com.lianzai.reader.ui.presenter.AuthInfoPresenter;
-import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.view.RxToast;
 
 import javax.inject.Inject;

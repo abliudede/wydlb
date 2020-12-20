@@ -10,9 +10,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.gson.Gson;
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.BaseActivity;
 import com.lianzai.reader.base.Constant;
@@ -27,7 +25,6 @@ import com.lianzai.reader.ui.presenter.AccountPresenter;
 import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
-import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxEventBusTool;
 import com.lianzai.reader.utils.RxFileTool;
 import com.lianzai.reader.utils.RxImageTool;
@@ -38,8 +35,6 @@ import com.lianzai.reader.utils.RxTool;
 import com.lianzai.reader.utils.SystemBarUtils;
 import com.lianzai.reader.view.RxToast;
 import com.lianzai.reader.view.dialog.RxDialogSelectImage;
-import com.netease.nim.uikit.common.util.C;
-import com.netease.nim.uikit.common.util.storage.StorageUtil;
 import com.upyun.library.common.Params;
 import com.upyun.library.common.UploadEngine;
 import com.upyun.library.listener.UpCompleteListener;
@@ -189,7 +184,6 @@ public class ActivityUserProfile extends BaseActivity implements AccountContract
     public void getAccountDetailSuccess(AccountDetailBean bean) {
         accountDetailBean=bean;
         RxSharedPreferencesUtil.getInstance().putString(Constant.LOGIN_ID,accountDetailBean.getData().getMobile());
-        RxSharedPreferencesUtil.getInstance().putObject(Constant.ACCOUNT_CACHE,accountDetailBean);//缓存账户信息
 
         RxEventBusTool.sendEvents(Constant.EventTag.REFRESH_USER_MINE_TAG);
 
@@ -562,7 +556,6 @@ public class ActivityUserProfile extends BaseActivity implements AccountContract
                     if (baseBean.getCode()==Constant.ResponseCodeStatus.SUCCESS_CODE){
                         //存入本地数据
                         accountDetailBean.getData().setIsHideReadLike(ishidden);
-                        RxSharedPreferencesUtil.getInstance().putObject(Constant.ACCOUNT_CACHE,accountDetailBean);//缓存账户信息
                     }else{
                         if(ishidden == 1){
                             sb_read_like.setChecked(false);
@@ -604,7 +597,6 @@ public class ActivityUserProfile extends BaseActivity implements AccountContract
                     if (baseBean.getCode()==Constant.ResponseCodeStatus.SUCCESS_CODE){
                         //存入本地数据
                         accountDetailBean.getData().setIsHideRecentRead(ishidden);
-                        RxSharedPreferencesUtil.getInstance().putObject(Constant.ACCOUNT_CACHE,accountDetailBean);//缓存账户信息
                     }else{
                         if(ishidden == 1){
                             sb_recently_read.setChecked(false);

@@ -23,7 +23,6 @@ import com.lianzai.reader.ui.presenter.WalletBalancePresenter;
 import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
-import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxDataTool;
 import com.lianzai.reader.utils.RxEncryptTool;
 import com.lianzai.reader.utils.RxLogTool;

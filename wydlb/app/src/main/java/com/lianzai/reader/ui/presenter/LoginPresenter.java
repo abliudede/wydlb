@@ -65,13 +65,11 @@ public class LoginPresenter extends RxPresenter<LoginContract.View> implements L
                             }
                         },
                         e -> {
-//                            if (!e.toString().contains("NullPointerException")){
                                 try {
                                     mView.complete(Constant.NetWorkStatus.SERVER_ERROR);
                                 }catch (Exception ex){
                                     e.printStackTrace();
                                 }
-//                            }
                         }
                 );
         addDisposable(disp);

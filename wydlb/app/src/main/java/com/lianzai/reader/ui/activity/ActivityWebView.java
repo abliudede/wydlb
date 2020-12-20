@@ -54,18 +54,12 @@ import com.lianzai.reader.interfaces.OnRepeatClickListener;
 import com.lianzai.reader.model.bean.WebHistoryBean;
 import com.lianzai.reader.model.local.ReadSettingManager;
 import com.lianzai.reader.model.local.WebHistoryRepository;
-import com.lianzai.reader.ui.activity.PersonHomePage.PerSonHomePageActivity;
-import com.lianzai.reader.ui.activity.UrlIdentification.UrlReadActivity;
-import com.lianzai.reader.ui.activity.book.ActivityBookListDetail;
-import com.lianzai.reader.ui.activity.circle.ActivityCircleDetail;
-import com.lianzai.reader.ui.activity.wallet.ActivityAutoTicketRecord;
 import com.lianzai.reader.ui.adapter.PureReadItemAdapter;
 import com.lianzai.reader.utils.AndroidBug5497Workaround;
 import com.lianzai.reader.utils.BrightnessUtils;
 import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
-import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxClipboardTool;
 import com.lianzai.reader.utils.RxDeviceTool;
 import com.lianzai.reader.utils.RxEncodeTool;
@@ -80,7 +74,6 @@ import com.lianzai.reader.utils.RxShareUtils;
 import com.lianzai.reader.utils.RxSharedPreferencesUtil;
 import com.lianzai.reader.utils.RxTimeTool;
 import com.lianzai.reader.utils.ScreenUtils;
-import com.lianzai.reader.utils.SkipReadUtil;
 import com.lianzai.reader.utils.SystemBarUtils;
 import com.lianzai.reader.utils.UIController;
 import com.lianzai.reader.view.CustomLoadMoreView;
@@ -110,7 +103,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -407,9 +399,6 @@ public class ActivityWebView extends PermissionActivity {
             return;
         }
 
-        if(skipFromUrl(openUrl)){
-            return;
-        }
 
         //先获得浏览器type
         try {
@@ -585,67 +574,6 @@ public class ActivityWebView extends PermissionActivity {
 
     }
 
-    private boolean skipFromUrl(String url){
-        //跳转逻辑。
-        try {
-            if (url.contains(Constant.ParseUrl.VOTINGRECORDS)) {//自动投票记录
-                ActivityAutoTicketRecord.startActivity(ActivityWebView.this);
-                finish();
-                return true;
-            }else if (url.contains(Constant.ParseUrl.LIANZAIHAO)) {//连载号
-                HashMap<String, String> map = executeParse(url);
-                ActivityCircleDetail.startActivity(ActivityWebView.this, map.get("id"));
-                finish();
-                return true;
-            }else if (url.contains(Constant.ParseUrl.CIRCLE)) {//圈子
-                HashMap<String, String> map = executeParse(url);
-                ActivityCircleDetail.startActivity(ActivityWebView.this, map.get("id"));
-                finish();
-                return true;
-//                String[] tempstr = url.split("/");
-//                if (tempstr.length > 1) {
-//                    String circleId = tempstr[tempstr.length - 1];
-//                    //识别圈子id是否为一串数字
-//                    try{
-//                        long[] temp = hashids.decode(circleId);
-//                        if (null != temp && temp.length > 0) {
-//                            circleId = String.valueOf(temp[0]);//解密
-//                        }
-//                    }catch (Exception e){
-//                    }
-//                   if(!TextUtils.isEmpty(circleId)){
-//                       ActivityCircleDetail.startActivity(ActivityWebView.this, circleId);
-//                       finish();
-//                   }
-//                }
-            } else if (url.contains(Constant.ParseUrl.BOOK_LIST)) {//书单详情
-                HashMap<String, String> map = executeParse(url);
-                ActivityBookListDetail.startActivity(ActivityWebView.this, map.get("id"));
-                finish();
-                return true;
-            } else if (url.contains(Constant.ParseUrl.BOOK_READ)) {//书籍阅读页
-                String[] tempstr = url.split("-");
-                if (tempstr.length > 1) {
-                    SkipReadUtil.normalRead(ActivityWebView.this, tempstr[1], "", openMulu);
-                    finish();
-                    return true;
-                }
-            }  else if (url.contains(Constant.ParseUrl.BOOK_READ2)) {//书籍阅读界面
-                HashMap<String, String> map = executeParse(url);
-                SkipReadUtil.normalRead(ActivityWebView.this, map.get("id"), map.get("ext"), openMulu);
-                finish();
-                return true;
-            } else if (url.contains(Constant.ParseUrl.PERSONAL)) {//个人主页
-                HashMap<String, String> map = executeParse(url);
-                PerSonHomePageActivity.startActivity(ActivityWebView.this, map.get("uid"));
-                finish();
-                return true;
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return false;
-    }
 
 
     private void addLongClick(WebView webView) {
@@ -848,76 +776,12 @@ public class ActivityWebView extends PermissionActivity {
     }
 
 
-    @OnClick(R.id.iv_exchange)
-    void exchangeClick() {
-        iv_readmode_enter.setVisibility(View.GONE);
-        //不满足条件时直接返回
-        if (null == bookId && bid <= 0) {
-            RxToast.custom(exchangeTip).show();
-            urlRecognitionRequest(openUrl);
-            return;
-        }
-        if (!RxSharedPreferencesUtil.getInstance().getBoolean(Constant.AUTO_EXCHANGE, false)) {
-            //偶尔弹框
-            int num = new Random().nextInt(4);
-            //第一次点击，必弹框
-            if (RxSharedPreferencesUtil.getInstance().getBoolean(Constant.FIRST_AUTO_EXCHANGE, true)) {
-                RxSharedPreferencesUtil.getInstance().putBoolean(Constant.FIRST_AUTO_EXCHANGE, false);
-                num = 1;
-            }
-            if (num == 1 && !rxDialogSureCancelNew.isShowing()) {
-                rxDialogSureCancelNew.setCanceledOnTouchOutside(true);
-                rxDialogSureCancelNew.setTitle("自动转码阅读");
-                rxDialogSureCancelNew.setContent("以后是否都自动进入转码阅读提升阅读体验?");
-                rxDialogSureCancelNew.setCancel("取消");
-                rxDialogSureCancelNew.setSure("确定");
-                rxDialogSureCancelNew.setSureListener(new OnRepeatClickListener() {
-                    @Override
-                    public void onRepeatClick(View v) {
-                        rxDialogSureCancelNew.dismiss();
-                        toRead();
-                        RxSharedPreferencesUtil.getInstance().putBoolean(Constant.AUTO_EXCHANGE, true);
-                    }
-                });
-                rxDialogSureCancelNew.setCancelListener(new OnRepeatClickListener() {
-                    @Override
-                    public void onRepeatClick(View v) {
-                        rxDialogSureCancelNew.dismiss();
-                        toRead();
-                    }
-                });
-                rxDialogSureCancelNew.show();
-            } else {
-                //不弹窗时直接去阅读界面
-                toRead();
-            }
-        } else {
-            //不弹窗时直接去阅读界面
-            toRead();
-        }
-
-    }
 
     @OnClick(R.id.iv_readmode_enter)
     void enterClick() {
         iv_readmode_enter.setVisibility(View.GONE);
     }
 
-    private void toRead() {
-        //假如是禁止阅读进来的，不进行识别。直接可以跳旧原生阅读页面。
-        if (null != bookId) {
-            if (!TextUtils.isEmpty(chapterTitle)) {
-                UrlReadActivity.startActivityOutsideRead(ActivityWebView.this, bookId,source,openMulu,"", chapterTitle,page , false);
-            } else {
-                //禁止阅读进来的
-                SkipReadUtil.normalRead(ActivityWebView.this, String.valueOf(bookId), source, openMulu);
-            }
-        } else if (bid > 0) {
-            SkipReadUtil.normalRead(ActivityWebView.this, String.valueOf(bid), source, openMulu);
-        } else {
-            RxToast.custom(exchangeTip).show();
-        }
-    }
 
 
     private boolean first = true;
@@ -983,9 +847,6 @@ public class ActivityWebView extends PermissionActivity {
             //显示成网址
             if(!openUrl.equals(mUrl)){
                 openUrl = mUrl;
-                if(skipFromUrl(openUrl)){
-                    return;
-                }
             }
 
             if (!showTitle && tv_commom_title != null) {
@@ -1108,7 +969,6 @@ public class ActivityWebView extends PermissionActivity {
                             count++;
                             //假如是自动转码的状态,且不是自动的纯净模式，跳往阅读页面
                             if (RxSharedPreferencesUtil.getInstance().getBoolean(Constant.AUTO_EXCHANGE, false) && !pureMode) {
-                                toRead();
                             }
                         }
                     } else {

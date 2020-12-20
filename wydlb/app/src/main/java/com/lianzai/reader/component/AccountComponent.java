@@ -16,58 +16,23 @@
 package com.lianzai.reader.component;
 
 import com.lianzai.reader.ui.activity.ActivityAreaCode;
-import com.lianzai.reader.ui.activity.ActivityBookList;
-import com.lianzai.reader.ui.activity.ActivityBookListForRank;
 import com.lianzai.reader.ui.activity.ActivityBountyHunter;
 import com.lianzai.reader.ui.activity.ActivityChoosePayWay;
-import com.lianzai.reader.ui.activity.ActivityEditPassword;
 import com.lianzai.reader.ui.activity.ActivityEnterAmount;
 import com.lianzai.reader.ui.activity.ActivityImagesPreview;
 import com.lianzai.reader.ui.activity.ActivityLoginNew;
 import com.lianzai.reader.ui.activity.ActivityOneKeyReward;
-import com.lianzai.reader.ui.activity.ActivityPushSettings;
 import com.lianzai.reader.ui.activity.ActivityRealNameAuthFirst;
 import com.lianzai.reader.ui.activity.ActivityRealNameAuthSecond;
 import com.lianzai.reader.ui.activity.ActivitySafety;
-import com.lianzai.reader.ui.activity.ActivitySearch2;
-import com.lianzai.reader.ui.activity.ActivitySearchFirst;
-import com.lianzai.reader.ui.activity.ActivitySettings;
 import com.lianzai.reader.ui.activity.GameFightLuck.ActivityFightLuckDetail;
 import com.lianzai.reader.ui.activity.GameFightLuck.ActivityFightLuckEnter;
 import com.lianzai.reader.ui.activity.GameFightLuck.ActivityFightLuckPersonList;
 import com.lianzai.reader.ui.activity.MainActivity;
 import com.lianzai.reader.ui.activity.MinerGameActivity;
-import com.lianzai.reader.ui.activity.PersonHomePage.ActivityAttentionPersonList;
-import com.lianzai.reader.ui.activity.PersonHomePage.ActivityUserShieldingList;
-import com.lianzai.reader.ui.activity.PersonHomePage.PerSonHomePageActivity;
-import com.lianzai.reader.ui.activity.TeamChat.ActivityTeamBanPerson;
-import com.lianzai.reader.ui.activity.TeamChat.ActivityTeamChatInfo;
-import com.lianzai.reader.ui.activity.TeamChat.ActivityTeamChatPersonList;
-import com.lianzai.reader.ui.activity.TeamChat.ActivityTeamChatSearchPersonList;
-import com.lianzai.reader.ui.activity.TeamChat.ActivityTeamChatShowPerson;
-import com.lianzai.reader.ui.activity.UrlIdentification.ActivityReadTimeShow;
-import com.lianzai.reader.ui.activity.UrlIdentification.ActivityTeamChoose;
-import com.lianzai.reader.ui.activity.UrlIdentification.UrlReadActivity;
-import com.lianzai.reader.ui.activity.circle.ActivityCircleClose;
-import com.lianzai.reader.ui.activity.circle.ActivityCircleDetailShow;
-import com.lianzai.reader.ui.activity.circle.ActivityCircleGXBQPersonList;
-import com.lianzai.reader.ui.activity.circle.ActivityCircleManagerAuditList;
-import com.lianzai.reader.ui.activity.circle.ActivityCircleManagerPersonList;
-import com.lianzai.reader.ui.activity.circle.ActivityCircleMutePersonList;
-import com.lianzai.reader.ui.activity.circle.ActivityCirclePersonList;
-import com.lianzai.reader.ui.activity.circle.ActivityCircleReportAuditList;
-import com.lianzai.reader.ui.activity.circle.ActivityInsideBookMulu;
-import com.lianzai.reader.ui.activity.circle.ActivityMyNotice;
-import com.lianzai.reader.ui.activity.circle.ActivityMyPraised;
-import com.lianzai.reader.ui.activity.circle.ActivityPostCircle;
-import com.lianzai.reader.ui.activity.circle.ActivityPostDetail;
-import com.lianzai.reader.ui.activity.circle.ActivityPostFloor;
-import com.lianzai.reader.ui.activity.circle.ActivityRelatedLinks;
 import com.lianzai.reader.ui.activity.listenPay.ActivityListenPay;
 import com.lianzai.reader.ui.activity.profile.ActivityUserProfile;
 import com.lianzai.reader.ui.activity.qrCodeShare.ActivityShareBitmapBook;
-import com.lianzai.reader.ui.activity.read.ActivityTeamChooseForLianzaihao;
-import com.lianzai.reader.ui.activity.read.NewReadActivity;
 import com.lianzai.reader.ui.activity.wallet.ActivityAutoTicketManage;
 import com.lianzai.reader.ui.activity.wallet.ActivityAutoTicketRecord;
 import com.lianzai.reader.ui.activity.wallet.ActivityCopyrightAssets;
@@ -85,8 +50,6 @@ import com.lianzai.reader.ui.activity.wallet.ActivityWalletWithdrawReadCoin;
 import com.lianzai.reader.ui.activity.wallet.ActivityWalletWithdrawReadTicket;
 import com.lianzai.reader.ui.activity.wallet.ActivityWithdrawReadCoinBindWallet;
 import com.lianzai.reader.ui.activity.wallet.ActivityWithdrawReadCoinConfirmOrder;
-import com.lianzai.reader.ui.fragment.BookStoreFragment;
-import com.lianzai.reader.ui.fragment.MyBookFragment;
 import com.lianzai.reader.ui.fragment.MyMessageFragment;
 import com.lianzai.reader.view.dialog.RxDialogBindReceiptAccount;
 import com.lianzai.reader.view.dialog.RxDialogDelete;
@@ -97,13 +60,7 @@ import dagger.Component;
 @Component(dependencies = AppComponent.class)
 public interface AccountComponent {
 
-    ActivityEditPassword inject(ActivityEditPassword activity);
-
     MainActivity inject(MainActivity activity);
-
-    BookStoreFragment inject(BookStoreFragment bookStoreFragment);
-
-    ActivityBookList inject(ActivityBookList activityBookList);
 
     MyMessageFragment inject(MyMessageFragment myMessageFragment);
 
@@ -143,8 +100,6 @@ public interface AccountComponent {
     ActivityWalletReadLockTicketList inject(ActivityWalletReadLockTicketList activityWalletReadLockTicketList);
     ActivityWalletRecordList inject(ActivityWalletRecordList activityWalletRecordList);
 
-    ActivitySettings inject(ActivitySettings activitySettings);
-
     ActivityBountyHunter inject(ActivityBountyHunter activitySettings);
 
     ActivityOneKeyReward inject(ActivityOneKeyReward activitySettings);
@@ -159,75 +114,15 @@ public interface AccountComponent {
 
     ActivityGoldDrillDetail inject(ActivityGoldDrillDetail activityBanPerson);
 
-    MyBookFragment inject(MyBookFragment myBookFragment);
-
     ActivityFightLuckEnter inject(ActivityFightLuckEnter myBookFragment);
 
     ActivityFightLuckDetail inject(ActivityFightLuckDetail myBookFragment);
 
     ActivityFightLuckPersonList inject(ActivityFightLuckPersonList myBookFragment);
 
-    NewReadActivity inject(NewReadActivity newReadActivity);
-
     ActivityLoginNew inject(ActivityLoginNew newReadActivity);
 
-    ActivityTeamChatInfo inject(ActivityTeamChatInfo newReadActivity);
-
-    ActivityTeamChatShowPerson inject(ActivityTeamChatShowPerson newReadActivity);
-
-    ActivityTeamChatPersonList inject(ActivityTeamChatPersonList newReadActivity);
-
-    ActivityTeamBanPerson inject(ActivityTeamBanPerson newReadActivity);
-
-    ActivityTeamChatSearchPersonList inject(ActivityTeamChatSearchPersonList newReadActivity);
-
-    ActivityAttentionPersonList inject(ActivityAttentionPersonList newReadActivity);
-
-    UrlReadActivity inject(UrlReadActivity newReadActivity);
-
-    ActivityTeamChoose inject(ActivityTeamChoose newReadActivity);
-
-    PerSonHomePageActivity inject(PerSonHomePageActivity perSonHomePageActivity);
-
-    ActivityBookListForRank inject(ActivityBookListForRank perSonHomePageActivity);
-
-    ActivityTeamChooseForLianzaihao inject(ActivityTeamChooseForLianzaihao perSonHomePageActivity);
-
     ActivityShareBitmapBook inject(ActivityShareBitmapBook perSonHomePageActivity);
-
-    ActivityPostCircle inject(ActivityPostCircle activityPostCircle);
-
-    ActivityCirclePersonList inject(ActivityCirclePersonList activityPostCircle);
-
-    ActivityPostDetail inject(ActivityPostDetail activityPostCircle);
-
-    ActivityPostFloor inject(ActivityPostFloor activitySettings);
-
-    ActivityMyNotice  inject(ActivityMyNotice activitySettings);
-
-    ActivityMyPraised inject(ActivityMyPraised activitySettings);
-
-    ActivityRelatedLinks inject(ActivityRelatedLinks activitySettings);
-
-    ActivityInsideBookMulu inject(ActivityInsideBookMulu activitySettings);
-
-    ActivityUserShieldingList inject(ActivityUserShieldingList activitySettings);
-
-    ActivityPushSettings inject(ActivityPushSettings activitySettings);
-
-    ActivityCircleClose inject(ActivityCircleClose activitySettings);
-
-    ActivityCircleGXBQPersonList inject(ActivityCircleGXBQPersonList activitySettings);
-
-    ActivityCircleDetailShow inject(ActivityCircleDetailShow activitySettings);
-
-    ActivityCircleManagerPersonList inject(ActivityCircleManagerPersonList activitySettings);
-
-    ActivityCircleMutePersonList inject(ActivityCircleMutePersonList activitySettings);
-
-    ActivityCircleReportAuditList inject(ActivityCircleReportAuditList activitySettings);
-
-    ActivityCircleManagerAuditList inject(ActivityCircleManagerAuditList activitySettings);
 
     ActivityAutoTicketManage inject(ActivityAutoTicketManage activitySettings);
 
@@ -237,13 +132,7 @@ public interface AccountComponent {
 
     ActivityCopyrightDetail inject(ActivityCopyrightDetail activitySettings);
 
-    ActivityReadTimeShow inject(ActivityReadTimeShow activitySettings);
-
     ActivityWithdrawReadCoinBindWallet inject(ActivityWithdrawReadCoinBindWallet activitySettings);
-
-    ActivitySearchFirst inject(ActivitySearchFirst activitySettings);
-
-    ActivitySearch2 inject(ActivitySearch2 activitySettings);
 
     ActivityListenPay  inject(ActivityListenPay activitySettings);
 

@@ -14,9 +14,7 @@ import android.widget.LinearLayout;
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.BaseActivity;
 import com.lianzai.reader.component.AppComponent;
-import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxImageTool;
-import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.view.RxToast;
 import com.lianzai.reader.view.SelectableRoundedImageView;
 
@@ -48,8 +46,6 @@ public class ActivityGuide extends BaseActivity {
     private ViewPagerAdapter mAdapter;
 
 
-    String pushJson="";
-
     String webOpenJson="";//通过浏览器唤醒的
 
 
@@ -66,9 +62,8 @@ public class ActivityGuide extends BaseActivity {
     public void initDatas() {
     }
 
-    public static void startActivity(Context context,String push,String web){
+    public static void startActivity(Context context,String web){
         Bundle bundle = new Bundle();
-        bundle.putString("push", push);
         bundle.putString("web", web);
         RxActivityTool.skipActivity(context, ActivityGuide.class, bundle);
     }
@@ -77,9 +72,7 @@ public class ActivityGuide extends BaseActivity {
     public void configViews(Bundle savedInstanceState) {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        pushJson = getIntent().getExtras().getString("push");
         webOpenJson = getIntent().getExtras().getString("web");
-
 
 //        初始化页面数组
         mImageList = new ArrayList<ImageView>();
@@ -187,8 +180,7 @@ public class ActivityGuide extends BaseActivity {
     }
 
     private void enterMainActivity() {
-        MainActivity.startActivity(ActivityGuide.this,pushJson,webOpenJson);
-        RxLogTool.e("SplashActivity enterMainActivity push json:" + pushJson);
+        MainActivity.startActivity(ActivityGuide.this,webOpenJson);
 
         //处理通过网页打开app的动作,此处未知待确认
         //processWebView();

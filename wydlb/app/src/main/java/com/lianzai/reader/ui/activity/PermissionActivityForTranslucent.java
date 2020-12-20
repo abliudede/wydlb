@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.lianzai.reader.R;
 import com.lianzai.reader.base.EasyPermissions;
-import com.lianzai.reader.utils.RxActivityTool;
 
 import java.util.List;
 

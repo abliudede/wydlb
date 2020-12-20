@@ -11,7 +11,6 @@ import com.lianzai.reader.base.BuglyApplicationLike;
 import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.bean.GetCommonShareUrlBean;
 import com.lianzai.reader.component.AppComponent;
-import com.lianzai.reader.ui.activity.book.ActivityBookListDetail;
 import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;

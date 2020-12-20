@@ -17,7 +17,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.bytedance.sdk.openadsdk.AdSlot;
 import com.bytedance.sdk.openadsdk.TTAdNative;
@@ -26,7 +25,6 @@ import com.lianzai.reader.R;
 import com.lianzai.reader.base.Constant;
 import com.lianzai.reader.bean.StartVersionBean;
 import com.lianzai.reader.inner.MyCountDownTimerForAD;
-import com.lianzai.reader.ui.activity.ActivityAdvertisement;
 import com.lianzai.reader.ui.activity.ActivityGuide;
 import com.lianzai.reader.ui.activity.ActivityLoginNew;
 import com.lianzai.reader.ui.activity.MainActivity;
@@ -43,10 +41,6 @@ import com.lianzai.reader.utils.SystemBarUtils;
 import com.lianzai.reader.utils.TTAdManagerHolder;
 import com.lianzai.reader.utils.WeakHandler;
 import com.lianzai.reader.view.RxToast;
-import com.netease.nimlib.sdk.NIMClient;
-import com.netease.nimlib.sdk.NimIntent;
-import com.netease.nimlib.sdk.msg.MsgService;
-import com.netease.nimlib.sdk.msg.model.IMMessage;
 import com.qq.e.ads.splash.SplashAD;
 import com.qq.e.ads.splash.SplashADListener;
 import com.qq.e.comm.util.AdError;
@@ -69,8 +63,6 @@ import okhttp3.Call;
 public class SplashActivity extends PermissionActivity implements SplashADListener,WeakHandler.IHandler{
 
     Hashids hashids;
-
-    String pushJson = "";//通过推送唤醒的
 
     String webOpenJson = "";//通过浏览器唤醒的
     private StartVersionBean startVersionBean;
@@ -110,13 +102,10 @@ public class SplashActivity extends PermissionActivity implements SplashADListen
 
         hashids = new Hashids("ds$#SDa", 8);
 
-        //分析推送数据，并获取到pushJson
-        onIntent();
         //处理通过网页打开app的动作，获取webOpenJson
         processWebView();
-        if (!TextUtils.isEmpty(pushJson) || !TextUtils.isEmpty(webOpenJson) && !isTaskRoot()) {
+        if (!TextUtils.isEmpty(webOpenJson) && !isTaskRoot()) {
             //应用已在后台
-            RxEventBusTool.sendEvents(pushJson, Constant.EventTag.PUSH_JSON_TAG);
             RxEventBusTool.sendEvents(webOpenJson, Constant.EventTag.WEB_JSON_TAG);
             finish();
             return;
@@ -140,61 +129,15 @@ public class SplashActivity extends PermissionActivity implements SplashADListen
         RxLogTool.e("onNewIntent......");
         setIntent(intent);
 
-
-        //分析推送数据，并获取到pushJson
-        onIntent();
         //处理通过网页打开app的动作，获取webOpenJson
         processWebView();
-        if (!TextUtils.isEmpty(pushJson) || !TextUtils.isEmpty(webOpenJson) && !isTaskRoot()) {
+        if ( !TextUtils.isEmpty(webOpenJson) && !isTaskRoot()) {
             //应用已在后台
-            RxEventBusTool.sendEvents(pushJson, Constant.EventTag.PUSH_JSON_TAG);
             RxEventBusTool.sendEvents(webOpenJson, Constant.EventTag.WEB_JSON_TAG);
             finish();
             return;
         }
 
-    }
-
-    // 处理收到的Intent
-    private void onIntent() {
-        RxLogTool.e("onIntent...");
-        Intent intent = getIntent();
-        if (intent != null) {
-            if (intent.hasExtra(NimIntent.EXTRA_NOTIFY_CONTENT)) {
-                parseNotifyIntent(intent);
-            }else if(intent.hasExtra("pushJson")){
-               pushJson = intent.getStringExtra("pushJson");
-            }
-        }
-    }
-
-    private void parseNotifyIntent(Intent intent) {
-        ArrayList<IMMessage> messages = (ArrayList<IMMessage>) intent.getSerializableExtra(NimIntent.EXTRA_NOTIFY_CONTENT);
-        if (messages == null || messages.size() > 1) {
-//            RxToast.custom("null.....").show();
-        } else {
-            try {
-                IMMessage message = messages.get(0);
-
-                if (null != message) {
-                    //清除未读红点
-                    NIMClient.getService(MsgService.class).clearUnreadCount(message.getSessionId(), message.getSessionType());
-                }
-
-                if (null != message.getRemoteExtension()) {
-                    pushJson = (String) message.getRemoteExtension().get("remoteType");
-                } else if (null != message.getPushPayload()) {
-                    pushJson = JSON.toJSONString(message.getPushPayload(), true);
-                    RxLogTool.e("SplashActivity parseNotifyIntent push json:" + pushJson);
-                }
-
-
-            } catch (Exception e) {
-//                e.printStackTrace();
-                RxLogTool.e("parseNotifyIntent error:" + e.getMessage());
-            }
-
-        }
     }
 
 
@@ -243,14 +186,11 @@ public class SplashActivity extends PermissionActivity implements SplashADListen
 
     //没登录不能进入主页
     private void enterMainActivity() {
-//        app_logo.setVisibility(View.INVISIBLE);
-//        container.removeAllViews();
         if(RxLoginTool.isLogin()){
-            MainActivity.startActivity(SplashActivity.this, pushJson, webOpenJson);
+            MainActivity.startActivity(SplashActivity.this, webOpenJson);
         }else {
             ActivityLoginNew.startActivity(SplashActivity.this);
         }
-
         finish();
     }
 
@@ -274,7 +214,7 @@ public class SplashActivity extends PermissionActivity implements SplashADListen
                 RxSharedPreferencesUtil.getInstance().putBoolean(Constant.NEEDGETCLOUDRECORD, true);
             }
             //跳转页面
-            ActivityGuide.startActivity(SplashActivity.this, pushJson, webOpenJson);
+            ActivityGuide.startActivity(SplashActivity.this, webOpenJson);
             finish();
         } else {
             //加载开屏广告
@@ -309,24 +249,7 @@ public class SplashActivity extends PermissionActivity implements SplashADListen
                                 if(startVersionBean.getData().getAdvertisement().getAppLimitMinute() > 0) {
                                     RxSharedPreferencesUtil.getInstance().putInt(Constant.ADVERTISEMENT_INTERNAL_TIME,startVersionBean.getData().getAdvertisement().getAppLimitMinute());
                                 }
-
-                                if (startVersionBean.getData().getAdvertisement().getAccessMode() == 1) {
-                                    //跳广告页
-                                    configId = String.valueOf(startVersionBean.getData().getAdvertisement().getConfigId());
-                                    String imgUrl = startVersionBean.getData().getAdvertisement().getImgUrl();
-                                    String jumpUrl = startVersionBean.getData().getAdvertisement().getJumpUrl();
-                                    ActivityAdvertisement.startActivity(SplashActivity.this, configId, imgUrl, jumpUrl, pushJson, webOpenJson,true);
-                                    finish();
-                                    return;
-                                }else if (startVersionBean.getData().getAdvertisement().getAccessMode() == 3) {
-                                    //跳广告页
-                                    configId = String.valueOf(startVersionBean.getData().getAdvertisement().getConfigId());
-                                    String imgUrl = startVersionBean.getData().getAdvertisement().getImgUrl();
-                                    String jumpUrl = startVersionBean.getData().getAdvertisement().getJumpUrl();
-                                    ActivityAdvertisement.startActivity(SplashActivity.this, configId, imgUrl, jumpUrl, pushJson, webOpenJson,false);
-                                    finish();
-                                    return;
-                                } else if (startVersionBean.getData().getAdvertisement().getAccessMode() == 2) {
+                                 if (startVersionBean.getData().getAdvertisement().getAccessMode() == 2) {
                                     configId = String.valueOf(startVersionBean.getData().getAdvertisement().getConfigId());
                                     channel = startVersionBean.getData().getAdvertisement().getSdkChannel();
                                     startSdkAd();

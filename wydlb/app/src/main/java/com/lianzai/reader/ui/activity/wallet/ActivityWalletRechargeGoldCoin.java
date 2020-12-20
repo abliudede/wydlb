@@ -22,7 +22,6 @@ import com.lianzai.reader.component.DaggerAccountComponent;
 import com.lianzai.reader.ui.adapter.WalletCoinRechargeAdapter;
 import com.lianzai.reader.ui.contract.GateWayContract;
 import com.lianzai.reader.ui.presenter.GateWayPresenter;
-import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxDataTool;
 import com.lianzai.reader.utils.RxEncryptTool;
 import com.lianzai.reader.utils.RxEventBusTool;

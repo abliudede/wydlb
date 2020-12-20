@@ -21,7 +21,6 @@ import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
 import com.lianzai.reader.R;
 import com.lianzai.reader.bean.BookShortAgeArtifact;
-import com.lianzai.reader.ui.activity.ActivitySearchFirst;
 import com.lianzai.reader.utils.FastBlur;
 import com.lianzai.reader.utils.RxImageTool;
 import com.lianzai.reader.utils.RxLogTool;

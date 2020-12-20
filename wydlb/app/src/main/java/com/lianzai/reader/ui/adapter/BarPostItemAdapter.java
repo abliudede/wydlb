@@ -13,7 +13,6 @@ import com.lianzai.reader.R;
 import com.lianzai.reader.bean.CommentInfoBean;
 import com.lianzai.reader.bean.PostDetailBean;
 import com.lianzai.reader.interfaces.CommentClickListener;
-import com.lianzai.reader.ui.activity.ActivitySearchFirst;
 import com.lianzai.reader.ui.activity.ActivityWebView;
 import com.lianzai.reader.utils.RxDataTool;
 import com.lianzai.reader.utils.RxImageTool;

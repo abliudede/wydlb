@@ -18,7 +18,6 @@ import com.lianzai.reader.model.bean.BookStoreBeanN;
 import com.lianzai.reader.utils.BookManager;
 import com.lianzai.reader.utils.RxDeviceTool;
 import com.lianzai.reader.utils.RxImageTool;
-import com.lianzai.reader.utils.SkipReadUtil;
 import com.lianzai.reader.view.SelectableRoundedImageView;
 
 import java.util.List;

@@ -17,7 +17,6 @@ import com.lianzai.reader.ui.adapter.AreaCodeAdapter;
 import com.lianzai.reader.ui.adapter.HeaderRecyclerAndFooterWrapperAdapter;
 import com.lianzai.reader.ui.adapter.ViewHolder;
 import com.lianzai.reader.utils.DividerItemDecoration;
-import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.utils.RxTool;
 import com.mcxtzhang.indexlib.IndexBar.widget.IndexBar;

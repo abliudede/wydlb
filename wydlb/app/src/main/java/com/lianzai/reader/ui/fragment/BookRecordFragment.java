@@ -21,7 +21,6 @@ import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
 import com.lianzai.reader.utils.RxLogTool;
 import com.lianzai.reader.utils.RxNetTool;
-import com.lianzai.reader.utils.SkipReadUtil;
 import com.lianzai.reader.view.CustomLoadMoreView;
 import com.lianzai.reader.view.RxToast;
 

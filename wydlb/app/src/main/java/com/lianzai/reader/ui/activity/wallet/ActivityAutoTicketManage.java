@@ -20,12 +20,10 @@ import com.lianzai.reader.bean.BaseBean;
 import com.lianzai.reader.bean.UserAutoSettingDailyTicketListBean;
 import com.lianzai.reader.component.AppComponent;
 import com.lianzai.reader.component.DaggerAccountComponent;
-import com.lianzai.reader.ui.activity.circle.ActivityCircleDetail;
 import com.lianzai.reader.ui.adapter.AutoTicketListAdapter;
 import com.lianzai.reader.utils.CallBackUtil;
 import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.OKHttpUtil;
-import com.lianzai.reader.utils.RxActivityTool;
 import com.lianzai.reader.utils.RxImageTool;
 import com.lianzai.reader.utils.RxLinearLayoutManager;
 import com.lianzai.reader.utils.RxLogTool;
@@ -141,7 +139,6 @@ public class ActivityAutoTicketManage extends BaseActivity implements SwipeRefre
             public void picClick(int position) {
                 try{
                     UserAutoSettingDailyTicketListBean.DataBean item = autoTicketListAdapter.getData().get(position);
-                    ActivityCircleDetail.startActivity(ActivityAutoTicketManage.this,item.getPlatformId());
                 }catch (Exception e){
                     RxLogTool.e(e.toString());
                 }

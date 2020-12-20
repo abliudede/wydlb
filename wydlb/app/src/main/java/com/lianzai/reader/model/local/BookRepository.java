@@ -6,8 +6,6 @@ import com.lianzai.reader.model.bean.CollBookBean;
 import com.lianzai.reader.model.gen.CollBookBeanDao;
 import com.lianzai.reader.model.gen.DaoSession;
 import com.lianzai.reader.utils.BookManager;
-import com.lianzai.reader.utils.CrashSaver;
-import com.lianzai.reader.utils.GsonUtil;
 import com.lianzai.reader.utils.IOUtils;
 import com.lianzai.reader.utils.RxLogTool;
 
