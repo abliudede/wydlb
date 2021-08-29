@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<item type="id" name="tag_first"></item>
-	<item type="id" name="status_bar"/>
+    <item type="id" name="status_bar"/>
 	<!-- Messages IDs -->
 	<item name="auto_focus" type="id"/>
 	<item name="decode" type="id"/>
@@ -16,18 +15,7 @@
 	<item name="search_book_contents_failed" type="id"/>
 	<item name="search_book_contents_succeeded" type="id"/>
 
-	<item name="register_phone_edittext" type="id"/>
-	<item name="complete_password" type="id"/>
-	<item name="complete_qrpaword" type="id"/>
-	<item name="complete_zhuce" type="id"/>
-	<item name="zhuce_title" type="id"/>
-
-	<item name="gridview" type="id"/>
-	<item name="webview" type="id"/>
-
-	<item type="id" name="scrollview"/>
-	<item type="id" name="expandable_text"/>
+    <item type="id" name="expandable_text"/>
 	<item type="id" name="expand_collapse"/>
 
-	<item type="id" name="notification_icon" id="0x7f0801ca"/>
 </resources>

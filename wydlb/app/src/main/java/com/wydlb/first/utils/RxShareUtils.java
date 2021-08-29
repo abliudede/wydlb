@@ -16,12 +16,6 @@ import com.wydlb.first.R;
 import com.wydlb.first.base.BuglyApplicationLike;
 import com.wydlb.first.base.Constant;
 import com.wydlb.first.view.RxToast;
-import com.sina.weibo.sdk.api.ImageObject;
-import com.sina.weibo.sdk.api.TextObject;
-import com.sina.weibo.sdk.api.WebpageObject;
-import com.sina.weibo.sdk.api.WeiboMultiMessage;
-import com.sina.weibo.sdk.share.WbShareHandler;
-import com.sina.weibo.sdk.utils.Utility;
 import com.tencent.connect.common.Constants;
 import com.tencent.connect.share.QQShare;
 import com.tencent.mm.opensdk.modelmsg.SendMessageToWX;
@@ -327,56 +321,6 @@ public class RxShareUtils {
         }
         return false;
     }
-
-
-    public static void WBShare(WbShareHandler shareHandler,Activity context,Boolean hasText,String content,String title,String url,Boolean hasImage,Bitmap bitmap){
-
-        if(!isWeiboInstalled(context)){
-            RxToast.custom("请先安装微博客户端", Constant.ToastType.TOAST_ERROR).show();
-            return;
-        }
-        WeiboMultiMessage weiboMessage = new WeiboMultiMessage();
-        if (hasText && !hasImage) {
-            //纯文字类型
-            TextObject textObject = new TextObject();
-            textObject.text = content;
-            textObject.title = title;
-            textObject.actionUrl = url;
-            weiboMessage.textObject = textObject;
-        }
-        else if (!hasText && hasImage) {
-            //图片类型
-            ImageObject imageObject = new ImageObject();
-            imageObject.setImageObject(bitmap);
-            weiboMessage.imageObject = imageObject;
-            TextObject textObject = new TextObject();
-            textObject.text = content;
-            textObject.title = title;
-            textObject.actionUrl = url;
-            weiboMessage.textObject = textObject;
-        }
-        else if(hasText && hasImage){
-            //网页类型
-            WebpageObject mediaObject = new WebpageObject();
-            mediaObject.identify = Utility.generateGUID();
-            mediaObject.title = title;
-            mediaObject.description = content;
-            // 设置 Bitmap 类型的图片到视频对象里         设置缩略图。 注意：最终压缩过的缩略图大小不得超过 32kb。
-            Bitmap pic = BitmapFactory.decodeResource(BuglyApplicationLike.getContext().getResources(), R.mipmap.ic_share);
-            Bitmap thumbBitmap = Bitmap.createScaledBitmap(pic, 120, 120, true);
-            mediaObject.setThumbImage(thumbBitmap);
-            mediaObject.actionUrl = url;
-            mediaObject.defaultText = title;
-            weiboMessage.mediaObject = mediaObject;
-            TextObject textObject = new TextObject();
-            textObject.text = content;
-            textObject.title = title;
-            textObject.actionUrl = url;
-            weiboMessage.textObject = textObject;
-        }
-        shareHandler.shareMessage(weiboMessage, true);
-    }
-
 
     public static void QQShareUrl(Context context, String title, String des, String url,String uri, IUiListener listener)
     {

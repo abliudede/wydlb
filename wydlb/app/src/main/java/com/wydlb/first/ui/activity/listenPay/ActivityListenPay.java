@@ -176,12 +176,6 @@ public class ActivityListenPay extends BaseActivity {
 
 
     @Override
-    public void initToolBar() {
-
-    }
-
-
-    @Override
     protected void onDestroy() {
         super.onDestroy();
     }

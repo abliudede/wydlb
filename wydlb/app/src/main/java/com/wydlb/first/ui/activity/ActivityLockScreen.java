@@ -42,10 +42,6 @@ public class ActivityLockScreen extends BaseActivity {
     public void gc() {
 
     }
-    @Override
-    public void initToolBar() {
-
-    }
 
 
     @OnClick(R.id.tv_options)void closeClick(){

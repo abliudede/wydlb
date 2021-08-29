@@ -7,58 +7,33 @@
     <color name="second_text_color">#424242</color>
     <color name="fourth_text_color">#969696</color>
     <color name="five_text_color">#666666</color>
-    <color name="yellow_text_color">#F8E71C</color>
-    <color name="gray_text_color">#593434</color>
-    <color name="yellow_text_color2">#FFE200</color>
     <color name="green_text_color">#28B70D</color>
-    <color name="gray_text_color2">#8D4816</color>
 
 
+
+    <color name="color_ff5928">#FF5928</color>
+    <color name="color_0ab806">#0AB806</color>
+    <color name="color_957777">#957777</color>
+    <color name="color_78ffdf80">#78FFDF80</color>
+    <color name="color_673c3c">#673c3c</color>
     <color name="third_text_color">#999999</color>
     <color name="white_text_color">#ffffff</color>
     <color name="white_text_color2">#FEFEFE</color>
-    <color name="white80">#ccffffff</color>
     <color name="bg_color">#F1F1F1</color>
     <color name="grey_blur_transparent">#ffdddddd</color>
     <color name="darker_gray">#cccccc</color>
     <color name="blue_color">#3865FE</color>
     <color name="red_color">#F54855</color>
-    <color name="red_packet_color">#F54855</color>
-    <color name="default_shadow_color">#88dcdada</color>
     <color name="line_bg">#FFF5F5F5</color>
-    <color name="select_bg">#FFF5F7FF</color>
 
-    <color name="yellow_color">#F4A61F</color>
-    <color name="green_color">#60C639</color>
-
-    <color name="transparent_color">@android:color/transparent</color>
     <color name="colorfeeb9e">#feeb9e</color>
-
+    <color name="colorffee52">#bbffee52</color>
     <!--read-->
     <color name="read.bg_1">#FFFFFF</color>
     <color name="read.bg_2">#F7F2E5</color>
     <color name="read.bg_3">#B9E0C3</color>
     <color name="read.bg_4">#E6D3A3</color>
     <color name="read.bg_5">#191919</color>
-
-
-    <color name="read.font_1">#4B4B4B</color>
-    <color name="read.font_2">#4B4B4B</color>
-    <color name="read.font_3">#4B4B4B</color>
-    <color name="read.font_4">#4B4B4B</color>
-    <color name="read.font_5">#696969</color>
-
-    <color name="read.bg.night">#191919</color>
-    <color name="read.font_night">#696969</color>
-
-    <color name="read.menu.bg">#191919</color>
-    <color name="read.menu.text">#CBCBCB</color>
-    <color name="read.bar.translucent">#88000000</color>
-
-
-    <color name="light_red">#EC4A48</color>
-
-    <color name="read_normal_text_color">#666666</color>
 
 
     <color name="v2_blue_color">#3865FE</color>
@@ -73,159 +48,69 @@
     <color name="white">#FFFFFF</color>
     <color name="light">#FFEEEEEE</color>
     <color name="black">#000000</color>
-    <color name="grey">#333333</color>
-    <color name="global_bg">#9000</color>
-    <color name="color_green_01d9ae">#01D9AE</color>
-    <color name="color_gray_d9d9d9">#d9d9d9</color>
-    <color name="color_activity_blue_bg">#f7389fff</color>
-    <color name="color_blue_FF485CF8">#FF485CF8</color>
-    <color name="split_line_grey_color_d9d9d9">#D9D9D9</color>
-    <color name="green_4DC0A4">#4DC0A4</color>
-    <color name="gray7">#c5c4c4</color>
-    <color name="GreyWhite">#F7F7F7</color>
-    <color name="im_list_select_hover">#dbdbdb</color>
-    <color name="color_aaaaaa_content_text">#ffaaaaaa</color>
-    <color name="title_color_01d9ae">#01D9AE</color>
-    <color name="color_b3b3b3">#b3b3b3</color>
-    <color name="color_red_ccfa3c55">#ccfa3c55</color>
     <color name="color_red_FF4343">#FF4343</color>
-    <color name="color_black_b3000000">#b3000000</color>
-    <color name="color_grey_eaeaea">#eaeaea</color>
     <color name="color_black_333333">#333333</color>
     <color name="color_grey_999999">#999999</color>
-    <color name="color_grey_555555">#555555</color>
-    <color name="color_green_disable">#a2efe0</color>
-    <color name="color_green_00d3a9">#ff00D3A9</color>
-    <color name="color_blue_0888ff">#0888ff</color>
-    <color name="action_bar_black_title_1f1f1f">#1f1f1f</color>
-    <color name="action_bar_black_title_color">#252525</color>
-    <color name="contact_search_hit">#02d3a9</color>
-    <color name="color_black_333333_90_transparent">#e5333333</color>
-    <color name="color_black_000000_88_transparent">#e0000000</color>
 
     <!-- main bg color -->
-    <color name="main_bg_color">#FFFFFF</color>
 
     <!-- session -->
-    <color name="color_message_default_bg">#e9ecf0</color>
-    <color name="input_panel_text_color_757572">#757572</color>
-    <color name="color_gray_cbd0d8">#cbd0d8</color>
 
     <!-- image picker -->
-    <color name="color_split_line_d9d9d9">#d9d9d9</color>
     <color name="color_split_line_cccccc">#cccccc</color>
 
     <!-- contact -->
-    <color name="contact_list_hover">#d9d9d9</color>
-    <color name="contact_letter_idx_bg">#33000000</color>
-    <color name="contacts_letters_color">#80807c</color>
-    <color name="color_background">#ECF1F5</color>
-    <color name="press_mask">#33000000</color>
-    <color name="color_grey_ababab">#ababab</color>
-    <color name="color_yellow_796413">#796413</color>
-    <color name="color_yellow_b39729">#b39729</color>
     <color name="color_yellow_fbdc9b">#FBDC9B</color>
 
 
     <!-- setting -->
     <color name="color_black_ff333333">#ff333333</color>
-    <color name="color_black_cc333333">#cc333333</color>
-    <color name="color_black_ff333333_alpha5">#7F333333</color>
     <color name="color_black_ff666666">#ff666666</color>
     <color name="color_black_ff999999">#ff999999</color>
-    <color name="color_gray_bfc2c5">#bfc2c5</color>
-
-    <color name="robot_link_element_text_blue">#248DFA</color>
 
     <color name="bounty_bg_color">#FFC986</color>
     <color name="black40">#66000000</color>
     <color name="black60">#99000000</color>
-    <color name="bounty_text_color">#FFF0A5</color>
     <color name="bounty_fengexian">#935E38</color>
     <color name="bounty_redtext_color">#DD2D24</color>
     <color name="bounty_graytext_color">#AB611C</color>
     <color name="bounty_graytext_color2">#915D37</color>
     <color name="bounty_yellowtext_color">#FFF800</color>
     <color name="bluetext_color">#3865FE</color>
-    <color name="bluetext_color2">#6DE6FD</color>
     <color name="pinktext_color">#FE3838</color>
     <color name="pay_background">#F3F3F3</color>
 
 
     <color name="redFE3838">#FE3838</color>
     <color name="colorF58923">#F58923</color>
-    <color name="color979797">#979797</color>
     <color name="colorf5f5f5">#FFF5F5F5</color>
     <color name="colorf5f5f5_alpha1">#19f5f5f5</color>
     <color name="colorbbbbbb">#bbbbbb</color>
 
-    <color name="white20">#44FFFFFF</color>
-    <color name="white50">#88FFFFFF</color>
-    <color name="selectgray">#FFF5F5F5</color>
-    <color name="qiandao_chengse">#FFFE3838</color>
     <color name="chengse_text_color">#FF5F00</color>
     <color name="cheng10">#1aF58923</color>
-    <color name="cheng20">#44FD800A</color>
-    <color name="zong_text_color">#A46B0C</color>
-    <color name="huangse_text_color">#FEDA41</color>
     <color name="girl_color">#FFFF5B94</color>
     <color name="white_05_alpha_color">#80FFFFFF</color>
     <color name="toast_bg">#A5000000</color>
-    <color name="circle_text_bg">#33000000</color>
     <color name="f9f9f9">#fff9f9f9</color>
     <color name="fense10">#19FE3838</color>
-    <color name="text_color_yellow">#FFFFEC00</color>
-    <color name="change_chapter_bg">#E5181819</color>
-    <color name="black80">#cc000000</color>
 
 
     <!--read-->
-    <color name="nb.read.bg_1">#FFF6F7F8</color>
-    <color name="nb.read.bg_2">#FFFFFBF0</color>
-    <color name="nb.read.bg_3">#FFFCF5F7</color>
-    <color name="nb.read.bg_4">#FFD6E9CA</color>
-    <color name="nb.read.bg_5">#FFFFF1CF</color>
-    <color name="nb.read.bg_6">#FFF7FCFE</color>
-    <color name="nb.read.bg_7">#FF2C2E2F</color>
-    <color name="nb.read.bg_8">#FFFFFF</color>
     <!--<color name="nb.read.bg_9">#FFFFFF</color>-->
     <!--<color name="nb.read.bg_10">#FFFFFF</color>-->
 
 
-    <color name="nb.read.font_1">#FF424242</color>
-    <color name="nb.read.font_2">#FF424242</color>
-    <color name="nb.read.font_3">#FF424242</color>
-    <color name="nb.read.font_4">#FF424242</color>
-    <color name="nb.read.font_5">#FF424242</color>
-    <color name="nb.read.font_6">#FF424242</color>
-    <color name="nb.read.font_7">#FF666666</color>
-    <color name="nb.read.font_8">#FF424242</color>
     <!--<color name="nb.read.font_9">#FF424242</color>-->
     <!--<color name="nb.read.font_10">#FF424242</color>-->
 
-    <color name="nb.read.font.chapter.title.3_9">#FF4B4B4B</color>
-
-    <color name="nb.read.font.book.title.3_9">#66000000</color><!--日间模式-小标题颜色-->
-
-    <color name="nb.read.font.chapter.title.10">#FF666666</color>
-
-    <color name="nb.read.bg.night">#FF0F0F0F</color>
-    <color name="nb.read.font_night">#FF666666</color>
+    <!--日间模式-小标题颜色-->
 
     <color name="nb.read.menu.bg">#FFFFFF</color>
-    <color name="nb.read.menu.text">#FF000000</color>
-    <color name="nb.read.bar.translucent">#88000000</color>
 
-    <color name="read_night_text_color">#80ffffff</color>
     <color name="read_night_bg_color">#ff181819</color>
 
-    <color name="origin_web_bg_color">#33000000</color>
-
-    <color name="color_white_4alpha">#66FFFFFF</color>
-    <color name="color_black_4alpha">#66000000</color>
     <color name="color_white_5alpha">#7fFFFFFF</color>
-    <color name="color_white_1alpha">#22FFFFFF</color>
 
-    <color name="colorPrimaryDark">#303F9F</color>
     <color name="bottom_bg">#AA000000</color>
 </resources>

@@ -12,7 +12,6 @@
         android:src="@mipmap/icon_photo_delete" />
 
     <ImageView
-        android:id="@+id/iv_photo"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_alignTop="@+id/iv_delete_photo"

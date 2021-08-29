@@ -59,7 +59,6 @@
                  />
 
             <ImageView
-                android:id="@+id/iv_pureread"
                 android:src="@mipmap/purereadmode_close"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -98,7 +97,6 @@
 </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/pure_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"

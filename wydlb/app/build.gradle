@@ -148,7 +148,7 @@ dependencies {
     implementation 'com.just.agentweb:filechooser:4.0.2'
 
     //ORM Database
-    implementation 'org.greenrobot:greendao:3.2.0'
+    implementation 'org.greenrobot:greendao:3.3.0'
     implementation 'com.github.devlight:infinitecycleviewpager:1.0.2'
 
     //侧滑
@@ -179,41 +179,18 @@ dependencies {
 //    implementation files('libs/MiPush_SDK_Client_3_6_2.jar')
 
     //二维码
-
-    //    implementation 'com.google.zxing:core:3.3.0'
     implementation 'cn.yipianfengye.android:zxing-library:2.2'
     implementation 'org.hashids:hashids:1.0.3'
 
-    //微博sdk
-    implementation 'com.sina.weibo.sdk:core:4.3.0:openDefaultRelease@aar'
-//    implementation files('libs/open_sdk_r6008_lite.jar')
-
     //高斯模糊
-
-    //implementation 'at.favre.lib:dali:0.3.5'
     implementation 'com.airbnb.android:lottie:2.7.0'
-//    implementation files('libs/tbs_x5.jar')
-//    implementation files('libs/com.baidu.tts_2.3.2.20180713_6101c2a.jar')
     implementation 'org.jsoup:jsoup:1.11.3'
-
-    //头条穿山甲广告联盟版本号V2.5.2.4
-//    implementation files('libs/android-query-full.0.26.7.jar')
-    implementation(name: 'open_ad_sdk', ext: 'aar')
-    //头条穿山甲动态图支持
-//    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.6'
-//    implementation files('libs/AMap_Location_V4.5.0_20190121.jar')
-//    implementation files('libs/AMap2DMap_5.2.0_AMapSearch_6.5.0_20180930.jar')
 
     //多图片选择器
 //    implementation 'com.yuyh.imgsel:library:2.0.6'
     implementation 'com.yuyh.easyadapter:library:1.1.0'
 
-    //websocket
-//    implementation "org.java-websocket:Java-WebSocket:1.4.0"
-
     implementation 'com.qihoo360.replugin:replugin-plugin-lib:2.2.4'
-
+    //websocket
     implementation 'com.github.0xZhangKe:WebSocketDemo:3.1'
-
-    implementation (name:'GDTSDK.unionNormal.4.100.970', ext:'aar')
 }

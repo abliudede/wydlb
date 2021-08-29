@@ -145,9 +145,6 @@ public class ActivitySmallConfidentialPaymentAmount extends BaseActivity {
     public void gc() {
 
     }
-    @Override
-    public void initToolBar() {
-    }
 
     @OnClick(R.id.img_back)void closeClick(){
         setResult(RESULT_OK);

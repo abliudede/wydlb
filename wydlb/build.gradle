@@ -19,7 +19,7 @@ buildscript {
         // in the individual module build.gradle files
         // 只需配置tinker-support插件依赖，无需再依赖tinker插件
         classpath 'com.tencent.bugly:tinker-support:1.0.9'
-        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.1'
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.3.0'
     }
 }
 

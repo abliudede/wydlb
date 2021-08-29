@@ -14,8 +14,7 @@ import android.os.Handler;
 import android.os.Message;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
-import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.RecyclerView;
+
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -35,8 +34,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.google.gson.JsonObject;
 import com.just.agentweb.AgentWeb;
 import com.just.agentweb.AgentWebConfig;
 import com.wydlb.first.R;
@@ -45,26 +42,20 @@ import com.wydlb.first.base.Constant;
 import com.wydlb.first.bean.DataSynEvent;
 import com.wydlb.first.bean.GetCommonShareUrlBean;
 import com.wydlb.first.bean.ObserverBean;
-import com.wydlb.first.bean.ReadabilityBean;
 import com.wydlb.first.bean.ShowShareBean;
-import com.wydlb.first.bean.UrlRecognitionBean;
 import com.wydlb.first.interfaces.AndroidInterface;
 import com.wydlb.first.interfaces.OnRepeatClickListener;
-import com.wydlb.first.model.bean.WebHistoryBean;
-import com.wydlb.first.model.local.WebHistoryRepository;
 import com.wydlb.first.utils.AndroidBug5497Workaround;
 import com.wydlb.first.utils.CallBackUtil;
 import com.wydlb.first.utils.GsonUtil;
 import com.wydlb.first.utils.OKHttpUtil;
 import com.wydlb.first.utils.RxActivityTool;
 import com.wydlb.first.utils.RxClipboardTool;
-import com.wydlb.first.utils.RxDeviceTool;
 import com.wydlb.first.utils.RxEncodeTool;
 import com.wydlb.first.utils.RxEncryptTool;
 import com.wydlb.first.utils.RxEventBusTool;
 import com.wydlb.first.utils.RxFileTool;
 import com.wydlb.first.utils.RxImageTool;
-import com.wydlb.first.utils.RxLinearLayoutManager;
 import com.wydlb.first.utils.RxLogTool;
 import com.wydlb.first.utils.RxLoginTool;
 import com.wydlb.first.utils.RxShareUtils;
@@ -72,31 +63,24 @@ import com.wydlb.first.utils.RxSharedPreferencesUtil;
 import com.wydlb.first.utils.RxTimeTool;
 import com.wydlb.first.utils.SystemBarUtils;
 import com.wydlb.first.utils.UIController;
-import com.wydlb.first.view.CustomLoadMoreView;
 import com.wydlb.first.view.RxToast;
-import com.wydlb.first.view.dialog.RxDialogSureCancelNew;
+import com.wydlb.first.view.dialog.RxDialogSureCancel;
 import com.wydlb.first.view.dialog.RxDialogWebShare;
-import com.sina.weibo.sdk.share.WbShareHandler;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.UiError;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 import org.hashids.Hashids;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 
 import java.io.BufferedInputStream;
 import java.io.File;
-import java.io.IOException;
 import java.io.InputStream;
 import java.lang.ref.WeakReference;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import butterknife.Bind;
@@ -153,11 +137,10 @@ public class ActivityWebView extends PermissionActivity {
 
     boolean isLoaded = false;
 
-    RxDialogSureCancelNew rxDialogSureCancelNew;
+    RxDialogSureCancel rxDialogSureCancelNew;
     private String titleShare = "";
     private String desShare = "";
     private String imgShare = "";
-    private WbShareHandler shareHandler;
 
     //分享弹窗
     RxDialogWebShare rxDialogWebShare;
@@ -303,12 +286,7 @@ public class ActivityWebView extends PermissionActivity {
         rxDialogWebShare.getTv_share_ftf().setVisibility(View.GONE);
 
         hashids = new Hashids("ds$#SDa", 8);
-        rxDialogSureCancelNew = new RxDialogSureCancelNew(this, R.style.OptionDialogStyle);
-
-        //微博初始化
-        shareHandler = new WbShareHandler(this);
-        shareHandler.registerApp();
-        shareHandler.setProgressColor(0xff33b5e5);
+        rxDialogSureCancelNew = new RxDialogSureCancel(this, R.style.OptionDialogStyle);
 
 
         parent_view = findViewById(R.id.parent_view);
@@ -823,8 +801,6 @@ public class ActivityWebView extends PermissionActivity {
                     //判断，两秒内没有任何请求，则识别网址，同时终止扫描。
                     long nowTime = System.currentTimeMillis();
                     if (nowTime - lastrequest > 1000) {
-                        //插入网页历史记录
-                        addHistory(pageTitle, openUrl);
                         myHandler.removeCallbacksAndMessages(null);
                     } else {
                         //没达到时间，继续扫描
@@ -1053,12 +1029,10 @@ public class ActivityWebView extends PermissionActivity {
                         return;
                     }
                     if (type == 0) {
-                        RxShareUtils.WBShare(shareHandler, this, true, desShare, titleShare, openUrl, true, null);
                     } else if (type == 1) {
                         //不分享类型
                         RxToast.custom("此页面不能分享").show();
                     } else if (type == 2) {
-                        RxShareUtils.WBShare(shareHandler, this, true, desShare, titleShare, openUrl, true, null);
                     } else if (type == 3) {
                         getCommonShareUrl(5);
                     }
@@ -1332,7 +1306,6 @@ public class ActivityWebView extends PermissionActivity {
 
                             case 5:
                                 //微博分享
-                                RxShareUtils.WBShare(shareHandler, ActivityWebView.this, true, baseBean.getData().getContentVal(), baseBean.getData().getTitleVal(), baseBean.getData().getOneUrlVal(), true, null);
                                 break;
 
                             case 6:
@@ -1358,30 +1331,6 @@ public class ActivityWebView extends PermissionActivity {
                 }
             }
         });
-    }
-
-
-    private void addHistory(String title, String url) {
-        if (url.contains("lianzai.com") || url.contains("bendixing.net")) {
-            //假如是内站链接则过滤
-             return;
-        }
-        //插入网页历史记录
-        WebHistoryBean webHistoryBean = new WebHistoryBean();
-        webHistoryBean.setTitle(title);
-        webHistoryBean.setUrl(url);
-        if (RxLoginTool.isLogin()) {
-            try {
-                String uid = String.valueOf(RxLoginTool.getLoginAccountToken().getData().getId());
-                webHistoryBean.setUserId(uid);
-            } catch (Exception e) {
-                webHistoryBean.setUserId("0");
-            }
-        } else {
-            webHistoryBean.setUserId("0");
-        }
-        webHistoryBean.setCreattime(System.currentTimeMillis());
-        WebHistoryRepository.getInstance().addWebHistory(webHistoryBean);
     }
 
 
@@ -1508,7 +1457,6 @@ public class ActivityWebView extends PermissionActivity {
 
                             case 5:
                                 //微博分享
-                                RxShareUtils.WBShare(shareHandler, ActivityWebView.this, true, baseBean.getData().getContentVal(), baseBean.getData().getTitleVal(), baseBean.getData().getOneUrlVal(), true, null);
                                 break;
 
                             case 6:

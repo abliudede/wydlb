@@ -161,10 +161,6 @@ public class ActivityImagesPreview extends BaseActivity implements DownloadFileC
     public void gc() {
 
     }
-    @Override
-    public void initToolBar() {
-
-    }
 
 
     private void initDots(int currentPosition){

@@ -69,16 +69,12 @@ public final class HeaderInterceptor implements Interceptor {
             }
             builder .addHeader("deviceNo", deviceNo);
         }catch (Exception e){
-
         }
-
 
         try{
             if (RxLoginTool.isLogin()&&null!=RxLoginTool.getLoginAccountToken().getData()&&null!=RxLoginTool.getLoginAccountToken().getData().getToken()){
-                builder.addHeader("lz_sso_token", RxLoginTool.getLoginAccountToken().getData().getToken());//token
-//                builder.addHeader("lz_sso_token", "E48CE4E280CC48E8B2D74E5D57280293");//token
+                builder.addHeader("token", RxLoginTool.getLoginAccountToken().getData().getToken());//token
             }
-//          builder .addHeader("deviceNo", RxDeviceTool.getIMEI(BuglyApplicationLike.getsInstance().getApplication().getApplicationContext()));
         }catch (Exception e){
         }
 //      builder.addHeader("User-Agent","Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Mobile Safari/537.36");
@@ -91,30 +87,11 @@ public final class HeaderInterceptor implements Interceptor {
 
         RxLogTool.e("httpUrl:"+httpUrl.toString());
 
-        if (httpUrl.toString().contains("lianzai.com")||httpUrl.toString().contains("bendixing.net")){//通过我们的接口
-            builder.addHeader("Accept", "application/json");
-        }else{
-            builder.addHeader("Accept", "text/html");
-//            builder.addHeader("Accept", "application/json");
-        }
-
+        builder.addHeader("Accept", "text/html");
         if (Constant.appMode==Constant.AppMode.DEV){//dev环境没配域名
             builder.addHeader("Accept", "application/json");
         }
 
-//        RxLogTool.e("encodePath:"+encodePath);
-        if (encodePath.equals("/user/sendVerificationCode")){//发短信
-            builder.addHeader("lz_token_auth", RxSharedPreferencesUtil.getInstance().getString("lz_token_auth",""));
-            builder.addHeader("lz_token_auth_method", "sms");
-            builder.addHeader("lz_token_auth_sign", RxSharedPreferencesUtil.getInstance().getString("lz_token_auth_sign",""));
-        }else if(encodePath.equals("/user/sendBindThirdCode")){
-            builder.addHeader("lz_token_auth", RxSharedPreferencesUtil.getInstance().getString("lz_token_auth",""));
-            builder.addHeader("lz_token_auth_method", "bindThirdSms");
-            builder.addHeader("lz_token_auth_sign", RxSharedPreferencesUtil.getInstance().getString("lz_token_auth_sign",""));
-        } else if(encodePath.equals("/api/exchange")||encodePath.equals("/api/gateway")||encodePath.equals("/api/withdraw") || encodePath.equals("/api/placeRewardOrder")|| encodePath.equals("/api/lzTransferwhiteRabbit")){//支付网关接口
-            return chain.proceed(builder.url(Constant.GATEWAY_API_BASE_URL+encodePath).build());
-        }
         return chain.proceed(builder.url(httpUrl).build());
-
     }
 }

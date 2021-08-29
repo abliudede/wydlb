@@ -400,11 +400,6 @@ public class ActivityChoosePayWay extends BaseActivity implements BountyHunterCo
 
 
     @Override
-    public void initToolBar() {
-
-    }
-
-    @Override
     public void getRewaredPoolDetailSuccess(GetRewaredPoolDetailBean bean) {
 
     }

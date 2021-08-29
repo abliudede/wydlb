@@ -155,11 +155,6 @@ public class ActivityLoginNew extends BaseActivity implements LoginContract.View
         dismissDialog();
         showSeverErrorDialog(message);
     }
-    @Override
-    public void initToolBar() {
-
-    }
-
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent(DataSynEvent event) {
@@ -206,7 +201,7 @@ public class ActivityLoginNew extends BaseActivity implements LoginContract.View
                         if (accountTokenBean.getCode() == Constant.ResponseCodeStatus.SUCCESS_CODE) {
                             //登录成功直接跳转到主页
                             RxLoginTool.saveToken(accountTokenBean);
-                            MainActivity.startActivity(ActivityLoginNew.this,"");
+                            MainActivity.startActivity(ActivityLoginNew.this);
                         } else {
                         }
                     } catch (Exception e) {

@@ -48,10 +48,6 @@ public class ActivityGuide extends BaseActivity {
     private List<ImageView> mImageList;
     private ViewPagerAdapter mAdapter;
 
-
-    String webOpenJson="";//通过浏览器唤醒的
-
-
     @Override
     public int getLayoutId() {
         return R.layout.activity_guide;
@@ -65,17 +61,13 @@ public class ActivityGuide extends BaseActivity {
     public void initDatas() {
     }
 
-    public static void startActivity(Context context,String web){
-        Bundle bundle = new Bundle();
-        bundle.putString("web", web);
-        RxActivityTool.skipActivity(context, ActivityGuide.class, bundle);
+    public static void startActivity(Context context){
+        RxActivityTool.skipActivity(context, ActivityGuide.class);
     }
 
     @Override
     public void configViews(Bundle savedInstanceState) {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-        webOpenJson = getIntent().getExtras().getString("web");
 
 //        初始化页面数组
         mImageList = new ArrayList<ImageView>();
@@ -185,7 +177,7 @@ public class ActivityGuide extends BaseActivity {
     //没登录不能进入主页
     private void enterMainActivity() {
         if(RxLoginTool.isLogin()){
-            MainActivity.startActivity(ActivityGuide.this, webOpenJson);
+            MainActivity.startActivity(ActivityGuide.this);
         }else {
             ActivityLoginNew.startActivity(ActivityGuide.this);
         }
@@ -228,11 +220,6 @@ public class ActivityGuide extends BaseActivity {
     @Override
     public void gc() {
         RxToast.gc();
-    }
-
-
-    @Override
-    public void initToolBar() {
     }
 
 

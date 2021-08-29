@@ -193,13 +193,6 @@ public class ActivityPayForBook extends BaseActivity {
     public void gc() {
 
     }
-    @Override
-    public void initToolBar() {
-
-    }
-
-
-
 
     @OnClick(R.id.tv_sure)void tv_sureClick(){
         sure(false);

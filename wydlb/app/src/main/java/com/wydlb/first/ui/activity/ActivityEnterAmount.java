@@ -174,10 +174,6 @@ public class ActivityEnterAmount extends BaseActivity {
     public void gc() {
 
     }
-    @Override
-    public void initToolBar() {
-
-    }
 
 
     @OnClick(R.id.img_back)void closeClick(){

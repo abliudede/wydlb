@@ -43,7 +43,6 @@
             android:textSize="@dimen/small_text_size" />
 
         <TextView
-            android:id="@+id/textView10"
             android:layout_width="1px"
             android:layout_height="match_parent"
             android:background="@color/line_bg" />

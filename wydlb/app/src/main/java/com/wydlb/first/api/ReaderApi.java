@@ -38,7 +38,6 @@ import com.wydlb.first.bean.BookCategoryBean;
 import com.wydlb.first.bean.BookCategoryListResponse;
 import com.wydlb.first.bean.BookListCategoryBean;
 import com.wydlb.first.bean.BookShopBean;
-import com.wydlb.first.bean.BookStoreResponse;
 import com.wydlb.first.bean.CaptchaBean;
 import com.wydlb.first.bean.ChapterInfoResponse;
 import com.wydlb.first.bean.ChasingBookListBean;
@@ -485,9 +484,6 @@ public class ReaderApi {
     }
 
 
-    public Single<BookStoreResponse> requestBookStore (ArrayMap<String, Object> params) {
-        return service.requestBookStore(params);
-    }
 
     //获取发起拼手气信息
     public Single<LuckLaunchBean> luckLaunch() {

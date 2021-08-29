@@ -41,11 +41,6 @@ public class WifiBookActivity extends BaseActivity {
         return R.layout.activity_wifi_book;
     }
 
-
-    @Override
-    public void initToolBar() {
-    }
-
     @Override
     public void initDatas() {
         String wifiname = NetworkUtils.getConnectWifiSsid(this);

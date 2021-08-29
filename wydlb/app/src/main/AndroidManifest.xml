@@ -184,61 +184,11 @@
         <activity android:name="com.wydlb.first.ui.activity.ActivityNoticeDetail" />
 
         <activity android:name="com.wydlb.first.ui.activity.WifiBookActivity" />
-        <activity android:name="com.wydlb.first.ui.activity.wallet.ActivityWalletDetail" />
-        <activity android:name="com.wydlb.first.ui.activity.wallet.ActivityWalletRechargeReadCoin" />
-        <activity android:name="com.wydlb.first.ui.activity.wallet.ActivityWalletRechargeGoldCoin" />
-        <activity android:name="com.wydlb.first.ui.activity.wallet.ActivityWalletRechargeReadTicket" />
-        <activity android:name="com.wydlb.first.ui.activity.wallet.ActivityWalletWithdrawReadCoin" />
-        <activity android:name="com.wydlb.first.ui.activity.wallet.ActivityWalletChoiceAssets" />
-        <activity android:name="com.wydlb.first.ui.activity.wallet.ActivityWalletWithdrawGoldCoin" />
-        <activity android:name="com.wydlb.first.ui.activity.wallet.ActivityWalletWithdrawReadTicket" />
-        <activity android:name="com.wydlb.first.ui.activity.wallet.ActivityWalletReadLockTicketList" />
-        <activity android:name="com.wydlb.first.ui.activity.chat.ActivityPublicNumberChat" />
-
-        <activity android:name=".ui.activity.book.ActivityBookListDetail" />
         <activity android:name="com.wydlb.first.ui.activity.ActivityImagesPreview" />
-        <activity android:name=".ui.activity.wallet.ActivityWalletRecordList" />
         <activity android:name=".ui.activity.profile.ActivityUserProfile" />
         <activity android:name=".ui.activity.profile.ActivityEditProfile" />
-        <activity android:name="com.netease.nim.uikit.common.media.picker.activity.PickImageActivity" />
-        <activity android:name="com.netease.nim.uikit.business.session.activity.CaptureVideoActivity" />
-        <activity android:name=".ui.activity.chatRoomSetting.ActivityRank" />
-        <activity android:name=".ui.activity.chatRoomSetting.ChatRoomEditNotice" />
-        <activity android:name=".ui.activity.chatRoomSetting.ActivityChatRoomShowPerson" />
-
-        <activity android:name=".ui.activity.taskCenter.ActivityFaceToFace" />
-        <activity
-            android:name=".ui.activity.taskCenter.ActivityNewRedEnvelope"
-            android:theme="@style/DialogActivityStyle" />
-        <activity android:name=".ui.activity.wallet.ActivityGoldDrillDetail" />
         <activity android:name=".ui.activity.ActivityGuide" />
-        <activity android:name=".ui.activity.GameFightLuck.ActivityFightLuckEnter" />
-        <activity android:name=".ui.activity.GameFightLuck.ActivityFightLuckDetail" />
         <activity android:name=".ui.activity.GameFightLuck.ActivityFightLuckPersonList" />
-        <activity
-            android:name=".ui.activity.read.NewReadActivity"
-            android:launchMode="singleTop"
-            android:maxAspectRatio="2.4"
-            android:resizeableActivity="false"
-            android:theme="@style/FastListStyle" />
-        <activity android:name=".ui.activity.read.ReadMoreSettingsActivity" />
-        <activity android:name=".ui.activity.TeamChat.TeamMessageActivity" />
-        <activity android:name=".ui.activity.TeamChat.ActivityTeamChatInfo" />
-        <activity android:name=".ui.activity.TeamChat.ActivityTeamChatShowPerson" />
-        <activity android:name=".ui.activity.TeamChat.TeamChatEditNotice" />
-        <activity android:name=".ui.activity.TeamChat.TeamChatEditNickName" />
-        <activity android:name=".ui.activity.TeamChat.ActivityTeamChatPersonList" />
-        <activity android:name=".ui.activity.TeamChat.ActivityTeamBanPerson" />
-        <activity android:name=".ui.activity.TeamChat.ActivityTeamChatSearchPersonList" />
-        <activity android:name=".ui.activity.chat.AddFriendsActivity" />
-        <activity
-            android:name=".ui.activity.chat.PublicNumberDetailActivity"
-            android:launchMode="singleInstance" />
-        <activity android:name=".ui.activity.chat.PublicNumberHistoryActivity" />
-        <activity android:name=".ui.activity.wallet.ActivityWithdrawReadCoinBindWallet" />
-        <activity android:name=".ui.activity.wallet.ActivityWithdrawReadCoinSuccess" />
-        <activity android:name=".ui.activity.wallet.ActivityWithdrawReadCoinConfirmOrder" />
-        <activity android:name=".ui.activity.ActivityAboutUs" />
         <activity android:name=".ui.activity.ActivityBountyHunter" />
         <activity android:name=".ui.activity.ActivityOneKeyReward" />
         <activity
@@ -250,72 +200,14 @@
             android:theme="@style/DialogActivityStyle" />
         <activity android:name="com.wydlb.first.ui.activity.ActivityChoosePayWay" />
         <activity android:name="com.wydlb.first.ui.activity.ActivityPaySuccess" />
-        <activity android:name=".ui.activity.chat.ScanCodeActivity" />
-        <activity android:name=".ui.activity.chat.ChatNumberQrCodeActivity" />
-        <activity
-            android:name=".ui.activity.chat.SendCardActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".ui.activity.chatRoomSetting.ActivityChatRoomInfo" />
-        <activity android:name=".ui.activity.chatRoomSetting.ChatRoomEditNickName" />
-        <activity android:name=".ui.activity.chatRoomSetting.ActivityMilepost" />
-        <activity android:name="com.netease.nim.uikit.business.ait.selector.AitContactSelectorActivity" />
-        <activity android:name=".ui.activity.PersonHomePage.ActivityAttentionPersonList" />
-        <!--单例模式方便互相切换-->
-        <activity
-            android:name=".ui.activity.UrlIdentification.UrlReadActivity"
-            android:maxAspectRatio="2.4"
-            android:resizeableActivity="false"
-            android:theme="@style/FastListStyle" />
-        <activity android:name=".ui.activity.UrlIdentification.ActivityTeamChoose" />
-        <activity android:name=".ui.activity.PersonHomePage.PerSonHomePageActivity" />
         <activity android:name=".ui.activity.profile.ActivityEditIntro" />
-        <activity android:name=".ui.activity.UrlIdentification.BrowserActivity" />
-        <activity android:name=".ui.activity.read.ActivityTeamChooseForLianzaihao" />
-
-        <activity android:name=".ui.activity.circle.ActivityCircleDetail" />
-        <activity
-            android:name=".ui.activity.circle.ActivityPostCircle"
-            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ui.activity.location.ActivitySelectLocation"
             android:windowSoftInputMode="adjustResize" />
-
-        <activity android:name=".ui.activity.circle.ActivityCirclePersonList" />
-        <activity
-            android:name=".ui.activity.circle.ActivityPostDetail"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name="com.wydlb.first.ui.activity.circle.ActivityPostFloor"
-            android:theme="@style/DialogActivityStyle"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
-        <activity android:name=".ui.activity.circle.ActivityMyNotice" />
-        <activity android:name=".ui.activity.circle.ActivityMyPraised" />
-        <activity android:name=".ui.activity.circle.ActivityMyDynamic" />
         <activity android:name=".ui.activity.ActivityTextShow" />
-        <activity android:name=".ui.activity.circle.ActivityRelatedLinks" />
-        <activity android:name=".ui.activity.PersonHomePage.ActivityUserShieldingList" />
-        <activity android:name=".ui.activity.circle.ActivityCircleClose" />
-        <activity android:name=".ui.activity.circle.ActivityCircleGXBQPersonList" />
-        <activity android:name=".ui.activity.circle.ActivityCircleDetailShow" />
-        <activity
-            android:name=".ui.activity.circle.ActivityCircleSetting"
-            android:theme="@style/DialogActivityStyle" />
-        <activity android:name=".ui.activity.circle.ActivityCircleManagerPersonList" />
-        <activity android:name=".ui.activity.circle.ActivityCircleMutePersonList" />
-        <activity android:name=".ui.activity.circle.ActivityCircleReportAuditList" />
-        <activity android:name=".ui.activity.circle.ActivityCircleManagerAuditList" />
-        <activity android:name=".ui.activity.wallet.ActivityAutoTicketManage" />
-        <activity android:name=".ui.activity.wallet.ActivityAutoTicketRecord" />
-        <activity android:name=".ui.activity.wallet.ActivityCopyrightAssets" />
-        <activity android:name=".ui.activity.wallet.ActivityCopyrightDetail" />
-        <activity
-            android:name=".ui.activity.circle.ActivityReportDetail"
-            android:theme="@style/DialogActivityStyle" />
-        <activity android:name=".ui.activity.UrlIdentification.ActivityReadTimeShow" />
         <activity
             android:name="com.yuyh.library.imgsel.ui.ISListActivity"
             android:theme="@style/SelTheme" />
-
         <activity
             android:name="com.yuyh.library.imgsel.ui.ISCameraActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
@@ -327,11 +219,6 @@
         <activity android:name=".ui.activity.qrCodeShare.ActivityShareBitmapCircle" />
         <activity android:name=".ui.activity.qrCodeShare.ActivityShareBitmapPerson" />
         <activity android:name=".ui.activity.qrCodeShare.ActivityShareBitmapBookList" />
-        <activity android:name=".ui.activity.wallet.ActivityCopyrightHistoryList" />
-        <activity
-            android:name="com.wydlb.first.ui.activity.UrlIdentification.ActivityReadDialogActivity"
-            android:theme="@style/DialogActivityStyle"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
 
 
 
@@ -414,22 +301,6 @@
 
 
 
-        <!-- 如果targetSdkVersion设置值>=24，则强烈建议添加以下provider，否则会影响app变现 -->
-        <!-- android:authorities="${applicationId}.bd.providerasd" authorities中${packageName}部分必须替换成app自己的包名 -->
-        <provider
-            android:name="com.bytedance.sdk.openadsdk.TTFileProvider"
-            android:authorities="com.wydlb.first.TTFileProvider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths" />
-        </provider>
-
-        <provider
-            android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
-            android:authorities="com.wydlb.first.TTMultiProvider"
-            android:exported="false" />
 
 
         <!-- 云信后台服务，请使用独立进程。 -->

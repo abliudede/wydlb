@@ -60,7 +60,6 @@
 
 
         <ImageView
-            android:id="@+id/iv_listen_bg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"

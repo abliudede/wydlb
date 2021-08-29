@@ -149,7 +149,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/ly_corwd_balance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -159,7 +158,6 @@
         android:layout_marginRight="12dp">
 
         <TextView
-            android:id="@+id/tv_corwd_balance_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="1"

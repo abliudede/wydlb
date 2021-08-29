@@ -19,7 +19,7 @@
             android:textColor="@color/color_black_ff999999"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-        <View android:id="@+id/line_view1"
+        <View
             android:layout_marginTop="10dp"
             style="@style/LineHStyle"/>
 
@@ -34,9 +34,7 @@
             android:textColor="@color/color_red_FF4343"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-        <View
-            android:id="@+id/line_view5"
-            style="@style/LineHStyle"/>
+        <View style="@style/LineHStyle"/>
 
         <TextView  android:id="@+id/tv_close"
             android:layout_gravity="center"

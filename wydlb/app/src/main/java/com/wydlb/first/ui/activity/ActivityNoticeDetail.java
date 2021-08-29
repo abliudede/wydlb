@@ -73,9 +73,6 @@ public class ActivityNoticeDetail extends BaseActivity {
     @Override
     public void gc() {
     }
-    @Override
-    public void initToolBar() {
-    }
 
     @OnClick(R.id.img_back)void closeClick(){
         finish();

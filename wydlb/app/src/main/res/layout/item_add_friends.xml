@@ -36,7 +36,6 @@
         />
 
     <TextView
-        android:id="@+id/tv_is_focus"
         android:background="@drawable/v2_blue_30corner_bg"
         android:textColor="@color/white"
         android:layout_alignParentRight="true"

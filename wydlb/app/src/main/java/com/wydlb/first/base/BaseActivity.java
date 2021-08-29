@@ -18,8 +18,6 @@ package com.wydlb.first.base;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
@@ -33,8 +31,7 @@ import com.wydlb.first.utils.RxBarTool;
 import com.wydlb.first.utils.RxLogTool;
 import com.wydlb.first.utils.RxNetTool;
 import com.wydlb.first.view.RxToast;
-import com.wydlb.first.view.RxToolBar;
-import com.wydlb.first.view.dialog.RxDialogSureCancelNew;
+import com.wydlb.first.view.dialog.RxDialogSureCancel;
 import com.wydlb.first.view.loadding.CustomDialog;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 import com.umeng.analytics.MobclickAgent;
@@ -48,9 +45,7 @@ public abstract class BaseActivity extends PermissionActivity {
 //    protected Context mContext;
     private CustomDialog dialog;//进度条
 
-    public RxToolBar mCommonToolbar;
-
-    RxDialogSureCancelNew networkDialog;//网络不可用提示框
+    RxDialogSureCancel networkDialog;//网络不可用提示框
 
     protected CompositeDisposable mDisposable;
 
@@ -72,18 +67,6 @@ public abstract class BaseActivity extends PermissionActivity {
 //        RxTool.init(mContext);
         ButterKnife.bind(this);
 
-        mCommonToolbar = ButterKnife.findById(this, R.id.common_toolbar);
-        if (mCommonToolbar != null) {
-            supportActionBar(mCommonToolbar);
-            initToolBar();
-            mCommonToolbar.setBackClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    backClick();
-                }
-            });
-        }
-
         setupActivityComponent(BuglyApplicationLike.getsInstance().getAppComponent());
         configViews(savedInstanceState);
 
@@ -96,19 +79,6 @@ public abstract class BaseActivity extends PermissionActivity {
 
     }
 
-
-    protected ActionBar supportActionBar(Toolbar toolbar){
-        setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null){
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setDisplayShowHomeEnabled(true);
-        }
-        mCommonToolbar.setNavigationOnClickListener(
-                (v) -> finish()
-        );
-        return actionBar;
-    }
 
     protected void addDisposable(Disposable d){
         if (mDisposable == null){
@@ -155,8 +125,6 @@ public abstract class BaseActivity extends PermissionActivity {
         super.onPause();
         MobclickAgent.onPause(this);
     }
-
-    public abstract void initToolBar();
 
     @Override
     protected void onDestroy() {
@@ -223,9 +191,9 @@ public abstract class BaseActivity extends PermissionActivity {
         return dialog;
     }
 
-    public RxDialogSureCancelNew getNetworkDialog(){
+    public RxDialogSureCancel getNetworkDialog(){
         if (networkDialog==null){
-            networkDialog=new RxDialogSureCancelNew(this,R.style.OptionDialogStyle);
+            networkDialog=new RxDialogSureCancel(this,R.style.OptionDialogStyle);
             networkDialog.setContent(getResources().getString(R.string.disconnect_network_title));
             networkDialog.setButtonText("确定","取消");
             networkDialog.setCancelable(false);

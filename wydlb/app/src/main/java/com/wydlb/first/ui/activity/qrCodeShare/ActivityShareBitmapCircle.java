@@ -355,11 +355,6 @@ public class ActivityShareBitmapCircle extends BaseActivity  {
     }
 
 
-    @Override
-    public void initToolBar() {
-    }
-
-
     @OnClick(R.id.img_back)
     void closeClick() {
         finish();

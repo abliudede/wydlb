@@ -43,13 +43,6 @@
     <!--<item name="windowNoTitle">true</item>-->
     <!--<item name="android:windowContentOverlay">@null</item>-->
 
-    <style name="Theme.Transparent" parent="AppTheme">
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowContentOverlay">@null</item>
-    </style>
-
     <!--Toolbar-->
     <style name="Theme.ToolBar.Menu" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
         <!-- 设置-弹窗的背景-颜色-->
@@ -97,30 +90,9 @@
     </style>
 
 
-    <style name="Dialog_Top_To_Bottom_Anim">
-        <item name="android:windowEnterAnimation">@anim/in_from_top</item>
-        <item name="android:windowExitAnimation">@anim/out_to_top</item>
-        <item name="android:windowShowAnimation">@null</item>
-        <item name="android:windowHideAnimation">@null</item>
-    </style>
-
-    <style name="Red_Packet_Dialog_Top_To_Bottom_Anim">
-        <item name="android:windowEnterAnimation">@anim/in_from_top</item>
-        <item name="android:windowExitAnimation">@anim/out_to_bottom</item>
-        <item name="android:windowShowAnimation">@null</item>
-        <item name="android:windowHideAnimation">@null</item>
-    </style>
-
     <style name="Dialog_Bottom_To_Up_Anim">
         <item name="android:windowEnterAnimation">@anim/in_from_bottom</item>
         <item name="android:windowExitAnimation">@anim/out_to_bottom</item>
-        <item name="android:windowShowAnimation">@null</item>
-        <item name="android:windowHideAnimation">@null</item>
-    </style>
-
-    <style name="Dialog_Left_To_Right_Anim">
-        <item name="android:windowEnterAnimation">@anim/in_from_left</item>
-        <item name="android:windowExitAnimation">@anim/out_to_right</item>
         <item name="android:windowShowAnimation">@null</item>
         <item name="android:windowHideAnimation">@null</item>
     </style>
@@ -152,49 +124,13 @@
     </style>
 
 
-    <style name="TabLayoutTextSizeStyle">
-        <item name="android:textSize">@dimen/text_size_16</item>
-        <item name="android:textAllCaps">false</item>
-    </style>
-
     <!--ReadActivity-->
-    <style name="ReadTopMenu">
-        <item name="android:layout_width">50dp</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textColor">@color/read.menu.text</item>
-        <item name="android:textSize">14sp</item>
-    </style>
-
-    <style name="ReadBottomMenu">
-        <item name="android:textColor">@color/read.menu.text</item>
-        <item name="android:textSize">13sp</item>
-    </style>
 
 
-
-    <style name="anim_slide_left_in_right_out" parent="android:Animation.Dialog">
-        <item name="android:windowEnterAnimation">@anim/slide_left_in</item>
-        <item name="android:windowExitAnimation">@anim/slide_right_out</item>
-    </style>
     <!--Dialog-->
-    <style name="CommonDialog" parent="@style/Theme.AppCompat.Light.Dialog">
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowFrame">@null</item>
-        <item name="android:windowIsFloating">true</item>
-        <item name="android:backgroundDimEnabled">false</item>
-        <!--必须要加上这句才能实现真正的半透明，-->
-        <item name="android:windowIsTranslucent">false</item>
-        <!--直接写windowEnter或者windowExit 是无效的-->
-        <item name="android:windowAnimationStyle">@style/anim_slide_left_in_right_out</item>
-    </style>
 
 
     <!--animation-->
-    <style name="anim_slide_bottom_in_out" parent="android:Animation.Dialog">
-        <item name="android:windowEnterAnimation">@anim/slide_bottom_in</item>
-        <item name="android:windowExitAnimation">@anim/slide_bottom_out</item>
-    </style>
 
     <style name="ReadSettingDialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowNoTitle">true</item>
@@ -203,27 +139,12 @@
         <item name="android:windowAnimationStyle">@style/Dialog_Bottom_To_Up_Anim</item>
     </style>
 
-    <style name="popup_anim">
-        <item name="android:windowEnterAnimation">@anim/popup_scale_in</item>
-        <item name="android:windowExitAnimation">@anim/popup_scale_out</item>
-    </style>
-
     <style name="Dialog_Anim">
         <item name="android:windowEnterAnimation">@anim/dialog_scale_in</item>
         <item name="android:windowExitAnimation">@anim/dialog_scale_out</item>
     </style>
 
-    <style name="Up_Dialog_Anim">
-        <item name="android:windowEnterAnimation">@anim/in_from_top</item>
-        <item name="android:windowExitAnimation">@anim/out_to_top</item>
-    </style>
-
     <!-- 一种从天而降的dialog -->
-    <style name="TopDialogStyle" parent="@android:style/Theme.Dialog">
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:windowAnimationStyle">@style/Red_Packet_Dialog_Top_To_Bottom_Anim</item>
-    </style>
 
 
     <!-- 自定义Dialog主题 -->
@@ -241,14 +162,6 @@
 
 
     <!--Dialog 样式  四周没有边框 加 全屏时不会有隐藏标题栏-->
-    <style name="ChangeResourceDialog" parent="@android:style/Theme.Dialog">
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:windowFrame">@null</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowIsFloating">true</item>
-        <item name="android:windowIsTranslucent">false</item>
-        <item name="android:backgroundDimEnabled">false</item>
-    </style>
 
 
     <!-- 自定义Dialog主题 -->
@@ -276,42 +189,6 @@
     </style>
 
     <!-- 全屏自定义Dialog主题 -->
-    <style name="OptionDialogStyleFull" parent="@android:style/Theme.Dialog">
-        <item name="android:fillViewport">true</item>
-        <item name="android:windowFullscreen">true</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowSoftInputMode">stateVisible|adjustPan</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:windowAnimationStyle">@style/Dialog_Anim</item>
-    </style>
-
-    <style name="UpDialogStyle" parent="@android:style/Theme.Dialog">
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:windowAnimationStyle">@style/Up_Dialog_Anim</item>
-    </style>
-
-    <style name="StyleReplyName">
-        <item name="android:textColor">@color/color_black_333333</item>
-        <item name="android:textSize">@dimen/normal_text_size</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="DeleteReplyContent">
-        <item name="android:textColor">@color/third_text_color</item>
-        <item name="android:textSize">@dimen/normal_text_size</item>
-    </style>
-
-    <style name="MoreTextStyle">
-        <item name="android:textColor">@color/third_text_color</item>
-        <item name="android:textSize">@dimen/text_size_12</item>
-    </style>
-
-    <style name="BlueStyleReplyName">
-        <item name="android:textColor">@color/v2_blue_color</item>
-        <item name="android:textSize">@dimen/normal_text_size</item>
-        <item name="android:textStyle">bold</item>
-    </style>
 
     <style name="StyleReplyNormal">
         <item name="android:textColor">@color/second_text_color</item>
@@ -354,16 +231,6 @@
         <item name="android:paddingLeft">5dip</item>
     </style>
 
-
-    <style name="TitleStyle">
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">@dimen/big_text_size</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_centerHorizontal">true</item>
-        <item name="android:layout_centerInParent">true</item>
-        <item name="android:textStyle">bold</item>
-    </style>
 
     <style name="LineHStyle">
         <item name="android:layout_width">match_parent</item>
@@ -434,140 +301,6 @@
     </style>
 
 
-    <style name="ImCircleLogoStyle">
-        <item name="android:layout_width">@dimen/chat_room_logo_size</item>
-        <item name="android:layout_height">@dimen/chat_room_logo_size</item>
-        <item name="sriv_left_bottom_corner_radius">5dp</item>
-        <item name="sriv_left_top_corner_radius">5dp</item>
-        <item name="sriv_right_bottom_corner_radius">5dp</item>
-        <item name="sriv_right_top_corner_radius">5dp</item>
-        <item name="sriv_border_color">@color/transparent</item>
-        <item name="android:scaleType">centerCrop</item>
-        <item name="android:src">@mipmap/default_fangxing_logo</item>
-    </style>
-
-    <style name="ImVipLogoStyle">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginBottom">-6dp</item>
-        <item name="android:layout_marginLeft">26dp</item>
-    </style>
-
-    <style name="ImOutVipLogoStyle">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginBottom">0dp</item>
-        <item name="android:layout_marginRight">0dp</item>
-    </style>
-
-    <style name="ImInPictureStyle">
-        <item name="android:layout_width">85dp</item>
-        <item name="android:layout_height">110dp</item>
-        <item name="sriv_left_bottom_corner_radius">8dp</item>
-        <item name="sriv_right_bottom_corner_radius">8dp</item>
-        <item name="sriv_right_top_corner_radius">8dp</item>
-        <item name="sriv_border_color">@color/transparent</item>
-        <item name="android:scaleType">centerCrop</item>
-    </style>
-
-    <style name="ImOutPictureStyle">
-        <item name="android:layout_width">85dp</item>
-        <item name="android:layout_height">110dp</item>
-        <item name="sriv_left_top_corner_radius">8dp</item>
-        <item name="sriv_left_bottom_corner_radius">8dp</item>
-        <item name="sriv_right_bottom_corner_radius">8dp</item>
-        <item name="sriv_border_color">@color/transparent</item>
-        <item name="android:scaleType">centerCrop</item>
-    </style>
-
-    <style name="ImNickNameStyle">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/color_black_ff999999</item>
-        <item name="android:textSize">11sp</item>
-        <item name="android:layout_marginLeft">10dp</item>
-        <item name="android:maxLength">30</item>
-    </style>
-
-    <style name="ImTextContentStyle">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:minWidth">50dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/color_black_333333</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:autoLink">web</item>
-        <item name="android:gravity">left</item>
-        <item name="android:paddingLeft">8dp</item>
-        <item name="android:paddingRight">8dp</item>
-        <item name="android:paddingTop">5dp</item>
-        <item name="android:paddingBottom">5dp</item>
-        <item name="android:lineSpacingExtra">1dp</item>
-        <item name="android:lineSpacingMultiplier">1.2</item>
-        <item name="android:maxLength">1024</item>
-    </style>
-
-    <style name="ImAudioStyle">
-        <item name="android:layout_width">100dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingLeft">8dp</item>
-        <item name="android:paddingRight">8dp</item>
-        <item name="android:paddingTop">5dp</item>
-        <item name="android:paddingBottom">5dp</item>
-    </style>
-
-    <style name="ImLianzaihaoStyle">
-        <item name="android:minWidth">150dp</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingLeft">8dp</item>
-        <item name="android:paddingRight">8dp</item>
-        <item name="android:paddingTop">5dp</item>
-        <item name="android:paddingBottom">5dp</item>
-    </style>
-
-    <style name="ImTipsStyle">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:layout_centerHorizontal">true</item>
-        <item name="android:textSize">8sp</item>
-        <!--<item name="android:maxLines">2</item>-->
-        <!--<item name="android:ellipsize">end</item>-->
-        <item name="android:gravity">center</item>
-        <item name="android:paddingLeft">4dp</item>
-        <item name="android:paddingRight">4dp</item>
-        <item name="android:paddingTop">2dp</item>
-        <item name="android:paddingBottom">2dp</item>
-        <item name="android:background">@drawable/im_tips_background</item>
-        <item name="android:lineSpacingExtra">1dp</item>
-        <item name="android:lineSpacingMultiplier">1.2</item>
-    </style>
-
-    <style name="ImTimelineStyle">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:layout_marginBottom">15dp</item>
-        <item name="android:layout_centerHorizontal">true</item>
-        <item name="android:textSize">8sp</item>
-        <item name="android:gravity">center</item>
-        <item name="android:paddingLeft">4dp</item>
-        <item name="android:paddingRight">4dp</item>
-        <item name="android:paddingTop">2dp</item>
-        <item name="android:paddingBottom">2dp</item>
-        <item name="android:background">@drawable/im_tips_background</item>
-        <item name="android:lineSpacingExtra">1dp</item>
-        <item name="android:lineSpacingMultiplier">1.2</item>
-    </style>
-
-
-
-    <style name="ImParentStyle">
-        <item name="android:padding">10dp</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-    </style>
-
     <style name="RecordButtonDialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item>
         <!-- 边框 -->
@@ -583,57 +316,6 @@
         <!-- 模糊 -->
     </style>
 
-    <style name="ChatMorePopupItemStyle">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">12sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:background">@drawable/chat_bottom_line_bg</item>
-        <item name="android:gravity">left|center</item>
-        <item name="android:paddingTop">5dp</item>
-        <item name="android:paddingBottom">5dp</item>
-        <item name="android:paddingLeft">5dp</item>
-        <item name="android:paddingRight">5dp</item>
-        <item name="android:drawablePadding">5dp</item>
-    </style>
-
-
-    <style name="Chatroom_More_Options_Out_Top_Anim">
-        <item name="android:windowEnterAnimation">@anim/chat_room_out_top_scale_in</item>
-        <item name="android:windowExitAnimation">@anim/chat_room_out_top_scale_out</item>
-        <item name="android:windowShowAnimation">@null</item>
-        <item name="android:windowHideAnimation">@null</item>
-    </style>
-
-    <style name="Chatroom_More_Options_Out_Bottom_Anim">
-        <item name="android:windowEnterAnimation">@anim/chat_room_out_bottom_scale_in</item>
-        <item name="android:windowExitAnimation">@anim/chat_room_out_bottom_scale_out</item>
-        <item name="android:windowShowAnimation">@null</item>
-        <item name="android:windowHideAnimation">@null</item>
-    </style>
-
-
-    <style name="Chatroom_More_Options_In_Top_Anim">
-        <item name="android:windowEnterAnimation">@anim/chat_room_in_top_scale_in</item>
-        <item name="android:windowExitAnimation">@anim/chat_room_in_top_scale_out</item>
-        <item name="android:windowShowAnimation">@null</item>
-        <item name="android:windowHideAnimation">@null</item>
-    </style>
-
-    <style name="Chatroom_More_Options_In_Bottom_Anim">
-        <item name="android:windowEnterAnimation">@anim/chat_room_in_bottom_scale_in</item>
-        <item name="android:windowExitAnimation">@anim/chat_room_in_bottom_scale_out</item>
-        <item name="android:windowShowAnimation">@null</item>
-        <item name="android:windowHideAnimation">@null</item>
-    </style>
-
-    <style name="RatingBar_CustomDrawable" parent="@android:style/Widget.Holo.RatingBar.Indicator">
-        <item name="android:progressDrawable">@drawable/ratingbar_bg</item>
-        <item name="android:minHeight">13dp</item>
-        <item name="android:maxHeight">13dp</item>
-    </style>
-
 
     <style name="MyToast_Anim">
         <item name="android:windowEnterAnimation">@anim/toast_anim_in</item>
@@ -642,68 +324,8 @@
 
 
     <!-- TextAppearance:修改 -->
-    <style name="ReadTextAppearance"/>
-
-
-    <style name="FastListStyle" parent="@style/AppTheme">
-        <item name="android:fastScrollThumbDrawable">@mipmap/icon_fast_bar</item>
-        <item name="android:fastScrollTrackDrawable">@null</item>
-        <item name="android:scrollbars">none</item>
-    </style>
 
 
     <!--15 字体大小 15sp 字体颜色#333333-->
-
-    <style name="DynamicText_15_333333">
-        <item name="android:textSize">15sp</item>
-        <item name="android:textColor">@color/color_black_333333</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-    </style>
-
-    <style name="DynamicText_15_999999">
-        <item name="android:textSize">15sp</item>
-        <item name="android:textColor">@color/color_black_ff999999</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-    </style>
-
-    <style name="DynamicText_13_333333">
-        <item name="android:textSize">13sp</item>
-        <item name="android:textColor">@color/color_black_333333</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-    </style>
-
-    <style name="DynamicText_12_999999">
-        <item name="android:textSize">12sp</item>
-        <item name="android:textColor">@color/color_black_ff999999</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-    </style>
-
-    <style name="DynamicText_13_999999">
-        <item name="android:textSize">13sp</item>
-        <item name="android:textColor">@color/color_black_ff999999</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-    </style>
-
-    <style name="DynamicUserLogo">
-        <item name="android:layout_width">36dp</item>
-        <item name="android:layout_height">36dp</item>
-    </style>
-
-    <style name="DynamicCommentNickName">
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="YellowText">
-        <item name="android:textColor">@color/yellow_text_color</item>
-    </style>
-
-    <style name="PinkText">
-        <item name="android:textColor">@color/pinktext_color</item>
-    </style>
 
 </resources>

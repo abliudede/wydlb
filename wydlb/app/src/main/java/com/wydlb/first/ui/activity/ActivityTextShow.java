@@ -38,12 +38,6 @@ public class ActivityTextShow extends BaseActivity{
         RxActivityTool.skipActivity(context,ActivityTextShow.class,bundle);
     }
 
-
-    @Override
-    public void initToolBar() {
-
-    }
-
     @Override
     public void gc() {
 

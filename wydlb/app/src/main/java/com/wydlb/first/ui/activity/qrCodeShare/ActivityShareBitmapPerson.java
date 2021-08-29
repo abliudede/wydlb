@@ -300,12 +300,6 @@ public class ActivityShareBitmapPerson extends BaseActivity  {
         RxToast.gc();
     }
 
-
-    @Override
-    public void initToolBar() {
-    }
-
-
     @OnClick(R.id.img_back)
     void closeClick() {
         finish();

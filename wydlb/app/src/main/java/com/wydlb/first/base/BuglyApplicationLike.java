@@ -14,9 +14,6 @@ import com.wydlb.first.utils.AppUtils;
 import com.wydlb.first.utils.RxEventBusTool;
 import com.wydlb.first.utils.RxSharedPreferencesUtil;
 import com.wydlb.first.utils.RxTool;
-import com.wydlb.first.utils.TTAdManagerHolder;
-import com.sina.weibo.sdk.WbSdk;
-import com.sina.weibo.sdk.auth.AuthInfo;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 import com.uuzuche.lib_zxing.activity.ZXingLibrary;
@@ -68,8 +65,6 @@ public class BuglyApplicationLike extends Application {
 
         sInstance = this;
 
-//        initX5Core();
-        TTAdManagerHolder.init(this);
         registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
 
             private int activityCount;
@@ -136,8 +131,6 @@ public class BuglyApplicationLike extends Application {
         //微信api初始化
         api = WXAPIFactory.createWXAPI(this, Constant.APP_ID, true);
         api.registerApp(Constant.APP_ID);
-        //微博sdk初始化
-        WbSdk.install(this, new AuthInfo(this, Constant.WEIBO_APP_KEY, Constant.WEIBO_REDIRECT_URL, Constant.WEIBO_SCOPE));
 
         RxSharedPreferencesUtil.init(this, "lianzaishenqi", Context.MODE_PRIVATE);
         initComponent();

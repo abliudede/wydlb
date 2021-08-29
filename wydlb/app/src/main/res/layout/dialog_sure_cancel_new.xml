@@ -9,74 +9,316 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:background="@drawable/white_corner_card"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:background="@drawable/wydlb_whiteffffff_stroke_corner20"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_title"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:text="提示"
-            android:textColor="@color/color_black_333333"
-            android:textSize="@dimen/text_size_16"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/tv_des"
-            style="@style/TextPaddingStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:paddingLeft="10dp"
-            android:textColor="@color/color_black_333333"
-            android:textSize="@dimen/text_size_13" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="15dp"
-            android:background="@color/bg_color" />
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:background="@mipmap/wydlb_dialog_head"
+            >
 
             <TextView
-                android:id="@+id/tv_sure"
-                android:layout_width="0dp"
-                android:layout_height="54dp"
-                android:layout_weight="1"
-                android:background="@drawable/shape_blue_leftbottomyuanjiao"
-                android:clickable="true"
-                android:gravity="center"
-                android:text="我知道了"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_size_13" />
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="解雇"
+                android:textSize="14sp"
+                android:textColor="@color/color_673c3c"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/wydlb_close"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                />
+
+            <ImageView
+                android:id="@+id/iv_wenhao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/wydlb_dialog_wenhao"
+                android:layout_toLeftOf="@id/iv_close"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/wydlb_yellowffdf80_conner"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="24dp"
+            >
 
             <TextView
-                android:id="@+id/tv_cancel"
-                android:layout_width="0dp"
-                android:layout_height="54dp"
-                android:layout_weight="1"
-                android:clickable="true"
+                android:id="@+id/tv_current_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="512"
+                android:textSize="20sp"
+                android:textColor="@color/color_0ab806"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_max_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10000"
+                android:textSize="20sp"
+                android:textColor="@color/color_673c3c"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                />
+
+            <SeekBar
+                android:id="@+id/seekbar_for_all"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="12dp"
+                android:layout_below="@id/tv_current_num"
+                android:max="100"
+                android:maxHeight="16dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:progressDrawable="@drawable/seek_bar_bg_white"
+                android:thumb="@mipmap/wydlb_seekbar_btn"
+                />
+
+            <TextView
+                android:id="@+id/tv_seek_des1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本次解雇人数"
+                android:textSize="12sp"
+                android:textColor="@color/color_673c3c"
+                android:layout_below="@id/seekbar_for_all"
+                android:layout_marginLeft="16dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_seek_des2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可解雇空闲人数"
+                android:textSize="12sp"
+                android:textColor="@color/color_673c3c"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/seekbar_for_all"
+                android:layout_marginRight="16dp"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_below="@id/tv_seek_des1"
+                android:layout_margin="16dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_quick_btn1"
+                    android:layout_width="60dp"
+                    android:layout_height="28dp"
+                    android:text="25%"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_673c3c"
+                    android:layout_below="@id/seekbar_for_all"
+                    android:background="@drawable/wydlb_yellowaaffdf80_conner"
+                    />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_quick_btn2"
+                    android:layout_width="60dp"
+                    android:layout_height="28dp"
+                    android:text="50%"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_673c3c"
+                    android:layout_below="@id/seekbar_for_all"
+                    android:background="@drawable/wydlb_yellowaaffdf80_conner"
+                    />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_quick_btn3"
+                    android:layout_width="60dp"
+                    android:layout_height="28dp"
+                    android:text="75%"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_673c3c"
+                    android:layout_below="@id/seekbar_for_all"
+                    android:background="@drawable/wydlb_yellowaaffdf80_conner"
+                    />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_quick_btn4"
+                    android:layout_width="60dp"
+                    android:layout_height="28dp"
+                    android:text="100%"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_673c3c"
+                    android:layout_below="@id/seekbar_for_all"
+                    android:background="@drawable/wydlb_yellowaaffdf80_conner"
+                    />
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl_shouzhi_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/wydlb_yellowffdf80_conner"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_show_des1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预计支付"
+                android:textSize="14sp"
+                android:textColor="@color/color_673c3c"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_show_num1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25600"
+                android:textSize="20sp"
+                android:textColor="@color/color_ff5928"
+               android:layout_alignBaseline="@id/tv_show_des1"
+                android:layout_toRightOf="@id/tv_show_des1"
+                android:layout_marginLeft="4dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_show_des2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元解雇费"
+                android:textSize="14sp"
+                android:textColor="@color/color_673c3c"
+                android:layout_marginLeft="4dp"
+                android:layout_alignBaseline="@id/tv_show_des1"
+                android:layout_toRightOf="@id/tv_show_num1"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_show_des3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="后续每月节省"
+                android:textSize="14sp"
+                android:textColor="@color/color_673c3c"
+                android:layout_below="@id/tv_show_des1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_show_num2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25600"
+                android:textSize="20sp"
+                android:textColor="@color/color_ff5928"
+                android:layout_alignBaseline="@id/tv_show_des3"
+                android:layout_toRightOf="@id/tv_show_des3"
+                android:layout_marginLeft="4dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_show_des4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元人工费"
+                android:textSize="14sp"
+                android:textColor="@color/color_673c3c"
+                android:layout_marginLeft="4dp"
+                android:layout_alignBaseline="@id/tv_show_des3"
+                android:layout_toRightOf="@id/tv_show_num2"
+                />
+
+        </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_gold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前余额: 0元"
+                android:textSize="14sp"
+                android:textColor="@color/color_673c3c"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:drawableLeft="@mipmap/wydlb_yu_e"
                 android:gravity="center"
-                android:text="不再显示"
-                android:textColor="@color/normal_text_color"
-                android:textSize="@dimen/text_size_13" />
+                android:drawablePadding="4dp"
+                />
 
 
-        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_sure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/wydlb_sure"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="29dp"
+            />
+
 
 
     </LinearLayout>

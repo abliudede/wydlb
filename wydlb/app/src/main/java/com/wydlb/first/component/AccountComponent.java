@@ -21,8 +21,6 @@ import com.wydlb.first.ui.activity.ActivityEnterAmount;
 import com.wydlb.first.ui.activity.ActivityImagesPreview;
 import com.wydlb.first.ui.activity.ActivityLoginNew;
 import com.wydlb.first.ui.activity.ActivityOneKeyReward;
-import com.wydlb.first.ui.activity.GameFightLuck.ActivityFightLuckDetail;
-import com.wydlb.first.ui.activity.GameFightLuck.ActivityFightLuckEnter;
 import com.wydlb.first.ui.activity.GameFightLuck.ActivityFightLuckPersonList;
 import com.wydlb.first.ui.activity.MainActivity;
 import com.wydlb.first.ui.activity.MinerGameActivity;
@@ -61,10 +59,6 @@ public interface AccountComponent {
     ActivityChoosePayWay inject(ActivityChoosePayWay activitySettings);
 
     ActivityUserProfile inject(ActivityUserProfile activityUserProfile);
-
-    ActivityFightLuckEnter inject(ActivityFightLuckEnter myBookFragment);
-
-    ActivityFightLuckDetail inject(ActivityFightLuckDetail myBookFragment);
 
     ActivityFightLuckPersonList inject(ActivityFightLuckPersonList myBookFragment);
 

@@ -46,7 +46,6 @@
         android:visibility="gone" />
 
     <TextView
-        android:id="@+id/tv_huancun_count"
         android:layout_width="wrap_content"
         android:layout_height="18dp"
         android:layout_alignTop="@id/iv_book_cover"
@@ -63,7 +62,6 @@
         />
     <!---->
     <ImageView
-        android:id="@+id/view_red"
         android:layout_width="10dp"
         android:layout_height="10dp"
         android:src="@mipmap/reddot_whitebian"

@@ -159,13 +159,6 @@ public class ActivityFightLuckPersonList extends BaseActivity implements FightLu
         showSeverErrorDialog(message);
     }
 
-
-    @Override
-    public void initToolBar() {
-
-    }
-
-
     @Override
     protected void onDestroy() {
         super.onDestroy();

@@ -32,11 +32,6 @@ public class ActivityPaySuccess extends BaseActivity {
 
 
     @Override
-    public void initToolBar() {
-
-    }
-
-    @Override
     public void gc() {
 
     }

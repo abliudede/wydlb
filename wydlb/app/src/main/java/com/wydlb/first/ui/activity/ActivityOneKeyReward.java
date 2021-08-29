@@ -185,12 +185,6 @@ public class ActivityOneKeyReward extends BaseActivity {
     }
 
 
-
-    @Override
-    public void initToolBar() {
-
-    }
-
     @Override
     protected void backClick() {
         super.backClick();

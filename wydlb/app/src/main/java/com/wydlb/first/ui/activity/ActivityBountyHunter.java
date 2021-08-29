@@ -364,11 +364,6 @@ public class ActivityBountyHunter extends BaseActivity implements BountyHunterCo
     }
 
 
-    @Override
-    public void initToolBar() {
-
-    }
-
 
     @Override
     public void getRewaredPoolDetailSuccess(GetRewaredPoolDetailBean bean) {
