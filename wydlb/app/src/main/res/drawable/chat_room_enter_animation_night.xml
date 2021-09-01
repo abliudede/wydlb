@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
-   <item android:drawable="@mipmap/icon_chat_room_enter1_night" android:duration="300"></item>
-   <item android:drawable="@mipmap/icon_chat_room_enter2_night" android:duration="300"></item>
-   <item android:drawable="@mipmap/icon_chat_room_enter3_night" android:duration="300"></item>
-
-
-</animation-list>

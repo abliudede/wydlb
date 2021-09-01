@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.wydlb.first.R;
+import com.wydlb.first.bean.GameInfoBean;
 import com.wydlb.first.model.bean.BannerBean;
 import com.wydlb.first.utils.RxDeviceTool;
 import com.wydlb.first.utils.RxImageTool;
@@ -20,20 +21,20 @@ import java.util.List;
 
 /**
  * Created by lrz on 2018/10/13.
- * 发现页item
+ * 项目列表
  */
 
-public class NewFindAdapter extends BaseQuickAdapter<BannerBean.DataBean, BaseViewHolder> {
+public class NewFindAdapter extends BaseQuickAdapter<GameInfoBean.DataBean.InvestmentsBean, BaseViewHolder> {
 
     Context context;
 
-    public NewFindAdapter(@Nullable List<BannerBean.DataBean> data, Context mContext) {
+    public NewFindAdapter(@Nullable List<GameInfoBean.DataBean.InvestmentsBean> data, Context mContext) {
         super(R.layout.item_find, data);
         this.context = mContext;
     }
 
     @Override
-    protected void convert(final BaseViewHolder baseViewHolder,BannerBean.DataBean bannerBean) {
+    protected void convert(final BaseViewHolder baseViewHolder,GameInfoBean.DataBean.InvestmentsBean bannerBean) {
         LinearLayout ly_content = baseViewHolder.getView(R.id.ly_content);
         if(baseViewHolder.getAdapterPosition()%2 == 0){
             ly_content.setBackgroundResource(R.color.white);

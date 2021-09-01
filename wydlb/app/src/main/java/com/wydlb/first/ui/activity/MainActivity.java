@@ -23,6 +23,7 @@ import com.wydlb.first.base.BaseActivity;
 import com.wydlb.first.base.Constant;
 import com.wydlb.first.bean.CheckUpdateResponse;
 import com.wydlb.first.bean.DataSynEvent;
+import com.wydlb.first.bean.GameInfoBean;
 import com.wydlb.first.component.AppComponent;
 import com.wydlb.first.component.DaggerAccountComponent;
 import com.wydlb.first.interfaces.OnRepeatClickListener;
@@ -74,7 +75,7 @@ public class MainActivity extends BaseActivity {
     //项目列表
     @Bind(R.id.recycler_view)
     RecyclerView recycler_view;
-    List<BannerBean.DataBean> bannerBeanList = new ArrayList<>();
+    List<GameInfoBean.DataBean.InvestmentsBean> bannerBeanList = new ArrayList<>();
     NewFindAdapter newFindAdapter;
     RxLinearLayoutManager manager;
 
@@ -128,7 +129,7 @@ public class MainActivity extends BaseActivity {
         newFindAdapter.setOnItemClickListener(
                 (adapter, view, position) -> {
                     if(null != bannerBeanList && !bannerBeanList.isEmpty()) {
-                        BannerBean.DataBean bannerBean = bannerBeanList.get(position);
+                        GameInfoBean.DataBean.InvestmentsBean bannerBean = bannerBeanList.get(position);
                     }
                 }
         );
@@ -137,10 +138,10 @@ public class MainActivity extends BaseActivity {
 
     }
 
+    /*获取全部基本数据的接口*/
     private void findRequest() {
         Map<String, String> map=new HashMap<>();
-        map.put("putPosition",String.valueOf(4));
-        OKHttpUtil.okHttpGet(Constant.API_BASE_URL + "/banner/getBanner",map, new CallBackUtil.CallBackString() {
+        OKHttpUtil.okHttpPost(Constant.API_BASE_URL + "/api/game/getGameInfo/app",map, new CallBackUtil.CallBackString() {
             @Override
             public void onFailure(Call call, Exception e) {
                 try{
@@ -151,13 +152,17 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onResponse(String response) {
                 try {
-                    RxLogTool.e("gameSwitchRequest:" + response);
-                    BannerBean bannerBean = GsonUtil.getBean(response, BannerBean.class);
+                    RxLogTool.e("getGameInfo:" + response);
+                    GameInfoBean bannerBean = GsonUtil.getBean(response, GameInfoBean.class);
                     if (bannerBean.getCode() == Constant.ResponseCodeStatus.SUCCESS_CODE) {
-                        if(null != bannerBean.getData() && !bannerBean.getData().isEmpty()){
-                            bannerBeanList.clear();
-                            bannerBeanList.addAll(bannerBean.getData());
-                            newFindAdapter.replaceData(bannerBeanList);
+                        if(null != bannerBean.getData()){
+                            //展示基本信息
+
+                            if(null != bannerBean.getData().getInvestments() && !bannerBean.getData().getInvestments().isEmpty()){
+                                bannerBeanList.clear();
+                                bannerBeanList.addAll(bannerBean.getData().getInvestments());
+                                newFindAdapter.replaceData(bannerBeanList);
+                            }
                         }
                     } else {
                         RxToast.custom(bannerBean.getMsg(),Constant.ToastType.TOAST_ERROR).show();

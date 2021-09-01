@@ -183,7 +183,7 @@ public class ActivityLoginNew extends BaseActivity implements LoginContract.View
 
 
     /**
-     * 推送点击的奖励接口
+     * 登录注册接口
      */
     private void loginAndRegister() {
         HashMap map = new HashMap();

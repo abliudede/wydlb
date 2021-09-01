@@ -77,7 +77,7 @@ public abstract class CallBackUtil<T> {
                 String responseStr=response.body().string();
                 RxLogTool.e("onParseResponse:"+responseStr);
                 BaseBean resultResponse = GsonUtil.getBean(responseStr, BaseBean.class);
-                if(resultResponse.getStatus() != 0 && resultResponse.getStatus() != 200){//解决返回404等异常状态时，code解析为成功的问题
+                if(!resultResponse.getMsg().equals("ok")){//解决返回404等异常状态时，code解析为成功的问题
                     return "";
                 }else if (resultResponse.getCode()== Constant.ResponseCodeStatus.TOKEN_INVALID){//token 失效
                     RxEventBusTool.sendEvents(Constant.EventTag.TOKEN_FAILURE);

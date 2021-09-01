@@ -9,18 +9,7 @@ import java.io.Serializable;
 public class BaseBean implements Serializable {
     private int code;
 
-    private int status;
-
     private String message="";
-
-
-    public int getStatus() {
-        return status;
-    }
-
-    public void setStatus(int status) {
-        this.status = status;
-    }
 
     public int getCode() {
         return code;
